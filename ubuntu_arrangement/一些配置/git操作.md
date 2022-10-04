@@ -59,6 +59,7 @@ git init
 通过`git add files`，添加文件或者文件夹到版本库 option：files
 `git status`可以查看跟踪状态
 `git commit -m "description"`  上传到版本库option：description
+`git commit -am "description"` git commit -m用于提交暂存区的文件，git commit -am用于提交跟踪过的文件(obsidian上传推荐用这个)。
 `git log` 查看上传记录
 	会给出commit id和上传时写的description
 `git reset --hard HEAD^` 返回上一个版本
@@ -76,6 +77,7 @@ git push -u origin main
 
 ### obsidian使用git备份
 安装obsidian_git插件，这个只是一个自动上下拉的插件，得先按前面的方法配置好远程仓库和本地仓库的链接。
+还可以用gitee：git commit -m用于提交暂存区的文件，git commit -am用于提交跟踪过的文件。
 
 ### 删除操作
 删除掉已经commit的文件，因为太大了一直导致push失败
