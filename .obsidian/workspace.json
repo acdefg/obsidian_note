@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/支持向量机.md",
+                "file": "Templates/日记模板.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "d1042b65fcf5678d",
+            "id": "050e45d520d9af55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/日记模板.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7abf6fb17ac6aba7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -52,7 +64,7 @@
             }
           },
           {
-            "id": "73d4534646ddd78c",
+            "id": "688f6fff85966de3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -60,7 +72,7 @@
             }
           },
           {
-            "id": "338c88b782e2e46a",
+            "id": "9b20f7eb811eaee9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -68,7 +80,7 @@
             }
           },
           {
-            "id": "8e4fe1ff92bc1452",
+            "id": "578516bd0bc45df4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -76,7 +88,7 @@
             }
           },
           {
-            "id": "db879231c00ed0d9",
+            "id": "9790e104338cf44e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -84,7 +96,63 @@
             }
           },
           {
-            "id": "dbdfb1f77f1d01a5",
+            "id": "ede6ff52d3adf369",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "be57e1a455627d34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3538ca14c944d8a6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "198115a817bfbe60",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "2bb2f0f45c155a6c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "b95ddddd049cd1e9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "9d627ca28ce64cc3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -96,7 +164,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 15
       }
     ],
     "direction": "vertical"
@@ -240,17 +308,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "dbdfb1f77f1d01a5",
+  "active": "9d627ca28ce64cc3",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
-    "study_note/支持向量机.md",
-    "ubuntu_arrangement/一些配置/host，source文件更改.md",
+    "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
     "ubuntu_arrangement/一些配置/git操作.md",
+    "ubuntu_arrangement/一些工具安装/Appimage格式文件安装.md",
+    "ubuntu_arrangement/ubuntu安装记录.md",
+    "Templates/日记模板.md",
+    "ubuntu_arrangement/一些配置/安装node.js.md",
     "ubuntu_arrangement/一些配置/图床设置.md",
     "ubuntu_arrangement/一些配置/zsh安装和设置.md",
-    "Templates/shell code blocks.md",
-    "Templates/Day planner_official.md",
-    "Templates/周记模板.md",
-    "ubuntu_arrangement/一些配置/私人token,ssh,user & root password记录.md"
+    "Pasted image 20220501121023.png.md"
   ]
 }
