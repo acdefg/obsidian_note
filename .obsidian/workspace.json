@@ -169,7 +169,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
+                "file": "ubuntu_arrangement/一些配置/git操作.md",
                 "mode": "source",
                 "source": false
               }
@@ -242,7 +242,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
+                "file": "ubuntu_arrangement/一些配置/git操作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -259,7 +259,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
+                "file": "ubuntu_arrangement/一些配置/git操作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -282,7 +282,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/github教程.md"
+                "file": "ubuntu_arrangement/一些配置/git操作.md"
               }
             }
           },
@@ -322,8 +322,8 @@
   },
   "active": "ce9327848e2e72ba",
   "lastOpenFiles": [
-    "ubuntu_arrangement/一些工具安装/clash(tizi).md",
     "ubuntu_arrangement/一些工具安装/github教程.md",
+    "ubuntu_arrangement/一些工具安装/clash(tizi).md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "ubuntu_arrangement/一些工具安装/sublime installation.md",
     "ubuntu_arrangement/一些配置/git操作.md",

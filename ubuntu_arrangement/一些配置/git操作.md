@@ -96,7 +96,7 @@ git push -u origin main
 2. [记一次删除Git记录中的大文件的过程-HollisChuang's Blog](https://www.hollischuang.com/archives/1708)
 
 一些教程记录
-[Fetching Title#15ws](https://blog.csdn.net/qq_34842671/article/details/70916587)
+[Fetching Title#15ws](https://blog.csdn.net/qq_34842671/article/details/70916587)  ---win下git安装教程
 [Git: ‘LF will be replaced by CRLF the next time Git touches it‘ 问题解决与思考_Babylonxun的博客-CSDN博客](https://blog.csdn.net/Babylonxun/article/details/126598477)
-[Fetching Title#ty7c](https://www.liaoxuefeng.com/wiki/896043488029600) --git教程
+[Fetching Title#ty7c](https://www.liaoxuefeng.com/wiki/896043488029600) --git教程  --廖雪峰
 
