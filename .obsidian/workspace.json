@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/soi/riscv.md"
+                "file": "study_note/作业/物联网期中——移动通信原理综述.md"
               }
             }
           },
@@ -178,6 +178,7 @@
   },
   "active": "f5d915866162259a",
   "lastOpenFiles": [
+    "study_note/soi/riscv.md",
     "study_note/未命名.md",
     "study_note/业余/一生一芯.md",
     "study_note/作业/物联网期中——移动通信原理综述.md",
@@ -186,7 +187,6 @@
     "study_note/作业/集成电路前沿技术导论.md",
     "study_note/复微杯比赛.md",
     "study_note/业余/b站一些笔记.md",
-    "study_note/支持向量机.md",
-    "ubuntu_arrangement/一些配置/git操作.md"
+    "study_note/支持向量机.md"
   ]
 }
