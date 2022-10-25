@@ -5,9 +5,9 @@
   "autoSaveInterval": 1,
   "autoPushInterval": 0,
   "autoPullInterval": 10,
-  "autoPullOnBoot": true,
+  "autoPullOnBoot": false,
   "disablePush": false,
-  "pullBeforePush": false,
+  "pullBeforePush": true,
   "disablePopups": false,
   "listChangedFilesInMessageBody": false,
   "showStatusBar": true,
@@ -19,9 +19,9 @@
   "refreshSourceControl": true,
   "basePath": "",
   "differentIntervalCommitAndPush": false,
-  "changedFilesInStatusBar": true,
+  "changedFilesInStatusBar": false,
   "username": "",
   "showedMobileNotice": true,
-  "refreshSourceControlTimer": 500,
+  "refreshSourceControlTimer": 7000,
   "showBranchStatusBar": true
 }
