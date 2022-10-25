@@ -70,10 +70,10 @@ git init
 
 ```shell
 git remote add origin git@github.com:acdefg/obsidian_note.git
-git push -u origin main
+git branch -M main
 git push -u origin main
 ```
-`git push -u origin main` 改分支名字，可以不改，默认是master，第三句变为`git push -u origin master`
+`git branch -M main` 改分支名字，可以不改，默认是master，第三句变为`git push -u origin master`
 
 ### obsidian使用git备份
 安装obsidian_git插件，这个只是一个自动上下拉的插件，得先按前面的方法配置好远程仓库和本地仓库的链接。
