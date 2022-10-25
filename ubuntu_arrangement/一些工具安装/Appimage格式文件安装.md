@@ -9,7 +9,9 @@
 
 ## 快捷方式添加
 ### 简单说明
+
 需要切换到root模式
+
 (possibly need root right, I've already changed root setting, see [[配置中一些小问题]])
 ```shell
 cd /usr/share/applications
@@ -55,6 +57,9 @@ Comment=Obsidian
 MimeType=x-scheme-handler/obsidian;
 Categories=Office;
 ```
+！要将.desktop文件也赋予可执行权限，方法同上
+
+>note:尝试好几次失败的原因可能是引用了中文路径，之前放在“下载”文件夹中不成功，放在根目录后成功了
 
 ```ad-warning
 要将.desktop文件也赋予可执行权限，方法同上
@@ -63,3 +68,4 @@ Categories=Office;
 ```ad-note
 尝试好几次失败的原因可能是引用了中文路径，之前放在“下载”文件夹中不成功，放在根目录后成功了
 ```
+

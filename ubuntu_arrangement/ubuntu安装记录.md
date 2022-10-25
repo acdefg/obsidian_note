@@ -31,6 +31,9 @@
 3. https://blog.csdn.net/codeHonghu/article/details/111940656 - good
 
 ## arrangement steps
+
+1. 修改软件源，在 software&updates..，修改命令行复制粘贴快捷键
+2. 改系统配置
 1. 修改软件源，在 software&updates..，在第一页download from，选择other，然后可选best server，完成后踩咯所 修改命令行复制粘贴快捷键，打开terminal->preference->shortcut
 2. 改系统配置，使得不用每次用命令都要输密码[[配置中一些小问题]]
 	```shell

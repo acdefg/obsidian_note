@@ -4,6 +4,13 @@
 sudo apt-get install git
 ```
 2. 设置账户
+```
+git config --global user.name "yourname" 
+git config --global user.email "youremail"
+```
+替换的时候不用保留引号
+3. 检查
+
 ```shell
 git config --global user.name "yourname" 
 git config --global user.email "youremail"
@@ -21,6 +28,7 @@ git config user.name
 git config user.email
 ```
 Or
+
 ```shell
 git config --list
 ```
@@ -85,3 +93,16 @@ git push -u origin main
 1. [Git清理commit中历史提交的大文件 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1536481)
 2. [记一次删除Git记录中的大文件的过程-HollisChuang's Blog](https://www.hollischuang.com/archives/1708)
 
+
+### 解决冲突
+[git如何解决冲突？_蛞蝓不孤寡的博客-CSDN博客_git怎么处理冲突](https://blog.csdn.net/fish_skyyyy/article/details/119539747)
+应该可以设置一下merge规则
+
+一些教程记录
+[Fetching Title#15ws](https://blog.csdn.net/qq_34842671/article/details/70916587)  ---win下git安装教程
+[Git: ‘LF will be replaced by CRLF the next time Git touches it‘ 问题解决与思考_Babylonxun的博客-CSDN博客](https://blog.csdn.net/Babylonxun/article/details/126598477)
+[Fetching Title#ty7c](https://www.liaoxuefeng.com/wiki/896043488029600) --git教程  --廖雪峰
+
+[详解gitignore的使用方法，让你尽情使用git add . - 知乎](https://zhuanlan.zhihu.com/p/264995020)
+
+测试一下obsidian_git
