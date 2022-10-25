@@ -91,7 +91,7 @@ git push -u origin main
 删除掉已经commit的文件，因为太大了一直导致push失败
 参考链接：先看1，再看2
 1. [Git清理commit中历史提交的大文件 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1536481)
-2. [记一次删除Git记录中的大文件的过程-HollisChuang's Blog](https://www.hollischuang.com/archives/1708)
+2. [记一次删除Git记录中的大文件的过程-HollisChuang's Blog](https://www.hollischuang.com/archives/1708)---看这个就行了
 
 
 ### 解决冲突
