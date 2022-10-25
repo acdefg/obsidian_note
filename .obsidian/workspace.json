@@ -4,167 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1b5811c7a220696d",
+        "id": "0227f5e6da345bc5",
         "type": "tabs",
         "children": [
           {
-            "id": "875ac5dd1aa8fe71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/物联网期中——移动通信原理综述.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f994f183aec9cc84",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ubuntu_arrangement/一些配置/host，source文件更改.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7dac6198afbd461a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/日记模板.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "050e45d520d9af55",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/日记模板.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7abf6fb17ac6aba7",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "688f6fff85966de3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "9b20f7eb811eaee9",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "578516bd0bc45df4",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "9790e104338cf44e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "ede6ff52d3adf369",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "be57e1a455627d34",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3538ca14c944d8a6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "198115a817bfbe60",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "2bb2f0f45c155a6c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "b95ddddd049cd1e9",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "9d627ca28ce64cc3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ce9327848e2e72ba",
+            "id": "3a43ba9d8384bca9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -175,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 16
+        ]
       }
     ],
     "direction": "vertical"
@@ -320,17 +163,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "ce9327848e2e72ba",
+  "active": "3a43ba9d8384bca9",
   "lastOpenFiles": [
+    "ubuntu_arrangement/一些配置/git操作.md",
     "ubuntu_arrangement/一些工具安装/github教程.md",
+    "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
     "ubuntu_arrangement/一些工具安装/clash(tizi).md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "ubuntu_arrangement/一些工具安装/sublime installation.md",
-    "ubuntu_arrangement/一些配置/git操作.md",
     "ubuntu_arrangement/su- 和 sudo区别.md",
     "ubuntu_arrangement/ubuntu安装记录.md",
     "conflict-files-obsidian-git.md",
-    "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
     "ubuntu_arrangement/一些工具安装/Appimage格式文件安装.md"
   ]
 }
