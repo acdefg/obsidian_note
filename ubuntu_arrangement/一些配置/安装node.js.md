@@ -8,7 +8,7 @@ sudo apt install nodejs npm
 这个自动安装nodejs为10.X，npm为6.14.4
 查询版本代码为：
 ```
-nodejs --version
+node --version
 npm --version
 ```
 - 指定版本

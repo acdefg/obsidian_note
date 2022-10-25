@@ -1,15 +1,15 @@
 {
   "main": {
-    "id": "8d24244e080cda36",
+    "id": "3828c1f70af4402b",
     "type": "split",
     "children": [
       {
-        "id": "a0690173751b8f18",
+        "id": "ee3be03443d42992",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "study_note/segger/zuoye3.md",
+            "file": "ubuntu_arrangement/一些配置/git操作.md",
             "mode": "source",
             "source": false
           }
@@ -19,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fb54bea9721bae7e",
+    "id": "c49e77af1d07ffc2",
     "type": "split",
     "children": [
       {
-        "id": "25f13c63fb3549c2",
+        "id": "3c8ba5f5366be1e8",
         "type": "tabs",
         "children": [
           {
-            "id": "f41bff11660e3a4a",
+            "id": "853e32297a232b91",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,26 +35,18 @@
             }
           },
           {
-            "id": "7430faf83716306c",
+            "id": "e3b0aa71cd90efcb",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "npm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "19d01a06e7c80256",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
             }
           }
         ]
@@ -64,24 +56,24 @@
     "width": 300
   },
   "right": {
-    "id": "cdd63b50bab6eb76",
+    "id": "bb077342d0daa673",
     "type": "split",
     "children": [
       {
-        "id": "925ccc302768fb8e",
+        "id": "ea3a083a82bdf704",
         "type": "tabs",
         "children": [
           {
-            "id": "645f819367f1e54f",
+            "id": "fec8baae71d6a42a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/segger/zuoye3.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "ubuntu_arrangement/一些配置/git操作.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -89,40 +81,7 @@
             }
           },
           {
-            "id": "a701aed19e3f2ac0",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "study_note/segger/zuoye3.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "c77ae5e7dcb8adfa",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "3fdfee6dd8d1bac8",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "study_note/segger/zuoye3.md"
-              }
-            }
-          },
-          {
-            "id": "12bea93b16a9abf5",
+            "id": "ef0e7dc80a710bf1",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -130,39 +89,33 @@
             }
           },
           {
-            "id": "487d2aa85632598e",
+            "id": "9dc24ee68e93b6cb",
             "type": "leaf",
             "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "50de3c6f3b1b63f2",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {}
+              "type": "outline",
+              "state": {
+                "file": "ubuntu_arrangement/一些配置/git操作.md"
+              }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 154.7423553466797
+    "width": 300
   },
-  "active": "a0690173751b8f18",
+  "active": "ee3be03443d42992",
   "lastOpenFiles": [
-    "study_note/segger/zuoye2.md",
-    "study_note/segger/zuoye2.pdf",
-    "study_note/segger/zuoye3.md",
-    "ubuntu_arrangement/一些工具安装/github操作.md",
-    "ubuntu_arrangement/一些配置/私人token,ssh,user & root password记录.md",
-    "Dairy/2022-04-09.md",
+    "study_note/riscv.md",
+    "study_note/一生一芯.md",
+    "study_note/支持向量机.md",
     "ubuntu_arrangement/一些工具安装/clash(tizi).md",
-    "study_note/数集/modelsim/zuoye记录.md",
-    "study_note/FPGA.md",
-    "study_note/b站一些笔记.md"
+    "ubuntu_arrangement/一些配置/安装node.js.md",
+    "ubuntu_arrangement/一些工具安装/github教程.md",
+    "conflict-files-obsidian-git.md",
+    "ubuntu_arrangement/一些配置/git操作.md",
+    "README.md",
+    "一些存储信息/罗技键盘快捷键.md"
   ]
 }

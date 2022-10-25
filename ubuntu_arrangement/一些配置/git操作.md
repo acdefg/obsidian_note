@@ -24,7 +24,6 @@ git config --global user.email "ljc512@outllok.com"
 替换的时候不用保留引号
 3. 检查
 ```shell  
->>>>>>> 5ae9acaaeca9f50f245e655a8faf7e8ba113bbb6
 git config user.name 
 git config user.email
 ```
@@ -79,10 +78,10 @@ git init
 
 ```shell
 git remote add origin git@github.com:acdefg/obsidian_note.git
-git push -u origin main
+git branch -M main
 git push -u origin main
 ```
-`git push -u origin main` 改分支名字，可以不改，默认是master，第三句变为`git push -u origin master`
+`git branch -M main` 改分支名字，可以不改，默认是master，第三句变为`git push -u origin master`
 
 ### obsidian使用git备份
 安装obsidian_git插件，这个只是一个自动上下拉的插件，得先按前面的方法配置好远程仓库和本地仓库的链接。
@@ -92,7 +91,7 @@ git push -u origin main
 删除掉已经commit的文件，因为太大了一直导致push失败
 参考链接：先看1，再看2
 1. [Git清理commit中历史提交的大文件 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1536481)
-2. [记一次删除Git记录中的大文件的过程-HollisChuang's Blog](https://www.hollischuang.com/archives/1708)
+2. [记一次删除Git记录中的大文件的过程-HollisChuang's Blog](https://www.hollischuang.com/archives/1708)---看这个就行了
 
 
 ### 解决冲突
