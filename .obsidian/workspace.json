@@ -25,14 +25,78 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user & root password记录.md",
+                "file": "ubuntu_arrangement/一些配置/host，source文件更改.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7dac6198afbd461a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "study_note/支持向量机.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d1042b65fcf5678d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "73d4534646ddd78c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "338c88b782e2e46a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "8e4fe1ff92bc1452",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "db879231c00ed0d9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "dbdfb1f77f1d01a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -78,8 +142,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -99,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user & root password记录.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user & root password记录.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user & root password记录.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -177,17 +240,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f994f183aec9cc84",
+  "active": "dbdfb1f77f1d01a5",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "study_note/支持向量机.md",
+    "ubuntu_arrangement/一些配置/host，source文件更改.md",
     "ubuntu_arrangement/一些配置/git操作.md",
-    "study_note/数集/加法器/32位加法器设计-记录.md",
-    "study_note/物联网期中——移动通信原理综述.md",
-    "riscv.md",
-    "study_note/一生一芯.md",
-    "支持向量机.md",
-    "未命名 1.md",
-    "study_note/数集/modelsim/zuoye.md",
-    "study_note/数集/modelsim/zuoye记录.md",
-    "study_note/segger/zuoye3.md"
+    "ubuntu_arrangement/一些配置/图床设置.md",
+    "ubuntu_arrangement/一些配置/zsh安装和设置.md",
+    "Templates/shell code blocks.md",
+    "Templates/Day planner_official.md",
+    "Templates/周记模板.md",
+    "ubuntu_arrangement/一些配置/私人token,ssh,user & root password记录.md"
   ]
 }

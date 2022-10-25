@@ -32,7 +32,8 @@
 		-   `a`：终止设置并退出
 		-   `q`：退出
 	建议选择 0，因为后面会配置.zshrc
-2. 上面那个可能不成功可以尝试：
+
+2. 上面那个界面可能不成功出现，可以尝试：
 	```shell
 	~$ sudo chsh  
 	[sudo] password for username:  
@@ -41,6 +42,10 @@
     登录 Shell [/bin/tcsh]: /bin/zsh
 	```
 	然后直接输入 `zsh` 就可以得到上面的界面
+
+```ad-note
+建议一直改不了设立了的话，直接安装oh my zsh，自动就进去了，oh my zsh链接不管用就去Github上面复制最新的
+```
 
 3. 安装 oh-my-zsh
 	[oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)make set zsh more easy
@@ -105,7 +110,11 @@ sudo apt-get install zsh-autosuggestions zsh-syntax-highlighting zsh-theme-power
 ```
 theme插件可选，其余两个推荐，一个是命令自动建议，一个是语法高亮，正确为绿色
 键入`vim ~/.zshrc`，最后加入
+<<<<<<< HEAD
 ```
+=======
+```shell
+>>>>>>> 5ae9acaaeca9f50f245e655a8faf7e8ba113bbb6
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```

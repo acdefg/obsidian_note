@@ -31,8 +31,11 @@
 3. https://blog.csdn.net/codeHonghu/article/details/111940656 - good
 
 ## arrangement steps
+
 1. 修改软件源，在 software&updates..，修改命令行复制粘贴快捷键
 2. 改系统配置
+1. 修改软件源，在 software&updates..，在第一页download from，选择other，然后可选best server，完成后踩咯所 修改命令行复制粘贴快捷键，打开terminal->preference->shortcut
+2. 改系统配置，使得不用每次用命令都要输密码[[配置中一些小问题]]
 	```shell
 	sudo gedit /etc/sudoers
 	```
@@ -86,7 +89,7 @@ sudo apt install ibus-clutter
 打开 language support，第一次安装会提示下载，同意即可
 ![300](https://s2.loli.net/2022/05/01/3sOh7xnjtCXRz6i.png)
 
-重启，打开设置
+重启，打开设置，chinese->chinese intelligent pinyin
 ![500](https://s2.loli.net/2022/05/01/n8J2FMjIXcwEP4t.png)
 候选词变成 8 个
 ![](https://s2.loli.net/2022/05/01/X8x3rliuHYpRcqT.png)

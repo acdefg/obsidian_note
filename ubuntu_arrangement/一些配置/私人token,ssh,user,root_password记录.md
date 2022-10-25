@@ -3,13 +3,13 @@ ssms
 ```txt
 ffahQLg9ImZ6kMXEM98YNJqRT1AoCs8D
 ``` 
-(已验证，win11成功)
+(已验证，win11,ubuntu成功)
 
 github
 ```txt
 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
 ```
-(已验证，永久有效)
+(win,ubuntu已验证，永久有效)
 
 
 gitee
@@ -31,6 +31,12 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC23hwCSnkXa5zhUt+iLXvJeFTDFJrAw9ZTjTgS+Nfs
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/ibT7YvvGMlfFln1yBS8zOg7DWumHAgOpJghRwcUJTqXOuY/leO5l7DXj1BZVc8qWBz6rs/tCDGkaEmujQ8c7tLLmYCO+VcyFkQrkZw9CTE7bnk3rInv1FCFWpBUyXykiU9ejO663bsRbbZuiYKHwaUHWp7ZRMlPIiTVMU/89ImrDQ4SlafQYuyIXLCjx1JEaw1tZE14InJsjM5+ncPM+sEbL6cEt3Ilw9dKcukEjHp3DVwU3aTK9IoylfGVjYBHwhzIBx9FPagbZrRPKIe/Y2bQWQ6GbXjhP2goL8GW+P6iurePU37O++OZ7c0H9gHQEzxVUYamyf0C3OMeB19gbPPBJLpSKHNFB3DuesloeSiDJsWc1yBxoPu/XNrr0Zx4JdgTz4gXV5Xh2V4zTa9H7m/CjwO4DJURYLGBWbL/sTt4jmmRlRShhOvqENt5PmFsXgfYd5Q/AbSRbUCwzk7/2JeQK8gMHOOz8ePB3hP1SUYu298dyogVqLOhMlmTZA8s= ljc512@outllok.com
 ```
 >win11 在c:/用户/asus/.ssh下
+
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIk1xBltdcEgY4TpJ9pVSWaNSCG4iUCg/mnuhpkTSEioL0F+qhbupsPaAKt8NMUwtILh9oanh4XZV9dJ1/xeSpIS7uZEh9WN+T+4NDtoPIHbdk2i9bPV3gmDTRCoCo0U5hb8JbcinX22WS5i+b8bTMinhrC4533ldj7blUVc8FTp3UyzvSs6hMZW4+y0j7j1YiBEt8ZCP62+nhb1vrQw0Qm/Z5ZU2OW1Um6cCJ0UeFM+L7gk0rWFhvCEYtJNkq+x1zZC04xKTfuEqJ2FLJ2jbF8qVhUzeAYdoTCM6bHMAXkPinYzMUmcRpZpzvL0GMXT6gTI5PeJwwwPrfZK44sBXAPHii1o0c0cU+jF+AIcqFrKXL62ikeQcGXPDJOb6Ec/We/1ZimoriPEcvPwQ6rTWvi2PPfSWTcUnj0U8b2RpSjP6KUtdvQIpuuok0FOV4eKpPtJQnYVV/ieeCKmJUCz4PaSfCt5yFEd0CcMPEAY3dvmvkGwUdLrx5iYaACEYrwes= ljv0606@outlook.com
+```
+>华硕电脑第三次安装
+> 5ae9acaaeca9f50f245e655a8faf7e8ba113bbb6
 
 ### user passwd
 ```txt

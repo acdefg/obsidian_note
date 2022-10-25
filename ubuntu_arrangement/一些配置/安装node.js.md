@@ -17,6 +17,12 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 将14.x改成任意版本即可
+```shell
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+将16.x改成任意版本即可
+
 第一句添加源，第二句安装
 如没有安装curl，就像我，会报错，按照提示安装即可
 ```
