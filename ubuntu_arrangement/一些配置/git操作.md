@@ -10,8 +10,7 @@ git config --global user.email "youremail"
 ```
 替换的时候不用保留引号
 3. 检查
-```  
-=======
+
 ```shell
 git config --global user.name "yourname" 
 git config --global user.email "youremail"
