@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/一生一芯.md",
+                "file": "study_note/业余/一生一芯.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,8 +23,12 @@
             "id": "f5d915866162259a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "study_note/soi/riscv.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "study_note/soi/riscv.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "study_note/soi/riscv.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "study_note/soi/riscv.md"
+              }
             }
           },
           {
@@ -168,17 +176,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f41bff11660e3a4a",
+  "active": "f5d915866162259a",
   "lastOpenFiles": [
-    "study_note/一生一芯.md",
+    "study_note/未命名.md",
+    "study_note/业余/一生一芯.md",
     "study_note/作业/物联网期中——移动通信原理综述.md",
-    "study_note/计算机组成原理.md",
+    "study_note/业余/计算机组成原理.md",
     "study_note/业余/计算机科学导论.md",
     "study_note/作业/集成电路前沿技术导论.md",
     "study_note/复微杯比赛.md",
-    "study_note/b站一些笔记.md",
+    "study_note/业余/b站一些笔记.md",
     "study_note/支持向量机.md",
-    "ubuntu_arrangement/一些配置/git操作.md",
-    "ubuntu_arrangement/一些工具安装/github教程.md"
+    "ubuntu_arrangement/一些配置/git操作.md"
   ]
 }
