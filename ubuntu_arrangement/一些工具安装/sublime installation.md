@@ -1,13 +1,3 @@
-### 参考链接
-[Github 简明教程 | 菜鸟教程](https://www.runoob.com/w3cnote/git-guide.html
-[Sublime Text安装与配置教程 | 韦阳的博客](https://godweiyang.com/2017/10/02/sublime/)
-[Fetching Title#ty7c](https://www.liaoxuefeng.com/wiki/896043488029600)
-
-### github installation
-新电脑要先下载github
-全选默认就好了
-
-### sublime installation
 去官网下载：[Download - Sublime Text](http://www.sublimetext.com/3)
 记得选这个，添加右键快捷键
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20220920230719.png)
@@ -17,3 +7,5 @@
 安装包：verilog[在Sublime Text 3 中配置 Verilog语法环境_vela_yang的博客-CSDN博客](https://blog.csdn.net/Vela_yang/article/details/40678423?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-40678423-blog-45749837.pc_relevant_multi_platform_whitelistv4&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-40678423-blog-45749837.pc_relevant_multi_platform_whitelistv4&utm_relevant_index=2)
 iverilog:[一文学会使用全球第四大数字芯片仿真器iverilog - 知乎](https://zhuanlan.zhihu.com/p/148795858)(ubuntu参考配置)
 asm（汇编）:[汇编语言编辑器：Sublime text3_XMJ2002的博客-CSDN博客_汇编编辑器](https://blog.csdn.net/m0_49448277/article/details/116772403)
+
+[Sublime Text安装与配置教程 | 韦阳的博客](https://godweiyang.com/2017/10/02/sublime/)

@@ -157,14 +157,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ce9327848e2e72ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 16
       }
     ],
     "direction": "vertical"
@@ -230,7 +242,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -247,7 +259,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "ubuntu_arrangement/一些工具安装/github教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -270,7 +282,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "ubuntu_arrangement/一些工具安装/github教程.md"
               }
             }
           },
@@ -308,17 +320,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "9d627ca28ce64cc3",
+  "active": "ce9327848e2e72ba",
   "lastOpenFiles": [
+    "ubuntu_arrangement/一些工具安装/clash(tizi).md",
+    "ubuntu_arrangement/一些工具安装/github教程.md",
+    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+    "ubuntu_arrangement/一些工具安装/sublime installation.md",
+    "ubuntu_arrangement/一些配置/git操作.md",
+    "ubuntu_arrangement/su- 和 sudo区别.md",
+    "ubuntu_arrangement/ubuntu安装记录.md",
     "conflict-files-obsidian-git.md",
     "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
-    "ubuntu_arrangement/一些配置/git操作.md",
-    "ubuntu_arrangement/一些工具安装/Appimage格式文件安装.md",
-    "ubuntu_arrangement/ubuntu安装记录.md",
-    "Templates/日记模板.md",
-    "ubuntu_arrangement/一些配置/安装node.js.md",
-    "ubuntu_arrangement/一些配置/图床设置.md",
-    "ubuntu_arrangement/一些配置/zsh安装和设置.md",
-    "Pasted image 20220501121023.png.md"
+    "ubuntu_arrangement/一些工具安装/Appimage格式文件安装.md"
   ]
 }
