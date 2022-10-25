@@ -43,3 +43,7 @@ gedit ~/.ssh/id_rsa.pub
 ![](https://s2.loli.net/2022/05/03/fqpDbIJ81S5ej9W.png)
 ![](https://s2.loli.net/2022/05/03/McjYFSmEKyhzwg6.png)
 添加，确认一下就可以了
+
+
+[Git: ‘LF will be replaced by CRLF the next time Git touches it‘ 问题解决与思考_Babylonxun的博客-CSDN博客](https://blog.csdn.net/Babylonxun/article/details/126598477)
+
