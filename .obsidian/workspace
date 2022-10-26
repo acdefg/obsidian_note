@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "study_note/业余/一生一芯.md",
+            "file": "study_note/soi/riscv.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/业余/一生一芯.md",
+                "file": "study_note/soi/riscv.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/业余/一生一芯.md"
+                "file": "study_note/soi/riscv.md"
               }
             }
           },
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/业余/一生一芯.md",
+                "file": "study_note/soi/riscv.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,10 +146,10 @@
   },
   "active": "ee3be03443d42992",
   "lastOpenFiles": [
+    "study_note/业余/一生一芯.md",
     "Templates/ad-note.md",
     "Templates/Daliy routine.md",
     "Templates/shell code blocks.md",
-    "study_note/业余/一生一芯.md",
     "study_note/一生一芯.md",
     "study_note/riscv.md",
     "ubuntu_arrangement/一些配置/git操作.md",
