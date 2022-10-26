@@ -146,15 +146,15 @@
   },
   "active": "ee3be03443d42992",
   "lastOpenFiles": [
+    "Templates/ad-note.md",
+    "Templates/Daliy routine.md",
+    "Templates/shell code blocks.md",
+    "study_note/业余/一生一芯.md",
     "study_note/一生一芯.md",
     "study_note/riscv.md",
     "ubuntu_arrangement/一些配置/git操作.md",
     "study_note/支持向量机.md",
     "ubuntu_arrangement/一些工具安装/clash(tizi).md",
-    "ubuntu_arrangement/一些配置/安装node.js.md",
-    "ubuntu_arrangement/一些工具安装/github教程.md",
-    "conflict-files-obsidian-git.md",
-    "README.md",
-    "一些存储信息/罗技键盘快捷键.md"
+    "ubuntu_arrangement/一些配置/安装node.js.md"
   ]
 }
