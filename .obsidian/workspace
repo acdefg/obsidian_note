@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ubuntu_arrangement/一些配置/git操作.md",
+            "file": "study_note/一生一芯.md",
             "mode": "source",
             "source": false
           }
@@ -48,6 +48,14 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "ecaf8278f915be3b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
@@ -69,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/git操作.md",
+                "file": "study_note/一生一芯.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -94,8 +102,39 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/git操作.md"
+                "file": "study_note/一生一芯.md"
               }
+            }
+          },
+          {
+            "id": "34b494da20cad73c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "study_note/一生一芯.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "69b38a746ae00fee",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ae921f08804eae04",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
             }
           }
         ],
@@ -108,13 +147,13 @@
   "active": "ee3be03443d42992",
   "lastOpenFiles": [
     "study_note/riscv.md",
+    "ubuntu_arrangement/一些配置/git操作.md",
     "study_note/一生一芯.md",
     "study_note/支持向量机.md",
     "ubuntu_arrangement/一些工具安装/clash(tizi).md",
     "ubuntu_arrangement/一些配置/安装node.js.md",
     "ubuntu_arrangement/一些工具安装/github教程.md",
     "conflict-files-obsidian-git.md",
-    "ubuntu_arrangement/一些配置/git操作.md",
     "README.md",
     "一些存储信息/罗技键盘快捷键.md"
   ]
