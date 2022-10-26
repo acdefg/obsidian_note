@@ -11,3 +11,11 @@ risc-v参阅平台
 [Site Unreachable](https://github.com/riscv-collab/riscv-gnu-toolchain)
 配置参考
 [PULPino 在 Modelsim 下的软件模拟 - 知乎](https://zhuanlan.zhihu.com/p/470281404)
+
+好东西，啥都有risc，pulp介绍
+[Page Not Found · GitBook (Legacy)](https://cnrv.gitbooks.io/riscv-soc-book/content/ch8/sec2-PULPino_overview.html)
+
+cmake教程
+[CMake教程（一） - 知乎](https://zhuanlan.zhihu.com/p/119426899)
+cmake官方教程
+[CMake Tutorial — CMake 3.17.5 Documentation](https://cmake.org/cmake/help/v3.17/guide/tutorial/index.html#adding-system-introspection-step-5)
