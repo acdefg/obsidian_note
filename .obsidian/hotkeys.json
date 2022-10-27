@@ -7,5 +7,22 @@
       ],
       "key": "Z"
     }
+  ],
+  "templater-obsidian:Templates/shell code blocks.md": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
+    }
+  ],
+  "templater-obsidian:Templates/ad-note.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "A"
+    }
   ]
 }
