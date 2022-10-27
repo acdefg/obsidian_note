@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "0227f5e6da345bc5",
+        "id": "ed1288c970c0c528",
         "type": "tabs",
         "children": [
           {
-            "id": "3a43ba9d8384bca9",
+            "id": "f415eb2d9d80914f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/业余/一生一芯.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f5d915866162259a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
+                "file": "study_note/作业/树莓派.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
+                "file": "study_note/作业/树莓派.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
+                "file": "study_note/作业/树莓派.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md"
+                "file": "study_note/作业/树莓派.md"
               }
             }
           },
@@ -173,20 +160,17 @@
     "direction": "horizontal",
     "width": 154.7423553466797
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "f5d915866162259a",
+  "active": "f415eb2d9d80914f",
   "lastOpenFiles": [
-    "study_note/soi/riscv.md",
-    "study_note/未命名.md",
     "study_note/业余/一生一芯.md",
     "study_note/作业/物联网期中——移动通信原理综述.md",
-    "study_note/业余/计算机组成原理.md",
-    "study_note/业余/计算机科学导论.md",
-    "study_note/作业/集成电路前沿技术导论.md",
-    "study_note/复微杯比赛.md",
-    "study_note/业余/b站一些笔记.md",
-    "study_note/支持向量机.md"
+    "Dairy/2022-04-17.md",
+    "Dairy/2022-09-12.md",
+    "Dairy/2022-04-29.md",
+    "Dairy/2022-04-15.md",
+    "Dairy/2022-04-08.md",
+    "study_note/作业/树莓派.md",
+    "study_note/soi/riscv.md",
+    "study_note/未命名.md"
   ]
 }
