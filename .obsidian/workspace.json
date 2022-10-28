@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/树莓派.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/树莓派.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/树莓派.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/soi/riscv.md"
+                "file": "study_note/作业/树莓派.md"
               }
             }
           },
@@ -162,9 +162,9 @@
   },
   "active": "f415eb2d9d80914f",
   "lastOpenFiles": [
+    "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
     "study_note/作业/树莓派.md",
-    "study_note/soi/riscv.md",
     "study_note/业余/一生一芯.md",
     "study_note/作业/物联网期中——移动通信原理综述.md",
     "Dairy/2022-04-17.md",
