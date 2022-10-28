@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f415eb2d9d80914f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/作业/树莓派.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cfa1ad273f9c972d",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
