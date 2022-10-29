@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221029195353.png" style="zoom: 67%;" />     <img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221029194813.png" style="zoom: 43%;" />
+
 FSM1
 ```verilog
 `timescale 1ns/1ns 
@@ -47,6 +49,29 @@ output wire Z1 ,
 	assign Z2 = state == ST3; 
 endmodule
 ```
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221029194813.png)
 
 FSM3
+```verilog
+module fsm3 ( 
+input wire clk , 
+			reset , 
+			x , 
+output wire Z1 , 
+			Z2 
+			); 
+	reg [2: 0] x_dly;
+	always @(posedge clk, negedge reset) 
+		if(!reset) 
+			x_dly <= 0; 
+		else begin 
+			x_dly[0] <= x; 
+			x_dly[1] <= x_dly[0]; 
+			x_dly[2] <= x_dly[1] | x_dly[2]; 
+		end 
+	assign Z1 = x_dly[0] & !x_dly[2]; 
+	assign Z2 = x_dly[2] ; 
+endmodule
+```
+
+
+

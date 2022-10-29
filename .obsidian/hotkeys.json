@@ -24,5 +24,13 @@
       ],
       "key": "A"
     }
+  ],
+  "templater-obsidian:Templates/image.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
   ]
 }
