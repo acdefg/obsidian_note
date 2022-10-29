@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cfa1ad273f9c972d",
+            "id": "65c284956c27dd8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/数集/序列检测.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/数集/序列检测.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/soi/riscv.md",
+                "file": "study_note/作业/数集/序列检测.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/soi/riscv.md"
+                "file": "study_note/作业/数集/序列检测.md"
               }
             }
           },
@@ -160,11 +160,11 @@
     "direction": "horizontal",
     "width": 154.7423553466797
   },
-  "active": "cfa1ad273f9c972d",
+  "active": "65c284956c27dd8d",
   "lastOpenFiles": [
+    "study_note/soi/riscv.md",
     "study_note/作业/树莓派.md",
     "study_note/作业/log.md",
-    "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
     "study_note/业余/一生一芯.md",
     "study_note/作业/物联网期中——移动通信原理综述.md",
