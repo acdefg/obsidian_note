@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
+                "file": "study_note/作业/集成电路前沿技术导论.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "输美派",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
+                "file": "study_note/作业/集成电路前沿技术导论.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md",
+                "file": "study_note/作业/集成电路前沿技术导论.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/物联网期中——移动通信原理综述.md"
+                "file": "study_note/作业/集成电路前沿技术导论.md"
               }
             }
           },
@@ -173,20 +174,17 @@
     "direction": "horizontal",
     "width": 154.7423553466797
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "f5d915866162259a",
+  "active": "7430faf83716306c",
   "lastOpenFiles": [
+    "study_note/支持向量机.md",
+    "study_note/作业/物联网期中——移动通信原理综述.md",
+    "study_note/作业/集成电路前沿技术导论.md",
     "study_note/soi/riscv.md",
     "study_note/未命名.md",
     "study_note/业余/一生一芯.md",
-    "study_note/作业/物联网期中——移动通信原理综述.md",
     "study_note/业余/计算机组成原理.md",
     "study_note/业余/计算机科学导论.md",
-    "study_note/作业/集成电路前沿技术导论.md",
     "study_note/复微杯比赛.md",
-    "study_note/业余/b站一些笔记.md",
-    "study_note/支持向量机.md"
+    "study_note/业余/b站一些笔记.md"
   ]
 }
