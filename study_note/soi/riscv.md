@@ -24,3 +24,6 @@ cmake官方教程
 工具链搭建
 ⚠️upload failed, check dev console
 
+指令集的简单介绍，初学可以看
+[计算机系统基础（五）之RISC-V指令集_深度学习的学习僧的博客-CSDN博客_risc-v指令集](https://blog.csdn.net/qq_38915354/article/details/115696721)
+

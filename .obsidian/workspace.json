@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/树莓派.md",
+                "file": "study_note/soi/riscv.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/树莓派.md",
+                "file": "study_note/soi/riscv.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/树莓派.md",
+                "file": "study_note/soi/riscv.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/树莓派.md"
+                "file": "study_note/soi/riscv.md"
               }
             }
           },
@@ -162,8 +162,8 @@
   },
   "active": "cfa1ad273f9c972d",
   "lastOpenFiles": [
-    "study_note/作业/log.md",
     "study_note/作业/树莓派.md",
+    "study_note/作业/log.md",
     "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
     "study_note/业余/一生一芯.md",
