@@ -73,5 +73,48 @@ output wire Z1 ,
 endmodule
 ```
 
+```verilog
+module FSM_EXP(clk,rst,sin,cout,cstout);
+input clk;                                  //状态机时钟
+input rst;                                  //复位信号  
+input [0:1] sin;                            //来自外部的状态机控制信号
+output [4:0] cstout;                        //状态机对外部发出的控制信号信号输出
+output [3:0] cout;
+reg [3:0] cout;
+assign cstout=cst;
+parameter s0=0,s1=1,s2=2,s3=3,s4=4;         //定义状态参数
+reg[4:0] cst,nst;                           //当前状态、下一状态
+always@(posedge clk or negedge rst)         //主控时序进程
+begin
+	if(!rst) cst<=s0;                       //复位有效时，下一状态进入s0
+	else cst<=nst; 
+end
+always@(cst or sin)begin                    //主控组合进程 
+	case(cst)
+		s0:begin cout<=5;
+			if(sin==2'b00) nst<=s0;
+			else nst<=s1;
+			end			
+		s1:begin cout<=8;
+			if(sin==2'b01) nst<=s1;
+			else nst<=s2;
+			end 			
+		s2:begin cout<=12;
+			if(sin==2'b10) nst<=s2;
+			else nst<=s3;
+			end		
+		s3:begin cout<=14;
+			if(sin==2'b11) nst<=s3;
+			else nst<=s4;
+			end		
+		s4:begin cout<=9;
+			nst<=s0;
+			end
+		default:nst<=s0;	//现太若未出现以上各太，返回初态s0
+		endcase
+	end
+endmodule
+```
+
 
 
