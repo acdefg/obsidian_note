@@ -11,12 +11,8 @@
             "id": "b9d8d06c51fccd3d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/作业/树莓派.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/树莓派.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/树莓派.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "study_note/作业/树莓派.md"
-              }
+              "state": {}
             }
           },
           {
@@ -162,15 +154,15 @@
   },
   "active": "b9d8d06c51fccd3d",
   "lastOpenFiles": [
-    "study_note/作业/log.md",
-    "study_note/作业/树莓派.md",
-    "study_note/作业/物联网期中——移动通信原理综述.md",
-    "study_note/作业/数集/序列检测/序列检测.md",
-    "Templates/image.md",
-    "study_note/作业/数集/序列检测/log.md",
+    "study_note/作业/segger/links.md",
+    "study_note/作业/segger/zuoye3.md",
+    "study_note/作业/segger/zuoye1.md",
+    "study_note/作业/segger/zuoye2.md",
+    "study_note/作业/segger/zuoye2.pdf",
+    "study_note/郭老师组会/支持向量机.md",
     "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
-    "study_note/业余/一生一芯.md",
-    "Dairy/2022-04-17.md"
+    "study_note/作业/集成电路前沿技术导论.md",
+    "study_note/作业/物联网期中——移动通信原理综述.md"
   ]
 }
