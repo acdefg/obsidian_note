@@ -20,7 +20,7 @@
   "templater-obsidian:Templates/ad-note.md": [
     {
       "modifiers": [
-        "Mod"
+        "Shift"
       ],
       "key": "A"
     }
@@ -120,6 +120,32 @@
         "Shift"
       ],
       "key": "Tab"
+    }
+  ],
+  "editor:unfold-all": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "A"
+    }
+  ],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "."
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": ","
     }
   ]
 }
