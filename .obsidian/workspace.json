@@ -13,11 +13,36 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/业余/计算机组成原理.md",
-                "mode": "preview",
+                "file": "entertain/Pr.md",
+                "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "ee94d6b0ba8d0e01"
+          }
+        ]
+      },
+      {
+        "id": "5eeeb1d18f7316d3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "78d313c934eb189f",
+            "type": "leaf",
+            "state": {
+              "type": "media-view",
+              "state": {
+                "info": {
+                  "host": 1,
+                  "id": "BV1d7411u7ux/",
+                  "src": "https://www.bilibili.com/video/BV1d7411u7ux/?vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7",
+                  "iframe": "https://player.bilibili.com/player.html?bvid=BV1d7411u7ux/&high_quality=1&danmaku=0",
+                  "hash": ""
+                },
+                "currentTime": 214.765882
+              }
+            },
+            "group": "ee94d6b0ba8d0e01"
           }
         ]
       }
@@ -70,7 +95,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -86,7 +112,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/业余/计算机组成原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +128,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu_arrangement/业余/计算机组成原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +149,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ubuntu_arrangement/业余/计算机组成原理.md"
-              }
+              "state": {}
             }
           },
           {
@@ -154,24 +176,24 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 154.7423553466797
+    "width": 206.5,
+    "collapsed": true
   },
-  "active": "1d66914a701bedfa",
+  "active": "78d313c934eb189f",
   "lastOpenFiles": [
+    "entertain/Pr.md",
+    "ubuntu_arrangement/业余/计算机组成原理.md",
     "ubuntu_arrangement/业余/b站一些笔记.md",
     "Dairy/2022-04-15.md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
-    "entertain/Pr.md",
     "study_note/作业/嵌入式/zuoye3.md",
     "study_note/作业/集成电路前沿技术导论.md",
     "study_note/作业/嵌入式/zuoye2.md",
     "study_note/作业/嵌入式/zuoye1.md",
-    "study_note/作业/嵌入式/links.md",
-    "study_note/作业/嵌入式/软中断.md"
+    "study_note/作业/嵌入式/links.md"
   ]
 }
