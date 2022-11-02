@@ -66,6 +66,7 @@ Or use the command palette and search "Advanced Tables". There are many commands
 - https://github.com/aidenlx/mx-bili-plugin - 上面插件的bilibili支持
 从release中，下载除source code以外的js、json文件，分别作为两个插件进行安装
 在阅读模式点击视频链接。
+
 ##### 5. [admonition](https://github.com/valentine195/obsidian-admonition)
 各种块插入，一些设置的代码块，丰富文本样式
 - Options
