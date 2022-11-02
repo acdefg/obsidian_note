@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/数集/加法器/32位加法器设计-记录.md",
+                "file": "study_note/作业/数集/modelsim/zuoye记录.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/数集/加法器/32位加法器设计-记录.md",
+                "file": "study_note/作业/数集/modelsim/zuoye记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/数集/加法器/32位加法器设计-记录.md",
+                "file": "study_note/作业/数集/modelsim/zuoye记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/数集/加法器/32位加法器设计-记录.md"
+                "file": "study_note/作业/数集/modelsim/zuoye记录.md"
               }
             }
           },
@@ -144,9 +144,25 @@
               "type": "todo",
               "state": {}
             }
+          },
+          {
+            "id": "abbaf34b312b50f5",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "7e85c631cc03f8b8",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
@@ -155,15 +171,15 @@
   },
   "active": "1d66914a701bedfa",
   "lastOpenFiles": [
+    "study_note/作业/数集/modelsim/zuoye.md",
+    "study_note/作业/数集/序列检测/序列检测.md",
+    "study_note/作业/数集/序列检测/log.md",
+    "study_note/作业/数集/加法器/32位加法器设计-记录.md",
     "ubuntu_arrangement/一些配置/git操作.md",
     "Dairy/2022-04-08.md",
     "ubuntu_arrangement/一些工具安装/sublime installation.md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "entertain/Pr.md",
-    "ubuntu_arrangement/业余/计算机组成原理.md",
-    "ubuntu_arrangement/业余/b站一些笔记.md",
-    "Dairy/2022-04-15.md",
-    "study_note/作业/嵌入式/zuoye3.md",
-    "study_note/作业/集成电路前沿技术导论.md"
+    "ubuntu_arrangement/业余/计算机组成原理.md"
   ]
 }
