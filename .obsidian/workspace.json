@@ -11,11 +11,9 @@
             "id": "1d66914a701bedfa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "study_note/作业/数集/modelsim/zuoye记录.md",
-                "mode": "source",
-                "source": true
+                "file": "kanban/未命名看板.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/数集/modelsim/zuoye记录.md",
+                "file": "kanban/未命名看板.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/数集/modelsim/zuoye记录.md",
+                "file": "kanban/未命名看板.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/数集/modelsim/zuoye记录.md"
+                "file": "kanban/未命名看板.md"
               }
             }
           },
@@ -171,6 +169,7 @@
   },
   "active": "1d66914a701bedfa",
   "lastOpenFiles": [
+    "study_note/作业/数集/modelsim/zuoye记录.md",
     "study_note/作业/数集/modelsim/zuoye.md",
     "study_note/作业/数集/序列检测/序列检测.md",
     "study_note/作业/数集/序列检测/log.md",
@@ -179,7 +178,6 @@
     "Dairy/2022-04-08.md",
     "ubuntu_arrangement/一些工具安装/sublime installation.md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
-    "entertain/Pr.md",
-    "ubuntu_arrangement/业余/计算机组成原理.md"
+    "entertain/Pr.md"
   ]
 }
