@@ -1,17 +1,11 @@
 [
   "templater-obsidian",
   "obsidian-tasks-plugin",
-  "table-editor-obsidian",
-  "obsidian-annotator",
   "obsidian-auto-link-title",
-  "calendar",
   "obsidian-checklist-plugin",
   "code-block-copy",
   "obsidian-cursor-location-plugin",
-  "dataview",
-  "obsidian-day-planner",
   "easy-typing-obsidian",
-  "obsidian-emoji-toolbar",
   "obsidian-enhancing-mindmap",
   "obsidian-excalidraw-plugin",
   "obsidian-hotkeys-for-specific-files",
@@ -26,5 +20,6 @@
   "obsidian-admonition",
   "mx-bili-plugin",
   "media-extended",
-  "shortcuts-extender"
+  "shortcuts-extender",
+  "table-editor-obsidian"
 ]

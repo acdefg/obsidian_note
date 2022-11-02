@@ -8,5 +8,8 @@
 ## 调色
 [Pr最详细视频调色教程，从零到调色大师！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1d7411u7ux/?vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 
-[04:41](https://www.bilibili.com/video/BV1d7411u7ux/?vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=281.176476)
+#### 左边 lumetri 范围介绍
+直方图：
+[04:46](https://www.bilibili.com/video/BV1d7411u7ux/?vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=286.732018)
+
 

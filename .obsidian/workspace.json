@@ -13,36 +13,11 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "entertain/Pr.md",
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "ee94d6b0ba8d0e01"
-          }
-        ]
-      },
-      {
-        "id": "5eeeb1d18f7316d3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "78d313c934eb189f",
-            "type": "leaf",
-            "state": {
-              "type": "media-view",
-              "state": {
-                "info": {
-                  "host": 1,
-                  "id": "BV1d7411u7ux/",
-                  "src": "https://www.bilibili.com/video/BV1d7411u7ux/?vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7",
-                  "iframe": "https://player.bilibili.com/player.html?bvid=BV1d7411u7ux/&high_quality=1&danmaku=0",
-                  "hash": ""
-                },
-                "currentTime": 214.765882
-              }
-            },
-            "group": "ee94d6b0ba8d0e01"
+            }
           }
         ]
       }
@@ -73,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bili",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,13 +65,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -112,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,15 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
-            }
-          },
-          {
-            "id": "12bea93b16a9abf5",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
+              "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
+              }
             }
           },
           {
@@ -169,21 +138,22 @@
             }
           },
           {
-            "id": "50de3c6f3b1b63f2",
+            "id": "7ad1fde003a415af",
             "type": "leaf",
             "state": {
               "type": "todo",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
     "width": 206.5,
     "collapsed": true
   },
-  "active": "78d313c934eb189f",
+  "active": "1d66914a701bedfa",
   "lastOpenFiles": [
     "entertain/Pr.md",
     "ubuntu_arrangement/业余/计算机组成原理.md",
