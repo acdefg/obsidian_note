@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "Dairy/2022-04-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "Dairy/2022-04-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "Dairy/2022-04-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
+                "file": "Dairy/2022-04-08.md"
               }
             }
           },
@@ -155,15 +155,15 @@
   },
   "active": "1d66914a701bedfa",
   "lastOpenFiles": [
+    "ubuntu_arrangement/一些工具安装/sublime installation.md",
+    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "entertain/Pr.md",
     "ubuntu_arrangement/业余/计算机组成原理.md",
     "ubuntu_arrangement/业余/b站一些笔记.md",
     "Dairy/2022-04-15.md",
-    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "study_note/作业/嵌入式/zuoye3.md",
     "study_note/作业/集成电路前沿技术导论.md",
     "study_note/作业/嵌入式/zuoye2.md",
-    "study_note/作业/嵌入式/zuoye1.md",
-    "study_note/作业/嵌入式/links.md"
+    "study_note/作业/嵌入式/zuoye1.md"
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "SelectionEnhance": true,
+  "SelectionEnhance": false,
   "IntrinsicSymbolPairs": true,
   "BaseObEditEnhance": true,
-  "FW2HWEnhance": true,
+  "FW2HWEnhance": false,
   "AutoFormat": true,
   "ExcludeFiles": "",
   "ChineseEnglishSpace": true,
@@ -15,7 +15,7 @@
   "InlineFormulaSpaceMode": 1,
   "InlineLinkSpaceMode": 1,
   "InlineLinkSmartSpace": true,
-  "UserDefinedRegSwitch": true,
+  "UserDefinedRegSwitch": false,
   "UserDefinedRegExp": ":\\w*:\n{{.*?}}",
   "debug": false,
   "userSelRepRuleTrigger": [

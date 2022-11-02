@@ -21,5 +21,8 @@
   "mx-bili-plugin",
   "media-extended",
   "shortcuts-extender",
-  "table-editor-obsidian"
+  "table-editor-obsidian",
+  "number-headings-obsidian",
+  "obsidian-code-block-enhancer",
+  "obsidian-excel-to-markdown-table"
 ]
