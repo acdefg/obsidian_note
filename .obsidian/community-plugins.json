@@ -24,5 +24,7 @@
   "number-headings-obsidian",
   "obsidian-code-block-enhancer",
   "obsidian-excel-to-markdown-table",
-  "breadcrumbs"
+  "breadcrumbs",
+  "dataview",
+  "quickadd"
 ]
