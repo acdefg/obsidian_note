@@ -4,45 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e28774e8783779bd",
+        "id": "f65b7881c8b82750",
         "type": "tabs",
         "children": [
           {
-            "id": "64efaffd50bce627",
+            "id": "b69d8d86c6a829c5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "group": "eb4a03f56cc1cd6f"
-          }
-        ]
-      },
-      {
-        "id": "a6822145e0dcd6f3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "998d4465bbeb9c6e",
-            "type": "leaf",
-            "state": {
-              "type": "media-view",
-              "state": {
-                "info": {
-                  "host": 1,
-                  "id": "BV1mb4y1y7R6/",
-                  "src": "https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=414.848546",
-                  "iframe": "https://player.bilibili.com/player.html?bvid=BV1mb4y1y7R6/&high_quality=1&danmaku=0",
-                  "hash": "#t=414.848546"
-                },
-                "currentTime": 452.340796
-              }
-            },
-            "group": "eb4a03f56cc1cd6f"
+              "type": "empty",
+              "state": {}
+            }
           }
         ]
       }
@@ -160,7 +131,7 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "998d4465bbeb9c6e",
+  "active": "b69d8d86c6a829c5",
   "lastOpenFiles": [
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "kanban/task_kanban.md",

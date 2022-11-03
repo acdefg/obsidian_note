@@ -190,6 +190,7 @@ quickadd setting：
 todo：[06:54](https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=414.848546)
 
 
+
 #### 复杂使用集合
 ##### 1. search(obsidian system)
 https://help.obsidian.md/Plugins/Search -> documents

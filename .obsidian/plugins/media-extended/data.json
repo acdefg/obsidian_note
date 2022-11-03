@@ -21,7 +21,7 @@
     "captions": false,
     "settings": true,
     "pip": false,
-    "fullscreen": false
+    "fullscreen": true
   },
   "embedMaxHeightMobile": "20vh",
   "embedMinWidthMobile": "200px",
