@@ -11,11 +11,9 @@
             "id": "489ea960eb03c960",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
-                "mode": "preview",
-                "source": false
+                "file": "kanban/task_kanban.md"
               }
             }
           }
@@ -69,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5,
-    "collapsed": true
+    "width": 252.5
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -86,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
+                "file": "kanban/task_kanban.md"
               }
             }
           },
@@ -96,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "kanban/task_kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,8 +128,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -141,8 +137,8 @@
   },
   "active": "489ea960eb03c960",
   "lastOpenFiles": [
-    "kanban/task_kanban.md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+    "kanban/task_kanban.md",
     "Templates/image.md",
     "study_note/作业/数集/modelsim/zuoye记录.md",
     "study_note/作业/数集/modelsim/zuoye.md",

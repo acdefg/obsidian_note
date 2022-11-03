@@ -6,6 +6,7 @@ kanban-plugin: basic
 
 ## Todo
 
+- [ ] - [ ] jj @{2022-11-05}
 
 
 ## Record
@@ -23,4 +24,4 @@ kanban-plugin: basic
 ```
 {"kanban-plugin":"basic"}
 ```
-%%- [ ] asss
+%%
