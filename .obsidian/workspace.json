@@ -69,106 +69,33 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 252.5,
+    "collapsed": true
   },
   "right": {
     "id": "cdd63b50bab6eb76",
     "type": "split",
     "children": [
       {
-        "id": "925ccc302768fb8e",
+        "id": "f4ca8845bfca3730",
         "type": "tabs",
         "children": [
           {
-            "id": "645f819367f1e54f",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "a701aed19e3f2ac0",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "c77ae5e7dcb8adfa",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "3fdfee6dd8d1bac8",
+            "id": "91d584664c2198eb",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
-              }
-            }
-          },
-          {
-            "id": "487d2aa85632598e",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "7ad1fde003a415af",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {}
-            }
-          },
-          {
-            "id": "abbaf34b312b50f5",
-            "type": "leaf",
-            "state": {
-              "type": "BC-matrix",
-              "state": {}
-            }
-          },
-          {
-            "id": "7e85c631cc03f8b8",
-            "type": "leaf",
-            "state": {
-              "type": "BC-tree",
               "state": {}
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 206.5,
+    "collapsed": true
   },
-  "active": "7e85c631cc03f8b8",
+  "active": "1d66914a701bedfa",
   "lastOpenFiles": [
     "kanban/task_kanban.md",
     "Templates/image.md",

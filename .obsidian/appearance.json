@@ -1,6 +1,7 @@
 {
   "baseFontSize": 14,
-  "cssTheme": "Atom",
-  "translucency": false,
-  "accentColor": ""
+  "cssTheme": "Obsidian Nord",
+  "translucency": true,
+  "accentColor": "#2d7786",
+  "showViewHeader": true
 }
