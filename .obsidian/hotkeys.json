@@ -184,5 +184,29 @@
       ],
       "key": "E"
     }
+  ],
+  "templater-obsidian:Templates/插入/ad-note.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "A"
+    }
+  ],
+  "templater-obsidian:Templates/插入/image.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "templater-obsidian:Templates/插入/shell code blocks.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
+    }
   ]
 }
