@@ -15,16 +15,16 @@
       },
       "format": {
         "enabled": true,
-        "format": "{{VALUE:Todo}}"
+        "format": "- [ ] {{VALUE:Todo}}"
       },
       "insertAfter": {
         "enabled": true,
         "after": "## Todo",
         "insertAtEnd": true,
-        "createIfNotFound": true,
+        "createIfNotFound": false,
         "createIfNotFoundLocation": "bottom"
       },
-      "prepend": true,
+      "prepend": false,
       "task": true,
       "openFileInNewTab": {
         "enabled": true,
