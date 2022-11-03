@@ -189,8 +189,6 @@ quickadd setting：
 [在obsidian中如何使用QuickAdd和Kanban插件来管理日程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 todo：[06:54](https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=414.848546)
 
-
-
 #### 待学习使用集合
 ##### 1. search(obsidian system)
 https://help.obsidian.md/Plugins/Search -> documents
@@ -200,6 +198,8 @@ https://help.obsidian.md/Plugins/Search -> documents
   Query them and mark them as done wherever you want. 
 	Supports due dates, recurring tasks (repetition), done dates, sub-set of checklist items, and filtering.
 - Ctrl+T新建任务或者 -[ ]
+
+[【效率办公】Obsidain插件之Tasks-任务管理利器 - 知乎](https://zhuanlan.zhihu.com/p/440969902)
 ##### - usage
 
 ##### - sorting
