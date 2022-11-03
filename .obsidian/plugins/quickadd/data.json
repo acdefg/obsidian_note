@@ -15,7 +15,7 @@
       },
       "format": {
         "enabled": true,
-        "format": "- [ ] {{VALUE:Todo}}"
+        "format": "- [ ] {{VALUE:Todo}}@{{DATE:YYYY-MM-DD}}@@{{DATE:HH:mm}}"
       },
       "insertAfter": {
         "enabled": true,
