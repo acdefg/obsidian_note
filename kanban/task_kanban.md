@@ -23,4 +23,4 @@ kanban-plugin: basic
 ```
 {"kanban-plugin":"basic"}
 ```
-%%
+%%- [ ] asss
