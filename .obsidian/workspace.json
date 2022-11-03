@@ -17,32 +17,7 @@
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "e724be66f3bc7f50"
-          }
-        ]
-      },
-      {
-        "id": "9cb33ae6e3e6ce2b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b4ed1f36920f9702",
-            "type": "leaf",
-            "state": {
-              "type": "media-view",
-              "state": {
-                "info": {
-                  "host": 1,
-                  "id": "BV1mb4y1y7R6/",
-                  "src": "https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7",
-                  "iframe": "https://player.bilibili.com/player.html?bvid=BV1mb4y1y7R6/&high_quality=1&danmaku=0",
-                  "hash": ""
-                },
-                "currentTime": 414.848546
-              }
-            },
-            "group": "e724be66f3bc7f50"
+            }
           }
         ]
       }
@@ -110,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
+              }
             }
           },
           {
@@ -119,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +138,7 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "b4ed1f36920f9702",
+  "active": "1d66914a701bedfa",
   "lastOpenFiles": [
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "kanban/task_kanban.md",

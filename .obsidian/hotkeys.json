@@ -1,13 +1,4 @@
 {
-  "editor:toggle-source": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "Z"
-    }
-  ],
   "templater-obsidian:Templates/shell code blocks.md": [
     {
       "modifiers": [
@@ -174,5 +165,15 @@
     }
   ],
   "obsidian-auto-link-title:enhance-url-with-title": [],
-  "obsidian-excalidraw-plugin:insert-link": []
+  "obsidian-excalidraw-plugin:insert-link": [],
+  "obsidian-excalidraw-plugin:insert-link-to-element": [],
+  "obsidian-excalidraw-plugin:save": [],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
+    }
+  ]
 }
