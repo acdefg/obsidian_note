@@ -22,7 +22,7 @@
         "after": "## Todo",
         "insertAtEnd": true,
         "createIfNotFound": true,
-        "createIfNotFoundLocation": "top"
+        "createIfNotFoundLocation": "bottom"
       },
       "prepend": true,
       "task": true,

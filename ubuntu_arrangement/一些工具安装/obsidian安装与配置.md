@@ -149,6 +149,7 @@ console.log("Hello!");
 ```
 
 ````
+
 ##### 6. Annotator 插件
 参考： https://mp.weixin.qq.com/s/MEPva7Os_nOyl1vgTBZTwQ?utm_source=pocket_mylist - 二一的笔记
 Obsidian 原生支持 PDF 阅读，你只需要将 PDF 文件**拖到文件夹上**即可载入，而安装 `Annotator 插件` 除了能让 Obsidian **额外支持阅读 EPUB 格式**的文件，还能进行高亮、批注等操作。

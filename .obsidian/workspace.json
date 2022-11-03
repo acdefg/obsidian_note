@@ -11,9 +11,11 @@
             "id": "1d66914a701bedfa",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kanban/task_kanban.md",
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kanban/task_kanban.md",
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
               }
             }
           },
@@ -169,8 +171,8 @@
   },
   "active": "1d66914a701bedfa",
   "lastOpenFiles": [
-    "Templates/image.md",
     "kanban/task_kanban.md",
+    "Templates/image.md",
     "study_note/作业/数集/modelsim/zuoye记录.md",
     "study_note/作业/数集/modelsim/zuoye.md",
     "study_note/作业/数集/序列检测/序列检测.md",
