@@ -2,7 +2,7 @@
   "choices": [
     {
       "id": "2306a430-b78f-4f68-8373-4264decfe6c3",
-      "name": "todo",
+      "name": "TODO",
       "type": "Capture",
       "command": true,
       "appendLink": false,

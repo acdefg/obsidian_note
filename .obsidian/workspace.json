@@ -11,9 +11,11 @@
             "id": "489ea960eb03c960",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "Templates/日程管理/日计划模板.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "Templates/日程管理/日计划模板.md"
               }
             }
           },
@@ -93,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kanban/task_kanban.md",
+                "file": "Templates/日程管理/日计划模板.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,17 +137,17 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "489ea960eb03c960",
+  "active": "f41bff11660e3a4a",
   "lastOpenFiles": [
-    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+    "Templates/日程管理/Day planner_official.md",
+    "Templates/日程管理/日计划模板.md",
+    "study_note/郭老师组会/支持向量机.md",
     "kanban/task_kanban.md",
-    "Templates/image.md",
+    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+    "Templates/插入/image.md",
     "study_note/作业/数集/modelsim/zuoye记录.md",
     "study_note/作业/数集/modelsim/zuoye.md",
     "study_note/作业/数集/序列检测/序列检测.md",
-    "study_note/作业/数集/序列检测/log.md",
-    "study_note/作业/数集/加法器/32位加法器设计-记录.md",
-    "ubuntu_arrangement/一些配置/git操作.md",
-    "Dairy/2022-04-08.md"
+    "study_note/作业/数集/序列检测/log.md"
   ]
 }
