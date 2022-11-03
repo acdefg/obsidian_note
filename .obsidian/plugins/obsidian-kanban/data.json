@@ -2,5 +2,16 @@
   "show-relative-date": true,
   "hide-date-display": false,
   "hide-date-in-title": true,
-  "date-picker-week-start": 1
+  "date-picker-week-start": 1,
+  "date-format": "YYYY-MM-DD",
+  "date-display-format": "YYYY-MM-DD",
+  "prepend-archive-date": true,
+  "date-colors": [
+    {
+      "isToday": false,
+      "distance": 1,
+      "unit": "days",
+      "direction": "after"
+    }
+  ]
 }
