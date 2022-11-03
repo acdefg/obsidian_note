@@ -17,7 +17,32 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "e724be66f3bc7f50"
+          }
+        ]
+      },
+      {
+        "id": "9cb33ae6e3e6ce2b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b4ed1f36920f9702",
+            "type": "leaf",
+            "state": {
+              "type": "media-view",
+              "state": {
+                "info": {
+                  "host": 1,
+                  "id": "BV1mb4y1y7R6/",
+                  "src": "https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7",
+                  "iframe": "https://player.bilibili.com/player.html?bvid=BV1mb4y1y7R6/&high_quality=1&danmaku=0",
+                  "hash": ""
+                },
+                "currentTime": 9.446246
+              }
+            },
+            "group": "e724be66f3bc7f50"
           }
         ]
       }
@@ -87,15 +112,57 @@
               "type": "outline",
               "state": {}
             }
+          },
+          {
+            "id": "af1d2cad36fcf6b4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f66d3eb4302775bb",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          },
+          {
+            "id": "8e9ee6e120ffbcbc",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "a852270e0cf38d5d",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 206.5,
+    "collapsed": true
   },
-  "active": "1d66914a701bedfa",
+  "active": "b4ed1f36920f9702",
   "lastOpenFiles": [
+    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "kanban/task_kanban.md",
     "Templates/image.md",
     "study_note/作业/数集/modelsim/zuoye记录.md",
@@ -104,7 +171,6 @@
     "study_note/作业/数集/序列检测/log.md",
     "study_note/作业/数集/加法器/32位加法器设计-记录.md",
     "ubuntu_arrangement/一些配置/git操作.md",
-    "Dairy/2022-04-08.md",
-    "ubuntu_arrangement/一些工具安装/sublime installation.md"
+    "Dairy/2022-04-08.md"
   ]
 }
