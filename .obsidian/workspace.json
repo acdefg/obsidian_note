@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "Templates/日程管理/日计划模板.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
+                "file": "Templates/日程管理/日计划模板.md"
               }
             }
           },
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "Templates/日程管理/日计划模板.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,11 +139,11 @@
   },
   "active": "489ea960eb03c960",
   "lastOpenFiles": [
+    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "Templates/日程管理/日计划模板.md",
     "Templates/日程管理/Day planner_official.md",
     "study_note/郭老师组会/支持向量机.md",
     "kanban/task_kanban.md",
-    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "Templates/插入/image.md",
     "study_note/作业/数集/modelsim/zuoye记录.md",
     "study_note/作业/数集/modelsim/zuoye.md",
