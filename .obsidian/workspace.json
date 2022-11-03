@@ -11,9 +11,38 @@
             "id": "b69d8d86c6a829c5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
+              "type": "markdown",
+              "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "mode": "preview",
+                "source": false
+              }
+            },
+            "group": "ccc210b68bc6b978"
+          }
+        ]
+      },
+      {
+        "id": "f53b79ed9f37e9cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "199358afff88602b",
+            "type": "leaf",
+            "state": {
+              "type": "media-view",
+              "state": {
+                "info": {
+                  "host": 1,
+                  "id": "BV1mb4y1y7R6/",
+                  "src": "https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=414.848546",
+                  "iframe": "https://player.bilibili.com/player.html?bvid=BV1mb4y1y7R6/&high_quality=1&danmaku=0",
+                  "hash": "#t=414.848546"
+                },
+                "currentTime": 414.992934
+              }
+            },
+            "group": "ccc210b68bc6b978"
           }
         ]
       }
@@ -81,7 +110,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
+              }
             }
           },
           {
@@ -90,6 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",

@@ -191,7 +191,7 @@ todo：[06:54](https://www.bilibili.com/video/BV1mb4y1y7R6/?spm_id_from=333.337.
 
 
 
-#### 复杂使用集合
+#### 待学习使用集合
 ##### 1. search(obsidian system)
 https://help.obsidian.md/Plugins/Search -> documents
 
