@@ -2,7 +2,7 @@
   "mediaFragmentsEmbed": true,
   "timestampLink": true,
   "extendedImageEmbedSyntax": true,
-  "thumbnailPlaceholder": false,
+  "thumbnailPlaceholder": true,
   "useYoutubeControls": false,
   "interalBiliPlayback": true,
   "hideYtbRecomm": false,
@@ -42,5 +42,5 @@
   },
   "timestampTemplate": "\n{{TIMESTAMP}}\n",
   "timestampOffset": 0,
-  "hideEmbedControls": false
+  "hideEmbedControls": true
 }
