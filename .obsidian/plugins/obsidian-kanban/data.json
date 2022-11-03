@@ -4,9 +4,17 @@
   "hide-date-in-title": true,
   "date-picker-week-start": 1,
   "date-format": "YYYY-MM-DD",
-  "date-display-format": "YYYY-MM-DD",
+  "date-display-format": "MM-DD",
   "prepend-archive-date": true,
   "date-colors": [
+    {
+      "distance": 1,
+      "unit": "days",
+      "direction": "after",
+      "backgroundColor": "rgba(210, 159, 101, 0)",
+      "isToday": true,
+      "color": "rgba(100, 126, 174, 1)"
+    },
     {
       "isToday": false,
       "distance": 1,
