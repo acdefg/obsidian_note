@@ -6,7 +6,7 @@
       "type": "Capture",
       "command": true,
       "appendLink": false,
-      "captureTo": "kanban/未命名看板.md",
+      "captureTo": "kanban/task_kanban.md",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": false,
@@ -15,19 +15,19 @@
       },
       "format": {
         "enabled": true,
-        "format": ""
+        "format": "{{VALUE:Todo}}"
       },
       "insertAfter": {
-        "enabled": false,
-        "after": "",
-        "insertAtEnd": false,
-        "createIfNotFound": false,
+        "enabled": true,
+        "after": "## Todo",
+        "insertAtEnd": true,
+        "createIfNotFound": true,
         "createIfNotFoundLocation": "top"
       },
       "prepend": true,
       "task": true,
       "openFileInNewTab": {
-        "enabled": false,
+        "enabled": true,
         "direction": "vertical",
         "focus": true
       },
