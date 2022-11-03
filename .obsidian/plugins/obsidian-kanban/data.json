@@ -1,6 +1,6 @@
 {
   "show-relative-date": true,
-  "hide-date-display": false,
+  "hide-date-display": true,
   "hide-date-in-title": true,
   "date-picker-week-start": 1,
   "date-format": "YYYY-MM-DD",
@@ -11,15 +11,18 @@
       "distance": 1,
       "unit": "days",
       "direction": "after",
-      "backgroundColor": "rgba(210, 159, 101, 0)",
+      "backgroundColor": "rgba(190, 118, 118, 0.35)",
       "isToday": true,
-      "color": "rgba(100, 126, 174, 1)"
+      "color": "rgba(255, 255, 255, 1)"
     },
     {
       "isToday": false,
       "distance": 1,
       "unit": "days",
-      "direction": "after"
+      "direction": "after",
+      "backgroundColor": "rgba(183, 116, 45, 0.31)"
     }
-  ]
+  ],
+  "hide-card-count": true,
+  "show-checkboxes": false
 }
