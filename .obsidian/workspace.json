@@ -166,10 +166,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5,
-    "collapsed": true
+    "width": 206.5
   },
-  "active": "1d66914a701bedfa",
+  "active": "7e85c631cc03f8b8",
   "lastOpenFiles": [
     "kanban/task_kanban.md",
     "Templates/image.md",
