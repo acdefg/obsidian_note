@@ -64,9 +64,10 @@ decoder_coder #(.n(N), .m(M))
 integer i;
 initial                                                
 begin
-	for(i=0; i<M; i=i+1)
-		#10 
+	for(i=0; i<M; i=i+1) begin
 		in = i;
+		#10; 
+	end	
 	#10 $stop;
 end
 
