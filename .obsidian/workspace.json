@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "图片",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -147,7 +147,7 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "7430faf83716306c",
+  "active": "489ea960eb03c960",
   "lastOpenFiles": [
     "study_note/作业/数集/设计/译码器-log.md",
     "kanban/task_kanban.md",
