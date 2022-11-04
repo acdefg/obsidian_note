@@ -211,3 +211,83 @@ endmodule
 
 ### 格雷码计数器
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104193624.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104193643.png)
+
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104193853.png)
+
+
+```verilog
+module gray_counter(
+	input clk,
+	input rst_n,
+	output reg[3:0]gray
+);
+	always@(posedge clk or negedge rst_n)
+	if(!rst_n)	gray <= 4'b0000;
+	else
+		case(gray)
+			4'b0000 : gray <= 4'b0001;
+			4'b0001 : gray <= 4'b0011;
+			4'b0011 : gray <= 4'b0010;
+			4'b0010 : gray <= 4'b0110;
+			4'b0110 : gray <= 4'b0111;
+			4'b0111 : gray <= 4'b0101;
+			4'b0101 : gray <= 4'b0100;
+			4'b0100 : gray <= 4'b1100;
+			4'b1100 : gray <= 4'b1101;
+			4'b1101 : gray <= 4'b1111;
+			4'b1111 : gray <= 4'b1110;
+			4'b1110 : gray <= 4'b1010;
+			4'b1010 : gray <= 4'b1011;
+			4'b1011 : gray <= 4'b1001;
+			4'b1001 : gray <= 4'b1000;
+			4'b1000 : gray <= 4'b0000;
+			default 	 : gray <= 4'bx;
+		endcase
+
+endmodule 
+```
+
+```verilog
+                                                                              
+// Verilog Test Bench template for design : gray_counter
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module gray_counter_vlg_tst();
+
+// test vector input registers
+reg clk;
+reg rst_n;
+// wires                                               
+wire [3:0]  gray;
+
+// assign statements (if any)                          
+gray_counter i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.gray(gray),
+	.rst_n(rst_n)
+);
+
+initial 
+begin 
+	rst_n = 0;
+	clk = 0;
+	#5 rst_n = 1;
+	#60 rst_n = 0;
+	#5 rst_n = 1;
+	#100 $stop;
+end
+
+always #5 clk = ~clk;
+
+initial $monitor($time,": state: %b",gray);
+endmodule
+```
+
+
