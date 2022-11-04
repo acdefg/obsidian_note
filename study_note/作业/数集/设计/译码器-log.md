@@ -251,11 +251,6 @@ endmodule
 ```
 
 ```verilog
-                                                                              
-// Verilog Test Bench template for design : gray_counter
-// 
-// Simulation tool : ModelSim (Verilog)
-// 
 
 `timescale 1 ns/ 1 ps
 module gray_counter_vlg_tst();
