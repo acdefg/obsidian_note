@@ -216,5 +216,13 @@
       ],
       "key": "T"
     }
+  ],
+  "templater-obsidian:Templates/插入/code blocks.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
+    }
   ]
 }

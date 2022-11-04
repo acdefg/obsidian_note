@@ -86,3 +86,68 @@ endmodule
 
 ### Coder_short
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104182352.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104183006.png)
+
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104183031.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104183342.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104183359.png)
+
+```verilog
+module decoder_coder #(
+	parameter n=3,
+			  m=1<<n
+)(
+	input wire[m-1:0]in,
+	output reg[n-1:0]y
+);
+	integer i;
+	always@(*)
+	begin:encoder
+		for (i=m-1;i>0;i=i-1)
+			if(in[i]==1)
+			begin
+				y = i;
+				disable encoder;  //jump out of loop
+			end
+			else y = 0;
+	end
+	
+endmodule 
+```
+
+```verilog
+`timescale 1 ns/ 1 ps
+module decoder_coder_vlg_tst();
+parameter N = 3;
+parameter M = 1<<N;
+// test vector input registers
+reg [M-1:0] in;
+// wires                                               
+wire [N-1:0]  y;
+
+// assign statements (if any)                          
+decoder_coder #(.n(N), .m(M))
+	i1 (
+// port map - connection between master ports and signals/registers   
+	.in(in),
+	.y(y)
+);
+
+integer i;
+initial                                                
+begin     
+	for(i=0; i<M; i=i+1) begin
+		in = 1<<i;
+		#10;
+	end  
+	
+	#10 $stop;
+end
+
+initial 
+	$monitor("in = %b ---> y = %b ", in, y);
+endmodule
+```
