@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 252.5,
+    "collapsed": true
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -138,15 +139,13 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 206.5,
-    "collapsed": true
+    "width": 206.5
   },
-  "active": "489ea960eb03c960",
+  "active": "91d584664c2198eb",
   "lastOpenFiles": [
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "study_note/作业/数集/设计/译码器-log.md",

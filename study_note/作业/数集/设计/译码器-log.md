@@ -16,3 +16,20 @@
 ### Decoder_short
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104170757.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104173909.png)
+
+```verilog
+`timescale 1 ns/ 1 ps
+module decoder_coder #(
+	parameter n=3,
+				 m=1<<n
+	)(
+	input wire[n-1:0]in,
+	output reg[m-1:0]y
+	);
+	//one-hot
+	always@(*)y=1<<in;
+endmodule 
+```
+
+### Decoder_long
