@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/数集/设计/序列检测/序列检测.md",
+                "file": "study_note/作业/数集/设计/译码器-log.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/数集/设计/序列检测/序列检测.md"
+                "file": "study_note/作业/数集/设计/译码器-log.md"
               }
             }
           },
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/数集/设计/序列检测/序列检测.md",
+                "file": "study_note/作业/数集/设计/译码器-log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,15 +157,15 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "f41bff11660e3a4a",
+  "active": "2cf40dcb77208d9d",
   "lastOpenFiles": [
-    "study_note/作业/数集/设计/序列检测/log.md",
-    "study_note/作业/数集/设计/序列检测/序列检测.md",
     "study_note/作业/数集/设计/32位加法器设计-记录.md",
+    "study_note/作业/数集/设计/序列检测-log.md",
+    "study_note/作业/数集/设计/序列检测/序列检测.md",
     "study_note/作业/数集/modelsim/log.md",
     "study_note/作业/数集/modelsim/测试verilog不同类型信号强度.md",
     "study_note/作业/数集/verilog整理.md",
-    "study_note/作业/数集/设计/译码器.md",
+    "study_note/作业/数集/设计/译码器-log.md",
     "kanban/task_kanban.md",
     "- [ ] 数集作业.md",
     "Templates/日程管理/日计划模板.md"
