@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -147,7 +146,7 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "489ea960eb03c960",
+  "active": "f41bff11660e3a4a",
   "lastOpenFiles": [
     "study_note/作业/数集/设计/译码器-log.md",
     "kanban/task_kanban.md",
