@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "study_note/作业/数集/设计/译码器-log.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md"
+                "file": "study_note/作业/数集/设计/译码器-log.md"
               }
             }
           },
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
+                "file": "study_note/作业/数集/设计/译码器-log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,6 +148,7 @@
   },
   "active": "489ea960eb03c960",
   "lastOpenFiles": [
+    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "study_note/作业/数集/设计/译码器-log.md",
     "kanban/task_kanban.md",
     "3a12c9388992ff1dcedb03fa91cf252.jpg",
@@ -156,7 +157,6 @@
     "study_note/作业/数集/设计/序列检测/序列检测.md",
     "study_note/作业/数集/modelsim/log.md",
     "study_note/作业/数集/modelsim/测试verilog不同类型信号强度.md",
-    "study_note/作业/数集/verilog整理.md",
-    "- [ ] 数集作业.md"
+    "study_note/作业/数集/verilog整理.md"
   ]
 }

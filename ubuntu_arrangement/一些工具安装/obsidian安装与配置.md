@@ -221,3 +221,4 @@ https://help.obsidian.md/Plugins/Search -> documents
 
 ### 语法教程
 [Obsidian教程一 - 知乎](https://zhuanlan.zhihu.com/p/492198616#:~:text=%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%20MD%E7%BC%96%E8%BE%91%E5%99%A8%20%E9%83%BD%E6%94%AF%E6%8C%81%E7%9B%AE%E5%BD%95%E7%94%9F%E6%88%90%20Obsidian%20%E5%B0%B1%E4%B8%8D%E6%94%AF%E6%8C%81%EF%BC%8C%E4%B8%8D%E8%BF%87,OB%20%E6%98%AF%E8%87%AA%E5%B8%A6%E5%A4%A7%E7%BA%B2%E7%9A%84%EF%BC%8C%E5%B0%B1%E6%98%AF%E7%9B%AE%E5%BD%95%E7%9A%84%E6%95%88%E6%9E%9C%20%E8%BE%93%E5%85%A5%E4%B8%8B%E6%96%B9%E5%86%85%E5%AE%B9%E4%BC%9A%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E7%9B%AE%E5%BD%95%EF%BC%9A%20%5Btoc%5D%202.)包括甘特图，图片等等语法
+[Markdown格式文档图片设置居中_汉木木的博客-CSDN博客_markdown图片居中](https://blog.csdn.net/Jivove/article/details/123496699)令人头痛的居中问题
