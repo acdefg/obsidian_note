@@ -179,3 +179,35 @@ endmodule
 ### Coder_long
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104184220.png)
 <img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104184220.png"/>
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104192251.png)
+
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104192306.png)
+
+```verilog
+`timescale 1 ns/ 1 ps
+module decoder_coder #(
+	parameter n=3,
+				 m=1<<n
+	)(
+	input wire[m-1:0]in,
+	output reg[n-1:0]y
+	);
+	//one-hot
+	always@(*)
+		casez(in)
+			8'b1???_????	: y = 3'b111;
+			8'b01??_????	: y = 3'b110;
+			8'b001?_????	: y = 3'b101;
+			8'b0001_????	: y = 3'b100;
+			8'b0000_1???	: y = 3'b011;
+			8'b0000_01??	: y = 3'b010;
+			8'b0000_001?	: y = 3'b001;
+			8'b0000_0001    : y = 3'b000;
+			default         : y = 3'b000;
+		endcase
+endmodule 
+```
+
+### 格雷码计数器
+
