@@ -20,9 +20,9 @@
 
 ![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104211553.png)
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104175901.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104211843.png)
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104175915.png)
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104211903.png)
 
 ```verilog
 `timescale 1 ns/ 1 ps
