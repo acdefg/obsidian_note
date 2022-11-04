@@ -14,7 +14,7 @@
 
 ## run_log
 ### Decoder_short
-![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104170757.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104170757.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104173909.png)
 
@@ -78,3 +78,5 @@ endmodule
 ```
 
 ### Decoder_long
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104180601.png)
+
