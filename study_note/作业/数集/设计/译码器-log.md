@@ -20,11 +20,15 @@
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104174410.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104175901.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104175915.png)
+
 ```verilog
 `timescale 1 ns/ 1 ps
 module decoder_coder #(
 	parameter n=3,
-				 m=1<<n
+			  m=1<<n
 	)(
 	input wire[n-1:0]in,
 	output reg[m-1:0]y
@@ -36,19 +40,22 @@ endmodule
 
 
 ```verilog                                                                                
+// Generated on "11/04/2022 16:59:40"                                                                               
 // Verilog Test Bench template for design : decoder_coder
-// 
 // Simulation tool : ModelSim (Verilog)
-
+// 
 `timescale 1 ns/ 1 ps
 module decoder_coder_vlg_tst();
+parameter N = 2;
+parameter M = 1<<N;
 // test vector input registers
-reg [2:0] in;
+reg [N-1:0] in;
 // wires                                               
-wire [7:0]  y;
+wire [M-1:0]  y;
 
-// assign statements (if any)                          
-decoder_coder i1 (
+// assign statements (if any)                         
+decoder_coder #(.n(N), .m(M)) 
+	i1(
 // port map - connection between master ports and signals/registers   
 	.in(in),
 	.y(y)
@@ -57,7 +64,7 @@ decoder_coder i1 (
 integer i;
 initial                                                
 begin
-	for(i=0; i<8; i=i+1)
+	for(i=0; i<M; i=i+1)
 		#10 
 		in = i;
 	#10 $stop;
