@@ -12,3 +12,7 @@
 ## 群里发的
 [文件路径](D:\Users\Documents\WeChat Files\wxid_1316strf57mi22\FileStorage\File\2022-10\ex_src)
 
+## run_log
+### Decoder_short
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104170757.png)
+
