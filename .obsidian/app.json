@@ -9,5 +9,6 @@
   "showFrontmatter": true,
   "showIndentGuide": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": ""
+  "attachmentFolderPath": "z_attachment",
+  "newFileLocation": "current"
 }

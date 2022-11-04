@@ -7,7 +7,8 @@
 
 ## CSND
 [Verilog设计参数化的译码器与编码器，以及设计4位格雷码计数器_ty_:-)的博客-CSDN博客](https://blog.csdn.net/Zhong_ty/article/details/127614249)
+	[独热码_百度百科](https://baike.baidu.com/item/%E7%8B%AC%E7%83%AD%E7%A0%81/1428731)
 
-
-
+## 群里发的
+[文件路径](D:\Users\Documents\WeChat Files\wxid_1316strf57mi22\FileStorage\File\2022-10\ex_src)
 
