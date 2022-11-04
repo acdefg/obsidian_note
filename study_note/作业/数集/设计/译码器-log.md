@@ -18,6 +18,8 @@
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104173909.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104174410.png)
+
 ```verilog
 `timescale 1 ns/ 1 ps
 module decoder_coder #(
@@ -30,6 +32,42 @@ module decoder_coder #(
 	//one-hot
 	always@(*)y=1<<in;
 endmodule 
+```
+
+
+```verilog                                                                                
+// Verilog Test Bench template for design : decoder_coder
+// 
+// Simulation tool : ModelSim (Verilog)
+
+`timescale 1 ns/ 1 ps
+module decoder_coder_vlg_tst();
+// test vector input registers
+reg [2:0] in;
+// wires                                               
+wire [7:0]  y;
+
+// assign statements (if any)                          
+decoder_coder i1 (
+// port map - connection between master ports and signals/registers   
+	.in(in),
+	.y(y)
+);
+
+integer i;
+initial                                                
+begin
+	for(i=0; i<8; i=i+1)
+		#10 
+		in = i;
+	#10 $stop;
+end
+
+initial 
+	$monitor("in = %b ---> y = %b ", in, y);
+                                                 
+endmodule
+
 ```
 
 ### Decoder_long
