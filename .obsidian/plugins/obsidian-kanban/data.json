@@ -24,5 +24,6 @@
     }
   ],
   "hide-card-count": true,
-  "show-checkboxes": false
+  "show-checkboxes": false,
+  "hide-tags-in-title": true
 }
