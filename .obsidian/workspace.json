@@ -6,7 +6,6 @@
       {
         "id": "f09e1db8f2977971",
         "type": "tabs",
-        "dimension": 45.812807881773395,
         "children": [
           {
             "id": "1ad88a18dded329a",
@@ -15,25 +14,6 @@
               "type": "markdown",
               "state": {
                 "file": "study_note/作业/数集/设计/作业4.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "ba3e3d7d6a4e12d4",
-        "type": "tabs",
-        "dimension": 54.187192118226605,
-        "children": [
-          {
-            "id": "8f7fb332805237e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/作业/数集/设计/译码器-log.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/数集/设计/译码器-log.md"
+                "file": "study_note/作业/数集/设计/作业4.md"
               }
             }
           },
@@ -116,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/数集/设计/译码器-log.md",
+                "file": "study_note/作业/数集/设计/作业4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,10 +145,10 @@
     "direction": "horizontal",
     "width": 206.5
   },
-  "active": "8f7fb332805237e2",
+  "active": "1ad88a18dded329a",
   "lastOpenFiles": [
-    "study_note/作业/数集/设计/作业4.md",
     "study_note/作业/数集/设计/译码器-log.md",
+    "study_note/作业/数集/设计/作业4.md",
     "Templates/插入/code blocks.md",
     "study_note/作业/数集/verilog整理.md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",

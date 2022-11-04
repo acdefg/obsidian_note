@@ -180,7 +180,6 @@ endmodule
 
 ### Coder_long
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104184220.png)
-<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104184220.png"/>
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104192251.png)
 
