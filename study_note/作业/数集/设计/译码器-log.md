@@ -81,9 +81,10 @@ endmodule
 ### Decoder_long
 ![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104180601.png)
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104180804.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104213430.png)
 
-![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104180826.png)
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104213454.png)
+
 
 ```verilog
 `timescale 1 ns/ 1 ps
