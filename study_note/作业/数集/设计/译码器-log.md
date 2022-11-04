@@ -9,3 +9,5 @@
 [Verilog设计参数化的译码器与编码器，以及设计4位格雷码计数器_ty_:-)的博客-CSDN博客](https://blog.csdn.net/Zhong_ty/article/details/127614249)
 
 
+
+

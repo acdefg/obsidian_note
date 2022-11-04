@@ -8,5 +8,6 @@
   },
   "showFrontmatter": true,
   "showIndentGuide": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": ""
 }
