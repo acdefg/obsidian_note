@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/数集/设计/作业4.md"
+                "file": "study_note/作业/数集/设计/译码器-log.md"
               }
             }
           },
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/数集/设计/作业4.md",
+                "file": "study_note/作业/数集/设计/译码器-log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,10 +165,10 @@
     "direction": "horizontal",
     "width": 206.5
   },
-  "active": "1ad88a18dded329a",
+  "active": "91d584664c2198eb",
   "lastOpenFiles": [
-    "study_note/作业/数集/设计/译码器-log.md",
     "study_note/作业/数集/设计/作业4.md",
+    "study_note/作业/数集/设计/译码器-log.md",
     "Templates/插入/code blocks.md",
     "study_note/作业/数集/verilog整理.md",
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
