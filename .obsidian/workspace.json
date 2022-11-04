@@ -107,14 +107,6 @@
             }
           },
           {
-            "id": "f66d3eb4302775bb",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {}
-            }
-          },
-          {
             "id": "8e9ee6e120ffbcbc",
             "type": "leaf",
             "state": {
@@ -129,15 +121,32 @@
               "type": "BC-tree",
               "state": {}
             }
+          },
+          {
+            "id": "bafe8a1c1a814517",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "d7972be804e777dc",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
     "width": 206.5,
     "collapsed": true
   },
-  "active": "489ea960eb03c960",
+  "active": "d7972be804e777dc",
   "lastOpenFiles": [
     "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
     "Templates/日程管理/日计划模板.md",
