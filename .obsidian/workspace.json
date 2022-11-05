@@ -6,7 +6,7 @@
       {
         "id": "43ee80193daa15fb",
         "type": "tabs",
-        "dimension": 26.91552062868369,
+        "dimension": 49.99999999999999,
         "children": [
           {
             "id": "886918443b443e8b",
@@ -35,22 +35,22 @@
               "type": "markdown",
               "state": {
                 "file": "study_note/soi/数字后端.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             },
-            "group": "988bafc980cefe9c"
+            "group": "c27682917bab8cb3"
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "5c96fb85671dc26b",
+        "id": "d4e5f8c4e949ae21",
         "type": "tabs",
-        "dimension": 73.0844793713163,
+        "dimension": 49.99999999999999,
         "children": [
           {
-            "id": "78ca01ff0ce24826",
+            "id": "59c290b29dae7579",
             "type": "leaf",
             "state": {
               "type": "media-view",
@@ -61,12 +61,12 @@
                   "filename": "meeting_01.mp4",
                   "src": "z_attachment/meeting_01.mp4",
                   "subtitles": [],
-                  "hash": ""
+                  "hash": "#t=17:08.309"
                 },
-                "currentTime": 934.48086
+                "currentTime": 1028.309
               }
             },
-            "group": "988bafc980cefe9c"
+            "group": "c27682917bab8cb3"
           }
         ]
       }
