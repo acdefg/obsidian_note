@@ -6,7 +6,7 @@
       {
         "id": "43ee80193daa15fb",
         "type": "tabs",
-        "dimension": 32.31827111984283,
+        "dimension": 25.93320235756385,
         "children": [
           {
             "id": "886918443b443e8b",
@@ -47,7 +47,7 @@
       {
         "id": "d4e5f8c4e949ae21",
         "type": "tabs",
-        "dimension": 67.68172888015717,
+        "dimension": 74.06679764243614,
         "children": [
           {
             "id": "59c290b29dae7579",
@@ -63,7 +63,7 @@
                   "subtitles": [],
                   "hash": "#t=17:08.309"
                 },
-                "currentTime": 2456.171078
+                "currentTime": 2615.972215
               }
             },
             "group": "1ccac486490ea5b4"
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "z_attachment/meeting_01.mp4"
+                "file": "study_note/soi/数字后端.md"
               }
             }
           },
@@ -145,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "z_attachment/meeting_01.mp4",
+                "file": "study_note/soi/数字后端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,10 +195,10 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "59c290b29dae7579",
+  "active": "6d862219133832e0",
   "lastOpenFiles": [
-    "study_note/soi/数字后端.md",
     "z_attachment/meeting_01.mp4",
+    "study_note/soi/数字后端.md",
     "study_note/郭老师组会/支持向量机.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/作业/数集/设计/作业4.md",
