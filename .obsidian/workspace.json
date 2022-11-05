@@ -6,7 +6,7 @@
       {
         "id": "06b3d3fcb19ead8d",
         "type": "tabs",
-        "dimension": 23.772102161100197,
+        "dimension": 26.91552062868369,
         "children": [
           {
             "id": "c8b0faa34fd9a3c1",
@@ -23,12 +23,12 @@
         ]
       },
       {
-        "id": "a466abd9fe5fc6dd",
+        "id": "a09317ca186614d2",
         "type": "tabs",
-        "dimension": 76.2278978388998,
+        "dimension": 73.0844793713163,
         "children": [
           {
-            "id": "a46bb045033b46de",
+            "id": "bf77d4e2aa281b80",
             "type": "leaf",
             "state": {
               "type": "media-view",
@@ -39,9 +39,9 @@
                   "filename": "meeting_01.mp4",
                   "src": "z_attachment/meeting_01.mp4",
                   "subtitles": [],
-                  "hash": "#t=07:31.777"
+                  "hash": "#t=01:29:17.749"
                 },
-                "currentTime": 471.468218
+                "currentTime": 582.623926
               }
             }
           }
@@ -172,7 +172,7 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "a46bb045033b46de",
+  "active": "bf77d4e2aa281b80",
   "lastOpenFiles": [
     "study_note/soi/数字后端.md",
     "z_attachment/meeting_01.mp4",
