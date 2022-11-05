@@ -42,7 +42,7 @@
                   "subtitles": [],
                   "hash": "#t=01:05:42.828"
                 },
-                "currentTime": 4080.539451
+                "currentTime": 4286.461321
               }
             },
             "group": "be3a6bf152a1352b"
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/soi/数字后端.md"
+                "file": "z_attachment/meeting_01.mp4"
               }
             }
           },
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/soi/数字后端.md",
+                "file": "z_attachment/meeting_01.mp4",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,10 +174,10 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "c8b0faa34fd9a3c1",
+  "active": "23bb8ffdc390c307",
   "lastOpenFiles": [
-    "z_attachment/meeting_01.mp4",
     "study_note/soi/数字后端.md",
+    "z_attachment/meeting_01.mp4",
     "Templates/插入/image.md",
     "study_note/郭老师组会/支持向量机.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
