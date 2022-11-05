@@ -1,4 +1,5 @@
-## anaconda 安装
+## anaconda
+### 安装
 [Index of /anaconda/archive/ | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 官网点不动 qs
 11.05 安装参考：
@@ -7,6 +8,17 @@ install for all user --x
 add anaconda path --√
 [如何彻底卸载Anaconda？_Lord_Bao的博客-CSDN博客_卸载anaconda](https://blog.csdn.net/Lord_Bao/article/details/114170382)
 边装边卸
+### 环境配置
+
+```shell
+pip install numpy matplotlib pandas scipy
+```
+
+```shell
+pip install scikit-learn
+```
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221105150521.png)
 
 ## 原理们
 [一文看懂随机森林 - Random Forest（4个实现步骤+10个优缺点）](https://easyai.tech/ai-definition/random-forest/)
