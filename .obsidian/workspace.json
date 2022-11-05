@@ -4,35 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "f09e1db8f2977971",
+        "id": "43ee80193daa15fb",
         "type": "tabs",
+        "dimension": 26.91552062868369,
         "children": [
           {
-            "id": "1ad88a18dded329a",
+            "id": "886918443b443e8b",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
+              "type": "media-view",
               "state": {
-                "file": "study_note/郭老师组会/支持向量机.md",
-                "mode": "source",
-                "source": false
-              }
+                "file": "z_attachment/meeting_01.mp4",
+                "info": {
+                  "type": "video",
+                  "filename": "meeting_01.mp4",
+                  "src": "z_attachment/meeting_01.mp4",
+                  "subtitles": [],
+                  "hash": ""
+                },
+                "currentTime": 20.905677
+              },
+              "pinned": true
             }
           },
           {
-            "id": "959c51663f7632e1",
+            "id": "6d862219133832e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/郭老师组会/随机森林vs决策树.md",
+                "file": "study_note/soi/数字后端.md",
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "988bafc980cefe9c"
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "5c96fb85671dc26b",
+        "type": "tabs",
+        "dimension": 73.0844793713163,
+        "children": [
+          {
+            "id": "78ca01ff0ce24826",
+            "type": "leaf",
+            "state": {
+              "type": "media-view",
+              "state": {
+                "file": "z_attachment/meeting_01.mp4",
+                "info": {
+                  "type": "video",
+                  "filename": "meeting_01.mp4",
+                  "src": "z_attachment/meeting_01.mp4",
+                  "subtitles": [],
+                  "hash": ""
+                },
+                "currentTime": 934.48086
+              }
+            },
+            "group": "988bafc980cefe9c"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +118,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 252.5,
+    "collapsed": true
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -98,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/郭老师组会/随机森林vs决策树.md"
+                "file": "study_note/soi/数字后端.md"
               }
             }
           },
@@ -108,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/郭老师组会/随机森林vs决策树.md",
+                "file": "study_note/soi/数字后端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,19 +192,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 206.5,
+    "collapsed": true
   },
-  "active": "959c51663f7632e1",
+  "active": "6d862219133832e0",
   "lastOpenFiles": [
+    "z_attachment/meeting_01.mp4",
+    "study_note/soi/数字后端.md",
     "study_note/郭老师组会/支持向量机.md",
+    "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/作业/数集/设计/作业4.md",
     "Templates/插入/image.md",
     "study_note/作业/数集/设计/作业4.pdf",
     "study_note/作业/数集/设计/译码器-log.md",
     "study_note/作业/数集/verilog整理.md",
-    "Templates/插入/code blocks.md",
-    "ubuntu_arrangement/一些工具安装/obsidian安装与配置.md",
-    "kanban/task_kanban.md",
-    "3a12c9388992ff1dcedb03fa91cf252.jpg"
+    "Templates/插入/code blocks.md"
   ]
 }
