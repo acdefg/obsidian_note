@@ -6,7 +6,7 @@
       {
         "id": "43ee80193daa15fb",
         "type": "tabs",
-        "dimension": 49.99999999999999,
+        "dimension": 32.31827111984283,
         "children": [
           {
             "id": "886918443b443e8b",
@@ -35,11 +35,11 @@
               "type": "markdown",
               "state": {
                 "file": "study_note/soi/数字后端.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             },
-            "group": "c27682917bab8cb3"
+            "group": "1ccac486490ea5b4"
           }
         ],
         "currentTab": 1
@@ -47,7 +47,7 @@
       {
         "id": "d4e5f8c4e949ae21",
         "type": "tabs",
-        "dimension": 49.99999999999999,
+        "dimension": 67.68172888015717,
         "children": [
           {
             "id": "59c290b29dae7579",
@@ -63,10 +63,10 @@
                   "subtitles": [],
                   "hash": "#t=17:08.309"
                 },
-                "currentTime": 1028.309
+                "currentTime": 1258.509565
               }
             },
-            "group": "c27682917bab8cb3"
+            "group": "1ccac486490ea5b4"
           }
         ]
       }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/soi/数字后端.md"
+                "file": "z_attachment/meeting_01.mp4"
               }
             }
           },
@@ -145,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/soi/数字后端.md",
+                "file": "z_attachment/meeting_01.mp4",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,10 +195,10 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "6d862219133832e0",
+  "active": "59c290b29dae7579",
   "lastOpenFiles": [
-    "z_attachment/meeting_01.mp4",
     "study_note/soi/数字后端.md",
+    "z_attachment/meeting_01.mp4",
     "study_note/郭老师组会/支持向量机.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/作业/数集/设计/作业4.md",
