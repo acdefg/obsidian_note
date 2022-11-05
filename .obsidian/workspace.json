@@ -6,7 +6,7 @@
       {
         "id": "06b3d3fcb19ead8d",
         "type": "tabs",
-        "dimension": 33.28981723237598,
+        "dimension": 23.772102161100197,
         "children": [
           {
             "id": "c8b0faa34fd9a3c1",
@@ -18,18 +18,17 @@
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "be3a6bf152a1352b"
+            }
           }
         ]
       },
       {
-        "id": "19f80ce5ea18d675",
+        "id": "a466abd9fe5fc6dd",
         "type": "tabs",
-        "dimension": 66.71018276762402,
+        "dimension": 76.2278978388998,
         "children": [
           {
-            "id": "23bb8ffdc390c307",
+            "id": "a46bb045033b46de",
             "type": "leaf",
             "state": {
               "type": "media-view",
@@ -40,12 +39,11 @@
                   "filename": "meeting_01.mp4",
                   "src": "z_attachment/meeting_01.mp4",
                   "subtitles": [],
-                  "hash": "#t=01:05:42.828"
+                  "hash": "#t=07:31.777"
                 },
-                "currentTime": 5360.636495
+                "currentTime": 471.468218
               }
-            },
-            "group": "be3a6bf152a1352b"
+            }
           }
         ]
       }
@@ -114,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/soi/数字后端.md"
+                "file": "z_attachment/meeting_01.mp4"
               }
             }
           },
@@ -124,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/soi/数字后端.md",
+                "file": "z_attachment/meeting_01.mp4",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,10 +172,10 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "c8b0faa34fd9a3c1",
+  "active": "a46bb045033b46de",
   "lastOpenFiles": [
-    "z_attachment/meeting_01.mp4",
     "study_note/soi/数字后端.md",
+    "z_attachment/meeting_01.mp4",
     "Templates/插入/image.md",
     "study_note/郭老师组会/支持向量机.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
