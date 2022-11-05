@@ -4,11 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "43ee80193daa15fb",
+        "id": "06b3d3fcb19ead8d",
         "type": "tabs",
+        "dimension": 33.28981723237598,
         "children": [
           {
-            "id": "6d862219133832e0",
+            "id": "c8b0faa34fd9a3c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,7 +18,34 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "be3a6bf152a1352b"
+          }
+        ]
+      },
+      {
+        "id": "19f80ce5ea18d675",
+        "type": "tabs",
+        "dimension": 66.71018276762402,
+        "children": [
+          {
+            "id": "23bb8ffdc390c307",
+            "type": "leaf",
+            "state": {
+              "type": "media-view",
+              "state": {
+                "file": "z_attachment/meeting_01.mp4",
+                "info": {
+                  "type": "video",
+                  "filename": "meeting_01.mp4",
+                  "src": "z_attachment/meeting_01.mp4",
+                  "subtitles": [],
+                  "hash": "#t=01:05:42.828"
+                },
+                "currentTime": 4080.539451
+              }
+            },
+            "group": "be3a6bf152a1352b"
           }
         ]
       }
@@ -69,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 252.5,
+    "collapsed": true
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -145,7 +174,7 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "6d862219133832e0",
+  "active": "c8b0faa34fd9a3c1",
   "lastOpenFiles": [
     "z_attachment/meeting_01.mp4",
     "study_note/soi/数字后端.md",
