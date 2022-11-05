@@ -26,7 +26,7 @@ Shift+Enter ，执⾏本单元代码，并跳转到下⼀单元
 Ctrl+Enter ，执⾏本单元代码，留在本单元
 Esc+m，切换为 Markdown 模式，单元中内容保存为文本
 
-
+安装插件：
 ```shell
 activate 虚拟环境名字
 
