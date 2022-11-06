@@ -41,3 +41,4 @@ jupyter contrib nbextension install --user --skip-running-check
 [一文看懂随机森林 - Random Forest（4个实现步骤+10个优缺点）](https://easyai.tech/ai-definition/random-forest/)
 [一文看懂决策树 - Decision tree（3个步骤+3种典型算法+10个优缺点）](https://easyai.tech/ai-definition/decision-tree/)
 
+### 随机森林

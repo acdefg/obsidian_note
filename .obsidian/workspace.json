@@ -13,37 +13,11 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/soi/数字后端.md",
-                "mode": "preview",
+                "file": "study_note/郭老师组会/随机森林vs决策树.md",
+                "mode": "source",
                 "source": false
               }
-            },
-            "group": "d4aedf6fe94f5ca2"
-          }
-        ]
-      },
-      {
-        "id": "3d220ad5afc5112f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2d7b6e093b12e2c3",
-            "type": "leaf",
-            "state": {
-              "type": "media-view",
-              "state": {
-                "file": "z_attachment/meeting_01.mp4",
-                "info": {
-                  "type": "video",
-                  "filename": "meeting_01.mp4",
-                  "src": "z_attachment/meeting_01.mp4",
-                  "subtitles": [],
-                  "hash": "#t=27:16.057"
-                },
-                "currentTime": 1637.161623
-              }
-            },
-            "group": "d4aedf6fe94f5ca2"
+            }
           }
         ]
       }
@@ -95,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5,
-    "collapsed": true
+    "width": 252.5
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -112,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "z_attachment/meeting_01.mp4"
+                "file": "study_note/郭老师组会/随机森林vs决策树.md"
               }
             }
           },
@@ -122,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "z_attachment/meeting_01.mp4",
+                "file": "study_note/郭老师组会/随机森林vs决策树.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,8 +145,10 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "2d7b6e093b12e2c3",
+  "active": "c8b0faa34fd9a3c1",
   "lastOpenFiles": [
+    "study_note/soi/riscv.md",
+    "study_note/soi/invertor.md",
     "study_note/soi/数字后端.md",
     "z_attachment/meeting_01.mp4",
     "Templates/插入/image.md",
@@ -181,8 +156,6 @@
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/作业/数集/设计/作业4.md",
     "study_note/作业/数集/设计/作业4.pdf",
-    "study_note/作业/数集/设计/译码器-log.md",
-    "study_note/作业/数集/verilog整理.md",
-    "Templates/插入/code blocks.md"
+    "study_note/作业/数集/设计/译码器-log.md"
   ]
 }
