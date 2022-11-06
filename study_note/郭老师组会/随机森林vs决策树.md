@@ -71,6 +71,47 @@ jupyter contrib nbextension install --user --skip-running-check
 一开始我们提到的随机森林中的“随机”就是指的这里的两个随机性。两个随机性的引入对随机森林的分类性能至关重要。由于它们的引入，使得随机森林不容易陷入过拟合，并且具有很好得抗噪能力（比如：对缺省值不敏感）。
 
 
+### 鸢尾花数据集
+iris 以鸢尾花的特征作为数据来源，常用在分类操作中。该数据集由 3 种不同类型的鸢尾花的各 50 个样本数据构成。其中的一个种类与另外两个种类是线性可分离的，后两个种类是非线性可分离的。
+
+该数据集包含了4个属性：
+
+& Sepal.Length（花萼长度），单位是cm;
+
+& Sepal.Width（花萼宽度），单位是cm;
+
+& Petal.Length（花瓣长度），单位是cm;
+
+& Petal.Width（花瓣宽度），单位是cm;
+
+种类：Iris Setosa（山鸢尾）、Iris Versicolour（杂色鸢尾），以及 Iris Virginica（维吉尼亚鸢尾）。
+
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221106125732.png)
+
+```verilog
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+import pandas as pd
+import numpy as np
+
+iris = load_iris()
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df['is_train'] = np.random.uniform(0, 1, len(df)) <= .75
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+df.head()
+
+train, test = df[df['is_train']==True], df[df['is_train']==False]
+
+features = df.columns[:4]
+clf = RandomForestClassifier(n_jobs=2)
+y, _ = pd.factorize(train['species'])
+clf.fit(train[features], y)
+
+preds = iris.target_names[clf.predict(test[features])]
+pd.crosstab(test['species'], preds, rownames=['actual'], colnames=['preds'])
+```
+
+
 ### 存在问题
 每种特性背后的具体原理不清楚
 一种统计学的知识不太牢固
