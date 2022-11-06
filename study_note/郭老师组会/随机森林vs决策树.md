@@ -23,6 +23,7 @@ pip install scikit-learn
 ```
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221105150521.png)
+
 ### Jupyter
 
 常用快捷键：
@@ -69,3 +70,7 @@ jupyter contrib nbextension install --user --skip-running-check
 3）每棵树都尽最大程度的生长，并且没有剪枝过程。
 一开始我们提到的随机森林中的“随机”就是指的这里的两个随机性。两个随机性的引入对随机森林的分类性能至关重要。由于它们的引入，使得随机森林不容易陷入过拟合，并且具有很好得抗噪能力（比如：对缺省值不敏感）。
 
+
+### 存在问题
+每种特性背后的具体原理不清楚
+一种统计学的知识不太牢固
