@@ -6,46 +6,16 @@
       {
         "id": "06b3d3fcb19ead8d",
         "type": "tabs",
-        "dimension": 21.218074656188605,
         "children": [
           {
             "id": "c8b0faa34fd9a3c1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "study_note/soi/数字后端.md",
-                "mode": "preview",
-                "source": false
+                "file": "kanban/task_kanban.md"
               }
-            },
-            "group": "bcd9fd5fcfe80a5c"
-          }
-        ]
-      },
-      {
-        "id": "ceb4228efeda5fa7",
-        "type": "tabs",
-        "dimension": 78.7819253438114,
-        "children": [
-          {
-            "id": "b0f360eb96843d8c",
-            "type": "leaf",
-            "state": {
-              "type": "media-view",
-              "state": {
-                "file": "z_attachment/meeting_01.mp4",
-                "info": {
-                  "type": "video",
-                  "filename": "meeting_01.mp4",
-                  "src": "z_attachment/meeting_01.mp4",
-                  "subtitles": [],
-                  "hash": "#t=01:07:57.548"
-                },
-                "currentTime": 4077.548
-              }
-            },
-            "group": "bcd9fd5fcfe80a5c"
+            }
           }
         ]
       }
@@ -114,7 +84,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "z_attachment/meeting_01.mp4"
+                "file": "kanban/task_kanban.md"
               }
             }
           },
@@ -124,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "z_attachment/meeting_01.mp4",
+                "file": "kanban/task_kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,10 +144,10 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "b0f360eb96843d8c",
+  "active": "c8b0faa34fd9a3c1",
   "lastOpenFiles": [
-    "study_note/soi/数字后端.md",
     "z_attachment/meeting_01.mp4",
+    "study_note/soi/数字后端.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
