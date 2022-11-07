@@ -6,16 +6,46 @@
       {
         "id": "06b3d3fcb19ead8d",
         "type": "tabs",
+        "dimension": 26.91552062868369,
         "children": [
           {
             "id": "c8b0faa34fd9a3c1",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "study_note/soi/数字后端.md",
+                "mode": "preview",
+                "source": false
               }
-            }
+            },
+            "group": "97d375a069fea233"
+          }
+        ]
+      },
+      {
+        "id": "cbfc5c5f0cd92822",
+        "type": "tabs",
+        "dimension": 73.0844793713163,
+        "children": [
+          {
+            "id": "e9736d2c01058bc8",
+            "type": "leaf",
+            "state": {
+              "type": "media-view",
+              "state": {
+                "file": "z_attachment/meeting_02.mp4",
+                "info": {
+                  "type": "video",
+                  "filename": "meeting_02.mp4",
+                  "src": "z_attachment/meeting_02.mp4",
+                  "subtitles": [],
+                  "hash": ""
+                },
+                "currentTime": 22.451323
+              }
+            },
+            "group": "97d375a069fea233"
           }
         ]
       }
@@ -67,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 252.5,
+    "collapsed": true
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -83,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "z_attachment/meeting_02.mp4"
               }
             }
           },
@@ -93,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kanban/task_kanban.md",
+                "file": "z_attachment/meeting_02.mp4",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,17 +174,17 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "c8b0faa34fd9a3c1",
+  "active": "e9736d2c01058bc8",
   "lastOpenFiles": [
-    "z_attachment/meeting_01.mp4",
     "study_note/soi/数字后端.md",
+    "z_attachment/meeting_01.mp4",
+    "kanban/task_kanban.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
     "Templates/插入/image.md",
     "study_note/郭老师组会/支持向量机.md",
     "study_note/作业/数集/设计/作业4.md",
-    "study_note/作业/数集/设计/作业4.pdf",
-    "study_note/作业/数集/设计/译码器-log.md"
+    "study_note/作业/数集/设计/作业4.pdf"
   ]
 }
