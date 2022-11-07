@@ -6,6 +6,7 @@
       {
         "id": "06b3d3fcb19ead8d",
         "type": "tabs",
+        "dimension": 21.218074656188605,
         "children": [
           {
             "id": "c8b0faa34fd9a3c1",
@@ -17,7 +18,34 @@
                 "mode": "preview",
                 "source": false
               }
-            }
+            },
+            "group": "bcd9fd5fcfe80a5c"
+          }
+        ]
+      },
+      {
+        "id": "ceb4228efeda5fa7",
+        "type": "tabs",
+        "dimension": 78.7819253438114,
+        "children": [
+          {
+            "id": "b0f360eb96843d8c",
+            "type": "leaf",
+            "state": {
+              "type": "media-view",
+              "state": {
+                "file": "z_attachment/meeting_01.mp4",
+                "info": {
+                  "type": "video",
+                  "filename": "meeting_01.mp4",
+                  "src": "z_attachment/meeting_01.mp4",
+                  "subtitles": [],
+                  "hash": "#t=01:07:57.548"
+                },
+                "currentTime": 1372.58832
+              }
+            },
+            "group": "bcd9fd5fcfe80a5c"
           }
         ]
       }
@@ -69,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 252.5,
+    "collapsed": true
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -85,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/soi/数字后端.md"
+                "file": "z_attachment/meeting_01.mp4"
               }
             }
           },
@@ -95,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/soi/数字后端.md",
+                "file": "z_attachment/meeting_01.mp4",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,13 +174,13 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "c8b0faa34fd9a3c1",
+  "active": "b0f360eb96843d8c",
   "lastOpenFiles": [
+    "study_note/soi/数字后端.md",
+    "z_attachment/meeting_01.mp4",
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
-    "study_note/soi/数字后端.md",
-    "z_attachment/meeting_01.mp4",
     "Templates/插入/image.md",
     "study_note/郭老师组会/支持向量机.md",
     "study_note/作业/数集/设计/作业4.md",
