@@ -6,7 +6,7 @@
       {
         "id": "06b3d3fcb19ead8d",
         "type": "tabs",
-        "dimension": 26.91552062868369,
+        "dimension": 19.646365422396855,
         "children": [
           {
             "id": "c8b0faa34fd9a3c1",
@@ -15,18 +15,18 @@
               "type": "markdown",
               "state": {
                 "file": "study_note/soi/数字后端.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             },
-            "group": "97d375a069fea233"
+            "group": "9be415f7d814cbb3"
           }
         ]
       },
       {
         "id": "cbfc5c5f0cd92822",
         "type": "tabs",
-        "dimension": 73.0844793713163,
+        "dimension": 80.35363457760315,
         "children": [
           {
             "id": "e9736d2c01058bc8",
@@ -34,18 +34,18 @@
             "state": {
               "type": "media-view",
               "state": {
-                "file": "z_attachment/meeting_02.mp4",
+                "file": "z_attachment/meeting_01.mp4",
                 "info": {
                   "type": "video",
-                  "filename": "meeting_02.mp4",
-                  "src": "z_attachment/meeting_02.mp4",
+                  "filename": "meeting_01.mp4",
+                  "src": "z_attachment/meeting_01.mp4",
                   "subtitles": [],
-                  "hash": ""
+                  "hash": "#t=02:05.944"
                 },
-                "currentTime": 22.451323
+                "currentTime": 2136.726996
               }
             },
-            "group": "97d375a069fea233"
+            "group": "9be415f7d814cbb3"
           }
         ]
       }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "z_attachment/meeting_02.mp4"
+                "file": "z_attachment/meeting_01.mp4"
               }
             }
           },
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "z_attachment/meeting_02.mp4",
+                "file": "z_attachment/meeting_01.mp4",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,13 +178,13 @@
   "lastOpenFiles": [
     "study_note/soi/数字后端.md",
     "z_attachment/meeting_01.mp4",
+    "z_attachment/meeting_02.mp4",
     "kanban/task_kanban.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
     "Templates/插入/image.md",
     "study_note/郭老师组会/支持向量机.md",
-    "study_note/作业/数集/设计/作业4.md",
-    "study_note/作业/数集/设计/作业4.pdf"
+    "study_note/作业/数集/设计/作业4.md"
   ]
 }
