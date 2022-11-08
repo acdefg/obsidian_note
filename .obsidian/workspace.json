@@ -41,7 +41,7 @@
                   "subtitles": [],
                   "hash": "#t=35:04.741"
                 },
-                "currentTime": 11369.094703
+                "currentTime": 11473.932304
               }
             }
           }
@@ -112,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "z_attachment/meeting_01.mp4"
+                "file": "study_note/soi/数字后端.md"
               }
             }
           },
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "z_attachment/meeting_01.mp4",
+                "file": "study_note/soi/数字后端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,10 +172,10 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "3b10262dd8e07094",
+  "active": "c8b0faa34fd9a3c1",
   "lastOpenFiles": [
-    "study_note/soi/数字后端.md",
     "z_attachment/meeting_01.mp4",
+    "study_note/soi/数字后端.md",
     "z_attachment/meeting_02.mp4",
     "kanban/task_kanban.md",
     "study_note/郭老师组会/随机森林vs决策树.md",
