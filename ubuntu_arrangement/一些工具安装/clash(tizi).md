@@ -37,4 +37,14 @@ clash
 
 ## 参考
 1. https://zhuanlan.zhihu.com/p/139305626?utm_source=pocket_mylist
-2. 
+2. [优质SS/SSR/V2Ray/Trojan/Clash机场推荐 | IPLC/IEPL专线加速器梯子推荐 - 选梯子](https://xuantizi.com/best-ss-ssr-v2ray-trojan-xray-proxy.html)
+
+# new
+现在ubuntu上有三个clash，
+一个在/usr/bin里面，可以直接终端输入clash启动
+一个在Template里面，可以进去后输入clash启动
+一个在download里面，输入./cfw启动，这个配置了订阅链接
+
+分流规则配置（待办）：
+https://yattazen.com/tutorial/clash-custom-config.html#:~:text=简易教程 | Clash | 自定义在线分流规则策略组 1 1. 简介,4. 导入配置文件地址到Clash 按照图示导入最终的配置文件到 CFW 或 Clash.Net ，完结撒花！%20
+这博客也不错，有空看看
