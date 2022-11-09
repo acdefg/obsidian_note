@@ -137,15 +137,24 @@
               "type": "todo",
               "state": {}
             }
+          },
+          {
+            "id": "0ab43568cfe403f2",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
     "width": 206.5,
     "collapsed": true
   },
-  "active": "5c83c6ae79d49b80",
+  "active": "0ab43568cfe403f2",
   "lastOpenFiles": [
     "study_note/作业/物联网/期中——移动通信原理综述.md",
     "study_note/作业/物联网/期末——智能家居.md",
