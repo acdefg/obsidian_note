@@ -8,12 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c8b0faa34fd9a3c1",
+            "id": "5c83c6ae79d49b80",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "study_note/作业/物联网/期末——智能家居.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -67,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5,
-    "collapsed": true
+    "width": 252.5
   },
   "right": {
     "id": "cdd63b50bab6eb76",
@@ -84,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kanban/task_kanban.md"
+                "file": "study_note/作业/物联网/期末——智能家居.md"
               }
             }
           },
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kanban/task_kanban.md",
+                "file": "study_note/作业/物联网/期末——智能家居.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,17 +145,17 @@
     "width": 206.5,
     "collapsed": true
   },
-  "active": "c8b0faa34fd9a3c1",
+  "active": "5c83c6ae79d49b80",
   "lastOpenFiles": [
-    "z_attachment/meeting_01.mp4",
+    "study_note/作业/物联网/期中——移动通信原理综述.md",
+    "study_note/作业/物联网/期末——智能家居.md",
     "kanban/task_kanban.md",
+    "z_attachment/meeting_01.mp4",
     "study_note/soi/数字后端.md",
     "z_attachment/meeting_02.mp4",
     "study_note/郭老师组会/随机森林vs决策树.md",
     "study_note/soi/riscv.md",
     "study_note/soi/invertor.md",
-    "Templates/插入/image.md",
-    "study_note/郭老师组会/支持向量机.md",
-    "study_note/作业/数集/设计/作业4.md"
+    "Templates/插入/image.md"
   ]
 }
