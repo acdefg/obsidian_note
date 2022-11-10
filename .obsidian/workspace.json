@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/树莓派/raspberry.md",
+                "file": "study_note/作业/树莓派/内核裁剪.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/树莓派/raspberry.md",
+                "file": "study_note/作业/树莓派/内核裁剪.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/图床设置.md",
+                "file": "study_note/作业/树莓派/内核裁剪.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/树莓派/raspberry.md"
+                "file": "study_note/作业/树莓派/内核裁剪.md"
               }
             }
           },
