@@ -23,7 +23,8 @@
   "enabled_templates_hotkeys": [
     "Templates/插入/code blocks.md",
     "Templates/插入/ad-note.md",
-    "Templates/插入/image.md"
+    "Templates/插入/image.md",
+    "Templates/插入/code blocks shell.md"
   ],
   "startup_templates": [
     ""

@@ -9,7 +9,11 @@ github
 ```txt
 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
 ```
-(win,ubuntu已验证，永久有效)
+(win已验证，永久有效)
+
+```verilog
+
+```
 
 
 gitee
