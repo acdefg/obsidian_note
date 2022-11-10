@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/图床设置.md",
+                "file": "study_note/作业/树莓派/raspberry.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "私人",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/图床设置.md",
+                "file": "study_note/作业/树莓派/raspberry.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/图床设置.md"
+                "file": "study_note/作业/树莓派/raspberry.md"
               }
             }
           },
@@ -166,9 +165,25 @@
               "type": "todo",
               "state": {}
             }
+          },
+          {
+            "id": "1cbeadaf1c34822d",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "eac1dbc6df4e724f",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -176,6 +191,7 @@
   },
   "active": "e8190376a89a8678",
   "lastOpenFiles": [
+    "ubuntu_arrangement/一些配置/图床设置.md",
     "study_note/作业/树莓派/内核裁剪.md",
     "study_note/作业/树莓派/raspberry.md",
     "study_note/作业/树莓派/树莓派.md",
@@ -184,7 +200,6 @@
     "study_note/作业/log.md",
     "ubuntu_arrangement/一些工具安装/clash(tizi).md",
     "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
-    "study_note/业余/一生一芯.md",
-    "ubuntu_arrangement/一些配置/host，source文件更改.md"
+    "study_note/业余/一生一芯.md"
   ]
 }
