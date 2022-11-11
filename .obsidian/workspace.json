@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md",
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
                 "mode": "source",
                 "source": false
               }
@@ -34,7 +34,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md"
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md",
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md",
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md"
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md"
               }
             }
           },
@@ -198,8 +198,8 @@
   },
   "active": "115bdc1922f44848",
   "lastOpenFiles": [
-    "study_note/作业/树莓派/内核裁剪步骤.md",
     "study_note/作业/树莓派/内核裁剪log.md",
+    "study_note/作业/树莓派/内核裁剪步骤.md",
     "study_note/作业/树莓派/raspberry.md",
     "ubuntu_arrangement/一些配置/配置中一些小问题.md",
     "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
