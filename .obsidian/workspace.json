@@ -6,6 +6,7 @@
       {
         "id": "f6cb1581a2ecae96",
         "type": "tabs",
+        "dimension": 79.27852348993288,
         "children": [
           {
             "id": "115bdc1922f44848",
@@ -13,9 +14,27 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/配置中一些小问题.md",
+                "file": "study_note/作业/树莓派/内核裁剪log.md",
                 "mode": "source",
-                "source": true
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "973b1023485ae9bc",
+        "type": "tabs",
+        "dimension": 20.721476510067113,
+        "children": [
+          {
+            "id": "9378b5bda01e6a4a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "study_note/作业/树莓派/内核裁剪log.md"
               }
             }
           }
@@ -85,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/配置中一些小问题.md",
+                "file": "study_note/作业/树莓派/内核裁剪log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/配置中一些小问题.md",
+                "file": "study_note/作业/树莓派/内核裁剪log.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu_arrangement/一些配置/配置中一些小问题.md"
+                "file": "study_note/作业/树莓派/内核裁剪log.md"
               }
             }
           },
@@ -174,19 +193,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 154.7423553466797
+    "width": 154.7423553466797,
+    "collapsed": true
   },
   "active": "115bdc1922f44848",
   "lastOpenFiles": [
-    "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
     "study_note/作业/树莓派/内核裁剪步骤.md",
     "study_note/作业/树莓派/内核裁剪log.md",
+    "ubuntu_arrangement/一些配置/配置中一些小问题.md",
+    "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
     "study_note/作业/树莓派/raspberry.md",
     "study_note/作业/树莓派/树莓派.md",
     "Templates/插入/code blocks shell.md",
     "study_note/作业/集成电路前沿技术导论.md",
     "Pasted image 20221110235541.png",
-    "Pasted image 20221110235017.png",
-    "Pasted image 20221111000241.png"
+    "Pasted image 20221110235017.png"
   ]
 }
