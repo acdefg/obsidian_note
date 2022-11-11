@@ -136,3 +136,4 @@ Backup
 [Linux内核配置选项 （经典学习）_wangliang888888的博客-CSDN博客](https://blog.csdn.net/wangliang888888/article/details/86599092) 👍参考选项配置
 [技术|如何装载/卸载 Linux 内核模块](https://linux.cn/article-9750-1.html) 有关于查看模块数量的说明
 [【嵌入式】构建嵌入式Linux系统（uboot、内核、文件系统） - 知乎](https://zhuanlan.zhihu.com/p/573207792) 介绍内核系统
+https://blog.csdn.net/u012308586/article/details/89491295 linux 内核裁剪流程
