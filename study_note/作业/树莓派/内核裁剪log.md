@@ -59,6 +59,69 @@ Menuconfig：
 内核升级：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111006632.png)
 
+## 内核配置
+### 方法
+常见的几种配置方式：
+
+为了完成内核的配置，必须切换到root用户，然后转入内核源码目录(就是你下载新内核的目录)：
+
+#cd /usr/src/linux/linux-2.6.38
+
+然后执行下面命令之一:
+
+#make config
+
+#make oldconfig
+
+#make menuconfig
+
+#make gconfig
+
+#make defconfig
+
+#make allyesconfig
+
+#make allmodconfig
+
+1.make config
+
+基于文本的最为传统的也是最为枯草的一种配置方式，但是它可以使用任何情况，这种方式会为每一个内核支持的特性向用户提问，如果用户回答“y”，则把特性编译进内核；回答“m”，则它特性作为模块进行编译；回答“n”，则表示不对该特性提供支持
+
+如果回答每个问题前，必须考虑清楚，如果在配置过程中犯了错误给了错误的回答，就只能按“ctcl+c”强行退出了
+
+2.make oldconfig
+
+make oldconfig和make config类似，但是它的作用是在现有的内核设置文件基础上建立一个新的设置文件，只会向用户提供有关新内核特性的问题，在新内核升级的过程 中，make oldconfig非常有用，用户将现有的配置文件.config复制到新内核的源码中，执行make oldconfig，此时，用户只需要回答那些针对新增特性的问题
+
+make silentoldconfig : Like above, but avoids cluttering the screen with questions already answered.和上面oldconfig一样，但在屏幕上不再出现已在.config中配置好的选项。
+
+3.make menuconfig
+
+基于终端的一种配置方式，提供了文本模式的图形用户界面，用户可以通过光标移动来浏览所支持的各种特性。使用这用配置方式时，系统中必须安装有ncurese库，否则会显示“Unable to find the Ncurses libraies”的错误提示
+
+4.make xoncifg
+
+基 于X Winodws的一种配置方式，提供了漂亮的配置窗口，不过只有能够在X Server上使用root用户欲行X应用程序时，才能够使用，它依赖于QT，如果系统中没有安装QT库，则会出现“Unable to find the QT installation”的错误提示
+
+5.make gconfig
+
+与make xocnifg类似，不同的是make gconfig依赖于GTK库
+
+6.make defconfig
+
+按照默认的配置文件arch/i386/defconfig对内核进行配置，生成.config可以用作初始化配置，然后再使用make menuconfig进行定制化配置
+
+7.make allyesconfig
+
+尽量多地使用“y”设置内核选项值，生成的配置中包含了全部的内核特性
+
+make allnoconfig :除必须的选项外,[**其它**](https://blog.csdn.net/hushup/article/details/26257791#:~:text=%E5%9C%A8%E5%86%85%E6%A0%B8%E6%A0%91%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95,%E8%A1%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%86%8D%E8%BF%90%E8%A1%8C%E3%80%82)选项一律不选. (常用于嵌入式系统).  
+
+8.make allmodconfig
+
+尽可能多的使用“m”设置内核选项值来生成配置文件
+
+
 ## Reference
 [树莓派内核源码得获取，配置， 编译，裁剪_一只青木呀的博客-CSDN博客_树莓派内核源码](https://blog.csdn.net/weixin_45309916/article/details/107525503)
 [树莓派 raspi-config 设置详解_weixin_34150830的博客-CSDN博客](https://blog.csdn.net/weixin_34150830/article/details/91733122)   --read
