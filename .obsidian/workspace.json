@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
+                "file": "study_note/作业/树莓派/内核裁剪log.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
+                "file": "study_note/作业/树莓派/内核裁剪log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
+                "file": "study_note/作业/树莓派/内核裁剪log.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪步骤.md"
+                "file": "study_note/作业/树莓派/内核裁剪log.md"
               }
             }
           },
@@ -191,10 +191,10 @@
   },
   "active": "e8190376a89a8678",
   "lastOpenFiles": [
+    "study_note/作业/树莓派/内核裁剪步骤.md",
     "study_note/作业/树莓派/内核裁剪log.md",
     "Templates/插入/code blocks shell.md",
     "study_note/作业/集成电路前沿技术导论.md",
-    "study_note/作业/树莓派/内核裁剪步骤.md",
     "study_note/作业/树莓派/树莓派.md",
     "Pasted image 20221110235541.png",
     "Pasted image 20221110235017.png",
