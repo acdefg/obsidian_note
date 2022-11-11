@@ -24,9 +24,6 @@ sudo apt-get install putty
 Sd 卡挂载到 linux 上，不取 SD 卡更新内核
 [树莓派不取 SD 卡更新 kernel 和 dtb_Li-Yongjun的博客-CSDN博客](https://blog.csdn.net/lyndon_li/article/details/127718815)
 
-Reference：
-[树莓派内核源码得获取，配置， 编译，裁剪_一只青木呀的博客-CSDN博客_树莓派内核源码](https://blog.csdn.net/weixin_45309916/article/details/107525503)
-
 uname -a
 查看原来内核版本
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110125692.png)
@@ -57,3 +54,6 @@ Install modules:
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110935973.png)
 内核升级：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111006632.png)
+
+## Reference
+[树莓派内核源码得获取，配置， 编译，裁剪_一只青木呀的博客-CSDN博客_树莓派内核源码](https://blog.csdn.net/weixin_45309916/article/details/107525503)
