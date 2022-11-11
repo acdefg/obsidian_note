@@ -1,7 +1,6 @@
 [
   "templater-obsidian",
   "obsidian-tasks-plugin",
-  "obsidian-auto-link-title",
   "obsidian-cursor-location-plugin",
   "easy-typing-obsidian",
   "obsidian-enhancing-mindmap",
@@ -30,5 +29,6 @@
   "obsidian-emoji-toolbar",
   "calendar",
   "obsidian-checklist-plugin",
-  "obsidian-day-planner"
+  "obsidian-day-planner",
+  "obsidian-auto-link-title"
 ]
