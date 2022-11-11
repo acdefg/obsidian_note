@@ -12,16 +12,17 @@ sudo apt-get install putty
 [Putty保持会话连接 & 正确注销方法_Tartisan的博客-CSDN博客](https://blog.csdn.net/Design_by_TaoZ/article/details/80629646)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101944468.png)
 
-
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101944590.png)
 
 不能显示桌面，改了分辨率之后可以了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101953207.png)
 
 ## 内核编译方法
-在树莓派中编译
-在 linux 上编译好，放到 sd 里
-Sd 卡挂载到 linux 上，不取 SD 卡更新内核
+1. 直接在树莓派中编译
+2. 在 linux 上编译好，放到 sd 里
+	1. Make config
+	2. Make menuconfig
+3. Sd 卡挂载到 linux 上，不取 SD 卡更新内核（待定）
 [树莓派不取 SD 卡更新 kernel 和 dtb_Li-Yongjun的博客-CSDN博客](https://blog.csdn.net/lyndon_li/article/details/127718815)
 
 uname -a
@@ -60,7 +61,7 @@ Menuconfig：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111006632.png)
 
 ## 内核配置
-### 方法
+### 几种方法
 常见的几种配置方式：
 
 为了完成内核的配置，必须切换到root用户，然后转入内核源码目录(就是你下载新内核的目录)：
@@ -129,9 +130,8 @@ Backup
 
 
 ## Reference
-[树莓派内核源码得获取，配置， 编译，裁剪_一只青木呀的博客-CSDN博客_树莓派内核源码](https://blog.csdn.net/weixin_45309916/article/details/107525503)
+[树莓派内核源码得获取，配置， 编译，裁剪_一只青木呀的博客-CSDN博客_树莓派内核源码](https://blog.csdn.net/weixin_45309916/article/details/107525503) 👍官网搬运工
 [树莓派 raspi-config 设置详解_weixin_34150830的博客-CSDN博客](https://blog.csdn.net/weixin_34150830/article/details/91733122)   --read
-[树莓派的关机命令_huayucong的博客-CSDN博客_树莓派关机指令](https://blog.csdn.net/huayucong/article/details/51706252)
 [【嵌入式】构建嵌入式Linux系统（uboot、内核、文件系统）_萌宅鹿同学的博客-CSDN博客_构建嵌入式系统](https://blog.csdn.net/weixin_43734095/article/details/105251245)
 [Linux内核配置选项 （经典学习）_wangliang888888的博客-CSDN博客](https://blog.csdn.net/wangliang888888/article/details/86599092) 👍参考选项配置
 [技术|如何装载/卸载 Linux 内核模块](https://linux.cn/article-9750-1.html) 有关于查看模块数量的说明
