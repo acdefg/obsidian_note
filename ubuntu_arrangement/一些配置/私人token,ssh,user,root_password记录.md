@@ -48,5 +48,5 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIk1xBltdcEgY4TpJ9pVSWaNSCG4iUCg/mnuhpkTSE
 ```
 ### root passwd
 ```txt
-759
+7598461230
 ```
