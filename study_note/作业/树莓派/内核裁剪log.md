@@ -58,3 +58,4 @@ Install modules:
 ## Reference
 [树莓派内核源码得获取，配置， 编译，裁剪_一只青木呀的博客-CSDN博客_树莓派内核源码](https://blog.csdn.net/weixin_45309916/article/details/107525503)
 [树莓派 raspi-config 设置详解_weixin_34150830的博客-CSDN博客](https://blog.csdn.net/weixin_34150830/article/details/91733122)
+[树莓派的关机命令_huayucong的博客-CSDN博客_树莓派关机指令](https://blog.csdn.net/huayucong/article/details/51706252)
