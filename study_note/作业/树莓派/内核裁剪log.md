@@ -52,5 +52,6 @@ Install modules:
 替换内核：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110133965.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110956391.png)
+
 第二次安装：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110935973.png)
