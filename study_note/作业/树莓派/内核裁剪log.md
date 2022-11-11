@@ -50,6 +50,10 @@ Install modules:
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110133965.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110956391.png)
 
+Menuconfig：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111027509.png)
+
+
 ### 第二次安装
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110935973.png)
 内核升级：
