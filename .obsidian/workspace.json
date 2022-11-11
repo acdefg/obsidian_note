@@ -4,30 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "33119de93919f690",
+        "id": "f6cb1581a2ecae96",
         "type": "tabs",
         "children": [
           {
-            "id": "16f1c26daa19581b",
+            "id": "115bdc1922f44848",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md",
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
                 "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e8190376a89a8678",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md",
-                "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md",
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md",
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study_note/作业/树莓派/内核裁剪log.md"
+                "file": "study_note/作业/树莓派/内核裁剪步骤.md"
               }
             }
           },
@@ -188,10 +176,10 @@
     "direction": "horizontal",
     "width": 154.7423553466797
   },
-  "active": "16f1c26daa19581b",
+  "active": "115bdc1922f44848",
   "lastOpenFiles": [
-    "study_note/作业/树莓派/内核裁剪步骤.md",
     "study_note/作业/树莓派/内核裁剪log.md",
+    "study_note/作业/树莓派/内核裁剪步骤.md",
     "study_note/作业/树莓派/raspberry.md",
     "study_note/作业/树莓派/树莓派.md",
     "Templates/插入/code blocks shell.md",
