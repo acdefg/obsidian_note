@@ -103,29 +103,11 @@ make silentoldconfig : Like above, but avoids cluttering the screen with questio
 
 基 于X Winodws的一种配置方式，提供了漂亮的配置窗口，不过只有能够在X Server上使用root用户欲行X应用程序时，才能够使用，它依赖于QT，如果系统中没有安装QT库，则会出现“Unable to find the QT installation”的错误提示
 
-5.make gconfig
-
-与make xocnifg类似，不同的是make gconfig依赖于GTK库
-
-6.make defconfig
-
-按照默认的配置文件arch/i386/defconfig对内核进行配置，生成.config可以用作初始化配置，然后再使用make menuconfig进行定制化配置
-
-7.make allyesconfig
-
-尽量多地使用“y”设置内核选项值，生成的配置中包含了全部的内核特性
-
-make allnoconfig :除必须的选项外,[**其它**](https://blog.csdn.net/hushup/article/details/26257791#:~:text=%E5%9C%A8%E5%86%85%E6%A0%B8%E6%A0%91%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95,%E8%A1%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%86%8D%E8%BF%90%E8%A1%8C%E3%80%82)选项一律不选. (常用于嵌入式系统).  
-
-8.make allmodconfig
-
-尽可能多的使用“m”设置内核选项值来生成配置文件
-
 
 ### Start
 Backup
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111306492.png)
-Menuconfig：
+Menuconfig：配了几个选项还没试
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111027509.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211121857732.png)
 
