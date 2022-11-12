@@ -9,7 +9,7 @@
   "highDPIDiagrams": true,
   "pandoc": "C:\\Program Files\\Pandoc\\pandoc.exe",
   "pdflatex": null,
-  "outputFolder": "D:\\Users\\Documents\\A研究生\\obsidan_note\\pandoc_output",
+  "outputFolder": "D:\\Users\\Documents\\A研究生",
   "extraArguments": "",
   "exportFrom": "md"
 }
