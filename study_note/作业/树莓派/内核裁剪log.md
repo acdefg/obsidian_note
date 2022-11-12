@@ -43,29 +43,31 @@ VNC 连接：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110100666.png)
 输入命令 " dmesg "看看 SD 卡是否挂在成功
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110101349.png)
-挂载错了地方，取消掉
+第一次挂载错了地方，取消掉
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110111889.png)
 Lsblk: 重新查看挂载对不对
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110119639.png)
-Install modules:
+Install modules：安装模块
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110122475.png)
 
 替换内核：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110133965.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110956391.png)
 
-Menuconfig：
+Menuconfig：修改配置文件
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111027509.png)
 
 
 ### 第二次安装
+这一部分仅提供内核升级对比的图片，是第一次安装不对后重新尝试的，内核版本的区别是安装系统的内核版本和从 github 上下载的内核版本之间的区别
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110935973.png)
 内核升级：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111006632.png)
 
 ## 内核配置
+这里自己修改内核
 ### 几种方法
-常见的几种配置方式：
+常见的几种配置方式：（仅供参考）
 
 为了完成内核的配置，必须切换到root用户，然后转入内核源码目录(就是你下载新内核的目录)：
 
@@ -74,17 +76,11 @@ Menuconfig：
 然后执行下面命令之一:
 
 #make config
-
 #make oldconfig
-
 #make menuconfig
-
 #make gconfig
-
 #make defconfig
-
 #make allyesconfig
-
 #make allmodconfig
 
 1.make config
