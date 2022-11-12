@@ -9,7 +9,7 @@ sudo apt-get install putty
 获取 IP 地址：
 192.168.31.84
 SSH 连接时，之前这个 IP 连接过了，要删一下原来的文件才能用：
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101930369.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101930369.png)
 在树莓派上运行 raspi-config，启用 VNC：
 [Putty保持会话连接 & 正确注销方法_Tartisan的博客-CSDN博客](https://blog.csdn.net/Design_by_TaoZ/article/details/80629646)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101944468.png)
