@@ -11,9 +11,6 @@ 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
 ```
 (win已验证，永久有效)
 
-```verilog
-
-```
 
 
 gitee
