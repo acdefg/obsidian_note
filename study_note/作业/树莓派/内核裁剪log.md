@@ -1,23 +1,26 @@
 ## 重装系统
-Putty 链接：
+将原来的 ubuntu18.04 换成 raspberry OS 64 bit full
+在安装时设置了用户名、密码和无线 wifi，通过改配置文件的方式连接 wifi 失败，但是在安装时直接设置会自动导入电脑所连 wifi，可以成功。
 
+在 ubuntu 主机上安装 Putty：
 ```shell
 sudo apt-get install putty
 ```
-
+获取 IP 地址：
 192.168.31.84
-
+SSH 连接时，之前这个 IP 连接过了，要删一下原来的文件才能用：
 ![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101930369.png)
-
+在树莓派上运行 raspi-config，启用 VNC：
 [Putty保持会话连接 & 正确注销方法_Tartisan的博客-CSDN博客](https://blog.csdn.net/Design_by_TaoZ/article/details/80629646)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101944468.png)
-
+VNC 连接：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101944590.png)
 
-不能显示桌面，改了分辨率之后可以了
+一开始不能显示桌面，重新连接树莓派，进入config改了分辨率之后可以了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101953207.png)
 
 ## 内核编译方法
+三种实现方法（供组员参考不用放到报告里）：
 1. 直接在树莓派中编译
 2. 在 linux 上编译好，放到 sd 里
 	1. Make config
@@ -25,7 +28,7 @@ sudo apt-get install putty
 3. Sd 卡挂载到 linux 上，不取 SD 卡更新内核（待定）
 [树莓派不取 SD 卡更新 kernel 和 dtb_Li-Yongjun的博客-CSDN博客](https://blog.csdn.net/lyndon_li/article/details/127718815)
 
-uname -a
+使用 uname -a 察看内核版本
 查看原来内核版本
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110125692.png)
 查看下载内核版本
