@@ -125,8 +125,9 @@ make allnoconfig :除必须的选项外,[**其它**](https://blog.csdn.net/hushu
 ### Start
 Backup
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111306492.png)
-
-
+Menuconfig：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111027509.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211121857732.png)
 
 ## Reference
 [树莓派内核源码得获取，配置， 编译，裁剪_一只青木呀的博客-CSDN博客_树莓派内核源码](https://blog.csdn.net/weixin_45309916/article/details/107525503) 👍官网搬运工
