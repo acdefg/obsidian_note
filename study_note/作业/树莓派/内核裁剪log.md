@@ -1,4 +1,5 @@
 ## 重装系统
+将原来的 ubuntu18.04 换成 raspberry OS 64 bit desktop
 Putty 链接：
 
 ```shell
