@@ -7,7 +7,7 @@ ffahQLg9ImZ6kMXEM98YNJqRT1AoCs8D
 
 github
 ```txt
-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
+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
 ```
 (win已验证，永久有效)
 
