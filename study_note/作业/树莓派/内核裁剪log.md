@@ -78,10 +78,6 @@ Menuconfig：修改配置文件
 #make config
 #make oldconfig
 #make menuconfig
-#make gconfig
-#make defconfig
-#make allyesconfig
-#make allmodconfig
 
 1.make config
 
