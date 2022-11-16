@@ -9,7 +9,7 @@ sudo apt-get install putty
 获取 IP 地址：
 192.168.31.84
 SSH 连接时，之前这个 IP 连接过了，要删一下原来的文件才能用：
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101930369.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101930369.png)
 在树莓派上运行 raspi-config，启用 VNC：
 [Putty保持会话连接 & 正确注销方法_Tartisan的博客-CSDN博客](https://blog.csdn.net/Design_by_TaoZ/article/details/80629646)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211101944468.png)
@@ -43,26 +43,31 @@ VNC 连接：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110100666.png)
 输入命令 " dmesg "看看 SD 卡是否挂在成功
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110101349.png)
-挂载错了地方，取消掉
+第一次挂载错了地方，取消掉
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110111889.png)
 Lsblk: 重新查看挂载对不对
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110119639.png)
-Install modules:
+Install modules：安装模块
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110122475.png)
 
 替换内核：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110133965.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110956391.png)
 
+Menuconfig：修改配置文件
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111027509.png)
+
 
 ### 第二次安装
+这一部分仅提供内核升级对比的图片，是第一次安装不对后重新尝试的，内核版本的区别是安装系统的内核版本和从 github 上下载的内核版本之间的区别
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211110935973.png)
 内核升级：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111006632.png)
 
 ## 内核配置
+这里自己修改内核
 ### 几种方法
-常见的几种配置方式：
+常见的几种配置方式：（仅供参考）
 
 为了完成内核的配置，必须切换到root用户，然后转入内核源码目录(就是你下载新内核的目录)：
 
@@ -73,10 +78,7 @@ Install modules:
 #make config
 #make oldconfig
 #make menuconfig
-#make gconfig
-#make defconfig
-#make allyesconfig
-#make allmodconfig
+
 
 1.make config
 
@@ -98,29 +100,11 @@ make silentoldconfig : Like above, but avoids cluttering the screen with questio
 
 基 于X Winodws的一种配置方式，提供了漂亮的配置窗口，不过只有能够在X Server上使用root用户欲行X应用程序时，才能够使用，它依赖于QT，如果系统中没有安装QT库，则会出现“Unable to find the QT installation”的错误提示
 
-5.make gconfig
-
-与make xocnifg类似，不同的是make gconfig依赖于GTK库
-
-6.make defconfig
-
-按照默认的配置文件arch/i386/defconfig对内核进行配置，生成.config可以用作初始化配置，然后再使用make menuconfig进行定制化配置
-
-7.make allyesconfig
-
-尽量多地使用“y”设置内核选项值，生成的配置中包含了全部的内核特性
-
-make allnoconfig :除必须的选项外,[**其它**](https://blog.csdn.net/hushup/article/details/26257791#:~:text=%E5%9C%A8%E5%86%85%E6%A0%B8%E6%A0%91%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95,%E8%A1%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%86%8D%E8%BF%90%E8%A1%8C%E3%80%82)选项一律不选. (常用于嵌入式系统).  
-
-8.make allmodconfig
-
-尽可能多的使用“m”设置内核选项值来生成配置文件
-
 
 ### Start
 Backup
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111306492.png)
-Menuconfig：
+Menuconfig：配了几个选项还没试
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211111027509.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211121857732.png)
 
@@ -131,5 +115,6 @@ Menuconfig：
 [Linux内核配置选项 （经典学习）_wangliang888888的博客-CSDN博客](https://blog.csdn.net/wangliang888888/article/details/86599092) 👍参考选项配置
 [技术|如何装载/卸载 Linux 内核模块](https://linux.cn/article-9750-1.html) 有关于查看模块数量的说明
 [【嵌入式】构建嵌入式Linux系统（uboot、内核、文件系统） - 知乎](https://zhuanlan.zhihu.com/p/573207792) 介绍内核系统
-https://blog.csdn.net/u012308586/article/details/89491295 linux 内核裁剪流程
-https://zhuanlan.zhihu.com/p/359566401?utm_campaign=shareopn&utm_medium=social&utm_oi=1192924132751323136&utm_psn=1574350599541170177&utm_source=wechat_session&utm_id=0 流程参考
+[嵌入式Linux内核制作_EmbededCoder的博客-CSDN博客](https://blog.csdn.net/u012308586/article/details/89491295) linux 内核裁剪流程
+[Linux内核架构及内核裁剪 - 知乎](https://zhuanlan.zhihu.com/p/359566401?utm_campaign=shareopn&utm_medium=social&utm_oi=1192924132751323136&utm_psn=1574350599541170177&utm_source=wechat_session&utm_id=0)  流程参考
+[嵌入式Linux内核制作_EmbededCoder的博客-CSDN博客](https://blog.csdn.net/u012308586/article/details/89491295) make clean 等（待定）

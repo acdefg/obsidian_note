@@ -7,13 +7,10 @@ ffahQLg9ImZ6kMXEM98YNJqRT1AoCs8D
 
 github
 ```txt
-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
+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
 ```
 (win已验证，永久有效)
 
-```verilog
-
-```
 
 
 gitee
