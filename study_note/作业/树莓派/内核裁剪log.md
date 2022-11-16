@@ -71,17 +71,11 @@ Install modules:
 然后执行下面命令之一:
 
 #make config
-
 #make oldconfig
-
 #make menuconfig
-
 #make gconfig
-
 #make defconfig
-
 #make allyesconfig
-
 #make allmodconfig
 
 1.make config
