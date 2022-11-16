@@ -8,7 +8,7 @@
   "ChineseEnglishSpace": true,
   "ChineseNoSpace": false,
   "PunctuationSpace": false,
-  "AutoCapital": true,
+  "AutoCapital": false,
   "AutoCapitalMode": "typing",
   "PunctuationSpaceMode": "global",
   "InlineCodeSpaceMode": 1,
