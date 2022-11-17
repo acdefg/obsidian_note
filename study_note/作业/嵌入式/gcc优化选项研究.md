@@ -80,6 +80,86 @@ Disassembly of section .text:
 
 ```
 
+```shell
+memcy3.o:     file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <memcpy>:
+   0:	d1000444 	sub	x4, x2, #0x1
+   4:	b4000762 	cbz	x2, f0 <memcpy+0xf0>
+   8:	91000423 	add	x3, x1, #0x1
+   c:	cb030003 	sub	x3, x0, x3
+  10:	f100387f 	cmp	x3, #0xe
+  14:	fa468880 	ccmp	x4, #0x6, #0x0, hi  // hi = pmore
+  18:	540006e9 	b.ls	f4 <memcpy+0xf4>  // b.plast
+  1c:	f100389f 	cmp	x4, #0xe
+  20:	54000789 	b.ls	110 <memcpy+0x110>  // b.plast
+  24:	927cec45 	and	x5, x2, #0xfffffffffffffff0
+  28:	d2800003 	mov	x3, #0x0                   	// #0
+  2c:	d503201f 	nop
+  30:	3ce36820 	ldr	q0, [x1, x3]
+  34:	3ca36800 	str	q0, [x0, x3]
+  38:	91004063 	add	x3, x3, #0x10
+  3c:	eb05007f 	cmp	x3, x5
+  40:	54ffff81 	b.ne	30 <memcpy+0x30>  // b.any
+  44:	927cec43 	and	x3, x2, #0xfffffffffffffff0
+  48:	cb030084 	sub	x4, x4, x3
+  4c:	8b030005 	add	x5, x0, x3
+  50:	8b030026 	add	x6, x1, x3
+  54:	eb03005f 	cmp	x2, x3
+  58:	540004c0 	b.eq	f0 <memcpy+0xf0>  // b.none
+  5c:	cb030042 	sub	x2, x2, x3
+  60:	d1000447 	sub	x7, x2, #0x1
+  64:	f10018ff 	cmp	x7, #0x6
+  68:	54000129 	b.ls	8c <memcpy+0x8c>  // b.plast
+  6c:	fc636820 	ldr	d0, [x1, x3]
+  70:	927df041 	and	x1, x2, #0xfffffffffffffff8
+  74:	8b0100a5 	add	x5, x5, x1
+  78:	8b0100c6 	add	x6, x6, x1
+  7c:	cb010084 	sub	x4, x4, x1
+  80:	fc236800 	str	d0, [x0, x3]
+  84:	eb01005f 	cmp	x2, x1
+  88:	54000340 	b.eq	f0 <memcpy+0xf0>  // b.none
+  8c:	394000c1 	ldrb	w1, [x6]
+  90:	390000a1 	strb	w1, [x5]
+  94:	b40002e4 	cbz	x4, f0 <memcpy+0xf0>
+  98:	394004c1 	ldrb	w1, [x6, #1]
+  9c:	390004a1 	strb	w1, [x5, #1]
+  a0:	f100049f 	cmp	x4, #0x1
+  a4:	54000260 	b.eq	f0 <memcpy+0xf0>  // b.none
+  a8:	394008c1 	ldrb	w1, [x6, #2]
+  ac:	390008a1 	strb	w1, [x5, #2]
+  b0:	f100089f 	cmp	x4, #0x2
+  b4:	540001e0 	b.eq	f0 <memcpy+0xf0>  // b.none
+  b8:	39400cc1 	ldrb	w1, [x6, #3]
+  bc:	39000ca1 	strb	w1, [x5, #3]
+  c0:	f1000c9f 	cmp	x4, #0x3
+  c4:	54000160 	b.eq	f0 <memcpy+0xf0>  // b.none
+  c8:	394010c1 	ldrb	w1, [x6, #4]
+  cc:	390010a1 	strb	w1, [x5, #4]
+  d0:	f100109f 	cmp	x4, #0x4
+  d4:	540000e0 	b.eq	f0 <memcpy+0xf0>  // b.none
+  d8:	394014c1 	ldrb	w1, [x6, #5]
+  dc:	390014a1 	strb	w1, [x5, #5]
+  e0:	f100149f 	cmp	x4, #0x5
+  e4:	54000060 	b.eq	f0 <memcpy+0xf0>  // b.none
+  e8:	394018c1 	ldrb	w1, [x6, #6]
+  ec:	390018a1 	strb	w1, [x5, #6]
+  f0:	d65f03c0 	ret
+  f4:	d2800003 	mov	x3, #0x0                   	// #0
+  f8:	38636824 	ldrb	w4, [x1, x3]
+  fc:	38236804 	strb	w4, [x0, x3]
+ 100:	91000463 	add	x3, x3, #0x1
+ 104:	eb03005f 	cmp	x2, x3
+ 108:	54ffff81 	b.ne	f8 <memcpy+0xf8>  // b.any
+ 10c:	d65f03c0 	ret
+ 110:	aa0103e6 	mov	x6, x1
+ 114:	aa0003e5 	mov	x5, x0
+ 118:	d2800003 	mov	x3, #0x0                   	// #0
+ 11c:	17ffffd4 	b	6c <memcpy+0x6c>
+```
+
 
 
 
