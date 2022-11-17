@@ -162,6 +162,8 @@ Disassembly of section .text:
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171908994.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171910102.png)
+
 
 
 
