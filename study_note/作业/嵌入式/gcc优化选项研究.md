@@ -4,3 +4,7 @@
 
 选择 memcpy 作为例子是因为它的实现代码简单, 但是涉及了传参, 条件判断和循环, 是逻辑密集型的代码, 能很好的体现 gcc 在逻辑上的优化。
 ![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171818644.png)
+
+```shell
+aarch64-linux-gnu-gcc -o memcy0.o memcy.c -O0
+```
