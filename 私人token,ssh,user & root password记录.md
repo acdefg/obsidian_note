@@ -1,4 +1,4 @@
 windows github image token
 ```txt
-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
+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
 ```
