@@ -160,6 +160,7 @@ Disassembly of section .text:
  11c:	17ffffd4 	b	6c <memcpy+0x6c>
 ```
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171908994.png)
 
 
 
