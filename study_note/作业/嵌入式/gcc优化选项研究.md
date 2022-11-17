@@ -47,4 +47,40 @@ Disassembly of section .text:
   60:	d65f03c0 	ret
 ```
 
+```shell
+memcy1.o:     file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <memcpy>:
+   0:	b40000e2 	cbz	x2, 1c <memcpy+0x1c>
+   4:	d2800003 	mov	x3, #0x0                   	// #0
+   8:	38636824 	ldrb	w4, [x1, x3]
+   c:	38236804 	strb	w4, [x0, x3]
+  10:	91000463 	add	x3, x3, #0x1
+  14:	eb02007f 	cmp	x3, x2
+  18:	54ffff81 	b.ne	8 <memcpy+0x8>  // b.any
+  1c:	d65f03c0 	ret
+```
+
+```shell
+memcy2.o:     file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <memcpy>:
+   0:	b40000e2 	cbz	x2, 1c <memcpy+0x1c>
+   4:	d2800003 	mov	x3, #0x0                   	// #0
+   8:	38636824 	ldrb	w4, [x1, x3]
+   c:	38236804 	strb	w4, [x0, x3]
+  10:	91000463 	add	x3, x3, #0x1
+  14:	eb02007f 	cmp	x3, x2
+  18:	54ffff81 	b.ne	8 <memcpy+0x8>  // b.any
+  1c:	d65f03c0 	ret
+
+```
+
+
+
+
 
