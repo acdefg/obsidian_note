@@ -170,12 +170,12 @@ aarch64-linux-gnu-gcc -o memcpy3.o memcpy_m.c -O3 -static
 ```
 
 使用 `time` 测试运行时间：
-| Options | real/s | user/s | system/% |
-| ------- | ---- | ---- | ------ |
-| O0      |  0.37    |      |        |
-| O1      |   0.35   |      |        |
-| O2      |    0.33  |      |        |
-| O3        |   0.24   |  0.6    |  100      |
+| Options | user/s | system|
+| ------- | ---- | ------ |
+| O0      |  0.37    |  0.5      |
+| O1      |   0.35   |  0.5      |
+| O2      |    0.33  |   0.54     |
+| O3        |     0.6    |  0.6      |
 
 real：实际时间，从 command 命令行开始执行到运行终止的消逝时间；
 
