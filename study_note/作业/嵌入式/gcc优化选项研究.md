@@ -160,10 +160,28 @@ Disassembly of section .text:
  11c:	17ffffd4 	b	6c <memcpy+0x6c>
 ```
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171908994.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211172105322.png)
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171910102.png)
+```shell
+aarch64-linux-gnu-gcc -o memcpy0.o memcpy_m.c -O0 -static
+aarch64-linux-gnu-gcc -o memcpy1.o memcpy_m.c -O1 -static
+aarch64-linux-gnu-gcc -o memcpy2.o memcpy_m.c -O2 -static
+aarch64-linux-gnu-gcc -o memcpy3.o memcpy_m.c -O3 -static
+```
 
+使用 `time` 测试运行时间：
+| Options | real/s | user/s | system/% |
+| ------- | ---- | ---- | ------ |
+| O0      |  0.37    |      |        |
+| O1      |   0.35   |      |        |
+| O2      |    0.33  |      |        |
+| O3        |   0.24   |  0.6    |  100      |
+
+real：实际时间，从 command 命令行开始执行到运行终止的消逝时间；
+
+user：用户CPU时间，命令执行完成花费的用户CPU时间，即命令在用户态中执行时间总和；
+
+system：系统CPU时间，命令执行完成花费的系统CPU时间，即命令在核心态中执行时间总和；
 
 
 

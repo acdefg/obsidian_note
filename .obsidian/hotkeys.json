@@ -45,14 +45,7 @@
   "workspace:goto-tab-4": [],
   "workspace:goto-tab-5": [],
   "workspace:goto-tab-6": [],
-  "outline:open-for-current": [
-    {
-      "modifiers": [
-        "Shift"
-      ],
-      "key": "\\"
-    }
-  ],
+  "outline:open-for-current": [],
   "obsidian-statusbar-pomo:start-satusbar-pomo": [
     {
       "modifiers": [
@@ -69,6 +62,14 @@
         "Mod"
       ],
       "key": "P"
+    }
+  ],
+  "outline:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
     }
   ]
 }
