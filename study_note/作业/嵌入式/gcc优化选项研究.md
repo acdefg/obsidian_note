@@ -13,3 +13,38 @@ aarch64-linux-gnu-gcc -c -o memcy0.o memcy.c -O0
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171841155.png)
 使用 `objdump ` 对程序进行反汇编：
 
+
+```shell
+memcy0.o:     file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <memcpy>:
+   0:	d100c3ff 	sub	sp, sp, #0x30
+   4:	f9000fe0 	str	x0, [sp, #24]
+   8:	f9000be1 	str	x1, [sp, #16]
+   c:	f90007e2 	str	x2, [sp, #8]
+  10:	f9400fe0 	ldr	x0, [sp, #24]
+  14:	f90013e0 	str	x0, [sp, #32]
+  18:	f9400be0 	ldr	x0, [sp, #16]
+  1c:	f90017e0 	str	x0, [sp, #40]
+  20:	14000009 	b	44 <memcpy+0x44>
+  24:	f94017e1 	ldr	x1, [sp, #40]
+  28:	91000420 	add	x0, x1, #0x1
+  2c:	f90017e0 	str	x0, [sp, #40]
+  30:	f94013e0 	ldr	x0, [sp, #32]
+  34:	91000402 	add	x2, x0, #0x1
+  38:	f90013e2 	str	x2, [sp, #32]
+  3c:	39400021 	ldrb	w1, [x1]
+  40:	39000001 	strb	w1, [x0]
+  44:	f94007e0 	ldr	x0, [sp, #8]
+  48:	d1000401 	sub	x1, x0, #0x1
+  4c:	f90007e1 	str	x1, [sp, #8]
+  50:	f100001f 	cmp	x0, #0x0
+  54:	54fffe81 	b.ne	24 <memcpy+0x24>  // b.any
+  58:	f9400fe0 	ldr	x0, [sp, #24]
+  5c:	9100c3ff 	add	sp, sp, #0x30
+  60:	d65f03c0 	ret
+```
+
+
