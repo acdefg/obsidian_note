@@ -9,6 +9,7 @@
 ```shell
 aarch64-linux-gnu-gcc -c -o memcy0.o memcy.c -O0
 ```
-使用 file 指令打印文件类型
+使用 file 指令打印文件类型，可以看到该程序属于在 arm64 环境：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171841155.png)
+使用 `objdump ` 对程序进行反汇编：
 
