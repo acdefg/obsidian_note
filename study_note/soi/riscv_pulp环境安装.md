@@ -32,6 +32,11 @@ cd pulpion
 ```
 因为不在开头就跑 update 出错无数次
 
+建议再跑一个，虽然很多博客和教程中都没提，但我遇到了问题
+```shell
+./generate-scripts.py
+```
+
 ### tool chain
 
 下载 tool chain respository
