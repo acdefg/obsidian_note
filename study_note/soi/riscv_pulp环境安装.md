@@ -135,6 +135,10 @@ sudo ln -s /usr/bin/python2 /usr/bin/python
 
 [libXft.so.2: cannot open shared object file: No such file or directory](https://www.linuxquestions.org/questions/linux-newbie-8/libxft-so-2-cannot-open-shared-object-file-no-such-file-or-directory-4175413269/)
 
+[Questa 10.7 在 ubuntu20.04下安装成功了_杰之行的博客-CSDN博客](https://blog.csdn.net/haojie_duan/article/details/119248753#t5)
+
+[Site Unreachable](https://blog.csdn.net/qq446293528/article/details/113895761)
+
 
 ```shell
 sudo apt install tcsh
