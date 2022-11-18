@@ -23,6 +23,15 @@
 
 [Issues · pulp-platform/pulpino · GitHub](https://github.com/pulp-platform/pulpino/issues) 😒鉴于我老点它，所以存一下
 ## log
+### pulipion
+
+```shell
+git clone https://github.com/pulp-platform/pulpino.git
+cd pulpion
+./update-ips.py
+```
+因为不在开头就跑 update 出错无数次
+
 ### tool chain
 
 下载 tool chain respository
