@@ -26,7 +26,7 @@
 [PULPino 在 Modelsim 下的软件模拟 - 知乎](https://zhuanlan.zhihu.com/p/470281404) 看到的第一个模拟，modelsim，参考意义不大
 [pulpino[1] nuttx：bring up · 大专栏](https://www.dazhuanlan.com/cnrootkit/topics/1415719) pulpion nuttx 内核移植
 [安装一个可用的Linux版本Modelsim](https://junningwu.haawking.com/tech/2019/12/11/%E5%AE%89%E8%A3%85%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84Linux%E7%89%88%E6%9C%ACModelsim/) modelsim 仿真 pulpion
-
+[Running Modelsim on a 64-bit Ubuntu - Github personal blog](https://pcotret.github.io/modelsim-ubuntu/) 用到 freetype 不懂但是留着
 ## log
 ### tool chain
 
