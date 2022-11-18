@@ -40,7 +40,7 @@ git clone --recursive https://github.com/pulp-platform/pulp-riscv-gnu-toolchain
 $ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
 ```
 
-安装，这一步要先切 root
+安装，这一步要先切 root 用户
 ```shell
 ./configure --prefix=/opt/riscv --with-arch=rv32imc --with-cmodel=medlow --enable-multilib
 make newlib -j4
