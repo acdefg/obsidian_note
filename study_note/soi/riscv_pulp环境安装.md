@@ -19,7 +19,7 @@
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181412510.png) ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181419145.png)
 
 
-## reference
+## reference link
 [编译riscv32-unknown-elf-gcc_牧羊女说的博客-CSDN博客](https://blog.csdn.net/deliapu/article/details/120708442) 比较详细
 [RISC-V GNU工具链的编译与安装 - 知乎](https://zhuanlan.zhihu.com/p/364638851) 有指令的解析
 [riscv各种版本gcc工具链编译与安装_weiqi7777的博客-CSDN博客](https://blog.csdn.net/weiqi7777/article/details/88045720) riscv 的各种工具链
@@ -27,6 +27,8 @@
 [pulpino[1] nuttx：bring up · 大专栏](https://www.dazhuanlan.com/cnrootkit/topics/1415719) pulpion nuttx 内核移植
 [安装一个可用的Linux版本Modelsim](https://junningwu.haawking.com/tech/2019/12/11/%E5%AE%89%E8%A3%85%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84Linux%E7%89%88%E6%9C%ACModelsim/) modelsim 仿真 pulpion
 [Running Modelsim on a 64-bit Ubuntu - Github personal blog](https://pcotret.github.io/modelsim-ubuntu/) 用到 freetype 不懂但是留着
+
+[Issues · pulp-platform/pulpino · GitHub](https://github.com/pulp-platform/pulpino/issues) 😒鉴于我老点它，所以存一下
 ## log
 ### tool chain
 
