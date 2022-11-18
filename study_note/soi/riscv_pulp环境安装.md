@@ -63,6 +63,9 @@ sudo ln -s /usr/bin/python2 /usr/bin/python
 3. ImportError: No module named yaml
 只能说不要再报错了，受够了，能不能一次把话说清楚
 `sudo pip2 install pyyaml #python2` python2 这么装，别问我 python3 怎么装，自己去搜吧
+4. 安装 modelsim 19.0 报错
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181745047.png)
+
 
 ## ideas
 用 qemu 仿真试试，参考普通 riscv 的办法，难点在于没有程序可以测试
