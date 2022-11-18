@@ -132,6 +132,10 @@ sudo ln -s /usr/bin/python2 /usr/bin/python
 5. [zsh: permission denied问题的解决办法_sido的博客-CSDN博客](https://blog.csdn.net/chnyifan/article/details/104705437)
 6. /bin/sh :1 tcsh not found 之类的，手敲的，具体的忘记了
 [Linux中tcsh/tcsh和bash的环境变量的配置以及切换shell版本_SOC罗三炮的博客-CSDN博客_linux tcsh](https://blog.csdn.net/luolaihua2018/article/details/124382529)
+
+[libXft.so.2: cannot open shared object file: No such file or directory](https://www.linuxquestions.org/questions/linux-newbie-8/libxft-so-2-cannot-open-shared-object-file-no-such-file-or-directory-4175413269/)
+
+
 ```shell
 sudo apt install tcsh
 ```
