@@ -66,9 +66,9 @@ make newlib -j4
 fix_m32.sh
 
 ```shell
-#!/bin/zsh
+#!/bin/bash
 
-#Find and replace all occurrances of '' and fix rest of line.
+#Find and replace all occurrances of '-m32' and fix rest of line.
 
 for file in $(find); do
     if [[ -f $file ]]; then
@@ -76,7 +76,7 @@ for file in $(find); do
         if [[ $? == 0 ]]; then
             echo writing...
             echo $file
-           sed 's/\//g' $file > tmp && mv tmp $file
+           sed 's/\-m32//g' $file > tmp && mv tmp $file
        fi
     fi
 done
