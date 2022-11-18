@@ -9,7 +9,7 @@
 
 ## pulpion environment requirement
 ![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181431287.png)
-
+[[ubuntu安装modelsim]]
 
 一些工具链：
 [GitHub - acdefg/pulp-riscv-gnu-toolchain](https://github.com/acdefg/pulp-riscv-gnu-toolchain) pulp
@@ -25,3 +25,24 @@
 [riscv各种版本gcc工具链编译与安装_weiqi7777的博客-CSDN博客](https://blog.csdn.net/weiqi7777/article/details/88045720) riscv 的各种工具链
 [PULPino 在 Modelsim 下的软件模拟 - 知乎](https://zhuanlan.zhihu.com/p/470281404) 看到的第一个模拟，modelsim，参考意义不大
 [pulpino[1] nuttx：bring up · 大专栏](https://www.dazhuanlan.com/cnrootkit/topics/1415719) pulpion nuttx 内核移植
+
+## log
+### tool chain
+
+下载 tool chain respository
+```shell
+git clone --recursive https://github.com/pulp-platform/pulp-riscv-gnu-toolchain
+```
+在使用官方库的时候用 `--recursive` 选项失败，这里可以成功
+
+安装环境 ubuntu：
+```shell
+$ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
+```
+
+安装，这一步要先切 root
+```shell
+./configure --prefix=/opt/riscv --with-arch=rv32imc --with-cmodel=medlow --enable-multilib
+make newlib -j4
+```
+这一步大部分选项算是一种尝试，直接使用下面 newlib 的指令安装的是 64 位，make 的选项可以参考 [RISC-V GNU工具链的编译与安装 - 知乎](https://zhuanlan.zhihu.com/p/364638851) 这里
