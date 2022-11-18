@@ -7,11 +7,14 @@
 > 记得在 zsh/bash 中添加路径，[[在 zsh 中添加路径]]
 > 安装错了可以先 `make clean` 再 make
 
+## pulpion environment requirement
+![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181431287.png)
+
+
 一些工具链：
-[Site Unreachable](https://github.com/acdefg/pulp-riscv-gnu-toolchain) pulp
-[Site Unreachable](https://github.com/acdefg/pulp-riscv-gnu-toolchain)
-[Site Unreachable](https://github.com/acdefg/riscv-gnu-toolchain) riscv
-[Site Unreachable](https://github.com/acdefg/ri5cy_gnu_toolchain) ri5cy
+[GitHub - acdefg/pulp-riscv-gnu-toolchain](https://github.com/acdefg/pulp-riscv-gnu-toolchain) pulp
+[GitHub - acdefg/riscv-gnu-toolchain: GNU toolchain for RISC-V, including GCC](https://github.com/acdefg/riscv-gnu-toolchain) riscv
+[GitHub - acdefg/ri5cy_gnu_toolchain](https://github.com/acdefg/ri5cy_gnu_toolchain) ri5cy
 个人感觉 pulp tool chain 和 riscv 的应该是一样的，前几次安装 ri5cy 老是失败有可能是没有开 root 权限，直接换了 pulp tool chain
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181412510.png) ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181419145.png)
 
