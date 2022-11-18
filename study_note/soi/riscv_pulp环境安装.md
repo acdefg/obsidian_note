@@ -48,7 +48,50 @@ make newlib -j4
 ```
 这一步大部分选项算是一种尝试，直接使用下面 newlib 的指令安装的是 64 位，make 的选项可以参考 [RISC-V GNU工具链的编译与安装 - 知乎](https://zhuanlan.zhihu.com/p/364638851) 这里
 
-##### 一些错误
+### pulp 编译篇
+#### part 1
+在 pulpion 源码文件夹下面，去 SW 文件夹下面 `mkdir build`，然后在把 SW 下的这个复制到 build 里面，虽然会报错，但是还是运行一下 `cmake_configure.riscv.gcc.sh` ，其它几个对应不同的 riscv
+
+```shell
+./cmake_configure.riscv.gcc.sh
+```
+然后新建两个文件，并且 `chmod u+x *.sh` ，以防忘记请把*号替换成文件名
+fix_m32.sh
+
+```shell
+#!/bin/zsh
+
+#Find and replace all occurrances of '' and fix rest of line.
+
+for file in $(find); do
+    if [[ -f $file ]]; then
+        [[ $(cat $file | grep m32) ]]
+        if [[ $? == 0 ]]; then
+            echo writing...
+            echo $file
+           sed 's/\//g' $file > tmp && mv tmp $file
+       fi
+    fi
+done
+```
+
+fix_linker.sh
+
+```shell
+#!/bin/zsh
+
+riscv32-unknown-elf-ld --verbose | head -n -1 | tail -n +7 | sed '168 a \ \ _fbss = .;' | sed '169 a \ \ . = .;' > /home/cici/code/qulp_test/pulpino/sw/build/CMakeFiles/CMakeTmp/riscv.ld
+```
+最后那个很长的路径要改掉
+
+再修改 cmake***.sh 文件中的 `GCC_MARCH="RV32IMXpulpv2"`，把原来的这个标志换掉好嘛
+
+先跑 fix_m32.sh，然后跑 fix_linker.sh，跑 cmake_configure.riscv.gcc.sh，和 fix_linker.sh 交替跑，直到成功
+
+#### part 2
+
+
+### 一些错误
 1. /usr/bin/env: ‘python’: No such file or directory
 没定位 python
 2. Missing parentheses in call to 'print'. Did you mean print(...)?
