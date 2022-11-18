@@ -49,9 +49,9 @@ make newlib -j4
 这一步大部分选项算是一种尝试，直接使用下面 newlib 的指令安装的是 64 位，make 的选项可以参考 [RISC-V GNU工具链的编译与安装 - 知乎](https://zhuanlan.zhihu.com/p/364638851) 这里
 
 ##### 一些环境错误
-/usr/bin/env: ‘python’: No such file or directory
+1. /usr/bin/env: ‘python’: No such file or directory
 没定位 python
-Missing parentheses in call to 'print'. Did you mean print(...)?
+2. Missing parentheses in call to 'print'. Did you mean print(...)?
 python2，不能用 python3
 这两个一起解决用：
 
@@ -60,6 +60,8 @@ sudo ln -s /usr/bin/python2 /usr/bin/python
 ```
 
 当然先看看 python2 在哪，虽然一般就在/usr/bin 下面，没有 python2 就装一个，原来用 python3 定位的默认 python，直接 `sudo rm /usr/bin/python`，再定位就好了，反正就是很暴力，已经烦了
+3. ImportError: No module named yaml
+只能说不要再报错了，受够了，能不能一次把话说清楚，
 
 ## ideas
 用 qemu 仿真试试，参考普通 riscv 的办法，难点在于没有程序可以测试
