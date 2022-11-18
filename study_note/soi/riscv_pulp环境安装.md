@@ -48,5 +48,10 @@ make newlib -j4
 ```
 这一步大部分选项算是一种尝试，直接使用下面 newlib 的指令安装的是 64 位，make 的选项可以参考 [RISC-V GNU工具链的编译与安装 - 知乎](https://zhuanlan.zhihu.com/p/364638851) 这里
 
+##### 一些环境错误
+Missing parentheses in call to 'print'. Did you mean print(...)?
+
+/usr/bin/env: ‘python’: No such file or directory
+
 ## ideas
 用 qemu 仿真试试，参考普通 riscv 的办法，难点在于没有程序可以测试
