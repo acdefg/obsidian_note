@@ -1,5 +1,5 @@
 起因 pulpion 环境要求：
-大问题在于 riscv 交叉编译工具链的安装
+大问题在于 riscv 交叉编译工具链的安装，xs 后来发现 modelsim 才难搞
 它要 riscv32-unknown-elf-gcc，应该重点在 32 位，newlib 版本
 
 > [!attention] 注意
@@ -11,7 +11,7 @@
 ![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181431287.png)
 [[ubuntu安装modelsim]]
 
-一些工具链：
+#### 一些工具链：
 [GitHub - acdefg/pulp-riscv-gnu-toolchain](https://github.com/acdefg/pulp-riscv-gnu-toolchain) pulp
 [GitHub - acdefg/riscv-gnu-toolchain: GNU toolchain for RISC-V, including GCC](https://github.com/acdefg/riscv-gnu-toolchain) riscv
 [GitHub - acdefg/ri5cy_gnu_toolchain](https://github.com/acdefg/ri5cy_gnu_toolchain) ri5cy
@@ -46,3 +46,6 @@ $ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-d
 make newlib -j4
 ```
 这一步大部分选项算是一种尝试，直接使用下面 newlib 的指令安装的是 64 位，make 的选项可以参考 [RISC-V GNU工具链的编译与安装 - 知乎](https://zhuanlan.zhihu.com/p/364638851) 这里
+
+## ideas
+用 qemu 仿真试试，参考普通 riscv 的办法，难点在于没有程序可以测试
