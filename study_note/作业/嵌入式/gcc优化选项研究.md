@@ -5,6 +5,24 @@
 选择 memcpy 作为例子是因为它的实现代码简单, 但是涉及了传参, 条件判断和循环, 是逻辑密集型的代码, 能很好的体现 gcc 在逻辑上的优化。
 ![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171818644.png)
 
+```C
+// This is the implementation in coreutils  
+  
+// Since no stdlib included, define size_t  
+// On x64 size_t is defined as unsigned long  
+  
+#define size_t unsigned long	  
+void * memcpy (void *destaddr, void const *srcaddr, size_t len)  
+{  
+    char *dest = destaddr;  
+    char const *src = srcaddr;  
+  
+    while (len-- > 0)  
+        *dest++ = *src++;  
+    return destaddr;  
+}
+```
+
 使用交叉编译，编译为 arm64 位环境的程序进行测试, 因为程序中没有 main 函数所以在交叉编译时加上 -c 选项：
 ```shell
 aarch64-linux-gnu-gcc -c -o memcy0.o memcy.c -O0
@@ -13,52 +31,52 @@ aarch64-linux-gnu-gcc -c -o memcy0.o memcy.c -O0
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211171841155.png)
 使用 `objdump ` 对程序进行反汇编：
 `aarch64-linux-gnu-objdump -d memcy0.o `
-
-```shell
+阅读代码，添加了一下注释
+```asm
 memcy0.o:     file format elf64-littleaarch64
 
 Disassembly of section .text:
 
 0000000000000000 <memcpy>:
-   0:	d100c3ff 	sub	sp, sp, #0x30
-   4:	f9000fe0 	str	x0, [sp, #24]
-   8:	f9000be1 	str	x1, [sp, #16]
-   c:	f90007e2 	str	x2, [sp, #8]
-  10:	f9400fe0 	ldr	x0, [sp, #24]
-  14:	f90013e0 	str	x0, [sp, #32]
-  18:	f9400be0 	ldr	x0, [sp, #16]
-  1c:	f90017e0 	str	x0, [sp, #40]
-  20:	14000009 	b	44 <memcpy+0x44>
-  24:	f94017e1 	ldr	x1, [sp, #40]
-  28:	91000420 	add	x0, x1, #0x1
-  2c:	f90017e0 	str	x0, [sp, #40]
-  30:	f94013e0 	ldr	x0, [sp, #32]
-  34:	91000402 	add	x2, x0, #0x1
-  38:	f90013e2 	str	x2, [sp, #32]
-  3c:	39400021 	ldrb	w1, [x1]
-  40:	39000001 	strb	w1, [x0]
-  44:	f94007e0 	ldr	x0, [sp, #8]
-  48:	d1000401 	sub	x1, x0, #0x1
-  4c:	f90007e1 	str	x1, [sp, #8]
-  50:	f100001f 	cmp	x0, #0x0
-  54:	54fffe81 	b.ne	24 <memcpy+0x24>  // b.any
+   0:	d100c3ff 	sub	sp, sp, #0x30   ;压栈
+   4:	f9000fe0 	str	x0, [sp, #24]   ;传递第一个参数(指针地址)
+   8:	f9000be1 	str	x1, [sp, #16]   ;传递第二个参数(指针地址)
+   c:	f90007e2 	str	x2, [sp, #8]    ;传递第三个参数
+  10:	f9400fe0 	ldr	x0, [sp, #24]   ;x0  --> *destaddr 指针地址复制 
+  14:	f90013e0 	str	x0, [sp, #32]   ;store *dest
+  18:	f9400be0 	ldr	x0, [sp, #16]   ;x0  --> *src 指针地址复制
+  1c:	f90017e0 	str	x0, [sp, #40]   ;store *src
+  20:	14000009 	b	44 <memcpy+0x44> ;跳转到44，执行len的递减
+  24:	f94017e1 	ldr	x1, [sp, #40]    ;loop start  x1 --> src (address)
+  28:	91000420 	add	x0, x1, #0x1     ;x0--->src + 1
+  2c:	f90017e0 	str	x0, [sp, #40]    ;src = src + 1
+  30:	f94013e0 	ldr	x0, [sp, #32]    ;x0 --> *dest (address)
+  34:	91000402 	add	x2, x0, #0x1     ;x2--->dest + 1
+  38:	f90013e2 	str	x2, [sp, #32]    ;dest = dest + 1
+  3c:	39400021 	ldrb	w1, [x1]     ;w1 --> *src (data)
+  40:	39000001 	strb	w1, [x0]     ;*dest --> w1 (data)
+  44:	f94007e0 	ldr	x0, [sp, #8]     ;读入len
+  48:	d1000401 	sub	x1, x0, #0x1     ;len-1
+  4c:	f90007e1 	str	x1, [sp, #8]     ;len = len -1
+  50:	f100001f 	cmp	x0, #0x0         ;len >0 ?
+  54:	54fffe81 	b.ne	24 <memcpy+0x24>  // b.any  
   58:	f9400fe0 	ldr	x0, [sp, #24]
   5c:	9100c3ff 	add	sp, sp, #0x30
-  60:	d65f03c0 	ret
+  60:	d65f03c0 	ret                  ;return
 ```
 
-```shell
+```asm
 memcy1.o:     file format elf64-littleaarch64
 
 Disassembly of section .text:
 
 0000000000000000 <memcpy>:
-   0:	b40000e2 	cbz	x2, 1c <memcpy+0x1c>
-   4:	d2800003 	mov	x3, #0x0                   	// #0
-   8:	38636824 	ldrb	w4, [x1, x3]
-   c:	38236804 	strb	w4, [x0, x3]
-  10:	91000463 	add	x3, x3, #0x1
-  14:	eb02007f 	cmp	x3, x2
+   0:	b40000e2 	cbz	x2, 1c <memcpy+0x1c>     ;x2 = 0 --> ret; x2 != 0 --> continue 
+   4:	d2800003 	mov	x3, #0x0                   	// #0  ; x3 = 0  i
+   8:	38636824 	ldrb	w4, [x1, x3]         ;w4 --> *(src+i) 
+   c:	38236804 	strb	w4, [x0, x3]         ;*(dest+i)  --> w4
+  10:	91000463 	add	x3, x3, #0x1             ;i = i + 1
+  14:	eb02007f 	cmp	x3, x2                   ;if i < x2, loop
   18:	54ffff81 	b.ne	8 <memcpy+0x8>  // b.any
   1c:	d65f03c0 	ret
 ```
@@ -147,7 +165,7 @@ Disassembly of section .text:
   e8:	394018c1 	ldrb	w1, [x6, #6]
   ec:	390018a1 	strb	w1, [x5, #6]
   f0:	d65f03c0 	ret
-  f4:	d2800003 	mov	x3, #0x0                   	// #0
+  f4:	d2800003 	mov	x3, #0x0           ;loop part       	// #0
   f8:	38636824 	ldrb	w4, [x1, x3]
   fc:	38236804 	strb	w4, [x0, x3]
  100:	91000463 	add	x3, x3, #0x1
@@ -161,6 +179,29 @@ Disassembly of section .text:
 ```
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211172105322.png)
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define size_t unsigned long 
+	
+int main(){
+    for (size_t i = 0; i<1000000; i++)
+    {
+        char* str = (char*) malloc(sizeof(char)*1024);
+        strcpy(str,"abcdefg");
+
+        char* new_str = (char*) malloc(sizeof(char)*1024);
+        memcpy(new_str,str,1024);	// customized memcpy() here
+    }
+
+    return 0;
+}
+	
+```
+
 
 ```shell
 aarch64-linux-gnu-gcc -o memcpy0.o memcpy_m.c -O0 -static
