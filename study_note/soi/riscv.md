@@ -20,6 +20,8 @@ cmake教程
 cmake官方教程
 [CMake Tutorial — CMake 3.17.5 Documentation](https://cmake.org/cmake/help/v3.17/guide/tutorial/index.html#adding-system-introspection-step-5)
 
+较详细的介绍
+[8.3 RI5CY介绍（已完成） · 关于RISC-V你所需要知道的一切](https://cnrv.gitbooks.io/riscv-soc-book/content/ch8/sec3-RI5CY_overview.html)
 
 工具链搭建
 ⚠️upload failed, check dev console
