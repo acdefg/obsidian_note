@@ -147,6 +147,7 @@ sudo apt install tcsh
 
 ## ideas
 用 qemu 仿真试试，参考普通 riscv 的办法，难点在于没有程序可以测试
+往 riscv 上移植一个系统内核
 
 ### log
 
