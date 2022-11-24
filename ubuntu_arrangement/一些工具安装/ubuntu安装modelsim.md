@@ -6,4 +6,4 @@
 有装就有卸：
 [Fetching Title#77fd](https://blog.csdn.net/heybob/article/details/41983427)
 
-然后这个装半天装不上去，烦死了直接装的
+然后这个装半天装不上去，烦死了直接装的 Questasim
