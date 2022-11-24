@@ -110,7 +110,7 @@ riscv32-unknown-elf-ld --verbose | head -n -1 | tail -n +7 | sed '168 a \ \ _fbs
 先跑 fix_m32.sh，然后跑 fix_linker.sh，跑 cmake_configure.riscv.gcc.sh，和 fix_linker.sh 交替跑，直到成功
 
 #### part 2
-
+make helloworld 会失败，因为环境不适配建议都是更换
 
 ### 一些错误
 1. /usr/bin/env: ‘python’: No such file or directory
