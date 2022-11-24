@@ -7,3 +7,6 @@
 [Fetching Title#77fd](https://blog.csdn.net/heybob/article/details/41983427)
 
 然后这个装半天装不上去，烦死了直接装的 Questasim
+参考：
+[Questa 10.7 在 ubuntu20.04下安装成功了_杰之行的博客-程序员宝宝_questa - 程序员宝宝](https://cxybb.com/article/haojie_duan/119248753)
+[IC验证工具：Ubuntu下Questasim10.7安装（64bit）全攻略_茶花煮酒的博客-CSDN博客](https://blog.csdn.net/qq446293528/article/details/113895761)
