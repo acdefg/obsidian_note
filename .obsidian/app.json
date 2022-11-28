@@ -6,5 +6,6 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "z_attachment"
+  "attachmentFolderPath": "z_attachment",
+  "alwaysUpdateLinks": true
 }
