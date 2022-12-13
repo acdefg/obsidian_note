@@ -31,3 +31,6 @@ int elem = src.at<int>(0,0);
 ```
 访问 test.jpg 图像的（0 , 0）元素
 
+### Soble
+[sobel算子原理与实现_写代码的胡歌的博客-CSDN博客_sobel算子原理](https://blog.csdn.net/qq_37124237/article/details/82183177)
+
