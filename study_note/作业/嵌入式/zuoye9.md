@@ -58,3 +58,7 @@ E: Unable to locate package libdc1394-22-dev
 [cmake - undefined reference to `png_set_longjmp_fn' when compiling PCL source file - Stack Overflow](https://is.gd/jkhxkT)
 
 这个错误花了很长时间，在 open4.x 的文件夹里面的 cmakelist 加上这里面的话，我加在开头了
+
+除了上面那个错误，其余可以参考这篇
+[Ubuntu22.04安装opencv4并配置VsCode_南叔先生的博客-CSDN博客_vscode配置opencv4](https://is.gd/giATjh)
+[Ubuntu22.04安装OpenCV4.5.1_Larry酷睿的博客-CSDN博客_ubuntu安装opencv4.5](https://is.gd/ARt86O)
