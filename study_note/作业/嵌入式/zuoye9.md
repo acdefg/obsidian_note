@@ -11,7 +11,7 @@ Mat src(10,10,CV_32FC3);
 **.depth 函数**
 
 ```
-int cv::Mat::depth()    const
+int cv::Mat::depth()  
 ```
 
 返回图像深度，即矩阵元素的存储方式
