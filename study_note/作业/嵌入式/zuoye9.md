@@ -45,5 +45,12 @@ sudo ln -s /usr/include/opencv4/opencv2 /usr/include/
 ### error messages
 [ubuntu换源更新失败：The following signatures couldn‘t be verified because the public key is not available_sxiaocaicai的博客-CSDN博客](https://is.gd/phn0oR)
 [Linux/Debian/Ubuntu报错解决：W: Target Packages (main/binary-amd64/Packages) is configured multiple times_zhangpeterx的博客-CSDN博客_w: target packages](https://is.gd/DHLCRc)
+[Ubuntu 20 仓库 http://security.ubuntu.com/ubuntu xenial-security InRelease 没有数字签名 解决_CyrusZhou的博客-CSDN博客](https://is.gd/LBwf0y)
+[E: Unable to locate package libjasper-dev的解决办法（亲测可以解决）_爱跑步的mango的博客-CSDN博客](https://is.gd/P6V8s3)
+```
+E: Package 'python-dev' has no installation candidate
+E: Unable to locate package python-numpy
+E: Unable to locate package libdc1394-22-dev
+```
 
 
