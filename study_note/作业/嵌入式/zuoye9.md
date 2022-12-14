@@ -68,9 +68,10 @@ E: Unable to locate package libdc1394-22-dev
 
 
 2.jpg
-origin use time: 70089
-openmp use time: 66779
-openmp2 use time: 66879
+origin use time: 12806
+openmp use time: 8295
+openmp2 use time: 8247
+accelarate ratio: 0.643995
 
 1.jpg
 origin use time: 22214
@@ -362,6 +363,7 @@ int main()
 	clock_t end3 = clock();
 	printf("openmp2 use time: %d\n",end3-start3);
 	
+	printf("accelarate ratio: %f\n",double((double)(end3-start3)/(double)(end1-start1)));
 	// imshow("原图", src);
 	// imshow("gradient", imgopmp);
  
