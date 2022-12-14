@@ -66,198 +66,7 @@ E: Unable to locate package libdc1394-22-dev
 
 ### log
 
-```c++
 
-#include<opencv2/opencv.hpp>
-
-#include<iostream>
-
-#include "omp.h"
-
-#include <time.h>
-
-
-using namespace std;
-
-using namespace cv;
-
-
-int main()
-
-{
-
-Mat m_img = imread("2.jpg");
-
-Mat src(m_img.rows, m_img.cols, CV_8UC1, Scalar(0));
-
-cvtColor(m_img, src, COLOR_RGB2GRAY);
-
-  
-
-Mat imgorig(src.rows, src.cols, CV_8UC1, Scalar(0));
-
-clock_t start1 = clock();
-
-for (int i = 1; i < src.rows - 1; i++)
-
-{
-
-for (int j = 1; j < src.cols - 1; j++)
-
-{
-
-imgorig.data[i*imgorig.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
-
-+ 2 * src.data[i*src.step + j + 1]
-
-+ src.data[(i + 1)*src.step + j + 1]
-
-- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
-
-- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
-
-+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
-
-- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
-
-- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
-
-+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
-
-- 2 * src.data[(i + 1)*src.step + j]
-
-- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
-
-+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
-
-- 2 * src.data[(i + 1)*src.step + j]
-
-- src.data[(i + 1)*src.step + j + 1]));
-
-}
-
-}
-
-clock_t end1 = clock();
-
-printf("origin use time: %d\n",end1-start1);
-
-Mat imgopmp(src.rows, src.cols, CV_8UC1, Scalar(0));
-
-clock_t start2 = clock();
-
-#pragma omp parallel for
-
-for (int i = 1; i < src.rows - 1; i++)
-
-{
-
-#pragma omp parallel for
-
-for (int j = 1; j < src.cols - 1; j++)
-
-{
-
-imgopmp.data[i*imgopmp.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
-
-+ 2 * src.data[i*src.step + j + 1]
-
-+ src.data[(i + 1)*src.step + j + 1]
-
-- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
-
-- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
-
-+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
-
-- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
-
-- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
-
-+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
-
-- 2 * src.data[(i + 1)*src.step + j]
-
-- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
-
-+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
-
-- 2 * src.data[(i + 1)*src.step + j]
-
-- src.data[(i + 1)*src.step + j + 1]));
-
-}
-
-}
-
-clock_t end2 = clock();
-
-printf("openmp use time: %d\n",end2-start2);
-
-  
-
-Mat imgopmp2(src.rows, src.cols, CV_8UC1, Scalar(0));
-
-clock_t start3 = clock();
-
-#pragma omp parallel for
-
-for (int i = 1; i < src.rows - 1; i++)
-
-{
-
-//#pragma omp parallel for
-
-for (int j = 1; j < src.cols - 1; j++)
-
-{
-
-imgopmp2.data[i*imgopmp2.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
-
-+ 2 * src.data[i*src.step + j + 1]
-
-+ src.data[(i + 1)*src.step + j + 1]
-
-- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
-
-- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
-
-+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
-
-- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
-
-- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
-
-+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
-
-- 2 * src.data[(i + 1)*src.step + j]
-
-- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
-
-+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
-
-- 2 * src.data[(i + 1)*src.step + j]
-
-- src.data[(i + 1)*src.step + j + 1]));
-
-}
-
-}
-
-clock_t end3 = clock();
-
-printf("openmp2 use time: %d\n",end3-start3);
-
-// imshow("原图", src);
-
-// imshow("gradient", imgopmp);
-
-waitKey(0);
-
-return 0;
-
-}
-```
 2.jpg
 origin use time: 70089
 openmp use time: 66779
@@ -285,3 +94,278 @@ origin y use time: 2297
 openmp y use time: 2308
 origin x use time: 4538
 openmp x use time: 4514
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212142122123.png)
+
+#### summary
+x 方向代码有平方运算
+step 含义
+加上一些配置过程
+介绍 soble 
+
+```c++
+//unused
+
+#include<opencv2/opencv.hpp>
+#include<iostream>
+#include "omp.h"
+#include <time.h>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	Mat m_img = imread("1.jpg");
+	Mat src(m_img.rows, m_img.cols, CV_8UC1, Scalar(0));
+	cvtColor(m_img, src, COLOR_RGB2GRAY);
+
+	clock_t start = clock();
+	Mat dstImage(src.rows, src.cols, CV_8UC1, Scalar(0));
+	for (int i = 1; i < src.rows - 1; i++)
+	{
+		for (int j = 1; j < src.cols - 1; j++)
+		{
+			dstImage.data[i*dstImage.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1]
+				+ src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1]));
+ 
+		}
+ 
+	}
+	clock_t end = clock();
+	printf("origin full use time: %d\n",end-start);
+
+	clock_t start1 = clock();
+	Mat dstImage1(src.rows, src.cols, CV_8UC1, Scalar(0));
+	#pragma omp parallel for
+	for (int i = 1; i < src.rows - 1; i++)
+	{
+		//#pragma omp parallel for
+		for (int j = 1; j < src.cols - 1; j++)
+		{
+			dstImage1.data[i*dstImage1.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1]
+				+ src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1]));
+ 
+		}
+ 
+	}
+	clock_t end1 = clock();
+	printf("openmp full use time: %d\n",end1-start1);
+
+	clock_t start2 = clock();
+	Mat grad_y(src.rows, src.cols, CV_8UC1, Scalar(0));
+	{
+		for (int i = 1; i < src.rows - 1; i++)
+		{
+			for (int j = 1; j < src.cols - 1; j++)
+			{
+				grad_y.data[i*grad_y.step + j] = abs((src.data[(i - 1)*src.step + j + 1]
+					+ 2 * src.data[i*src.step + j + 1]
+					+ src.data[(i + 1)*src.step + j + 1]
+					- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+					- src.data[(i + 1)*src.step + j - 1]));
+			}
+		}
+	}
+	clock_t end2 = clock();
+	printf("origin y use time: %d\n",end2-start2);
+
+	clock_t start3 = clock();
+	Mat grad_y1(src.rows, src.cols, CV_8UC1, Scalar(0));
+	{
+		#pragma omp parallel for
+		for (int i = 1; i < src.rows - 1; i++)
+		{
+			for (int j = 1; j < src.cols - 1; j++)
+			{
+				grad_y1.data[i*grad_y1.step + j] = abs((src.data[(i - 1)*src.step + j + 1]
+					+ 2 * src.data[i*src.step + j + 1]
+					+ src.data[(i + 1)*src.step + j + 1]
+					- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+					- src.data[(i + 1)*src.step + j - 1]));
+			}
+		}
+	}
+	clock_t end3 = clock();
+	printf("openmp y use time: %d\n",end3-start3);
+
+	clock_t start4 = clock();
+	Mat grad_x(src.rows, src.cols, CV_8UC1, Scalar(0));
+	{
+		for (int i = 1; i < src.rows - 1; i++)
+		{
+			for (int j = 1; j < src.cols - 1; j++)
+			{
+				grad_x.data[i*grad_x.step + j] = sqrt((src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+					+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+					- 2 * src.data[(i + 1)*src.step + j]
+					- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+					+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+					- 2 * src.data[(i + 1)*src.step + j]
+					- src.data[(i + 1)*src.step + j + 1]));
+			}
+		}
+	}
+	clock_t end4 = clock();
+	printf("origin x use time: %d\n",end4-start4);
+
+	clock_t start5 = clock();
+	Mat grad_x1(src.rows, src.cols, CV_8UC1, Scalar(0));
+	{
+		#pragma omp parallel for
+		for (int i = 1; i < src.rows - 1; i++)
+		{
+			for (int j = 1; j < src.cols - 1; j++)
+			{
+				grad_x1.data[i*grad_x1.step + j] = sqrt((src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+					+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+					- 2 * src.data[(i + 1)*src.step + j]
+					- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+					+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+					- 2 * src.data[(i + 1)*src.step + j]
+					- src.data[(i + 1)*src.step + j + 1]));
+			}
+		}
+	}
+	clock_t end5 = clock();
+	printf("openmp x use time: %d\n",end5-start5);
+
+	// imshow("原图", src);
+	// imshow("gradient", dstImage);
+	// imshow("Vertical gradient", grad_y);
+	// imshow("Horizontal gradient", grad_x);
+ 
+	waitKey(0);
+	return 0;
+}
+```
+
+```c++
+
+#include<opencv2/opencv.hpp>
+#include<iostream>
+#include "omp.h"
+#include <time.h>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	Mat m_img = imread("1.jpg");
+	Mat src(m_img.rows, m_img.cols, CV_8UC1, Scalar(0));
+	cvtColor(m_img, src, COLOR_RGB2GRAY);
+
+	Mat imgorig(src.rows, src.cols, CV_8UC1, Scalar(0));
+	clock_t start1 = clock();
+	for (int i = 1; i < src.rows - 1; i++)
+	{
+		for (int j = 1; j < src.cols - 1; j++)
+		{
+		    imgorig.data[i*imgorig.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1]
+				+ src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1]));
+ 
+		}
+	}
+	clock_t end1 = clock();
+	printf("origin use time: %d\n",end1-start1); 
+    
+	Mat imgopmp(src.rows, src.cols, CV_8UC1, Scalar(0));
+	clock_t start2 = clock();
+	#pragma omp parallel for
+	for (int i = 1; i < src.rows - 1; i++)
+	{
+		#pragma omp parallel for
+		for (int j = 1; j < src.cols - 1; j++)
+		{
+		    imgopmp.data[i*imgopmp.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1]
+				+ src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1]));
+ 
+		}
+	}
+	clock_t end2 = clock();
+	printf("openmp use time: %d\n",end2-start2);
+
+    Mat imgopmp2(src.rows, src.cols, CV_8UC1, Scalar(0));
+	clock_t start3 = clock();
+	#pragma omp parallel for
+	for (int i = 1; i < src.rows - 1; i++)
+	{
+		//#pragma omp parallel for
+		for (int j = 1; j < src.cols - 1; j++)
+		{
+		    imgopmp2.data[i*imgopmp2.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1]
+				+ src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+				+ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+				- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+				- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+				+ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+				- 2 * src.data[(i + 1)*src.step + j]
+				- src.data[(i + 1)*src.step + j + 1]));
+ 
+		}
+	}
+	clock_t end3 = clock();
+	printf("openmp2 use time: %d\n",end3-start3);
+	
+	// imshow("原图", src);
+	// imshow("gradient", imgopmp);
+ 
+	waitKey(0);
+	return 0;
+}
+```
