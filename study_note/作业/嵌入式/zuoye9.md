@@ -42,4 +42,7 @@ sudo ln -s /usr/include/opencv4/opencv2 /usr/include/
 ```
 [c++ 中——fatal error: opencv2/opencv.hpp: No such file or directory #include ＜opencv2/opencv.hpp＞_程序猿的探索之路的博客-CSDN博客](https://blog.csdn.net/nyist_yangguang/article/details/120442569)
 
+### error messages
+[ubuntu换源更新失败：The following signatures couldn‘t be verified because the public key is not available_sxiaocaicai的博客-CSDN博客](https://is.gd/phn0oR)
+
 
