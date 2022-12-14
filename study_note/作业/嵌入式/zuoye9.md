@@ -258,11 +258,22 @@ return 0;
 
 }
 ```
-
+2.jpg
 origin use time: 70089
 openmp use time: 66779
 openmp2 use time: 66879
 
-origin use time: 70089
-openmp use time: 66779
-openmp2 use time: 66879
+1.jpg
+origin use time: 22214
+openmp use time: 8468
+openmp2 use time: 8581
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212142111632.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212142111601.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212142112108.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212142112202.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212142112099.png)
+openmp full use time: 74714
+openmp gradienty use time: 18683
+openmp gradientx use time: 37674
+
