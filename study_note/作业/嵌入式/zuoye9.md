@@ -54,3 +54,7 @@ E: Unable to locate package libdc1394-22-dev
 ```
 [linux/videodev.h : no such file or directory_Alex-xt的博客-CSDN博客_linux/videodev.h: no such file or directory](https://is.gd/QSi0mE)
 
+直接安 4.x
+[cmake - undefined reference to `png_set_longjmp_fn' when compiling PCL source file - Stack Overflow](https://is.gd/jkhxkT)
+
+这个错误花了很长时间，在 open4.x 的文件夹里面的 cmakelist 加上这里面的话，我加在开头了
