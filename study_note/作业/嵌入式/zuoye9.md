@@ -52,5 +52,5 @@ E: Package 'python-dev' has no installation candidate
 E: Unable to locate package python-numpy
 E: Unable to locate package libdc1394-22-dev
 ```
-
+[linux/videodev.h : no such file or directory_Alex-xt的博客-CSDN博客_linux/videodev.h: no such file or directory](https://is.gd/QSi0mE)
 
