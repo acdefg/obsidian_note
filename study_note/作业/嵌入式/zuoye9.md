@@ -62,3 +62,207 @@ E: Unable to locate package libdc1394-22-dev
 除了上面那个错误，其余可以参考这篇
 [Ubuntu22.04安装opencv4并配置VsCode_南叔先生的博客-CSDN博客_vscode配置opencv4](https://is.gd/giATjh)
 [Ubuntu22.04安装OpenCV4.5.1_Larry酷睿的博客-CSDN博客_ubuntu安装opencv4.5](https://is.gd/ARt86O)
+
+
+### log
+
+```c++
+
+#include<opencv2/opencv.hpp>
+
+#include<iostream>
+
+#include "omp.h"
+
+#include <time.h>
+
+
+using namespace std;
+
+using namespace cv;
+
+
+int main()
+
+{
+
+Mat m_img = imread("2.jpg");
+
+Mat src(m_img.rows, m_img.cols, CV_8UC1, Scalar(0));
+
+cvtColor(m_img, src, COLOR_RGB2GRAY);
+
+  
+
+Mat imgorig(src.rows, src.cols, CV_8UC1, Scalar(0));
+
+clock_t start1 = clock();
+
+for (int i = 1; i < src.rows - 1; i++)
+
+{
+
+for (int j = 1; j < src.cols - 1; j++)
+
+{
+
+imgorig.data[i*imgorig.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+
++ 2 * src.data[i*src.step + j + 1]
+
++ src.data[(i + 1)*src.step + j + 1]
+
+- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+
+- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+
++ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+
+- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+
+- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+
++ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+
+- 2 * src.data[(i + 1)*src.step + j]
+
+- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+
++ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+
+- 2 * src.data[(i + 1)*src.step + j]
+
+- src.data[(i + 1)*src.step + j + 1]));
+
+}
+
+}
+
+clock_t end1 = clock();
+
+printf("origin use time: %d\n",end1-start1);
+
+Mat imgopmp(src.rows, src.cols, CV_8UC1, Scalar(0));
+
+clock_t start2 = clock();
+
+#pragma omp parallel for
+
+for (int i = 1; i < src.rows - 1; i++)
+
+{
+
+#pragma omp parallel for
+
+for (int j = 1; j < src.cols - 1; j++)
+
+{
+
+imgopmp.data[i*imgopmp.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+
++ 2 * src.data[i*src.step + j + 1]
+
++ src.data[(i + 1)*src.step + j + 1]
+
+- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+
+- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+
++ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+
+- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+
+- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+
++ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+
+- 2 * src.data[(i + 1)*src.step + j]
+
+- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+
++ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+
+- 2 * src.data[(i + 1)*src.step + j]
+
+- src.data[(i + 1)*src.step + j + 1]));
+
+}
+
+}
+
+clock_t end2 = clock();
+
+printf("openmp use time: %d\n",end2-start2);
+
+  
+
+Mat imgopmp2(src.rows, src.cols, CV_8UC1, Scalar(0));
+
+clock_t start3 = clock();
+
+#pragma omp parallel for
+
+for (int i = 1; i < src.rows - 1; i++)
+
+{
+
+//#pragma omp parallel for
+
+for (int j = 1; j < src.cols - 1; j++)
+
+{
+
+imgopmp2.data[i*imgopmp2.step + j] = sqrt((src.data[(i - 1)*src.step + j + 1]
+
++ 2 * src.data[i*src.step + j + 1]
+
++ src.data[(i + 1)*src.step + j + 1]
+
+- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+
+- src.data[(i + 1)*src.step + j - 1])*(src.data[(i - 1)*src.step + j + 1]
+
++ 2 * src.data[i*src.step + j + 1] + src.data[(i + 1)*src.step + j + 1]
+
+- src.data[(i - 1)*src.step + j - 1] - 2 * src.data[i*src.step + j - 1]
+
+- src.data[(i + 1)*src.step + j - 1]) + (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+
++ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+
+- 2 * src.data[(i + 1)*src.step + j]
+
+- src.data[(i + 1)*src.step + j + 1])* (src.data[(i - 1)*src.step + j - 1] + 2 * src.data[(i - 1)*src.step + j]
+
++ src.data[(i - 1)*src.step + j + 1] - src.data[(i + 1)*src.step + j - 1]
+
+- 2 * src.data[(i + 1)*src.step + j]
+
+- src.data[(i + 1)*src.step + j + 1]));
+
+}
+
+}
+
+clock_t end3 = clock();
+
+printf("openmp2 use time: %d\n",end3-start3);
+
+// imshow("原图", src);
+
+// imshow("gradient", imgopmp);
+
+waitKey(0);
+
+return 0;
+
+}
+```
+
+origin use time: 70089
+openmp use time: 66779
+openmp2 use time: 66879
+
+origin use time: 70089
+openmp use time: 66779
+openmp2 use time: 66879
