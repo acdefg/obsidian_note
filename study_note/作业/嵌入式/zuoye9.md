@@ -277,3 +277,11 @@ openmp full use time: 74714
 openmp gradienty use time: 18683
 openmp gradientx use time: 37674
 
+
+2.jpg
+origin full use time: 33763
+openmp full use time: 8234
+origin y use time: 2297
+openmp y use time: 2308
+origin x use time: 4538
+openmp x use time: 4514
