@@ -44,5 +44,6 @@ sudo ln -s /usr/include/opencv4/opencv2 /usr/include/
 
 ### error messages
 [ubuntu换源更新失败：The following signatures couldn‘t be verified because the public key is not available_sxiaocaicai的博客-CSDN博客](https://is.gd/phn0oR)
+[Linux/Debian/Ubuntu报错解决：W: Target Packages (main/binary-amd64/Packages) is configured multiple times_zhangpeterx的博客-CSDN博客_w: target packages](https://is.gd/DHLCRc)
 
 
