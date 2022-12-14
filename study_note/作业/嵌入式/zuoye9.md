@@ -35,5 +35,11 @@ int elem = src.at<int>(0,0);
 [sobel算子原理与实现_写代码的胡歌的博客-CSDN博客_sobel算子原理](https://blog.csdn.net/qq_37124237/article/details/82183177)
 
 ### 安装 opencv
+```
+sudo apt-get install libopencv-dev
+cd /usr/include 
+sudo ln -s /usr/include/opencv4/opencv2 /usr/include/
+```
+[c++ 中——fatal error: opencv2/opencv.hpp: No such file or directory #include ＜opencv2/opencv.hpp＞_程序猿的探索之路的博客-CSDN博客](https://blog.csdn.net/nyist_yangguang/article/details/120442569)
 
 
