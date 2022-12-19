@@ -64,5 +64,7 @@ code：
 sin_addr：点分式的内容转化为大整数
 [22:58](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1378.023747)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219145842.png)
+0.0.0.0：any address
+[25:18](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1518.675878)
 
 流式嵌套字
