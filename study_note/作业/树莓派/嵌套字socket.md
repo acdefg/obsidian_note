@@ -125,5 +125,7 @@ socket option
 
 setsockop,getsockop:
 [12:02](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=722.006624)
+code:
+[14:55](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=895.215316)
 
 流式嵌套字
