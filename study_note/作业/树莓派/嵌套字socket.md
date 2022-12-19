@@ -129,4 +129,13 @@ code:
 [14:55](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=895.215316)
 [18:02](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1082.142452)
 
+phenomeno
+[20:49](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1249.202385)
+
+receiver code:
+[22:23](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1343.029424)
+
+[07.套接字-多播实例2_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=133)
+防火墙
+
 流式嵌套字
