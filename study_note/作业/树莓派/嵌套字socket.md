@@ -53,7 +53,9 @@ domain 中的一个
 AF_**INET**（又称 PF_**INET**）是 IPv4 网络协议的套接字类型
 0：默认
 ![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219144437.png)
-bind
+bind：
 [15:13](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=913.213163)
+man 7 ip：
+[17:37](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1057.120534)
 
 流式嵌套字
