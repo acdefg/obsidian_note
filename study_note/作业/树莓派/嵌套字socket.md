@@ -155,3 +155,9 @@ phenomeno
 [23:04](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=1384.320773)
 
 流式嵌套字
+
+### reference link
+[两个及其简单的TCPUDP程序，树莓派与pc间的通信_怪我不能1v9的博客-CSDN博客_实现笔记本和树莓派之间的tcp网络通信](https://blog.csdn.net/qq_40993036/article/details/111810975?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=1)
+[15.流式套接字实现图片页面抓包_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=141&spm_id_from=pageDriver&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
+[树莓派和上位机使用TCP通信（字符串和图像传输）_嵌入式-小王的博客-CSDN博客_树莓派tcp通信](https://blog.csdn.net/Wangguang_/article/details/111658412)
+[网络编程之UDP协议下C#编写服务端 树莓派作客户端实现发送接受消息_clyrjj的博客-CSDN博客](https://blog.csdn.net/clyrjj/article/details/109408261)
