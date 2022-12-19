@@ -17,20 +17,25 @@ struct{
 ### 3 类型长度问题
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219120558.png)
 ## socket
+[02.套接字-socket函数_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=128&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219121243.png)
 #### socket 函数
-协议族 domain
+##### 协议族 domain
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219121552.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219121552.png)
 标记的是内核和用户态的一个通信
 
-传输类型
+##### 传输类型
 [18:15](https://www.bilibili.com/video/BV1yJ411S7r6?p=128&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1095.711557)
 流式：有序可靠双工字节传输
 报式：数据分组传输、无连接的、不可靠的、最大上限是固定
-返回文件苗符
-[02.套接字-socket函数_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=128&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
-报式嵌套字
 
+##### protool
+domain 中的一个
+
+##### 返回文件苗符
+
+#### 报式嵌套字
+[03.套接字-报式套接字相应过程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 
 流式嵌套字
