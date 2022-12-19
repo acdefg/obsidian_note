@@ -61,5 +61,8 @@ man 7 ip：
 [17:37](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1057.120534)
 code：
 [19:30](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1170.394879)
+sin_addr：点分式的内容转化为大整数
+[22:58](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1378.023747)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219145842.png)
 
 流式嵌套字
