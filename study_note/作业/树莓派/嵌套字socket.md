@@ -73,6 +73,8 @@ sin_addr：点分式的内容转化为大整数
 [04.套接字-报式套接字实例_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 bind code：
 [00:39](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=39.691269)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212192112463.png)
+
 recvfrom 报式，recv 流式
 [02:00](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=120.641185)
 code：
@@ -170,6 +172,7 @@ listen：
 [16:04](https://www.bilibili.com/video/BV1yJ411S7r6?p=138&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=964.926669)
 accept:
 [13.流式套接字实现实例_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=139&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212192111917.png)
 
 ### reference link
 [两个及其简单的TCPUDP程序，树莓派与pc间的通信_怪我不能1v9的博客-CSDN博客_实现笔记本和树莓派之间的tcp网络通信](https://blog.csdn.net/qq_40993036/article/details/111810975?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=1)
