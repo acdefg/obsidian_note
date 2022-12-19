@@ -174,13 +174,16 @@ accept:
 [13.流式套接字实现实例_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=139&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212192111917.png)
 
-nc 名模拟client
+nc 名模拟 client
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212192219235.png)
 [18:43](https://www.bilibili.com/video/BV1yJ411S7r6?p=139&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1123.773251)
 地址还在使用：
 netstate -ant
 [19:43](https://www.bilibili.com/video/BV1yJ411S7r6?p=139&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1183.12822)
 过段时间会自动回收
 没有正常释放的情况下，想继续用 reuseaddr
+[14.流式套接字并发实例_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=140&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
+
 ### reference link
 [两个及其简单的TCPUDP程序，树莓派与pc间的通信_怪我不能1v9的博客-CSDN博客_实现笔记本和树莓派之间的tcp网络通信](https://blog.csdn.net/qq_40993036/article/details/111810975?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=1)
 [15.流式套接字实现图片页面抓包_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=141&spm_id_from=pageDriver&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
