@@ -143,5 +143,14 @@ code
 [09:18](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=558.2049)
 setsocketop code
 [12:38](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=758.469491)
+ifconfig，ip ad sh, if_nametoindex
+[16:12](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=972.605186)
+bugs
+[17:50](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=1070.620953)
+receiver:
+[18:44](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=1124.872265)
+phenomeno
+[21:45](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=1305.021726)
+
 
 流式嵌套字
