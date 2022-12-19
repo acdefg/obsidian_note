@@ -8,4 +8,5 @@ jupyter 切换环境：
 
 Pycharm:
 安装第三方库
-file-->setting-->python inter
+file-->setting-->python interpreter
+安装的时候要关掉系统代理（科学上网）
