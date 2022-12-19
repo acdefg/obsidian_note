@@ -16,7 +16,14 @@ struct{
 解决：不对齐
 ### 3 类型长度问题
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219120558.png)
-
+## socket
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219121243.png)
+协议族 domain
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219121552.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219121552.png)
+标记的是内核和用户态的一个通信
+传输类型
+返回文件苗符
 报式嵌套字
 [02.套接字-socket函数_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=128&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 
