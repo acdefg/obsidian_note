@@ -117,8 +117,13 @@ receiver
 [06.套接字-多播实例1_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 多点通讯：广播（全网广播，子网广播），多播/组播
 广播：
+code:
 [05:07](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=307.288932)
 man 7 socket
 [07:14](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=434.375716)
+socket option
+
+setsockop,getsockop:
+[12:02](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=722.006624)
 
 流式嵌套字
