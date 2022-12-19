@@ -106,5 +106,7 @@ bug
 [29:41](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1781.836432)
 
 [05.套接字-动态报式套接字实例_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=131&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
+变长数组
+[03:20](https://www.bilibili.com/video/BV1yJ411S7r6?p=131&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=200.898168)
 
 流式嵌套字
