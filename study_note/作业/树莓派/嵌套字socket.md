@@ -114,4 +114,7 @@ sender
 receiver
 [11:34](https://www.bilibili.com/video/BV1yJ411S7r6?p=131&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=694.041279)
 
+[06.套接字-多播实例1_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=132&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
+多点通讯：广播（全网广播，子网广播），多播/组播
+
 流式嵌套字
