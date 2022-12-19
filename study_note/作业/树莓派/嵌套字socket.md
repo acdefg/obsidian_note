@@ -66,5 +66,11 @@ sin_addr：点分式的内容转化为大整数
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219145842.png)
 0.0.0.0：any address
 [25:18](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1518.675878)
+[04.套接字-报式套接字实例_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
+bind code：
+[00:39](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=39.691269)
+recvfrom 报式，recv 流式
+[02:00](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=120.641185)
+
 
 流式嵌套字
