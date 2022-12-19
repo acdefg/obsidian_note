@@ -39,6 +39,9 @@ domain 中的一个
 [03.套接字-报式套接字相应过程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 套路 1：
 [02:37](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=157.780979)
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219143503.png)
+代码：
+[06:00](https://www.bilibili.com/video/BV1yJ411S7r6?p=129&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=360.092404)
 
 
 流式嵌套字
