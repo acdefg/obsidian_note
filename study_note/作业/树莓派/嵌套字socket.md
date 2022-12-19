@@ -5,8 +5,12 @@
 小端：低地址处放低字节
 区分主机字节序 host 和网络字节序 network
 解决：\_to\_  \_: htons,htonl,ntohs,ntohl
->解释如下，数字 16 的 16 进制表示为 0x0010，数字 4096 的 16 进制表示为 0x1000。 由于 Intel 机器是小尾端，存储数字 16 时实际顺序为 1000，存储 4096 时实际顺序为 0010。因此在发送网络包时为了报文中数据为 0010，需要经过 htons 进行字节转换。如果用 IBM 等大尾端机器，则没有这种字节顺序转换，但为了程序的可移植性，也最好用这个函数。
+```ad-note
+
+解释如下，数字 16 的 16 进制表示为 0x0010，数字 4096 的 16 进制表示为 0x1000。 由于 Intel 机器是小尾端，存储数字 16 时实际顺序为 1000，存储 4096 时实际顺序为 0010。因此在发送网络包时为了报文中数据为 0010，需要经过 htons 进行字节转换。如果用 IBM 等大尾端机器，则没有这种字节顺序转换，但为了程序的可移植性，也最好用这个函数。
 原文链接：https://blog.csdn.net/zouxinfox/article/details/1814088
+```
+
 ### 2 对齐
 struct{
 	int i;
@@ -155,6 +159,10 @@ phenomeno
 [23:04](https://www.bilibili.com/video/BV1yJ411S7r6?p=133#t=1384.320773)
 
 流式嵌套字
+[12.流式套接字详解_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yJ411S7r6?p=138&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212192046411.png)
+
+[04:28](https://www.bilibili.com/video/BV1yJ411S7r6?p=138&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=268.207775)
 
 ### reference link
 [两个及其简单的TCPUDP程序，树莓派与pc间的通信_怪我不能1v9的博客-CSDN博客_实现笔记本和树莓派之间的tcp网络通信](https://blog.csdn.net/qq_40993036/article/details/111810975?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-111810975-blog-105521375.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=1)
