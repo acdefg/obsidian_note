@@ -7,3 +7,5 @@ jupyter 切换环境：
 [PyCharm与Anaconda超详细安装配置教程_思绪无限的博客-CSDN博客_pycharm安装教程anaconda](https://blog.csdn.net/qq_32892383/article/details/116137730)
 
 Pycharm:
+安装第三方库
+file-->setting-->python inter
