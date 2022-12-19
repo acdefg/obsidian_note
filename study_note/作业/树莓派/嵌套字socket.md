@@ -71,6 +71,8 @@ bind code：
 [00:39](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=39.691269)
 recvfrom 报式，recv 流式
 [02:00](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=120.641185)
+code：
+[04:44](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=284.719147)
 
 
 流式嵌套字
