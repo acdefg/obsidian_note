@@ -75,6 +75,22 @@ code：
 [04:44](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=284.719147)
 inet_ntop：int to p
 [09:27](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=567.574093)
+code:
+[12:53](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=773.136803)
 
+[13:39](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=819.703748)
+
+[14:05](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=845.038481)
+netstat -anu
+[14:36](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=876.376754)
+
+sender:
+[16:05](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=965.171723)
+
+[16:44](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1004.051567)
+![100](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221219152130.png)
+
+send to:
+[17:53](https://www.bilibili.com/video/BV1yJ411S7r6?p=130&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7#t=1073.096463)
 
 流式嵌套字
