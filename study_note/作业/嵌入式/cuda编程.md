@@ -4,6 +4,7 @@
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291221320.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291452085.png)
+2. 安装 cuda toolkit，参考[kali linux 安装CUDA 11.6问题总结 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/328870.html)
 问题 1：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292226234.png)
 
