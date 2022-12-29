@@ -24,3 +24,5 @@ update 一下
 sudo apt-get install liburcu6 
 sudo apt-get -y install cuda 
 ```
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292241297.png)
