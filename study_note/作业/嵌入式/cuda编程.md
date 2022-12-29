@@ -24,10 +24,16 @@ update 一下
 sudo apt-get install liburcu6 
 sudo apt-get -y install cuda 
 ```
-
+至此安装完成，查看一下下
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292241297.png)
-
+添加环境变量，这条我改过
+```zsh
+zshconfig
+```
+添加这两句
 ```txt
 export  PATH=/usr/local/cuda/bin:$PATH  
 export  LD_LIBRARY_PATH=/usr/local/cuda/lib64$LD_LIBRARY_PATH
 ```
+输入 `nvcc -V`，查看更改成功
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292244738.png)
