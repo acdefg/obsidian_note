@@ -26,3 +26,8 @@ sudo apt-get -y install cuda
 ```
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292241297.png)
+
+```txt
+export  PATH=/usr/local/cuda/bin:$PATH  
+export  LD_LIBRARY_PATH=/usr/local/cuda/lib64$LD_LIBRARY_PATH
+```
