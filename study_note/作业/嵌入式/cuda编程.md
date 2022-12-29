@@ -1,4 +1,6 @@
 ## cuda 安装
+参考：[Ubuntu 22.04 安装cuda，适用20.04_AIhub的博客-CSDN博客_ubuntu22.04安装cuda](https://is.gd/H3L2qQ)
+[kali linux 安装CUDA 11.6问题总结 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/328870.html)
 1. 安装驱动
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291206968.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291221320.png)
@@ -38,3 +40,4 @@ export  LD_LIBRARY_PATH=/usr/local/cuda/lib64$LD_LIBRARY_PATH
 ```
 输入 `nvcc -V`，查看更改成功
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292244738.png)
+## cuda 程序
