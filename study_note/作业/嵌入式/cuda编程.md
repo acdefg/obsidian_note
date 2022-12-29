@@ -17,5 +17,10 @@ deb http://ftp.de.debian.org/debian bullseye main
 update 一下
 问题 2：没有 key
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292233359.png)
-选了其中的一个 key，添加一下，会有 warning，正确解决如链接：
+选了其中的一个 key，添加一下，会有 warning，正确解决如链接：[apt key - Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead - Stack Overflow](https://is.gd/hoVl1w) 事实上，不用管 warning，直接再 update 阿安装就可以了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292234809.png)
+按顺序安装下面两个
+```zsh
+sudo apt-get install liburcu6 
+sudo apt-get -y install cuda 
+```
