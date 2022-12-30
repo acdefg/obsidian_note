@@ -46,3 +46,5 @@ cuda 编程教学👍：[CUDA C/C++ 教程一：加速应用程序_白水baishui
 
 ## 问题
 上次之后不知道系统删掉了什么环境，这次运行就一直报错，找不到 opencv2/opencv.hpp 从查找文件还在，经过一步一步检查，应该是 autoremove 把 libopencv-dev 在这个包给删了，'sudo apt-get install libopencv-dev' ，重新安装，配置好 vscode，F5 运行没问题了。
+
+[vs各个版本编写代码时的光标变成了黑块，黑块选中字符，再输入的时候就会替换掉那个黑块选中的字符_CJack酒杯的博客-CSDN博客_c语言光标变成黑块](https://blog.csdn.net/qwe6620692/article/details/88079003)
