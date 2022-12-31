@@ -34,14 +34,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_G
 ```
 
 -D BUILD_opencv_world=ON   编译生成 libopencv_world.so
--D CUDA_NVCC_FLAGS=–expt-relaxed-constexpr  使用abs
-2. make&install
-
-```shell
-make -j8
-
-```
-
+-D CUDA_NVCC_FLAGS=–expt-relaxed-constexpr  使用 abs
 #### 看看，建个.sh 文件放在目录下
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -86,6 +79,16 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D BUILD_EXAMPLES=OFF ..
 ```
 
+### cmake-gui
+以上设置更加简单的方法
+#### 安装
+
+## make&install
+
+```shell
+make -j8
+```
+
 
 #### 问题
 有大病问题，这么清楚的 build 看不见瞎嘛，总而言之删了重新解压，重新操作一遍就好了
@@ -97,4 +100,5 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 emmmm，路径带括号，什么路径，就是（cpoy）别用了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311415048.png)
 
+这个说改 cmake -D CUDA_ARCH_BIN="8.6" 这个选项，emmmm，我不这么改了，换成 cmake-gui
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311420494.png)
