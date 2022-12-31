@@ -18,6 +18,7 @@ cp ./modules/videoio/include/opencv2/videoio/videoio_c.h /usr/include/sys/videoi
 cp ./modules/videoio/include/opencv2/videoio/videoio_c.h /usr/include/video/videoio.h
 ```
 
+
 ## 编译 cmake 选项
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311216796.png)
 
@@ -79,6 +80,20 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D BUILD_EXAMPLES=OFF ..
 ```
 
+
+#### 问题
+有大病问题，这么清楚的 build 看不见瞎嘛，总而言之删了重新解压，重新操作一遍就好了
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311213569.png)
+
+之前出现这个问题是要将 gcc，g++降级，我明明降过了
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311224803.png)
+
+emmmm，路径带括号，什么路径，就是（cpoy）别用了
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311415048.png)
+
+这个说改 cmake -D CUDA_ARCH_BIN="8.6" 这个选项，emmmm，我不这么改了，换成 cmake-gui
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311420494.png)
+
 ### cmake-gui
 以上设置更加简单的方法
 #### 安装
@@ -128,6 +143,7 @@ if(WITH_PNG)
     endif ()
 endif(WITH_PNG)
 ```
+
 #### 问题 2：ade
 
 > [!failure]
@@ -141,14 +157,9 @@ cmake/OpenCVModule.cmake:361 (_add_modules_1)
 cmake/OpenCVModule.cmake:385 (ocv_glob_modules)  
 CMakeLists.txt:971 (ocv_register_modules)
 
-```
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311525522.png)
 
-## make&install
 
-```shell
-make -j8
-```
 #### 问题 3：boostdesc_bgm.i
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311704695.png)
 
@@ -174,16 +185,10 @@ curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f7
 curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f73bbfb21745f9babcd4eb1d/vgg_generated_80.i > 7cd47228edec52b6d82f46511af325c5-vgg_generated_80.i
 ```
 
+## make&install
 
-#### 问题
-有大病问题，这么清楚的 build 看不见瞎嘛，总而言之删了重新解压，重新操作一遍就好了
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311213569.png)
-
-之前出现这个问题是要将 gcc，g++降级，我明明降过了
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311224803.png)
-
-emmmm，路径带括号，什么路径，就是（cpoy）别用了
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311415048.png)
-
-这个说改 cmake -D CUDA_ARCH_BIN="8.6" 这个选项，emmmm，我不这么改了，换成 cmake-gui
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311420494.png)
+```shell
+make -j8
+```
+查看最大核数
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311725826.png)
