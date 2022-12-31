@@ -83,6 +83,22 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 以上设置更加简单的方法
 #### 安装
 
+```shell
+sudo apt-get install cmake-qt-gui
+```
+
+运行：
+
+```shell
+cmake-gui
+cmake-gui ..(在源码目录下打开)
+```
+
+#### 编译 opencv
+configure
+specify cmplier 找\\usr\\bin 下的 gcc
+改选项
+
 ## make&install
 
 ```shell
