@@ -23,9 +23,13 @@ cp ./modules/videoio/include/opencv2/videoio/videoio_c.h /usr/include/video/vide
 
 使用的：
 1. 在 opencv 名目录下，新建 build，进去
+
 ```shell
 mkdir build
 cd build
+```
+
+```shell
 cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=ON -D ENABLE_CXX11=1 -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -D OPENCV_ENABLE_NONFREE=True -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D WITH_CUDA=ON -D WITH_TBB=ON -D ENABLE_FAST_MATH=1 -D WITH_OPENMP=ON -D WITH_CUFFT=ON -D WITH_CUBLAS=ON ..
 ```
 
