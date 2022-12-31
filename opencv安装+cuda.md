@@ -98,7 +98,12 @@ cmake-gui ..(在源码目录下打开)
 configure
 specify cmplier 找\\usr\\bin 下的 gcc
 改选项
-#### 问题：png
+#### 问题 1：png
+
+> [!failure]
+> 
+undefined reference to `png_set_longjmp_fn'
+
 [cmake - undefined reference to `png_set_longjmp_fn' when compiling PCL source file - Stack Overflow](https://stackoverflow.com/questions/36220123/undefined-reference-to-png-set-longjmp-fn-when-compiling-pcl-source-file)
 
 cmake list 了里面加上这个
@@ -123,6 +128,21 @@ if(WITH_PNG)
     endif ()
 endif(WITH_PNG)
 ```
+#### 问题 2：ade
+
+> [!failure]
+> 
+CMake Error at modules/gapi/cmake/DownloadADE.cmake:23 (add_library):  
+No SOURCES given to target: ade  
+Call Stack (most recent call first):  
+modules/gapi/cmake/init.cmake:20 (include)  
+cmake/OpenCVModule.cmake:298 (include)  
+cmake/OpenCVModule.cmake:361 (_add_modules_1)  
+cmake/OpenCVModule.cmake:385 (ocv_glob_modules)  
+CMakeLists.txt:971 (ocv_register_modules)
+
+```
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311525522.png)
 
 ## make&install
 
