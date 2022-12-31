@@ -24,8 +24,9 @@ __global__ 关键字表明该函数将在 GPU 上运行并可全局调用（ 既
 通常，我们把要运行在 GPU 上的函数称为 kernel （核）函数;
 启动核(kernel)函数时，我们必须事先配置 GPU 参数，使用 <<< ... >>> 语法向核函数传递两个必要的参数;
 在 <<< ... >>> 中传递的参数用于为核函数设定线程的层次结构，第一个参数定义线程块(Block)的数量，第二个参数定义 Block 中含有的线程(Thread)数量。
-![10](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221231234731.png)
-
+CUDA线程的层次结构分为三层：Thread（线程）、Block（块）、Grid（网格），网格由块组成，块由线程组成。
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221231234731.png)
+`someKernel<<<10, 10>>()` 在GPU中为该核函数分配10个具有10个线程的线程块，核函数中的代码将运行100次
 
 3. `cudaDeviceSynchronize()：`
 与其他并行化的代码类似，核函数启动方式为异步，即 CPU 代码将继续执行而不会等待核函数执行完成；
