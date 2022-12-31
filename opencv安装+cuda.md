@@ -159,13 +159,18 @@ CMakeLists.txt:971 (ocv_register_modules)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311525522.png)
 
+## make&install
 
-#### 问题 3：boostdesc_bgm.i
+```shell
+make -j8
+```
+查看最大核数，那就最大可以-16
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311725826.png)
+
+#### 问题：boostdesc_bgm.i
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311704695.png)
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311703227.png)
-
-download.sh 在 opencv 个根目录下运行这个脚本，操作下面隐藏文件夹cache
+download.sh 在 opencv 个根目录下运行这个脚本，操作下面隐藏文件夹 cache
 ```shell
 #!/bin/bash
 cd ./.cache/xfeatures2d/
@@ -184,11 +189,6 @@ curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f7
 curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f73bbfb21745f9babcd4eb1d/vgg_generated_48.i > e8d0dcd54d1bcfdc29203d011a797179-vgg_generated_48.i
 curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f73bbfb21745f9babcd4eb1d/vgg_generated_80.i > 7cd47228edec52b6d82f46511af325c5-vgg_generated_80.i
 ```
-
-## make&install
-
-```shell
-make -j8
-```
-查看最大核数
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311725826.png)
+然后下载了一个补充文件，放在 opencv_contrib/modules/xfeatures2d/src/目录下：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311746943.png)
+想安装 tree，查看文件结构，还没好
