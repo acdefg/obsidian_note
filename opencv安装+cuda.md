@@ -12,4 +12,9 @@ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libp
 ```
 会少 python2-dev，python-numpy，lib...，lib 年那个加了个 source list [[zuoye9#error messages]]
 
+video.h
+```
+cp ./modules/videoio/include/opencv2/videoio/videoio_c.h /usr/include/sys/videoio.h
+cp ./modules/videoio/include/opencv2/videoio/videoio_c.h /usr/include/video/videoio.h
+```
 
