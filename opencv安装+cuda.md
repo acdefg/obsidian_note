@@ -94,4 +94,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 之前出现这个问题是要将 gcc，g++降级，我明明降过了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311224803.png)
 
+emmmm，路径带括号，什么路径，就是（cpoy）别用了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311415048.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311420494.png)
