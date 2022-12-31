@@ -98,6 +98,31 @@ cmake-gui ..(在源码目录下打开)
 configure
 specify cmplier 找\\usr\\bin 下的 gcc
 改选项
+#### 问题：png
+[cmake - undefined reference to `png_set_longjmp_fn' when compiling PCL source file - Stack Overflow](https://stackoverflow.com/questions/36220123/undefined-reference-to-png-set-longjmp-fn-when-compiling-pcl-source-file)
+
+cmake list 了里面加上这个
+```
+# LibPNG
+option(WITH_PNG "PNG file support" TRUE)
+if(WITH_PNG)
+    # search for pkg-config
+    include (FindPkgConfig)
+    if (NOT PKG_CONFIG_FOUND)
+        message (FATAL_ERROR "pkg-config not found")
+    endif ()
+
+    # check for libpng
+    pkg_check_modules (LIBPNG libpng16 REQUIRED)
+    if (NOT LIBPNG_FOUND)
+        message(FATAL_ERROR "You don't seem to have libpng16 development libraries installed")
+    else ()
+        include_directories (${LIBPNG_INCLUDE_DIRS})
+        link_directories (${LIBPNG_LIBRARY_DIRS})
+        link_libraries (${LIBPNG_LIBRARIES})
+    endif ()
+endif(WITH_PNG)
+```
 
 ## make&install
 
