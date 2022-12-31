@@ -87,3 +87,5 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 有大病问题，这么清楚的 build 看不见瞎嘛，总而言之删了重新解压，重新操作一遍就好了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311213569.png)
 
+之前出现这个问题是要将 gcc，g++降级，我明明降过了
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311224803.png)
