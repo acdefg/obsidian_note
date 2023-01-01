@@ -427,3 +427,22 @@ update
 # or
 sudo updatedb
 ```
+
+
+```shell
+#打开下列文件
+sudo gedit /etc/ld.so.conf.d/opencv.conf 
+ 
+# 添加lib路經
+/usr/local/lib
+ 
+# 更新
+sudo ldconfig
+```
+
+查看版本号
+```shell
+pkg-config --modversion opencv4
+```
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011456367.png)
