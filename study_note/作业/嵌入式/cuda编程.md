@@ -51,5 +51,13 @@ cuda 编程教学👍：[CUDA C/C++ 教程一：加速应用程序_白水baishui
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212301822118.png)
 根据这篇把 gcc/g++降级了，还是不行 [error: parameter packs not expanded with ‘...’ · Issue #119 · NVlabs/instant-ngp · GitHub](https://github.com/NVlabs/instant-ngp/issues/119)
+降级新办法：[[ubuntu][原创]ubuntu gcc g++降级方法_FL1623863129 的博客-CSDN 博客_ubuntu 22 gcc12 降到 11](https://blog.csdn.net/FL1623863129/article/details/115192387)
+
+```shell
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 48
+```
+
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212301823753.png)
 
