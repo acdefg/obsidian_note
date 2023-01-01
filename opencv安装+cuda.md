@@ -450,3 +450,16 @@ pkg-config --modversion opencv4
 
 #### 问题：opencv.pc
 [linux下编译安装opencv生成opencv.pc_浓茶淡酒的博客-CSDN博客](https://blog.csdn.net/s15810751918/article/details/107705387)
+
+## 测试
+到这个目录下面执行：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011545157.png)
+#### 问题：报错
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011546064.png)
+解决：
+```shell
+sudo cmake .. -DCMAKE_CXX_COMPILER=$(which g++) -DCMAKE_C_COMPILER=$(which gcc)
+```
+参考：
+[[已解决] The C++ compiler "/usr/local/bin/c++" is not able to compile a simple test program._HeyMountain的博客-CSDN博客_cmake在编译你的c或c++代码前，会先验证你指定的编译器是否可以正常工作](https://is.gd/VJi6Vm)
+[Ubuntu下安装opencv并进行测试_带你去网吧里偷耳机的博客-CSDN博客_检测opencv是否安装成功 ubuntu](https://blog.csdn.net/qq_40123329/article/details/103904087)
