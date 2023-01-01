@@ -447,3 +447,6 @@ pkg-config --modversion opencv4
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011456367.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011526487.png)
+
+#### 问题：opencv.pc
+[linux下编译安装opencv生成opencv.pc_浓茶淡酒的博客-CSDN博客](https://blog.csdn.net/s15810751918/article/details/107705387)
