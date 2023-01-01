@@ -195,3 +195,235 @@ curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f7
 想安装 tree，查看文件结构，还没好
 ### 问题 2：nvopticalFlow.h 没得
 把 cudaflow 等一些没必要的 module 给关掉，重来就好了
+## 配置环境变量
+#### 从 cmake option配置 log
+```
+General configuration for OpenCV 4.7.0-dev =====================================
+
+Version control: unknown
+
+  
+
+Platform:
+
+Timestamp: 2022-12-31T06:50:17Z
+
+Host: Linux 5.15.0-56-generic x86_64
+
+CMake: 3.22.1
+
+CMake generator: Unix Makefiles
+
+CMake build tool: /usr/bin/gmake
+
+Configuration: Release
+
+  
+
+CPU/HW features:
+
+Baseline: SSE SSE2 SSE3
+
+requested: SSE3
+
+Dispatched code generation: SSE4_1 SSE4_2 FP16 AVX AVX2 AVX512_SKX
+
+requested: SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX
+
+SSE4_1 (15 files): + SSSE3 SSE4_1
+
+SSE4_2 (2 files): + SSSE3 SSE4_1 POPCNT SSE4_2
+
+FP16 (1 files): + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 AVX
+
+AVX (5 files): + SSSE3 SSE4_1 POPCNT SSE4_2 AVX
+
+AVX2 (29 files): + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 FMA3 AVX AVX2
+
+AVX512_SKX (7 files): + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 FMA3 AVX AVX2 AVX_512F AVX512_COMMON AVX512_SKX
+
+  
+
+C/C++:
+
+Built as dynamic libs?: YES
+
+C++ standard: 11
+
+C++ Compiler: /bin/g++-10 (ver 10.4.0)
+
+C++ flags (Release): -fsigned-char -ffast-math -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -O3 -DNDEBUG -DNDEBUG
+
+C++ flags (Debug): -fsigned-char -ffast-math -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -g -O0 -DDEBUG -D_DEBUG
+
+C Compiler: /bin/gcc-10
+
+C flags (Release): -fsigned-char -ffast-math -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -msse -msse2 -msse3 -fvisibility=hidden -fopenmp -O3 -DNDEBUG -DNDEBUG
+
+C flags (Debug): -fsigned-char -ffast-math -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -msse -msse2 -msse3 -fvisibility=hidden -fopenmp -g -O0 -DDEBUG -D_DEBUG
+
+Linker flags (Release): -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined
+
+Linker flags (Debug): -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined
+
+ccache: YES
+
+Precompiled headers: NO
+
+Extra dependencies: png16 z m pthread cudart_static dl rt nppc nppial nppicc nppidei nppif nppig nppim nppist nppisu nppitc npps cublas cufft -L/usr/local/cuda/lib64 -L/usr/lib/x86_64-linux-gnu
+
+3rdparty dependencies:
+
+  
+
+OpenCV modules:
+
+To be built: alphamat barcode bioinspired core cudaarithm cudabgsegm cudacodec cudafilters cudaimgproc cudalegacy cudawarping cudev datasets dnn dnn_objdetect dnn_superres flann freetype fuzzy hfs highgui img_hash imgcodecs imgproc intensity_transform line_descriptor ml phase_unwrapping photo plot quality reg surface_matching tracking ts video videoio xphoto
+
+Disabled: cudafeatures2d cudaoptflow features2d optflow world xfeatures2d
+
+Disabled by dependency: aruco bgsegm calib3d ccalib cudaobjdetect cudastereo dpm face mcc objdetect rapid rgbd saliency shape stereo stitching structured_light superres text videostab wechat_qrcode ximgproc xobjdetect
+
+Unavailable: cvv gapi hdf java julia matlab ovis python2 python3 sfm viz
+
+Applications: tests perf_tests apps
+
+Documentation: NO
+
+Non-free algorithms: YES
+
+  
+
+GUI: GTK2
+
+GTK+: YES (ver 2.24.33)
+
+GThread : YES (ver 2.72.4)
+
+GtkGlExt: NO
+
+  
+
+Media I/O:
+
+ZLib: /usr/lib/x86_64-linux-gnu/libz.so (ver 1.2.11)
+
+JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (ver 80)
+
+WEBP: build (ver encoder: 0x020f)
+
+PNG: /opt/questasim/questasim/linux_x86_64/libpng.so (ver 1.6.37)
+
+TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (ver 42 / 4.3.0)
+
+JPEG 2000: build (ver 2.4.0)
+
+OpenEXR: /usr/lib/x86_64-linux-gnu/libImath-2_5.so /usr/lib/x86_64-linux-gnu/libIlmImf-2_5.so /usr/lib/x86_64-linux-gnu/libIex-2_5.so /usr/lib/x86_64-linux-gnu/libHalf-2_5.so /usr/lib/x86_64-linux-gnu/libIlmThread-2_5.so (ver 2_5)
+
+HDR: YES
+
+SUNRASTER: YES
+
+PXM: YES
+
+PFM: YES
+
+  
+
+Video I/O:
+
+DC1394: YES (2.2.6)
+
+FFMPEG: YES
+
+avcodec: YES (58.134.100)
+
+avformat: YES (58.76.100)
+
+avutil: YES (56.70.100)
+
+swscale: YES (5.9.100)
+
+avresample: NO
+
+GStreamer: NO
+
+v4l/v4l2: YES (linux/videodev2.h)
+
+  
+
+Parallel framework: OpenMP
+
+  
+
+Trace: YES (with Intel ITT)
+
+  
+
+Other third-party libraries:
+
+VA: NO
+
+Lapack: NO
+
+Eigen: YES (ver 3.4.0)
+
+Custom HAL: NO
+
+Protobuf: build (3.19.1)
+
+  
+
+NVIDIA CUDA: YES (ver 11.6, CUFFT CUBLAS FAST_MATH)
+
+NVIDIA GPU arch: 70 75 80 86
+
+NVIDIA PTX archs:
+
+  
+
+cuDNN: NO
+
+  
+
+OpenCL: YES (no extra features)
+
+Include path: /home/cici/softwares/opencv-4.x/3rdparty/include/opencl/1.2
+
+Link libraries: Dynamic load
+
+  
+
+Python (for build): /usr/bin/python2.7
+
+  
+
+Java:
+
+ant: NO
+
+JNI: /usr/lib/jvm/default-java/include /usr/lib/jvm/default-java/include/linux /usr/lib/jvm/default-java/include
+
+Java wrappers: NO
+
+Java tests: NO
+
+  
+Install to: /usr/local
+```
+
+
+```shell
+zshconfig
+# bash用：
+sudo gedit /etc/bash.bashrc
+
+# 加入
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH
+
+# update
+update
+# or
+sudo updatedb
+```
