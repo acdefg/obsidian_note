@@ -446,3 +446,4 @@ pkg-config --modversion opencv4
 ```
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011456367.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011526487.png)
