@@ -80,7 +80,6 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D BUILD_EXAMPLES=OFF ..
 ```
 
-
 #### 问题
 有大病问题，这么清楚的 build 看不见瞎嘛，总而言之删了重新解压，重新操作一遍就好了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311213569.png)
@@ -166,8 +165,10 @@ make -j8
 ```
 查看最大核数，那就最大可以-16
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311725826.png)
+装了一天终于成了
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011441400.png)
 
-#### 问题：boostdesc_bgm.i
+#### 问题 1：boostdesc_bgm.i
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311704695.png)
 
 download.sh 在 opencv 个根目录下运行这个脚本，操作下面隐藏文件夹 cache
@@ -192,3 +193,5 @@ curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f7
 然后下载了一个补充文件，放在 opencv_contrib/modules/xfeatures2d/src/目录下：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311746943.png)
 想安装 tree，查看文件结构，还没好
+### 问题 2：nvopticalFlow.h 没得
+把 cudaflow 等一些没必要的 module 给关掉，重来就好了
