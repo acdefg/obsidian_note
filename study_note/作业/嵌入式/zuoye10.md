@@ -62,7 +62,7 @@ CUDA线程的层次结构分为三层：Thread（线程）、Block（块）、Gr
 与其他并行化的代码类似，核函数启动方式为异步，即 CPU 代码将继续执行而不会等待核函数执行完成；
 调用 CUDA 提供的函数 cudaDeviceSynchronize 可以让 Host 代码(CPU) 等待 Device 代码(GPU) 执行完毕，再在 CPU 上继续执行。
 
-### 程序编写
+## 程序编写
 首先，gpu 在中不能计算整数 为为参数的 `sqrt() 函数，先定义两个浮点数进行计算，在将结果放到数组中。
 原来的处理程序：
 ```c
@@ -115,6 +115,8 @@ blockDim.x 块中 x 为维度线程的个数（这里表示块中所有线程数
 gpu 算力为 8.6 的对应创建单个块中线程上限为 1024，x 为维块个数上限较大
 gpu 算力可以通过编程得到，程序在附录中，运行结果如下，也可以在上面链接中搜索得到
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022340476.png)
+
+### 较小的图片
 对于比较小的图片，可以让线程号对应列数，块对应行：
 
 ```c
@@ -125,4 +127,121 @@ size_t blocksnum = src.rows; // 定义block的数量
 int index = threadIdx.x + 1 + (blockIdx.x + 1) * blockDim.x;
 ```
 运行结果：
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022344217.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022345848.png)
+
+```c
+origin use time: 171862
+openmp use time: 34064
+gpu cuda use time: 41
+image size : 512 * 510
+```
+
+### 较大的图片
+对于较大的图片，线程数量有限制不能等于图片列宽，对于块的数量，一般情况下都会够用，但是也可以采取下面的方法。
+当进程数量小于处理数组数据量时，一种方法是可以让同一个进程执行多次，另一种是继续扩大进程数量。
+
+**让同一个进程执行多次：**
+```c
+int stride = gridDim.x * blockDim.x;  //一个网格中线程块数量*块中线程数量= 一个网格中线程数量
+for(int i = index; i < N; i += stride)
+{
+	colorx = datain[i + width + 1]
+			+ 2 * datain[i + 1]
+			+ datain[i + width + 1]
+			- datain[i - width - 1] - 2 * datain[i - 1]
+			- datain[i + width - 1];
+	colory = datain[i - width - 1] + 2 * datain[i - width]
+			+ datain[i + width + 1] - datain[i + width - 1]
+			- 2 * datain[i + width]
+			- datain[i + width + 1];  //gy
+	dataout[i] = sqrt(colorx*colorx+colory*colory);
+	if(i>N) printf("!!!");
+}
+```
+运行结果如下，完整代码在附录中：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022316707.png)
+
+**增加进程数量：**
+增加进程数量可以增加维度，这里做图片的处理，块的数量足够，递增变量维度也仅需要二维，增加块数量即可
+```c
+int N = m_img.rows * m_img.cols;
+size_t threadsnum = 1024; // 定义thread数量为最大值
+size_t blocksnum = (N + threadsnum - 1)/threadsnum; // block的数量，使得浪费的进程数量最小
+
+//gpu函数中：
+if(index < N)   //在数组索引范围内的进程才执行，可以加快运行速度
+{
+	colorx = datain[index + width + 1]
+			+ 2 * datain[i + 1]
+			+ datain[index + width + 1]
+			- datain[index - width - 1] - 2 * datain[index - 1]
+			- datain[index + width - 1];
+	colory = datain[index - width - 1] + 2 * datain[index - width]
+			+ datain[index + width + 1] - datain[index + width - 1]
+			- 2 * datain[index + width]
+			- datain[index + width + 1];  //gy
+	dataout[index] = sqrt(colorx*colorx+colory*colory);
+	//if(i>N) printf("!!!");
+}
+```
+运行结果如下，完整代码在附录中：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022319208.png)
+
+### 实验结论
+可以从运行结果中看出，使用 gpu 对于程序速度有巨大的提升，是成百倍的，且在处理数据量范围内，进程数量越多，运行速度越快 。 
+
+## 实验过程记录
+### cuda 安装
+参考：[Ubuntu 22.04 安装cuda，适用20.04_AIhub的博客-CSDN博客_ubuntu22.04安装cuda](https://is.gd/H3L2qQ)
+[kali linux 安装CUDA 11.6问题总结 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/328870.html)
+#### 安装驱动
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291206968.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291221320.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291452085.png)
+2. 安装 cuda toolkit，参考 [kali linux 安装CUDA 11.6问题总结 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/328870.html)
+###  问题总结
+#### 问题 1：缺少 liburcu6
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292226234.png)
+
+```
+sudo vim /etc/apt/sources.list
+```
+加上
+```
+deb http://ftp.de.debian.org/debian bullseye main
+```
+update 一下
+#### 问题 2：没有 key
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292233359.png)
+选了其中的一个 key，添加一下，会有 warning，正确解决如链接：[apt key - Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead - Stack Overflow](https://is.gd/hoVl1w) 事实上，不用管 warning，直接再 update 阿安装就可以了
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292234809.png)
+按顺序安装下面两个
+```zsh
+sudo apt-get install liburcu6 
+sudo apt-get -y install cuda 
+```
+至此安装完成，查看一下下
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292241297.png)
+添加环境变量，这条我改过
+```zsh
+zshconfig
+```
+添加这两句
+```txt
+export  PATH=/usr/local/cuda/bin:$PATH  
+export  LD_LIBRARY_PATH=/usr/local/cuda/lib64$LD_LIBRARY_PATH
+```
+输入 `nvcc -V`，查看更改成功
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292244738.png)
+#### 问题 3：gcc,g++降级编译
+运行出现下面问题：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212301822118.png)
+根据这篇把 gcc/g++降级了，还是不行 [error: parameter packs not expanded with ‘...’ · Issue #119 · NVlabs/instant-ngp · GitHub](https://github.com/NVlabs/instant-ngp/issues/119)
+降级新办法：[[ubuntu][原创]ubuntu gcc g++降级方法_FL1623863129 的博客-CSDN 博客_ubuntu 22 gcc12 降到 11](https://blog.csdn.net/FL1623863129/article/details/115192387)
+
+```shell
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 48
+```
