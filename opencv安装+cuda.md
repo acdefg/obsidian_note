@@ -472,3 +472,8 @@ nvcc -std=c++11 `pkg-config --cflags opencv4` cuda_image.cu `pkg-config --libs o
 ```
 cuda_image.cu  --- source code 
 image  --- output
+### reference
+[c++ - Cmake + CUDA + OpenCV - Stack Overflow](https://stackoverflow.com/questions/31881249/cmake-cuda-opencv)  --cmake cuda
+[Linux平台CUDA+OpenCV3.4配置 - Brccq - 博客园](https://www.cnblogs.com/br170525/p/8331640.html)  --一篇比较长的模板，可以修改 cuda opencv
+[cuda与openCV结合编程（一）_alpc40的博客-CSDN博客_cuda与opencv](https://blog.csdn.net/weixin_39212021/article/details/78884830) --几种编译方法
+
