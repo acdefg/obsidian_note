@@ -42,7 +42,11 @@ export  LD_LIBRARY_PATH=/usr/local/cuda/lib64$LD_LIBRARY_PATH
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292244738.png)
 ## cuda 程序
 cuda 编程教学👍：[CUDA C/C++ 教程一：加速应用程序_白水baishui的博客-CSDN博客_c++ cuda](https://is.gd/XcIHdt)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022103477.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022222652.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022316707.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022319208.png)
 
 ## 问题
 上次之后不知道系统删掉了什么环境，这次运行就一直报错，找不到 opencv2/opencv.hpp 从查找文件还在，经过一步一步检查，应该是 autoremove 把 libopencv-dev 在这个包给删了，'sudo apt-get install libopencv-dev' ，重新安装，配置好 vscode，F5 运行没问题了。
@@ -51,5 +55,13 @@ cuda 编程教学👍：[CUDA C/C++ 教程一：加速应用程序_白水baishui
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212301822118.png)
 根据这篇把 gcc/g++降级了，还是不行 [error: parameter packs not expanded with ‘...’ · Issue #119 · NVlabs/instant-ngp · GitHub](https://github.com/NVlabs/instant-ngp/issues/119)
+降级新办法：[[ubuntu][原创]ubuntu gcc g++降级方法_FL1623863129 的博客-CSDN 博客_ubuntu 22 gcc12 降到 11](https://blog.csdn.net/FL1623863129/article/details/115192387)
+
+```shell
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 48
+```
+
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212301823753.png)
 
