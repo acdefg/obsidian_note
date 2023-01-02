@@ -45,6 +45,7 @@ cuda 编程教学👍：[CUDA C/C++ 教程一：加速应用程序_白水baishui
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022103477.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022222652.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022316707.png)
 
 
 ## 问题
