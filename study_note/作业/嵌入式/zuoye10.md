@@ -125,3 +125,4 @@ size_t blocksnum = src.rows; // 定义block的数量
 int index = threadIdx.x + 1 + (blockIdx.x + 1) * blockDim.x;
 ```
 运行结果：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022344217.png)
