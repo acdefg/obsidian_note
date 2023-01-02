@@ -470,3 +470,5 @@ sudo cmake .. -DCMAKE_CXX_COMPILER=$(which g++) -DCMAKE_C_COMPILER=$(which gcc)
 ```shell
 nvcc -std=c++11 `pkg-config --cflags opencv4` cuda_image.cu `pkg-config --libs opencv4` -o image
 ```
+cuda_image.cu  --- source code 
+image  --- output
