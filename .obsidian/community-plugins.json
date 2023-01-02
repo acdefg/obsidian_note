@@ -12,7 +12,6 @@
   "markdown-prettifier",
   "obsidian-extract-pdf-highlights",
   "obsidian-smarter-md-hotkeys",
-  "obsidian-pandoc",
   "obsidian-git",
   "obsidian-admonition",
   "mx-bili-plugin",
@@ -31,5 +30,6 @@
   "obsidian-checklist-plugin",
   "obsidian-day-planner",
   "obsidian-auto-link-title",
-  "obsidian-statusbar-pomo"
+  "obsidian-statusbar-pomo",
+  "obsidian-enhancing-export"
 ]
