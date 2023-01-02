@@ -47,14 +47,15 @@ int index = threadIdx.x + 1 + (blockIdx.x + 1) * blockDim.x;
 }
 ```
 
-1.  `__global__ void GPUFunction()：
+1. ` __global__ void GPUFunction()：`
 __global__ 关键字表明该函数将在 GPU 上运行并可全局调用（ 既可以由 CPU ，也可以由 GPU 调用）；
 通常，将在 CPU 上执行的代码称为 Host （主机）代码，而将在 GPU 上运行的代码称为 Device （设备）代码；
 注意返回类型为 void。使用 __global__ 关键字定义的函数返回值需为 void 类型。
-2. `GPUFunction<<<1, 1>>>()：
+2. `GPUFunction<<<1, 1>>>()：`
 通常，我们把要运行在 GPU 上的函数称为 kernel （核）函数;
 启动核(kernel)函数时，我们必须事先配置 GPU 参数，使用 <<< ... >>> 语法向核函数传递两个必要的参数;
-在 <<< ... >>> 中传递的参数用于为核函数设定线程的层次结构，第一个参数定义线程块(Block)的数量，第二个参数定义 Block 中含有的线程(Thread)数量。
+在 <<< ... >>> 中传递的参数用于为核函数设定线程的层次结构
+第一个参数定义线程块(Block)的数量，第二个参数定义 Block 中含有的线程(Thread)数量。
 CUDA线程的层次结构分为三层：Thread（线程）、Block（块）、Grid（网格），网格由块组成，块由线程组成。
 ![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221231234731.png)
 `someKernel<<<10, 10>>()` 在 GPU 中为该核函数分配 10 个具有 10 个线程的线程块，核函数中的代码将运行 100 次
