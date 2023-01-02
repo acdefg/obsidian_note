@@ -465,3 +465,4 @@ sudo cmake .. -DCMAKE_CXX_COMPILER=$(which g++) -DCMAKE_C_COMPILER=$(which gcc)
 [Ubuntu下安装opencv并进行测试_带你去网吧里偷耳机的博客-CSDN博客_检测opencv是否安装成功 ubuntu](https://blog.csdn.net/qq_40123329/article/details/103904087)
 
 ## 编译方法
+可以设置 cmake，配置 vscode
