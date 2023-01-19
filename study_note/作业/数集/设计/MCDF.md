@@ -82,6 +82,8 @@ rst 异步
 通过写寄存器更改指定值：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106163208.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230119191323.png)
+
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106163905.png)
 由于 0x10，0x14，0x18 几个位置，不能直接通过写入 datain 来改变，所以输出为高阻态
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230119191125.png)
