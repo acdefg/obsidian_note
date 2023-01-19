@@ -84,7 +84,8 @@ rst 异步
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106163905.png)
 由于 0x10，0x14，0x18 几个位置，不能直接通过写入 datain 来改变，所以输出为高阻态
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106163247.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230119191125.png)
+
 进入模块查看上述变化，通过 datain 改变的输入在下一个 clk 上升沿就会被原输入端改写：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106163645.png)
 
