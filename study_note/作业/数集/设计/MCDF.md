@@ -95,8 +95,10 @@ rst 异步
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106170652.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106170908.png)
 
-通过向寄存器写指令，更换数据长度，更换通道
+通过向寄存器写指令，更换数据长度，通过更改优先级更换通道
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230120203057.png)
+优先级和通道变更
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230120231423.png)
 
 ### 问题
 使用 multisim 仿真时遇到变量命名和模块中不一致而仿真不出来的问题
