@@ -95,5 +95,7 @@ rst 异步
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106170652.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106170908.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230120203057.png)
+
 ### 问题
 使用 multisim 仿真时遇到变量命名和模块中不一致而仿真不出来的问题
