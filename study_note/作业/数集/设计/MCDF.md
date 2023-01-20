@@ -95,7 +95,7 @@ rst 异步
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106170652.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230106170908.png)
 
-通过向寄存器写指令，zzzz更换数据长度，更换通道
+通过向寄存器写指令，更换数据长度，更换通道
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230120203057.png)
 
 ### 问题
