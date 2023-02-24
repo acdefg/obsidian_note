@@ -6,3 +6,5 @@
 要关闭系统代理
 - [ ] 🔼 fix image update
 - [ ]   🔼 fix conda in jupyter
+### anaconda 包安装速度很慢
+使用 conda，打开 anaconda prompt 更改国内源
