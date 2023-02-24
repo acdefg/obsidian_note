@@ -4,4 +4,5 @@
 2. [Jupyter Notebook切换conda虚拟环境_IT_xiao_bai的博客-CSDN博客_jupyter ,显示conda页卡](https://blog.csdn.net/it_xiao_bai/article/details/102765922)安装插件
 #### 安装插件
 要关闭系统代理
-⚠️upload failed, check dev console
+- [ ] 🔼 fix image update
+- [ ]   🔼 fix conda in jupyter
