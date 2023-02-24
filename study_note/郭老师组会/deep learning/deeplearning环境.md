@@ -8,3 +8,7 @@
 - [ ]   🔼 fix conda in jupyter
 ### anaconda 包安装速度很慢
 使用 conda，打开 anaconda prompt 更改国内源
+### tensorflow-hub
+[Site Unreachable](https://tfhub.dev/google/tf2-preview/mobilenet_v2/classification/4)
+### jupyter 设置 proxy（暂时没成）
+[如何给Jupyter notebook设置代理服务器_Zing22的博客-CSDN博客_notebook proxy](https://blog.csdn.net/Mr_Zing/article/details/98470386)
