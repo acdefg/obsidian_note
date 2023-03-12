@@ -1,5 +1,14 @@
 In the context of "Nihao's Convolutional Neural Network", "Nihao" is not a name but rather an acronym for "N eural network I nference H ardware A cceleration O ptimization". The creators of NCNN chose this name to represent their focus on optimizing neural network inference performance on a variety of hardware platforms, particularly mobile and embedded devices.
 
+## facenet 和 mobilenet
+FaceNet 和 MobileNet 都是深度学习中比较流行的轻量级卷积神经网络模型，它们有一定的关系，但是在应用场景和目标上有所不同。
+
+FaceNet是由Google研发的一种人脸识别模型，采用了一种称为三重损失函数的训练方法，可以将人脸图像映射为一个高维度的向量表示，从而实现了对人脸的有效识别。FaceNet基于卷积神经网络（CNN）实现，包括多个卷积层和全连接层。
+
+MobileNet则是一种专门针对移动设备和嵌入式系统优化的卷积神经网络模型，旨在实现高效的模型训练和推理。MobileNet通过在卷积操作中引入深度可分离卷积，降低了模型的参数数量和计算复杂度，从而实现了在嵌入式设备上高效的运行。
+
+虽然 FaceNet 和 MobileNet 都是卷积神经网络模型，但是它们的应用场景和目标不同。FaceNet 主要用于人脸识别领域，需要处理复杂的人脸图像，并且需要高精度的识别结果。MobileNet 则主要用于移动设备和嵌入式系统领域，需要在有限的计算资源和存储空间下实现高效的模型推理，通常应用于图像分类、目标检测等任务。
+
 [Site Unreachable](https://blog.csdn.net/weixin_46236212/article/details/122570929)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230311090827.png)
 
