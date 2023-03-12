@@ -3,3 +3,7 @@ In the context of "Nihao's Convolutional Neural Network", "Nihao" is not a name 
 [Site Unreachable](https://blog.csdn.net/weixin_46236212/article/details/122570929)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230311090827.png)
 
+
+### questions
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230312095027.png)
+
