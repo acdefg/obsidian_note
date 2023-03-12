@@ -23,3 +23,8 @@ pip install tf_slim
 ```python
 import tf_slim as slim
 ```
+### module 'tensorflow.compat.v2.__internal__' has no attribute 'register_load_context_function'
+降低 tensorflow 和 keras 的版本并保持一致
+更改代码：
+`from keras.models import load_model`
+`from tensorflow.python.keras.models import load_model`
