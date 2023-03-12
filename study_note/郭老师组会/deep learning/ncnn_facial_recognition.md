@@ -30,3 +30,6 @@ import tf_slim as slim
 `from tensorflow.python.keras.models import load_model`
 ### OSError: SavedModel file does not exist at:
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230312121303.png)
+自定义层，需要在 load_model()里，加上 cuustom_objects，暂时没成功
+### 开了代理无法下载包
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230312161919.png)
