@@ -5,5 +5,6 @@
 
 ### 综合
 [Tcl与Design Compiler （三）——DC综合的流程 - IC_learner - 博客园](https://www.cnblogs.com/IClearner/p/6618992.html)
+[Site Unreachable](https://blog.csdn.net/qq_40223983/article/details/96426938)
 
 ### 后仿
