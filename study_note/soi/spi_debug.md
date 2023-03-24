@@ -8,3 +8,7 @@
 [Site Unreachable](https://blog.csdn.net/qq_40223983/article/details/96426938)
 
 ### 后仿
+
+
+### EDA
+[数字IC设计全流程介绍 - 知乎](https://zhuanlan.zhihu.com/p/85063131)
