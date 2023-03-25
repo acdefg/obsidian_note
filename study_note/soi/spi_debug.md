@@ -9,6 +9,12 @@
 
 ### 后仿
 
-
+```verilog
+vcs-sdf min:top.i_test.:test.sdf
+```
+-sdf   min|typ|max:instance_name:file.sdf
+The min|typ|max notation is used to represent path delays in SDF files. The min delay represents the minimum delay that can occur on a path, while the max delay represents the maximum delay that can occur on a path.
 ### EDA
 [数字IC设计全流程介绍 - 知乎](https://zhuanlan.zhihu.com/p/85063131)
+
+### vcs+verdi
