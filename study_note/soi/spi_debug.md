@@ -73,3 +73,9 @@ verdi   -sv                 \ #Systemverilog 的支持
 	-ssf tb_top.fsdb    \ #加载 fsdb 波形，tb.sv 中产生的波形名字有关
         -nologo               #打开界面时不出现 logo
 ```
+
+##### sdf
+```shell
+vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
+```
+
