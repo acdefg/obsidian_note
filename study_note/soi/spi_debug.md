@@ -6,6 +6,7 @@
 ### 综合
 [Tcl与Design Compiler （三）——DC综合的流程 - IC_learner - 博客园](https://www.cnblogs.com/IClearner/p/6618992.html)
 [Site Unreachable](https://blog.csdn.net/qq_40223983/article/details/96426938)
+[DC中常用到的命令（示例）总结 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1665000)
 
 ### 后仿
 
@@ -84,3 +85,23 @@ vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 ```
 
 [Site Unreachable](https://blog.csdn.net/JasonFuyz/article/details/107508893)  --这个查看和添加波形教程不错
+
+##### **前仿选项**
+
+-   **+nospeicy**  
+    在仿真时忽略库文件中指定的延时。
+-   **+delay_mode_zero**  
+    将标准库单元中定义的延时替换为0。testbench中的 #延时也都被消除。
+-   **+notimingcheck**时序检查开关，比如setup/hold/width检查等等，如使用了该option，则仿真时不检查时序，行为类似于RTL仿真。  
+    在PR未结束，sdf反标文件还没准备好时，可用该选项忽略延时，可用于功能性的粗略检查。  
+    但真正跑后仿真时，不可使用该选项，否则仿真有效性大大降低。
+
+##### **后仿选项**
+
+-   **+sdfverbose**  
+    显示所有的sdf反标错误；
+-   **+no_notifier**  
+    可以关掉时序检查产生的不定态。通过这个命令参数可以使时序检查任务中检测到时序违例后，不影响其参数列表中的notifier的值，从而避免了notifier变化引起udp输出不定态的情况，该命令仅对notifier的值有影响，对于时序检查任务检测到的时序违例不产生任何影响；
+-   **+neg_tchk**若要使用负延时检查，在编译设计时必须包含+neg_tchk选项。如果省略此选项，VCS将所有负延迟更改为0。
+-   **-negdelay**  
+    用于SDF文件中有负延迟，如果省略此选项，VCS将所有负延迟更改为0。
