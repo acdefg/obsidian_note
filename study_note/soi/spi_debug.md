@@ -53,7 +53,7 @@ end
 [数字IC设计全流程介绍 - 知乎](https://zhuanlan.zhihu.com/p/85063131)
 
 #### vcs+verdi
-
+[VCS与Verdi的联合仿真 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1669477)  比较详细
 ```verilog
 vcs -timescale=1ns/1ns  \ #设置仿真精度
     -sverilog           \ #Systemverilog的支持
