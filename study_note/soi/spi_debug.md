@@ -214,3 +214,48 @@ clean:
   rm -rf  ./verdiLog  ./dff ./csrc *.daidir *log *.vpd *.vdb simv* *.key *race.out* *.rc *.fsdb *.vpd *.log *.conf *.dat *.conf uart
 ```
 
+
+```makefile
+.PHONY: com sim run_verdi clean
+
+TOP = mux_debug
+TB_TOP = mux_debug_tb
+
+export top_module=$(TOP)
+export tb_module=$(TB_TOP)
+
+#compile
+VCS =vcs     +v2k  -timescale=1ns/1ps                    \
+     -full64                                             \
+     -debug_all                                          \
+     -sverilog                                           \
+     +vcs+flush+all                                      \
+     -f file_list.f                                      \
+     -o simv                                             \
+     -l compile.log                                      \
+     -sdf :instance_name:file.sdf
+
+VERDI=verdi -f file_list.f   \
+      -ssf $(OUTPUT).fsdb    \
+      -nologo                \
+      -l v.log             
+
+#sim
+SIM = ./simv                                            \
+      -ucli -i ./dump_fsdb.tcl             \
+      +fsdb+autoflush                                   \
+      -l sim.log
+    
+com:
+  $(VCS)
+
+sim:
+  $(SIM)
+
+run_verdi:
+  $(VERDI)
+
+clean:
+  rm -rf  ./verdiLog  ./dff ./csrc *.daidir *log *.vpd *.vdb simv* *.key *race.out* *.rc *.fsdb *.vpd *.log *.conf *.dat *.conf
+
+```
