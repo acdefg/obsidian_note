@@ -2,3 +2,5 @@
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230325234659.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230325234722.png)
+
+[models/research/slim/nets/mobilenet at master · tensorflow/models · GitHub](https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet)
