@@ -65,6 +65,10 @@ vcs -timescale=1ns/1ns  \ #设置仿真精度
     -P  ***/verdi/share/PLI/VCS/LINUX/novas.tab \   #调用verdi的库，也就是在tb文件中添加几行代码所需要的文件路径
         ***/verdi/share/PLI/VCS/LINUX/pli.a
 ```
+-   -fsdb : 仿真过程同时生成 fsdb 格式的波形
+-   -full64 : 匹配64位服务器系统
+-   -f : 读取仿真文件
+-   -R : 编译后自动运行
 
 ```verilog
 verdi   -sv                 \ #Systemverilog 的支持
