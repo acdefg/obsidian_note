@@ -104,4 +104,5 @@ vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
     可以关掉时序检查产生的不定态。通过这个命令参数可以使时序检查任务中检测到时序违例后，不影响其参数列表中的notifier的值，从而避免了notifier变化引起udp输出不定态的情况，该命令仅对notifier的值有影响，对于时序检查任务检测到的时序违例不产生任何影响；
 -   **+neg_tchk**若要使用负延时检查，在编译设计时必须包含+neg_tchk选项。如果省略此选项，VCS将所有负延迟更改为0。
 -   **-negdelay**  
-    用于SDF文件中有负延迟，如果省略此选项，VCS将所有负延迟更改为0。
+    用于 SDF 文件中有负延迟，如果省略此选项，VCS 将所有负延迟更改为 0。
+[芯片后仿及SDF反标 - 知乎](https://zhuanlan.zhihu.com/p/439180974) 上面这段连接
