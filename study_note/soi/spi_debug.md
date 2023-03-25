@@ -86,8 +86,60 @@ vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 
 [Site Unreachable](https://blog.csdn.net/JasonFuyz/article/details/107508893)  --这个查看和添加波形教程不错
 
-##### **前仿选项**
+##### 四、VCS+Verdi 如何 dump 波形
 
+在 dump 波形时会用到那些命令，解决的是生成 fsdb 波形的问题，为了生成.fsbd 格式的文件，可以使用 verilog 波形函数，也可以使用 ucli/tcl 接口： 
+
+###### （一）使用 Verilog 系统函数 
+
+作为小白，我觉得这种方式很友好，通过 Verilog 的 PLI 接口实现，在 tb 中添加两个函数：
+
+```verilog
+initial begin
+$fsdbDumfile(“uart.fsdb”);     //指定生成的 fsdb 文件的文件名
+$fsdbDumpars(0,uart_byte_tx_tb); //指定 dump 的层次，0 表示存储所有的 wave，tb 为起始层
+end 
+```
+
+###### （二）、使用 ucli/tcl 接口 
+
+使用 ucli/tcl 接口时无需在 tb 中调用与 fsdbDumpvars()函数，仅需在脚本中进行设置即可。在运行仿真时，打开 ucli 接口，通过 Tcl 脚本对 fsdb 进行设置，设置 fsdb 文件的文件名，设置 fsdb 文件的集成类型和起始文件： 
+
+```
+global env  
+```
+
+tcl 脚本引用环境变量，Makefile 中通过 export 定义 
+
+```
+fsdbDumpfile "$env(demo_name).fsdb"
+```
+
+设置波形文件名，受环境变量 env(demo_name)控制 
+
+demo_name 在 makefile 中使用 exportdemo_name=demo_fifo 
+
+```
+fsdbDumpvars 0 "tb_top"     
+```
+ 
+设置波形的顶层和层次，表示将 tb_top 作为顶层，Dump 所有层次
+
+```
+run
+```
+
+```
++fsdb+autoflush 
+```
+
++fsdb+f+autoflush：用于开启一边仿真以一边 Dump 波形的功能，在不开启该功能时，运行完仿真之后，未退出命令行，直接在新终端中启动 Verdi 调用波性文件的话是一个用文件，没有波形，这是因为只有在结束仿真之后，波形才会 Dump 为静态文件供 verdi 调用，没有出现波形的原因是此时的.fsdb 只是一个空文件，波形还未 Dump，如下图所示：
+
+此时可以在仿真的命令行中键入：fsdbDumpflush，启动波形 Dump，在另一个终端中启动 verdi 加载波形，波形正常加载：
+
+verdi 优于 modelsim 也正是因此，通过 tcl 语言的控制，每次设置 run 时间，不断的加载仿真波形，十分方便！
+
+##### **前仿选项**
 -   **+nospeicy**  
     在仿真时忽略库文件中指定的延时。
 -   **+delay_mode_zero**  
@@ -106,3 +158,4 @@ vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 -   **-negdelay**  
     用于 SDF 文件中有负延迟，如果省略此选项，VCS 将所有负延迟更改为 0。
 [芯片后仿及SDF反标 - 知乎](https://zhuanlan.zhihu.com/p/439180974) 上面这段连接
+
