@@ -83,3 +83,4 @@ verdi   -sv                 \ #Systemverilog 的支持
 vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 ```
 
+[Site Unreachable](https://blog.csdn.net/JasonFuyz/article/details/107508893)  --这个查看和添加波形教程不错
