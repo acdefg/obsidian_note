@@ -84,6 +84,26 @@ verdi   -sv                 \ #Systemverilog 的支持
 vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 ```
 
+##### **前仿选项**
+-   **+nospeicy**  
+    在仿真时忽略库文件中指定的延时。
+-   **+delay_mode_zero**  
+    将标准库单元中定义的延时替换为 0。testbench 中的 #延时也都被消除。
+-   **+notimingcheck**时序检查开关，比如 setup/hold/width 检查等等，如使用了该 option，则仿真时不检查时序，行为类似于 RTL 仿真。  
+    在 PR 未结束，sdf 反标文件还没准备好时，可用该选项忽略延时，可用于功能性的粗略检查。  
+    但真正跑后仿真时，不可使用该选项，否则仿真有效性大大降低。
+
+##### **后仿选项**
+
+-   **+sdfverbose**  
+    显示所有的 sdf 反标错误；
+-   **+no_notifier**  
+    可以关掉时序检查产生的不定态。通过这个命令参数可以使时序检查任务中检测到时序违例后，不影响其参数列表中的 notifier 的值，从而避免了 notifier 变化引起 udp 输出不定态的情况，该命令仅对 notifier 的值有影响，对于时序检查任务检测到的时序违例不产生任何影响；
+-   **+neg_tchk**若要使用负延时检查，在编译设计时必须包含+neg_tchk 选项。如果省略此选项，VCS 将所有负延迟更改为 0。
+-   **-negdelay**  
+    用于 SDF 文件中有负延迟，如果省略此选项，VCS 将所有负延迟更改为 0。
+[芯片后仿及SDF反标 - 知乎](https://zhuanlan.zhihu.com/p/439180974) 上面这段连接
+
 [Site Unreachable](https://blog.csdn.net/JasonFuyz/article/details/107508893)  --这个查看和添加波形教程不错
 
 ##### 四、VCS+Verdi 如何 dump 波形
@@ -138,26 +158,6 @@ run
 此时可以在仿真的命令行中键入：fsdbDumpflush，启动波形 Dump，在另一个终端中启动 verdi 加载波形，波形正常加载：
 
 verdi 优于 modelsim 也正是因此，通过 tcl 语言的控制，每次设置 run 时间，不断的加载仿真波形，十分方便！
-
-##### **前仿选项**
--   **+nospeicy**  
-    在仿真时忽略库文件中指定的延时。
--   **+delay_mode_zero**  
-    将标准库单元中定义的延时替换为0。testbench中的 #延时也都被消除。
--   **+notimingcheck**时序检查开关，比如setup/hold/width检查等等，如使用了该option，则仿真时不检查时序，行为类似于RTL仿真。  
-    在PR未结束，sdf反标文件还没准备好时，可用该选项忽略延时，可用于功能性的粗略检查。  
-    但真正跑后仿真时，不可使用该选项，否则仿真有效性大大降低。
-
-##### **后仿选项**
-
--   **+sdfverbose**  
-    显示所有的sdf反标错误；
--   **+no_notifier**  
-    可以关掉时序检查产生的不定态。通过这个命令参数可以使时序检查任务中检测到时序违例后，不影响其参数列表中的notifier的值，从而避免了notifier变化引起udp输出不定态的情况，该命令仅对notifier的值有影响，对于时序检查任务检测到的时序违例不产生任何影响；
--   **+neg_tchk**若要使用负延时检查，在编译设计时必须包含+neg_tchk选项。如果省略此选项，VCS将所有负延迟更改为0。
--   **-negdelay**  
-    用于 SDF 文件中有负延迟，如果省略此选项，VCS 将所有负延迟更改为 0。
-[芯片后仿及SDF反标 - 知乎](https://zhuanlan.zhihu.com/p/439180974) 上面这段连接
 
 ##### ucli
 ucli 是 Synopsys 公司的一种通用命令行接口，可以执行任意 TCL（ Tool Command Language ）命令 。在 VCS 仿真中，可以通过-ucli 参数启动 UCLI 命令行模式，使用 UCLI 可以执行一些仿真控制命令，如 run、dump、quit 等 
@@ -257,5 +257,51 @@ run_verdi:
 
 clean:
   rm -rf  ./verdiLog  ./dff ./csrc *.daidir *log *.vpd *.vdb simv* *.key *race.out* *.rc *.fsdb *.vpd *.log *.conf *.dat *.conf
+
+```
+
+
+```makefile
+.PHONY: com sim run_verdi clean
+
+TOP = mux_debug
+TB_TOP = mux_debug_tb
+
+export top_module=$(TOP)
+export tb_module=$(TB_TOP)
+
+#compile
+VCS =vcs  +v2k  -timescale=1ns/1ps                       \
+     -full64                                             \
+     -debug_all                                          \
+     -sverilog                                           \
+     +vcs+flush+all                                      \
+     -f filelist.f                                       \
+     -o simv                                             \
+     -l compile.log                                      
+
+VERDI=verdi -f filelist.f                                \
+      -ssf $(TOP).fsdb                                   \
+      -nologo                                            \
+      -l v.log             
+
+#sim
+SIM = ./simv                                            \
+      -ucli -i ./dump_fsdb.tcl                          \
+      +fsdb+autoflush                                   \
+      -l sim.log
+all:    com sim	
+    
+com:
+	$(VCS)
+
+sim:
+	$(SIM)
+
+verdi:
+	$(VERDI) &
+
+clean:
+	rm -rf  ./verdiLog  ./dff ./csrc *.daidir *log *.vpd *.vdb simv* *.key *race.out* *.rc *.fsdb *.vpd *.log *.conf *.dat *.conf
 
 ```
