@@ -103,7 +103,17 @@ begin
 end
 `endif
 ```
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230330104327.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230330104333.png)
 
+
+
+```verilog
+	initial
+	begin
+	  $sdf_annotate("./mux_debug.syn.sdf",mux_debug_tb,,"sdf.log",,,);
+	end
+```
 
 ##### **前仿选项**
 -   **+nospeicy**  
