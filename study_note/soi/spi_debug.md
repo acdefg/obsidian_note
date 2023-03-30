@@ -307,3 +307,8 @@ clean:
 	rm -rf  ./verdiLog  ./dff ./csrc *.daidir *log *.vpd *.vdb simv* *.key *race.out* *.rc *.fsdb *.vpd *.log *.conf *.dat *.conf
 
 ```
+
+### todo
+测试原来的testbench
+sdf 反标没有成功，分别是 testbench 和makefile
+波形能否一次导入
