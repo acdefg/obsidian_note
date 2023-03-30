@@ -81,6 +81,7 @@ verdi   -sv                 \ #Systemverilog 的支持
 	-ssf tb_top.fsdb    \ #加载 fsdb 波形，tb.sv 中产生的波形名字有关
         -nologo               #打开界面时不出现 logo
 ```
+verdi 还有很多快捷键，比如 ctrl+4 将.v 文件中所有信号波形全部导入波形窗口，在波形窗口按 f 自动适配波形大小，按 z 缩小波形，按 Z 放大波形，等等，许多便捷操作，以及用命令行或者脚本直接 verdi 读取 fsdb 文件并显示等，这些大家可以自行上网查询~
 
 ##### sdf
 ```shell
