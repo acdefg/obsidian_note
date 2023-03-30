@@ -84,6 +84,7 @@ verdi   -sv                 \ #Systemverilog 的支持
 verdi 还有很多快捷键，比如 ctrl+4 将.v 文件中所有信号波形全部导入波形窗口，在波形窗口按 f 自动适配波形大小，按 z 缩小波形，按 Z 放大波形，等等，许多便捷操作，以及用命令行或者脚本直接 verdi 读取 fsdb 文件并显示等，这些大家可以自行上网查询~
 
 ##### sdf
+makefile
 ```shell
 vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 ```
@@ -92,6 +93,17 @@ vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 -sdf typ:$(TB_TOP):mux_debug.syn.sdf
 ```
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230330103145.png)
+
+testbench
+```
+`ifdef SDF
+initial
+begin
+  $sdf_annotate("./mux_debug.syn.sdf",tb,,"sdf.log",);
+end
+`endif
+```
+
 
 ##### **前仿选项**
 -   **+nospeicy**  
