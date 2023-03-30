@@ -7,7 +7,7 @@
 
 ### 综合
 [Tcl与Design Compiler （三）——DC综合的流程 - IC_learner - 博客园](https://www.cnblogs.com/IClearner/p/6618992.html)
-[Site Unreachable](https://blog.csdn.net/qq_40223983/article/details/96426938)
+[逻辑综合工具DesignCompiler使用教程](https://blog.csdn.net/qq_40223983/article/details/96426938)
 [DC中常用到的命令（示例）总结 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1665000)
 
 ### 后仿
@@ -72,6 +72,7 @@ vcs -timescale=1ns/1ns  \ #设置仿真精度
 -   -full64 : 匹配64位服务器系统
 -   -f : 读取仿真文件
 -   -R : 编译后自动运行
+[Site Unreachable](https://blog.csdn.net/burningCky/article/details/111558398)  ---vcs 选项字典
 
 ```verilog
 verdi   -sv                 \ #Systemverilog 的支持
