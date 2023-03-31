@@ -92,6 +92,11 @@ vcs +neg_tchk -negdelay -sdf min|typ|max:instance_name:file.sdf
 ```
 -sdf typ:$(TB_TOP):mux_debug.syn.sdf
 ```
+
+```verilog
+     -sdf max:$(TB_TOP):mux_debug.syn.sdf                \
+```
+
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230330103145.png)
 
 testbench
