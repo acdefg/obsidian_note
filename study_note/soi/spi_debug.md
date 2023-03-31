@@ -115,6 +115,14 @@ end
 	end
 ```
 
+```verilog
+initial
+	begin
+	  //$sdf_annotate("./mux_debug.syn.sdf",,,"sdf.log",,,);
+	  $sdf_annotate("./mux_debug.syn.sdf", uut);
+	end
+```
+
 ##### **前仿选项**
 -   **+nospeicy**  
     在仿真时忽略库文件中指定的延时。
