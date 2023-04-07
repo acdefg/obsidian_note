@@ -40,3 +40,4 @@ tf.keras.layers.RandomRotation(
 
 ## debug store
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231422.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231601.png)
