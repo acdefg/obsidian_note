@@ -31,3 +31,4 @@ tf.keras.layers.RandomRotation(
     fill_value=0.0,
     **kwargs
 )
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407213637.png)
