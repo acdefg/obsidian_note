@@ -32,6 +32,8 @@ tf.keras.layers.RandomRotation(
     **kwargs
 )
 
+[保存和恢复模型  |  TensorFlow Core](https://tensorflow.google.cn/tutorials/keras/save_and_load?hl=zh-cn#checkpoint_%E5%9B%9E%E8%B0%83%E7%94%A8%E6%B3%95)
+
 ## 测试图片
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407213637.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407214526.png)
