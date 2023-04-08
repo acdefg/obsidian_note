@@ -38,6 +38,9 @@ tf.keras.layers.RandomRotation(
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407214540.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407214548.png)
 
+validation_split=.30, 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230408205827.png)
+
 ## debug store
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231422.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231601.png)
