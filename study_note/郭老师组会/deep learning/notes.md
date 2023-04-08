@@ -43,6 +43,7 @@ validation_split=.30,
 
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/f9553b49d58cde32e791b5849b84be0.png)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230408210606.png)
 
 ## debug store
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231422.png)
