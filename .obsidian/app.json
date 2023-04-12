@@ -8,5 +8,9 @@
   },
   "attachmentFolderPath": "z_attachment",
   "alwaysUpdateLinks": true,
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "defaultViewMode": "preview",
+  "showFrontmatter": false,
+  "showLineNumber": true,
+  "showIndentGuide": false
 }
