@@ -11,3 +11,5 @@ Ctrl + E	进入顶模块或上层原理图
 Shift + M	移动器件
 Shift + N	添加普通文字
 鼠标右键	移动器件时旋转
+
+[模拟IC设计中的软件操作：Cadence Virtuoso Schematic 电路原理图编辑技巧及其相关快捷键 - 知乎](https://zhuanlan.zhihu.com/p/574080087)
