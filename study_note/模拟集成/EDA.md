@@ -14,3 +14,8 @@ Shift + N	添加普通文字
 
 [模拟IC设计中的软件操作：Cadence Virtuoso Schematic 电路原理图编辑技巧及其相关快捷键 - 知乎](https://zhuanlan.zhihu.com/p/574080087)
 
+### 激励信号设置
+#### vpulse
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230417160056.png)
+#### vpwl
+
