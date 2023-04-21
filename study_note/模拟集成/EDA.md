@@ -19,3 +19,7 @@ Shift + N	添加普通文字
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230417160056.png)
 #### vpwl
 
+
+### result print
+region 为 0,1,2,3,4 依次代表 [MOS管](https://so.csdn.net/so/search?q=MOS%E7%AE%A1&spm=1001.2101.3001.7020)工作在截止区、线性区、饱和区、亚阈值区、breakdown
+
