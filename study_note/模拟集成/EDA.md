@@ -1,3 +1,4 @@
+### 键位记录
 按键	作用
 i	添加器件
 W	进行连线
@@ -12,6 +13,18 @@ Shift + M	移动器件
 Shift + N	添加普通文字
 鼠标右键	移动器件时旋转
 
+#### 模块层次操作
+器件是组件schematic的最小单元
+
+e –> 以只读模式在当前窗口中进入对应组件的下一层
+
+Shift + e –> 以编辑模式在当前窗口中进入对应组件的下一层
+
+Ctrl + e –> 返回当前组件的上一层（以new tab模式时会关闭新打开的tab）
+
+Ctrl + TAB –> 在多个 tab 中切换
+
+#### reference link
 [模拟IC设计中的软件操作：Cadence Virtuoso Schematic 电路原理图编辑技巧及其相关快捷键 - 知乎](https://zhuanlan.zhihu.com/p/574080087)
 
 ### 激励信号设置
