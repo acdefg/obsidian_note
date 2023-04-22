@@ -352,7 +352,14 @@ clean:
 
 ```
 
-### todo
+### todo(done)
 测试原来的testbench
 sdf 反标没有成功，分别是 testbench 和makefile
 波形能否一次导入
+
+### virtuoso 测试
+#### bug
+这个时间一直跑不完，感觉电路有错
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422151959.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422152100.png)
