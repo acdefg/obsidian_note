@@ -358,8 +358,21 @@ sdf 反标没有成功，分别是 testbench 和makefile
 波形能否一次导入
 
 ### virtuoso 测试
+### 两种生成分段波形的方式
+1. vpwl 设置短的上升和下降时间
+2. vbit 设置 010 序列
+20n-160n
+![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422153559.png)
+400n-475n
+![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422153747.png)
+1
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422153656.png)
+2
+![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422153853.png)
+
 #### bug
 这个时间一直跑不完，感觉电路有错
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422151959.png)
-
+VDD 和 VSS 怎么接？？？
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422152100.png)
+
