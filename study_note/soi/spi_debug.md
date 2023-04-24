@@ -369,6 +369,10 @@ sdf 反标没有成功，分别是 testbench 和makefile
 ![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422153656.png)
 2
 ![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422153853.png)
+##### 长信号
+![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422154412.png)
+
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230422154433.png)
 
 #### bug
 这个时间一直跑不完，感觉电路有错
