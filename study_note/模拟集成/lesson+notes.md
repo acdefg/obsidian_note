@@ -8,7 +8,8 @@ gm/id
 [Site Unreachable](https://blog.csdn.net/weixin_44115643/article/details/119419501)
 计算方法：
 [Site Unreachable](https://blog.csdn.net/weixin_44115643/article/details/119062516)
-
+veriloga：
+[Verilog-A 语言简单入门教程 – Analog-Life](https://www.analog-life.com/2022/04/veriloga-quick-learning/)
 一些工具使用笔记，可跟
 [[ Virtuoso ] 中如何优化 Library Manager 的显示 - YEUNGCHIE - 博客园](https://www.cnblogs.com/yeungchie/p/13520120.html)
 [模拟IC设计中的软件操作：Cadence Virtuoso Schematic 电路原理图编辑技巧及其相关快捷键 - 知乎](https://zhuanlan.zhihu.com/p/574080087)    一些基础操作记录
