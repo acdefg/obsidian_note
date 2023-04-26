@@ -71,12 +71,22 @@
       "key": "M"
     }
   ],
+<<<<<<< HEAD
   "outline:open-for-current": [
     {
       "modifiers": [
         "Shift"
       ],
       "key": "L"
+=======
+  "easy-typing-obsidian:easy-typing-insert-codeblock": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "W"
+>>>>>>> origin/main
     }
   ]
 }
