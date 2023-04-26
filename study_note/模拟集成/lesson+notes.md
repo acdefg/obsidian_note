@@ -16,3 +16,8 @@ veriloga：
 [模拟IC设计中的软件操作：Cadence Virtuoso Schematic 电路原理图编辑技巧及其相关快捷键 - 知乎](https://zhuanlan.zhihu.com/p/574080087)    一些基础操作记录
 ### bug
 [Site Unreachable](https://blog.csdn.net/weixin_43868685/article/details/127059192)
+
+```ad-error
+未修复bug，vmtools还没好
+```
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230426203619.png)
