@@ -54,5 +54,6 @@ validation_split=.30,
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231601.png)
 
 ### plan and todo
-目前的想法是把模型训练完善好，先做一个多分类任务的训练，
+目前的想法是把模型训练完善好，先做一个多分类任务的训练，模型精度调整
+然后做模型的量化剪枝，并且继续测试精度，然后考虑系统分级任务
 - [ ]   
