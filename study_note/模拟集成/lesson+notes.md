@@ -17,6 +17,7 @@ veriloga：
 
 ### 一些基础知识
 [常用拉氏变换表 - YKR - 博客园](https://www.cnblogs.com/yuankai-ren/p/11622815.html)
+ω = 2πf，f=1/T
 
 ### bug
 [Site Unreachable](https://blog.csdn.net/weixin_43868685/article/details/127059192)
