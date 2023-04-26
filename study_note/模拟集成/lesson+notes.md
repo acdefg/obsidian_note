@@ -1,11 +1,12 @@
 [Videos at CMOSedu.com](https://cmosedu.com/videos/videos.htm)
 [Electrical Engineering 240: Advanced Analog Integrated Circuits (UC Berkeley) | Electronics and Electrical Engineering | Audio/video Courses](http://www.infocobuild.com/education/audio-video-courses/electronics/ee240-berkeley.html)
-
+stanford EE214
 比较详细的模拟学习和仿真过程：
 [Site Unreachable](https://blog.csdn.net/qq_33599939/article/details/123928961)
 [Site Unreachable](https://blog.csdn.net/qq_40987215/article/details/104722352)
-gm/id
+gm/id：
 [Site Unreachable](https://blog.csdn.net/weixin_44115643/article/details/119419501)
+[Gm/Id仿真（一）原理\_硬件老钢丝的博客-CSDN博客](https://blog.csdn.net/kexuedalao/article/details/122502487)
 计算方法：
 [Site Unreachable](https://blog.csdn.net/weixin_44115643/article/details/119062516)
 veriloga：
