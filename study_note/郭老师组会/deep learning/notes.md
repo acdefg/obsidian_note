@@ -52,3 +52,7 @@ validation_split=.30,
 ## debug store
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231422.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230407231601.png)
+
+### plan and todo
+目前的想法是把模型训练完善好，先做一个多分类任务的训练，
+- [ ]   
