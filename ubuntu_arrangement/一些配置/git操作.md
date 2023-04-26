@@ -105,4 +105,8 @@ git push -u origin main
 
 [详解gitignore的使用方法，让你尽情使用git add . - 知乎](https://zhuanlan.zhihu.com/p/264995020)
 
-测试一下obsidian_git
+测试一下 obsidian_git
+
+### 使用过程的问题 log
+bad objects：
+[BitBucket Git Error: did not send all necessary objects - Stack Overflow](https://stackoverflow.com/questions/8788975/bitbucket-git-error-did-not-send-all-necessary-objects/70957667#70957667)
