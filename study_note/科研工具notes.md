@@ -20,3 +20,15 @@ $P_{\text {analog }}=\frac{1}{2} C_{L} V_{D D} V^{*} A_{v} \omega_{b w}$
 它是一款翻译软件，它的优点：复制好的东西自动粘贴翻译；PDF 格式不会乱，不用手动调空格回车；可以选择翻译源；专注模式就是中文窗口，也就是你复制一段英文，窗口直接显示中文。
 
 ### 文献查阅
+pku 教育资源进入页面：
+[https://ds.carsi.edu.cn/?entityID=https%3A%2F%2Fds.carsi.edu.cn%2Fshibboleth-sp%2Fcarsifed&return=https%3A%2F%2Fds.carsi.edu.cn%2FShibboleth.sso%2FLogin%3FSAMLDS%3D1%26target%3Dss%253Amem%253Ab70f9446a8197986591a62c7a50a037de0a4efcc3857f209f2873f5f15582442](https://ds.carsi.edu.cn/resource/resource.php)
+
+#### web of science
+[Web of Science](https://www.webofscience.com/wos/alldb/basic-search)
+反正没有正常进去过，说要挂校园网什么，反正 vpn 也挂了，梯子也关了，就是用不了，进去页面就是灰色的
+
+#### sci-hub
+[Sci-Hub](https://sci-hub.hkvisa.net/)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230428143323.png)
+
+
