@@ -1,6 +1,13 @@
-[Videos at CMOSedu.com](https://cmosedu.com/videos/videos.htm)
-[Electrical Engineering 240: Advanced Analog Integrated Circuits (UC Berkeley) | Electronics and Electrical Engineering | Audio/video Courses](http://www.infocobuild.com/education/audio-video-courses/electronics/ee240-berkeley.html)
+
+### lesson link
 stanford EE214
+[Videos at CMOSedu.com](https://cmosedu.com/videos/videos.htm)    
+
+berkeley EE240：
+[Electrical Engineering 240: Advanced Analog Integrated Circuits (UC Berkeley) | Electronics and Electrical Engineering | Audio/video Courses](http://www.infocobuild.com/education/audio-video-courses/electronics/ee240-berkeley.html)
+[Berkeley IC课程EE240讲义分享 - 哔哩哔哩](https://www.bilibili.com/read/cv8129228/)
+
+### EDA notes
 比较详细的模拟学习和仿真过程：
 [Site Unreachable](https://blog.csdn.net/qq_33599939/article/details/123928961)
 [Site Unreachable](https://blog.csdn.net/qq_40987215/article/details/104722352)
@@ -26,3 +33,6 @@ veriloga：
 未修复bug，vmtools还没好
 ```
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230426203619.png)
+
+### eetop
+[[eetop]]

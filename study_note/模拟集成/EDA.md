@@ -1,3 +1,4 @@
+[[lesson+notes#EDA notes]]
 ### 键位记录
 按键	作用
 i	添加器件
