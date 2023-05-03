@@ -6,3 +6,4 @@
 
 [Fetching Title#exqm](https://zhuanlan.zhihu.com/p/157633225)
 
+[AI/ML/DNN硬件加速设计怎么入门？ - 知乎](https://zhuanlan.zhihu.com/p/51791683)
