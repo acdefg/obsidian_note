@@ -30,6 +30,8 @@ mos 管参数中的 ron 和 rout
 ron：大信号情况下的电阻，直流电阻，或者是导通电阻，其值，ron=VDS/IDS，（大写指的是直流，小写是交流，大小写混合是交直流，学电路的时候应该有介绍）
 
 rout：小信号情况下的电阻，交流输出电阻，rout=1/gds。
+
+[模拟IC设计知识分享 - 知乎](https://www.zhihu.com/column/c_1410260543161085952)  基础模块写的不错，特别新手友好
 ### bug
 [Site Unreachable](https://blog.csdn.net/weixin_43868685/article/details/127059192)
 
