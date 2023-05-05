@@ -27,6 +27,7 @@ pip install tensorflow-gpu==2.7.0 -i  https://pypi.mirrors.ustc.edu.cn/simple
 ```
 pip install tensorflow-gpu==2.10.0 -i  https://pypi.mirrors.ustc.edu.cn/simple --user
 ```
+[python 安装或升级模块时，[WinError 5] 拒绝访问 - hyisangie - 博客园](https://www.cnblogs.com/hyisangie/p/15154426.html)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230505200235.png)
 
