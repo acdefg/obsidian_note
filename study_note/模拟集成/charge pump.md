@@ -1,0 +1,1 @@
+[Cockcroft–Walton voltage-multiplier circuit generator](https://www.globalsino.com/EM/page3257.html#:~:text=The%20Cockcroft%E2%80%93Walton%20%28CW%29%20voltage-multiplier%20circuit%20generator%20is%20an,%28alternating%20current%29%20or%20pulsing%20DC%20%28direct%20current%29%20voltages.) 
