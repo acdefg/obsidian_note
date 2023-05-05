@@ -17,7 +17,17 @@ file-->setting-->python interpreter
 [Fetching Title#w0r8](https://blog.csdn.net/m0_49090516/article/details/113576003)
 可以参考教程
 安的 tensorflow-gpu=2.10.1
+
 ```
 pip install tensorflow-gpu==2.7.0 -i  https://pypi.mirrors.ustc.edu.cn/simple  
 ```
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230505200438.png)
+报错了，加以项--user
+
+```
+pip install tensorflow-gpu==2.10.0 -i  https://pypi.mirrors.ustc.edu.cn/simple --user
+```
+
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230505200235.png)
+
+`C:\Users\ASUS\AppData\Roaming\Python\Python38\Scripts`
