@@ -10,3 +10,14 @@ Pycharm:
 安装第三方库
 file-->setting-->python interpreter
 安装的时候要关掉系统代理（科学上网）
+
+#### tensorflow-gpu 的安装
+[Tensorflow-gpu保姆级安装教程（Win11, Anaconda3，Python3.9）\_酷酷的懒虫的博客-CSDN博客](https://blog.csdn.net/weixin_43412762/article/details/129824339)
+可以看版本，nivida 网上的应该已经下好了
+[Fetching Title#w0r8](https://blog.csdn.net/m0_49090516/article/details/113576003)
+可以参考教程
+安的 tensorflow-gpu=2.10.1
+```
+pip install tensorflow-gpu==2.7.0 -i  https://pypi.mirrors.ustc.edu.cn/simple  
+```
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230505200235.png)
