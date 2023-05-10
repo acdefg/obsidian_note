@@ -1,7 +1,6 @@
 ![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230510092611.png)
 
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230510092629.png)
-R 对侧为 Q
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230510092538.png)
 
