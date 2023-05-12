@@ -4,7 +4,11 @@
 
 [深入理解dc的read\_verilog和analyze&elaborate区别-zjli1984](http://zjli1984.lofter.com/post/1cc905c9_10269fc0)
 
+### Read_design
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230512091858.png)
 
+### guide_path
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230512091954.png)
 
 ```
 list_libs
