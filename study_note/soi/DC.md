@@ -4,6 +4,9 @@
 
 [深入理解dc的read\_verilog和analyze&elaborate区别-zjli1984](http://zjli1984.lofter.com/post/1cc905c9_10269fc0)
 
+[DC综合的一些基本概念](https://blog.csdn.net/sinat_29862967/article/details/108286059)
+
+[DC逻辑综合流程 - 简书](https://www.jianshu.com/p/7e36a639c11e)
 ### Read_design
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230512091858.png)
 
