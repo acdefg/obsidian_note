@@ -61,7 +61,7 @@ advance：int4 量化方法的研究，AI 模型优化 optimization 综述
 
 
 ### 2023.5.19
-更新：加入 100 个人脸数据集，新加入的人脸每个人有 10 张图片，数据集来源：
+更新：加入 100 个人脸数据集，新加入的人脸每个人有 10 张图片，数据集来源：CFP
 
 训练结果：10epoch
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230519150920.png)
