@@ -58,3 +58,11 @@ validation_split=.30,
 然后做模型的量化剪枝，并且继续测试精度，然后考虑系统分级任务（待定）
 advance：int4 量化方法的研究，AI 模型优化 optimization 综述
 - [ ]   
+
+
+### 2023.5.19
+更新：加入 100 个人脸数据集，新加入的人脸每个人有 10 张图片，数据集来源：
+
+训练结果：10epoch
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230519150920.png)
+训练集精度较高，测试集精度太低
