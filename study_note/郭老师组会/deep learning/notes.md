@@ -71,3 +71,7 @@ advance：int4 量化方法的研究，AI 模型优化 optimization 综述
 量化测试
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230519233935.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230520000133.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230520002053.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230520002112.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230520002137.png)
