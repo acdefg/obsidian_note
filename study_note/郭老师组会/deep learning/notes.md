@@ -66,3 +66,7 @@ advance：int4 量化方法的研究，AI 模型优化 optimization 综述
 训练结果：10epoch
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230519150920.png)
 训练集精度较高，测试集精度太低
+
+其实不 管测试集精度，先直接用训练集测试量化后精度，还挺高的
+量化测试
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230519233935.png)
