@@ -31,3 +31,7 @@ man  create_clock ：查看create_clock这个命令的详细信息
 
 man target_library ：查看target_library这个命令的详细信息
 ```
+
+
+### install
+[安装design compiler的教程\_21岁的彭于晏的博客-CSDN博客](https://blog.csdn.net/DO_NOT_LOVE_ME/article/details/105899207)
