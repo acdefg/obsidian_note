@@ -9,10 +9,10 @@ berkeley EE240：
 
 ### EDA notes
 比较详细的模拟学习和仿真过程：
-[Site Unreachable](https://blog.csdn.net/qq_33599939/article/details/123928961)
-[Site Unreachable](https://blog.csdn.net/qq_40987215/article/details/104722352)
+[小刘同学的模拟IC(Razavi)-virtuoso ic618仿真记录](https://blog.csdn.net/qq_33599939/article/details/123928961)
+[Cadence IC设计环境搭建（ IC617+MMSIM151+Calibre2015）](https://blog.csdn.net/qq_40987215/article/details/104722352)
 gm/id：
-[Site Unreachable](https://blog.csdn.net/weixin_44115643/article/details/119419501)
+[模拟CMOS集成电路设计中的gm/id设计方法及用Cadence Virtuoso IC617仿真有关参数曲线](https://blog.csdn.net/weixin_44115643/article/details/119419501)
 [Gm/Id仿真（一）原理\_硬件老钢丝的博客-CSDN博客](https://blog.csdn.net/kexuedalao/article/details/122502487)
 计算方法：
 [Site Unreachable](https://blog.csdn.net/weixin_44115643/article/details/119062516)
