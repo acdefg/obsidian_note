@@ -24,6 +24,9 @@
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230525222538.png)
 
+### optimization
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527101236.png)
+
 ### guide_path
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230512091954.png)
 
