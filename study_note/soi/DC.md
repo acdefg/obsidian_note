@@ -24,6 +24,9 @@
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230525222538.png)
 
+### compile
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527101621.png)
+
 ### optimization
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527101236.png)
 
