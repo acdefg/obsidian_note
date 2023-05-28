@@ -56,3 +56,10 @@ man target_library ：查看target_library这个命令的详细信息
 
 ### save_files
 [DC综合后处理（查看生成的网表和报告）\_dc时序报告怎么看\_北方爷们的博客-CSDN博客](https://blog.csdn.net/sinat_29862967/article/details/115113829)
+
+### saif 文件
+
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230528223524.png)
+
+
