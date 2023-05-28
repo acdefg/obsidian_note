@@ -53,3 +53,6 @@ man target_library ：查看target_library这个命令的详细信息
 ### install
 [安装design compiler的教程\_21岁的彭于晏的博客-CSDN博客](https://blog.csdn.net/DO_NOT_LOVE_ME/article/details/105899207)
 [分享一个本人搭建的EDA虚拟机平台 - EDA资源使用讨论 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://bbs.eetop.cn/thread-906855-1-1.html)
+
+### save_files
+[DC综合后处理（查看生成的网表和报告）\_dc时序报告怎么看\_北方爷们的博客-CSDN博客](https://blog.csdn.net/sinat_29862967/article/details/115113829)
