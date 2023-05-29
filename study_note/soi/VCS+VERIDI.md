@@ -28,3 +28,14 @@ hhhh，这指令可真好使，下级目录的也能生成，爱了爱了
     end
     
 ```
+
+```verilog
+  initial begin
+    $fsdbDumpfile("novas.fsdb");
+    $fsdbDumpvars("+all");
+  end  
+```
+
+```verilog
+
+```
