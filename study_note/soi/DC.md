@@ -69,5 +69,9 @@ vcd2saif input zoomout.vcd -output zoomout.saif
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230528223524.png)
 
-⚠️upload failed, check dev console
+###  POWER
+只优化功耗
+```
+set compile_power_opto_only true
+```
 
