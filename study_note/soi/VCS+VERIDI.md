@@ -37,5 +37,9 @@ hhhh，这指令可真好使，下级目录的也能生成，爱了爱了
 ```
 
 ```verilog
+    +vcs+flush+all                        \
+    +vcs+dumpvars                         \
+    -vcd ./1.vdc                          \
+
 
 ```
