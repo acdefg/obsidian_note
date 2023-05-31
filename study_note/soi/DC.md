@@ -75,3 +75,9 @@ vcd2saif input zoomout.vcd -output zoomout.saif
 set compile_power_opto_only true
 ```
 
+### constrians
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230531100445.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230531100459.png)
+
+
