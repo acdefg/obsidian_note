@@ -1,3 +1,6 @@
+
+
+
 ## 安装
 ### 文件下载
 [obsidian下载安装官网](https://blog.csdn.net/qq_41821678/article/details/119870496) ：包括window、linux(snap)、linux(appimage)百度云
