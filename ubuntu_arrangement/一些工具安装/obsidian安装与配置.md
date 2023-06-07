@@ -58,7 +58,7 @@ Or use the command palette and search "Advanced Tables". There are many commands
 日记，周记，以及可插入模板，预览
 >等日记多一点再看看
 
-##### 3.[Day Planner](https://github.com/lynchjames/obsidian-day-planner/blob/main/README.md#day-planner-mode)
+##### 3.[Day Planner](https://github.com/lynchjames/obsidian-day-planner/blob/main/README.md#usage)
 按照时间顺序列出每日任务即可，可以加sub-todo，和列表说明
 
 ##### 4. Media Extended & bili plugin
