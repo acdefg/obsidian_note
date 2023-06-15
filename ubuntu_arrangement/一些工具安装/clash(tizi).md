@@ -48,3 +48,7 @@ clash
 分流规则配置（待办）：
 https://yattazen.com/tutorial/clash-custom-config.html#:~:text=简易教程 | Clash | 自定义在线分流规则策略组 1 1. 简介,4. 导入配置文件地址到Clash 按照图示导入最终的配置文件到 CFW 或 Clash.Net ，完结撒花！%20
 这博客也不错，有空看看
+
+### bug
+突然端口号显示为 0，并且上不了网，也改不回来
+改了一个更大的 10240, 将就行了
