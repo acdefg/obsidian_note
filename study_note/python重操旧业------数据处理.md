@@ -29,4 +29,4 @@ print(df)
 ```
 [pandas.DataFrame设置某一行为表头（列索引），设置某一列为行索引，按索引取多行多列\_pandas第一行设置为表头\_Admiral\~的博客-CSDN博客](https://blog.csdn.net/Admiral_x/article/details/126415277)
 
-
+[Python excel 合并居中值相同的单元格\_python合并相同内容单元格\_一根咸鱼\_的博客-CSDN博客](https://blog.csdn.net/weixin_47597129/article/details/124319638)
