@@ -24,7 +24,8 @@
     "Templates/插入/code blocks verilog.md",
     "Templates/插入/ad-note.md",
     "Templates/插入/image.md",
-    "Templates/插入/code blocks shell.md"
+    "Templates/插入/code blocks shell.md",
+    "Templates/插入/code blocks python.md"
   ],
   "startup_templates": [
     ""
