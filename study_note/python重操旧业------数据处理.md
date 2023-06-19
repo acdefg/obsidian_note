@@ -30,3 +30,5 @@ print(df)
 [pandas.DataFrame设置某一行为表头（列索引），设置某一列为行索引，按索引取多行多列\_pandas第一行设置为表头\_Admiral\~的博客-CSDN博客](https://blog.csdn.net/Admiral_x/article/details/126415277)
 
 [Python excel 合并居中值相同的单元格\_python合并相同内容单元格\_一根咸鱼\_的博客-CSDN博客](https://blog.csdn.net/weixin_47597129/article/details/124319638)
+[python 合并内容相同单元格\_梦因you而美的博客-CSDN博客](https://blog.csdn.net/apollo_miracle/article/details/102874716#:~:text=python%20%E5%90%88%E5%B9%B6%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E5%8D%95%E5%85%83%E6%A0%BC%201%20from%20openpyxl%20import%20load_workbook%202,type_list%20%3D%20%5B%5D%208%20i%20%3D%202%20%E6%9B%B4%E5%A4%9A%E9%A1%B9%E7%9B%AE)
+
