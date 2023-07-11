@@ -110,3 +110,10 @@ git push -u origin main
 ### 使用过程的问题 log
 bad objects：
 [BitBucket Git Error: did not send all necessary objects - Stack Overflow](https://stackoverflow.com/questions/8788975/bitbucket-git-error-did-not-send-all-necessary-objects/70957667#70957667)
+
+### 其他用户修改上传
+1. 下载仓库，初始化仓库 git init
+2. 添加远程仓库（不要用 https，用 git@）`git remote add origin git@github.com:acdefg/obsidian_note.git`  
+git branch -M main
+3. 给仓库添加共同协作者
+4. 给仓库添加 ssh key（不确定有没有影响）
