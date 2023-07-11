@@ -1,0 +1,15 @@
+{
+  "showCLICommands": true,
+  "addExtensionsToInternalLinks": "html",
+  "injectAppCSS": "light",
+  "injectThemeCSS": false,
+  "customCSSFile": null,
+  "displayYAMLFrontmatter": false,
+  "linkStrippingBehaviour": "link",
+  "highDPIDiagrams": true,
+  "pandoc": "C:\\Program Files\\Pandoc\\pandoc.exe",
+  "pdflatex": null,
+  "outputFolder": "D:\\Users\\Documents\\A研究生",
+  "extraArguments": "",
+  "exportFrom": "md"
+}

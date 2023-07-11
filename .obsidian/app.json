@@ -1,0 +1,16 @@
+{
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "attachmentFolderPath": "z_attachment",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "defaultViewMode": "preview",
+  "showFrontmatter": false,
+  "showLineNumber": true,
+  "showIndentGuide": false
+}

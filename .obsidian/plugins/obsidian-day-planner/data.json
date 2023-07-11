@@ -1,0 +1,16 @@
+{
+  "customFolder": "Day Planners",
+  "mode": 1,
+  "mermaid": true,
+  "notesToDates": [
+    {
+      "notePath": "Day Planners/Day Planner-20230607.md",
+      "date": "Wed Jun 07 2023"
+    }
+  ],
+  "completePastItems": false,
+  "circularProgress": true,
+  "nowAndNextInStatusBar": true,
+  "showTaskNotification": true,
+  "timelineZoomLevel": 4
+}
