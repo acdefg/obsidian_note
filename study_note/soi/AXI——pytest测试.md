@@ -1,7 +1,13 @@
 ## python 测试
 
 ### 方法
+tb 目录下
+```python
+python test_axi.py > test.txt
+```
+python 运行并且重点向到 test.txt 文档内
 
+### 内容
 1. **基准测试（测试 1）**：
     - 此测试读取整个 AXI RAM 的内容，并以十六进制格式打印出来。
 2. **直接写入测试（测试2）**：
@@ -29,7 +35,21 @@
 - 内存偏移量（offset）：在 AXI RAM 中写入数据的起始偏移量，范围从 4 字节到 8 字节，以及 4096-4 在字节。
 - 传输大小（size）：用于写入操作的传输大小，包括 3 种情况：2（4 字节传输），1（2 字节传输）和 0（1 字节传输）。
 
-### 模块
+## pytest + tox
+最外层
+```python
+pytest
+```
+
+内容：
+所有模块的 py 测试内容
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307240020939.png)
+
+## cocotb
+tb 名目录下 make
+
+
+## 模块
 ### `axi_adapter` module
 
 AXI width adapter module with parametrizable data and address interface widths. Supports INCR burst types and narrow bursts. Wrapper for `axi_adapter_rd` and `axi_adapter_wr`.
