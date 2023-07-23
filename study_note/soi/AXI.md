@@ -9,5 +9,9 @@ AXI 是 ARM AMBA（AdvancedMicrocontroller Bus Architecture，高级微控制器
 • AXI4-Stream: 一般用于高速的数据流。
 AXI4-Lite 与 AXI4 的总线逻辑基本是一样的，仅端口数量上有差异（AXI4 端口数量更多，对应功能更多），AXI4-Stream 与以上两者差别相对大一些，因此仅梳理 AXI4 以及 AXI4-Stream 实际上就可以对 AXI4 的整体协议框架有一个比较好的认识。
 
+### 信号
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307231808460.png)
+
+
 ### 写
 AXI4 在进行数据读写时主要使用通道（channel）方式，这种方式保证了读写可以同步进行。
