@@ -47,6 +47,7 @@ pytest
 
 ## cocotb
 tb 名目录下 make
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307240022756.png)
 
 
 ## 模块
