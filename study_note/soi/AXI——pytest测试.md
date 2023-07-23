@@ -22,5 +22,157 @@
 
 测试 5,6 从测试的具体内容
 - 数据长度（length）：测试数据写入的字节数，范围从 1 字节到 1024 字节。
-- 内存偏移量（offset）：在 AXI RAM 中写入数据的起始偏移量，范围从 4 字节到 8 字节，以及 4096-4 字节。
-- 传输大小（size）：用于写入操作的传输大小，包括3种情况：2（4字节传输），1（2字节传输）和0（1字节传输）。
+- 内存偏移量（offset）：在 AXI RAM 中写入数据的起始偏移量，范围从 4 字节到 8 字节，以及 4096-4 在字节。
+- 传输大小（size）：用于写入操作的传输大小，包括 3 种情况：2（4 字节传输），1（2 字节传输）和 0（1 字节传输）。
+
+### 模块
+### `axi_adapter` module
+
+AXI width adapter module with parametrizable data and address interface widths. Supports INCR burst types and narrow bursts. Wrapper for `axi_adapter_rd` and `axi_adapter_wr`.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_adapter_rd-module)
+
+### `axi_adapter_rd` module
+
+AXI width adapter module with parametrizable data and address interface widths. Supports INCR burst types and narrow bursts.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_adapter_wr-module)
+
+### `axi_adapter_wr` module
+
+AXI width adapter module with parametrizable data and address interface widths. Supports INCR burst types and narrow bursts.
+
+### `axi_cdma` module
+
+AXI to AXI DMA engine with parametrizable data and address interface widths. Generates full-width INCR bursts only, with parametrizable maximum burst length. Supports unaligned transfers, which can be disabled via parameter to save on resource consumption.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_cdma_desc_mux-module)
+
+### `axi_cdma_desc_mux` module
+
+Descriptor multiplexer/demultiplexer for AXI CDMA module. Enables sharing the AXI CDMA module between multiple request sources, interleaving requests and distributing responses.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_crossbar-module)
+
+### `axi_crossbar` module
+
+AXI nonblocking crossbar interconnect with parametrizable data and address interface widths and master and slave interface counts. Supports all burst types. Fully nonblocking with completely separate read and write paths; ID-based transaction ordering protection logic; and per-port address decode, admission control, and decode error handling. Wrapper for `axi_crossbar_rd` and `axi_crossbar_wr`.
+
+Wrappers can generated with `axi_crossbar_wrap.py`.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_crossbar_addr-module)
+
+### `axi_crossbar_addr` module
+
+Address decode and admission control module for AXI nonblocking crossbar interconnect.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_crossbar_rd-module)
+
+### `axi_crossbar_rd` module
+
+AXI nonblocking crossbar interconnect with parametrizable data and address interface widths and master and slave interface counts. Read interface only. Supports all burst types. Fully nonblocking with completely separate read and write paths; ID-based transaction ordering protection logic; and per-port address decode, admission control, and decode error handling.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_crossbar_wr-module)
+
+### `axi_crossbar_wr` module
+
+AXI nonblocking crossbar interconnect with parametrizable data and address interface widths and master and slave interface counts. Write interface only. Supports all burst types. Fully nonblocking with completely separate read and write paths; ID-based transaction ordering protection logic; and per-port address decode, admission control, and decode error handling.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_dma-module)
+
+### `axi_dma` module
+
+AXI to AXI stream DMA engine with parametrizable data and address interface widths. Generates full-width INCR bursts only, with parametrizable maximum burst length. Supports unaligned transfers, which can be disabled via parameter to save on resource consumption. Wrapper for `axi_dma_rd` and `axi_dma_wr`.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_dma_desc_mux-module)
+
+### `axi_dma_desc_mux` module
+
+Descriptor multiplexer/demultiplexer for AXI DMA module. Enables sharing the AXI DMA module between multiple request sources, interleaving requests and distributing responses.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_dma_rd-module)
+
+### `axi_dma_rd` module
+
+AXI to AXI stream DMA engine with parametrizable data and address interface widths. Generates full-width INCR bursts only, with parametrizable maximum burst length. Supports unaligned transfers, which can be disabled via parameter to save on resource consumption.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_dma_wr-module)
+
+### `axi_dma_wr` module
+
+AXI stream to AXI DMA engine with parametrizable data and address interface widths. Generates full-width INCR bursts only, with parametrizable maximum burst length. Supports unaligned transfers, which can be disabled via parameter to save on resource consumption.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_dp_ram-module)
+
+### `axi_dp_ram` module
+
+AXI dual-port RAM with parametrizable data and address interface widths. Supports FIXED and INCR burst types as well as narrow bursts.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_fifo-module)
+
+### `axi_fifo` module
+
+AXI FIFO with parametrizable data and address interface widths. Supports all burst types. Optionally can delay the address channel until either the write data is completely shifted into the FIFO or the read data FIFO has enough capacity to fit the whole burst. Wrapper for `axi_fifo_rd` and `axi_fifo_wr`.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_fifo_rd-module)
+
+### `axi_fifo_rd` module
+
+AXI FIFO with parametrizable data and address interface widths. AR and R channels only. Supports all burst types. Optionally can delay the address channel until either the read data FIFO is empty or has enough capacity to fit the whole burst.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_fifo_wr-module)
+
+### `axi_fifo_wr` module
+
+AXI FIFO with parametrizable data and address interface widths. WR, W, and B channels only. Supports all burst types. Optionally can delay the address channel until the write data is shifted completely into the write data FIFO, or the current burst completely fills the write data FIFO.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_interconnect-module)
+
+### `axi_interconnect` module
+
+AXI shared interconnect with parametrizable data and address interface widths and master and slave interface counts. Supports all burst types. Small in area, but does not support concurrent operations.
+
+Wrappers can generated with `axi_interconnect_wrap.py`.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_ram-module)
+
+### `axi_ram` module
+
+AXI RAM with parametrizable data and address interface widths. Supports FIXED and INCR burst types as well as narrow bursts.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_ram_rd_if-module)
+
+### `axi_ram_rd_if` module
+
+AXI RAM read interface with parametrizable data and address interface widths. Handles bursts and presents a simplified internal memory interface. Supports FIXED and INCR burst types as well as narrow bursts.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_ram_wr_if-module)
+
+### `axi_ram_wr_if` module
+
+AXI RAM write interface with parametrizable data and address interface widths. Handles bursts and presents a simplified internal memory interface. Supports FIXED and INCR burst types as well as narrow bursts.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_ram_wr_rd_if-module)
+
+### `axi_ram_wr_rd_if` module
+
+AXI RAM read/write interface with parametrizable data and address interface widths. Handles bursts and presents a simplified internal memory interface. Supports FIXED and INCR burst types as well as narrow bursts. Wrapper for `axi_ram_rd_if` and `axi_ram_wr_if`.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_register-module)
+
+### `axi_register` module
+
+AXI register with parametrizable data and address interface widths. Supports all burst types. Inserts simple buffers or skid buffers into all channels. Channel register types can be individually changed or bypassed. Wrapper for `axi_register_rd` and `axi_register_wr`.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_register_rd-module)
+
+### `axi_register_rd` module
+
+AXI register with parametrizable data and address interface widths. AR and R channels only. Supports all burst types. Inserts simple buffers or skid buffers into all channels. Channel register types can be individually changed or bypassed.
+
+### [](https://github.com/alexforencich/verilog-axi#axi_register_wr-module)
+
+### `axi_register_wr` module
+
+AXI register with parametrizable data and address interface widths. WR, W, and B channels only. Supports all burst types. Inserts simple buffers or skid buffers into all channels. Channel register types can be individually changed or bypassed.
+
