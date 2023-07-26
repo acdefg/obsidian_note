@@ -1,6 +1,7 @@
 [Verilog AXI Components Readme [Alex Forencich]](http://alexforencich.com/wiki/en/verilog/axi/readme)
-[test\_axi\_cdma.py](https://github.com/alexforencich/verilog-axi/blob/master/tb/axi_cdma/test_axi_cdma.py)
+[test\_axi\_cdma.py](https://github.com/alexforencich/verilog-axi/blob/master/tb/axi_cdma/test_axi_cdma.py) 
 
+[NoC总线架构拓扑介绍-电子工程专辑](https://www.eet-china.com/mp/a73963.html)   ---------这篇关于总线的整体介绍不错
 [[UVM]]
 [[AXI——pytest测试]]
 ## 类型
