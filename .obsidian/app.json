@@ -12,5 +12,6 @@
   "defaultViewMode": "preview",
   "showFrontmatter": false,
   "showLineNumber": true,
-  "showIndentGuide": false
+  "showIndentGuide": false,
+  "spellcheck": false
 }
