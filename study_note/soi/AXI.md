@@ -98,3 +98,11 @@ AXI 写入传输事务需要在 3 条读取信道上存在多次传输。
 - 读数据必须始终位于数据相关的地址之后
 - 从设备必须等待发出 ARVALID 和 ARREADY 断言后，才能发出 RVALID 断言以指示该有效数据可用
 
+### 类型
+
+AXI-DMA：实现从 PS 内存到 PL 高速传输高速通道 AXI-HP<---->AXI-Stream 的转换
+AXI-FIFO-MM2S：实现从PS内存到PL通用传输通道AXI-GP<----->AXI-Stream的转换
+AXI-DataMover：实现从PS内存到PL高速传输高速通道AXI-HP<---->AXI-Stream的转换，只不过这次是完全由PL控制的，PS是完全被动的。
+AXI-VDMA：实现从PS内存到PL高速传输高速通道AXI-HP<---->AXI-Stream的转换，只不过是专门针对视频、图像等二维数据的。
+除了上面的还有一个AXI-CDMA IP核，这个是由PL完成的将数据从内存的一个位置搬移到另一个位置，无需CPU来插手。
+
