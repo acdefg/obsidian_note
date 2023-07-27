@@ -6,6 +6,8 @@ tb 目录下
 python test_axi.py > test.txt
 ```
 python 运行并且重点向到 test.txt 文档内
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307270839111.png)
+
 
 ### 内容
 1. **基准测试（测试 1）**：
@@ -201,3 +203,7 @@ AXI register with parametrizable data and address interface widths. AR and R cha
 
 AXI register with parametrizable data and address interface widths. WR, W, and B channels only. Supports all burst types. Inserts simple buffers or skid buffers into all channels. Channel register types can be individually changed or bypassed.
 
+
+
+### 波形
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307270902686.png)
