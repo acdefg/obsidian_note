@@ -6,7 +6,7 @@ tb 目录下
 python test_axi.py > test.txt
 ```
 python 运行并且重点向到 test.txt 文档内
-
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307270839111.png)
 
 
 ### 内容
