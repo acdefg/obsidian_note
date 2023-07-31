@@ -10,6 +10,8 @@
 
 [DC lab4和lab6略解 - 墨魂](https://mohun-8052.github.io/2022/05/04/DC-lab4%E5%92%8Clab6%E7%95%A5%E8%A7%A3/#3-%E7%8E%AF%E5%A2%83%E5%B1%9E%E6%80%A7%E7%BA%A6%E6%9D%9F) 好东西
 
+使用Design Compiler进行综合得到的面积单位通常是以平方毫米（mm²）
+
 ### Read_design
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230512091858.png)
 
