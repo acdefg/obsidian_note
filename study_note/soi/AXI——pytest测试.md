@@ -53,7 +53,13 @@ tb 名目录下 make
 
 
 ### 环境配置
-
+[Install](http://hnikolov.github.io/pihdf_doc/install.html)
+编译不成功，无法生成 vip 为文件
+找了一下 issue
+[Failed to make myhdl.vpi based on Makefile of Icarus Verilog · Issue #273 · myhdl/myhdl · GitHub](https://github.com/myhdl/myhdl/issues/273)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308062009447.png)
+缺少.h 文件：
+[vpi\_user.h](https://github.com/cocotb/cocotb/blob/v1.3.0/cocotb/share/include/vpi_user.h)
 
 ## 模块
 ### `axi_adapter` module
