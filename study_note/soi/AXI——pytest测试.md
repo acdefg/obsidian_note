@@ -66,6 +66,14 @@ tb 名目录下 make
 直接执行下面的就可以用了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308062133354.png)
 
+## 仿真设置
+
+
+```shell
+iverilog -o my_design_tb.vvp my_design.v my_testbench.v
+vvp -M. -mmy_design my_design_tb.vvp +sdf_file=my_design.sdf
+```
+
 ## 模块
 ### `axi_adapter` module
 
