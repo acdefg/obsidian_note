@@ -206,4 +206,8 @@ AXI register with parametrizable data and address interface widths. WR, W, and B
 
 
 ### 波形
+
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307270902686.png)
+
+### 后仿
+[Verilog PLI Tutorial Part-VI](https://www.asic-world.com/verilog/pli6.html)
