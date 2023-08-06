@@ -52,6 +52,9 @@ tb 名目录下 make
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307240022756.png)
 
 
+### 环境配置
+
+
 ## 模块
 ### `axi_adapter` module
 
