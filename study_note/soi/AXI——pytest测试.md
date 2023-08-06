@@ -52,7 +52,7 @@ tb 名目录下 make
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307240022756.png)
 
 
-### 环境配置
+## 环境配置
 [Install](http://hnikolov.github.io/pihdf_doc/install.html)
 编译不成功，无法生成 vip 为文件
 找了一下 issue
@@ -60,6 +60,11 @@ tb 名目录下 make
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308062009447.png)
 缺少.h 文件：
 [vpi\_user.h](https://github.com/cocotb/cocotb/blob/v1.3.0/cocotb/share/include/vpi_user.h)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308062133196.png)
+画框的语句执行有 bug
+直接执行下面的就可以用了
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308062133354.png)
 
 ## 模块
 ### `axi_adapter` module
