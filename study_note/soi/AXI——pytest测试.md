@@ -86,7 +86,9 @@ vvp -M. -mmy_design my_design_tb.vvp +sdf_file=my_design.sdf
 
 python: 3.10.12
 pytest: 7.4.0
-
+myhdl: 0.11
+Icarus Verilog: 11.0
+gtkwave: 3.3
 
 ## 模块
 ### `axi_adapter` module
