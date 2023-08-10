@@ -37,3 +37,10 @@ cmake ../CMakeLists.txt -DCMAKE_C_COMPILER=$(which gcc)
 ```
 
 ### gdb 调试
+
+```shell
+gdb program-cmd
+(gdb) run
+(gdb) backtrace
+```
+
