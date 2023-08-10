@@ -13,6 +13,9 @@
 ### openmp
 
 
+### cmake
+[cmake(5)：选择编译器及设置编译器选项\_cmake指定编译器\_翔底的博客-CSDN博客](https://blog.csdn.net/rangfei/article/details/108862896#t3)
+
 ### gcc
 
 报错：
