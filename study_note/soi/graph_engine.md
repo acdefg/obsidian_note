@@ -10,3 +10,26 @@
 ## 环境
 ### glut
 [ubuntu配置openGL glut库\_xiadidi的博客-CSDN博客](https://blog.csdn.net/xiadidi/article/details/50867241)
+
+### gcc
+
+报错：
+```ad-failure
+- The C compiler identification is unknown
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - broken
+CMake Error at /usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "/usr/bin/cc"
+
+  is not able to compile a simple test program.
+
+```
+
+```shell
+cmake ../CMakeLists.txt -DCMAKE_C_COMPILER=$(which gcc)
+```
