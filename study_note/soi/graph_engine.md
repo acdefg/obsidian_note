@@ -35,3 +35,5 @@ CMake Error at /usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (messag
 ```shell
 cmake ../CMakeLists.txt -DCMAKE_C_COMPILER=$(which gcc)
 ```
+
+### gdb 调试
