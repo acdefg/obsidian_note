@@ -74,6 +74,22 @@ iverilog -o my_design_tb.vvp my_design.v my_testbench.v
 vvp -M. -mmy_design my_design_tb.vvp +sdf_file=my_design.sdf
 ```
 
+### 后仿
+- 首先，它使用三个嵌套循环来遍历不同的 `length`，`offset` 和 `size`，`cache` 值。
+- 然后，它使用另一个循环来遍历不同的等待状态。
+- 在每次迭代中，它会打印出当前的`length`，`offset`，`size`和`cache`值。
+- 然后，它会计算地址并生成测试数据。
+- 接下来，它会使用`axi_ram_inst.write_mem()`方法将测试数据写入内存。
+- 然后，它会使用`axi_master_inst.init_write()`方法初始化写操作。
+- 在等待时钟上升沿之后，它会使用`axi_ram_inst.read_mem()`方法读取内存中的数据并打印出来。
+- 最后，它会使用断言来检查读取到的数据是否与预期相符。
+
+python: 3.10.12
+pytest: 7.4.0
+myhdl: 0.11
+Icarus Verilog: 11.0
+gtkwave: 3.3
+
 ## 模块
 ### `axi_adapter` module
 
