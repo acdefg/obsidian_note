@@ -8,8 +8,10 @@
 - **实验结果和比较。** 作者在许多布料和可变形物体模拟示例中展示了他们预处理器的性能，包括实时模拟。他们表明，他们的预处理器优于其他竞争者，如 GPU 上的多网格 AmgX、CPU 上的 ichol 和 ILUT 等。他们还验证了他们预处理器与各种求解器（如 PCG、加速梯度下降和 L-BFGS）之间的兼容性。
 
 ## 环境
-### glut
+### openGL
 [ubuntu配置openGL glut库\_xiadidi的博客-CSDN博客](https://blog.csdn.net/xiadidi/article/details/50867241)
+### openmp
+
 
 ### gcc
 
