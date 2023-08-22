@@ -10,3 +10,13 @@
 2、快速模式：Fast Mode=400 Kbps
 3、高速模式：High speed mode=3.4 Mbps
 4、超快速模式：Ultra fast mode=5 Mbps
+
+### 硬件
+I2C 协议仅需要 SDA 和 SCL 两个引脚。SDA 是串行数据线的缩写，而 SCL 是串行时钟线的缩写。这两条数据线需要接上拉电阻。
+I2C 总线（SDA，SCL）内部都使用漏极开路驱动器（开漏驱动），因此 SDA 和 SCL 可以被拉低为低电平，但是不能被驱动为高电平，所以每条线上都要使用一个上拉电阻，默认情况下将其保持在高电平；
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308221559901.png)
+
+[一文搞懂I2C通信 - 知乎](https://zhuanlan.zhihu.com/p/282949543) 一些关于上拉电阻的问题
+
+### 数据传输协议
+
