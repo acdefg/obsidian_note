@@ -27,3 +27,12 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 10
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
 ```
 系统会自动选择优先级最高的版本
+
+另外，还有一种方法，可以修改默认的 g++版本，我们可以更改一下 gcc 的软链接:
+
+```
+sudo rm /usr/bin/gcc  
+sudo ln -s /usr/bin/gcc-4.8 /usr/bin/gcc  
+sudo rm /usr/bin/g++  
+sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
+```
