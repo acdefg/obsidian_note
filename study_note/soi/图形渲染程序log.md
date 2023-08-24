@@ -18,4 +18,7 @@ status：昨天打开 cmake all 在之后就没停下来
 没看懂具体干啥的，但是可以试试
 深度学习做的
 
+[Human Motion Diffusion Model](https://guytevet.github.io/mdm-page/)
+深度学习做的
+
 
