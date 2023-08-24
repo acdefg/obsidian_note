@@ -1,0 +1,1 @@
+[使用 Cadence AMS 仿真器进行数模混仿教程 – Analog-Life](https://www.analog-life.com/2023/02/using-cadence-ams-simulator-for-digital-analog-mixing-simulation/)
