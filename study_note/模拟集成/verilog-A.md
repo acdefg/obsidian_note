@@ -5,6 +5,8 @@
 [https://www.siue.edu/\~gengel/ece585WebStuff/OVI\_VerilogA.pdf](https://www.siue.edu/~gengel/ece585WebStuff/OVI_VerilogA.pdf)
 有索引的手册
 [edadownload.software.keysight.com/eedl/ads/2011\_01/pdf/verilogaref.pdf](http://edadownload.software.keysight.com/eedl/ads/2011_01/pdf/verilogaref.pdf)
+官方但有索引的手册文件
+[veriloga使用手册. - Analog/RF IC 资料共享 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://bbs.eetop.cn/thread-250118-1-1.html)
 
 ## 事件
 ### 初始事件 initial step
