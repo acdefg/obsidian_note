@@ -15,6 +15,10 @@ analog begin // 事件控制语句必须放在 analog 语句内部
     end
 end
 ```
+## functions
+### timer
+The timer function schedules an event that occurs at an absolute time (as specified by start_time). The analog simulator places a time point at, or just beyond, the time of the event. If period is specified, then the timer function schedules subsequent events at multiples of the period.
+
 
 
 
