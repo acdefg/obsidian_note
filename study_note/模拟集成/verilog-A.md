@@ -42,7 +42,29 @@ expression
 	end
 	endmodule
 
+### cross
 
+> [!NOTE] explain
+cross_function ::=
+cross ( expression [ , opt_args ] )
+opt_args ::=
+direction [ , time_tol [ , expression_tol ] ]
+direction ::=
++1 | -1
+time_tol ::=
+expression
+expression_tol ::=
+expression
+
+cross 在 expression 与 0 的交点
+direction： 0/不设 上下沿都检测
+				+1 上升沿
+				-1 下降沿
+时间和表达容差都必须为正。如果表达式容差设置了，交叉点必须满足时间和表达容差	
+
+```verilog
+@(cross(V(smpl) - 2.5, +1))
+```
 
 
 
