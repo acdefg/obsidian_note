@@ -19,6 +19,31 @@ end
 ### timer
 The timer function schedules an event that occurs at an absolute time (as specified by start_time). The analog simulator places a time point at, or just beyond, the time of the event. If period is specified, then the timer function schedules subsequent events at multiples of the period.
 
+> [!note] explain
+> 
+ timer_function ::=
+timer ( start_time [ , period ] )
+start_time ::=
+expression
+period ::=
+expression
+
+
+> [!NOTE] usage
+	module bitStream (out) ;
+	output out ;
+	electrical out ;
+	parameter period = 1.0 ;
+	integer x ;
+	analog begin
+		@(timer(0, period))
+		x = $random + 0.5 ;
+		V(out) <+ transition( x, 0.0, period/100.0 ) ;
+	end
+	endmodule
+
+
+
 
 
 
