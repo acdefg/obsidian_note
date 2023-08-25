@@ -1,8 +1,10 @@
 简单教程
 [Verilog-A 语言简单入门教程 – Analog-Life](https://www.analog-life.com/2022/04/veriloga-quick-learning/)
 
-手册
+官方但无索引的手册
 [https://www.siue.edu/\~gengel/ece585WebStuff/OVI\_VerilogA.pdf](https://www.siue.edu/~gengel/ece585WebStuff/OVI_VerilogA.pdf)
+有索引的手册
+[edadownload.software.keysight.com/eedl/ads/2011\_01/pdf/verilogaref.pdf](http://edadownload.software.keysight.com/eedl/ads/2011_01/pdf/verilogaref.pdf)
 
 ## 事件
 ### 初始事件 initial step
