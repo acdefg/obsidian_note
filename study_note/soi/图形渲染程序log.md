@@ -25,3 +25,16 @@ status：昨天打开 cmake all 在之后就没停下来
 [GitHub - johnBuffer/ClothSimulation: Basic cloth simulation using Verlet integration](https://github.com/johnBuffer/ClothSimulation)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311646565.png)
 
+### environment
+#### SFML
+[SFML and Linux (SFML / Learn / 2.5 Tutorials)](https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
+
+**▶️ test pass**
+
+📢 **pay attention**
+You must then link the compiled file to the SFML libraries in order to get the final executable. SFML is made of 5 modules (system, window, graphics, network and audio), and there's one library for each of them.
+To link an SFML library, you must add "-lsfml-xxx" to your command line, for example "-lsfml-graphics" for the graphics module (the "lib" prefix and the ".so" extension of the library file name must be omitted).
+```
+g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+```
+
