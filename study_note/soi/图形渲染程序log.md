@@ -24,6 +24,13 @@ status：昨天打开 cmake all 在之后就没停下来
 
 [GitHub - johnBuffer/ClothSimulation: Basic cloth simulation using Verlet integration](https://github.com/johnBuffer/ClothSimulation)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311646565.png)
+👍 status: success
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311716756.png)
+
+Left click 	Move view
+Wheel 	Zoom
+Right click 	Move cloth
+Middle click 	Cut cloth
 
 ### environment
 #### SFML
