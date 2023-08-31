@@ -22,6 +22,13 @@ status：昨天打开 cmake all 在之后就没停下来
 [Human Motion Diffusion Model](https://guytevet.github.io/mdm-page/)
 深度学习做的
 
+[GitHub - sciecode/sheen: GPGPU cloth simulation](https://github.com/sciecode/sheen)
+java 写的
+效果不错
+📍：testing
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311743254.png)
+
 
 [GitHub - JUSTIVE/GPU-Cloth-Simulation: GPU Mass-Spring Simulation Cloth in Unity](https://github.com/JUSTIVE/GPU-Cloth-Simulation)
 看起来不错
