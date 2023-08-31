@@ -22,6 +22,7 @@ status：昨天打开 cmake all 在之后就没停下来
 [Human Motion Diffusion Model](https://guytevet.github.io/mdm-page/)
 深度学习做的
 
+#### ClothSimulation ✔️
 [GitHub - johnBuffer/ClothSimulation: Basic cloth simulation using Verlet integration](https://github.com/johnBuffer/ClothSimulation)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311646565.png)
 👍 status: success
