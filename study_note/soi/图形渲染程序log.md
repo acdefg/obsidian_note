@@ -22,8 +22,18 @@ status：昨天打开 cmake all 在之后就没停下来
 [Human Motion Diffusion Model](https://guytevet.github.io/mdm-page/)
 深度学习做的
 
+
+[GitHub - JUSTIVE/GPU-Cloth-Simulation: GPU Mass-Spring Simulation Cloth in Unity](https://github.com/JUSTIVE/GPU-Cloth-Simulation)
+看起来不错
+test on windows
+给了一堆测试向量的参考值
+📍status：waiting
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311738274.png)
+
 #### ClothSimulation ✔️
 [GitHub - johnBuffer/ClothSimulation: Basic cloth simulation using Verlet integration](https://github.com/johnBuffer/ClothSimulation)
+代码完整，调用库少
+简陋
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311646565.png)
 👍 status: success
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311716756.png)
