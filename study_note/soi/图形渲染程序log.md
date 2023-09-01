@@ -12,6 +12,10 @@ log:
 
 [GitHub - MauriceGit/Cloth\_Simulation: Cloth-Visualization via particle-simulation.](https://github.com/MauriceGit/Cloth_Simulation)
 
+### eol-cloth
+[GitHub - sueda/eol-cloth: Eulerian-on-Lagrangian Cloth Simulation](https://github.com/sueda/eol-cloth)
+那个 cmakelist 个根本不适用 ubuntu，改了一点不想改了，重写一个
+
 ### DART
 [GitHub - dartsim/dart: DART: Dynamic Animation and Robotics Toolkit](https://github.com/dartsim/dart)
 [Biped — DART: Dynamic Animation and Robotics Toolkit 7.0.0-alpha20230101 documentation](https://dart.readthedocs.io/en/latest/user_guide/tutorials/biped.html)
