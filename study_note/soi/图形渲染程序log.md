@@ -83,3 +83,19 @@ To link an SFML library, you must add "-lsfml-xxx" to your command line, for exa
 g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
 ```
 
+#### eigen
+
+[ubuntu安装Eigen\_ubuntu22安装eigen\_ClaireQi的博客-CSDN博客](https://blog.csdn.net/wangxiao7474/article/details/103422616)
+
+```
+sudo apt-get install libeigen3-dev
+```
+```
+# /usr/include
+sudo cp -r /usr/include/eigen3/Eigen /usr/include
+# /usr/local/include
+sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
+```
+测试：
+[Eigen的介绍、安装与入门操作 - 知乎](https://zhuanlan.zhihu.com/p/462494086)
+
