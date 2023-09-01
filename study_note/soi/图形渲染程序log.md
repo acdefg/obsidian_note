@@ -45,7 +45,7 @@ java 写的
 另一个网站可以，一下子就运行成功了，哭哭
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011439278.png)
 
-感觉是个没写完的，只加载出来了背景，先放弃了。。。。。
+只加载出来了背景，加载方式不太对劲，另外一个用其他在线平台验证的，本地也跑不出来，canvas 的问题？先放弃了。。。。。
 
 
 [GitHub - JUSTIVE/GPU-Cloth-Simulation: GPU Mass-Spring Simulation Cloth in Unity](https://github.com/JUSTIVE/GPU-Cloth-Simulation)
@@ -68,6 +68,8 @@ Wheel 	Zoom
 Right click 	Move cloth
 Middle click 	Cut cloth
 
+这个差不多，java 新写的
+[GitHub - dissimulate/Tearable-Cloth: A tearable cloth simulation using vertlet integration.](https://github.com/dissimulate/Tearable-Cloth)
 ### environment
 #### SFML
 [SFML and Linux (SFML / Learn / 2.5 Tutorials)](https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
