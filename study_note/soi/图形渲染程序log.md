@@ -107,5 +107,5 @@ sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
 改了半天搜索路径一直不对，不想在 cmake 在中额外加搜索路径，直接找到这个文件复制进来
 ```
 sudo find / -name libglfw3.a
-cp /usr/local/lib/libglfw3.a .
+cp /usr/local/lib/libglfw3.a .  //路径根据具体情况改
 ```
