@@ -29,13 +29,14 @@ status：昨天打开 cmake all 在之后就没停下来
 [GitHub - sciecode/sheen: GPGPU cloth simulation](https://github.com/sciecode/sheen)
 java 写的
 效果不错
-📍：😒 啥也不是
+📍：😒 quit
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311743254.png)
 
 合着我折腾一天配置 java 环境，跑出来就和 github 的点进去一样
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011152845.png)
 啥也没有，无语死了
+不应该阿，代码写了相关的东西emmmmmm
 
 [GitHub - JUSTIVE/GPU-Cloth-Simulation: GPU Mass-Spring Simulation Cloth in Unity](https://github.com/JUSTIVE/GPU-Cloth-Simulation)
 看起来不错
