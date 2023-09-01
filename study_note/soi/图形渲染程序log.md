@@ -35,7 +35,7 @@ java 写的
 ![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311743254.png)
 
 [[vscode_ubuntu_javajs]]
-合着我折腾一天配置 java 环境，跑出来就和 github 的点进去一样
+合着我折腾一天配置 java 环境，跑出来就和 github 点进去一样
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011152845.png)
 啥也没有，无语死了
 不应该阿，代码和好像写了相关的东西 emmmmmm
