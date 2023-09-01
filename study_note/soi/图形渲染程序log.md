@@ -38,9 +38,11 @@ java 写的
 合着我折腾一天配置 java 环境，跑出来就和 github 的点进去一样
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011152845.png)
 啥也没有，无语死了
-不应该阿，代码写了相关的东西emmmmmm
+不应该阿，代码和好像写了相关的东西 emmmmmm
 [• Atomize •](https://sciecode.com/)
-另一个网站可以，哭哭
+另一个网站可以，一下子就运行成功了，哭哭
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011439278.png)
+
 感觉是个没写完的，只加载出来了背景，先放弃了。。。。。
 
 
