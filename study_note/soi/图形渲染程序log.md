@@ -37,6 +37,8 @@ java 写的
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011152845.png)
 啥也没有，无语死了
 不应该阿，代码写了相关的东西emmmmmm
+[• Atomize •](https://sciecode.com/)
+另一个网站可以，哭哭，放弃了
 
 [GitHub - JUSTIVE/GPU-Cloth-Simulation: GPU Mass-Spring Simulation Cloth in Unity](https://github.com/JUSTIVE/GPU-Cloth-Simulation)
 看起来不错
