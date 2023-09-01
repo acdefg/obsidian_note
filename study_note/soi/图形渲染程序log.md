@@ -10,10 +10,14 @@ log:
 按道理来说能检测到路径，但是就是打不开，有毒了
 可以试试是不是 ig.. 库安装的问题
 
+### DART
 [GitHub - dartsim/dart: DART: Dynamic Animation and Robotics Toolkit](https://github.com/dartsim/dart)
 [Biped — DART: Dynamic Animation and Robotics Toolkit 7.0.0-alpha20230101 documentation](https://dart.readthedocs.io/en/latest/user_guide/tutorials/biped.html)
 好像是一个完整的库
 status：昨天打开 cmake all 在之后就没停下来
+#### log
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309010855320.png)
+应该是有错误在不断重试
 
 [GitHub - hbertiche/NeuralClothSim](https://github.com/hbertiche/NeuralClothSim)
 没看懂具体干啥的，但是可以试试
