@@ -102,6 +102,8 @@ sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
 #### opengl
 [Ubuntu下搭建OpenGL开发环境（GLFW\_3.3.1 + GLM\_0.9.9 + GLAD）\_RoboticsLearner的博客-CSDN博客](https://blog.csdn.net/l1216766050/article/details/102787618)
 
+[Linux（Ubuntu）使用 sudo apt-get install 命令安装软件的目录在哪？（已解决） - Memory4Young - 博客园](https://www.cnblogs.com/memory4young/p/where-is-sudo-apt-get-install-package-file-path.html)
+
 测试一直报错
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011712246.png)
 改了半天搜索路径一直不对，不想在 cmake 在中额外加搜索路径，直接找到这个文件复制进来
