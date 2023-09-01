@@ -10,6 +10,8 @@ log:
 按道理来说能检测到路径，但是就是打不开，有毒了
 可以试试是不是 ig.. 库安装的问题
 
+[GitHub - MauriceGit/Cloth\_Simulation: Cloth-Visualization via particle-simulation.](https://github.com/MauriceGit/Cloth_Simulation)
+
 ### DART
 [GitHub - dartsim/dart: DART: Dynamic Animation and Robotics Toolkit](https://github.com/dartsim/dart)
 [Biped — DART: Dynamic Animation and Robotics Toolkit 7.0.0-alpha20230101 documentation](https://dart.readthedocs.io/en/latest/user_guide/tutorials/biped.html)
