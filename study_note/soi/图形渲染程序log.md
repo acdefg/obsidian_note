@@ -26,19 +26,23 @@ status：昨天打开 cmake all 在之后就没停下来
 [Human Motion Diffusion Model](https://guytevet.github.io/mdm-page/)
 深度学习做的
 
+### sheen
 [GitHub - sciecode/sheen: GPGPU cloth simulation](https://github.com/sciecode/sheen)
 java 写的
 效果不错
 📍：😒 quit
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311743254.png)
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202308311743254.png)
 
+[[vscode_ubuntu_javajs]]
 合着我折腾一天配置 java 环境，跑出来就和 github 的点进去一样
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011152845.png)
 啥也没有，无语死了
 不应该阿，代码写了相关的东西emmmmmm
 [• Atomize •](https://sciecode.com/)
-另一个网站可以，哭哭，放弃了
+另一个网站可以，哭哭
+感觉是个没写完的，只加载出来了背景，先放弃了。。。。。
+
 
 [GitHub - JUSTIVE/GPU-Cloth-Simulation: GPU Mass-Spring Simulation Cloth in Unity](https://github.com/JUSTIVE/GPU-Cloth-Simulation)
 看起来不错
