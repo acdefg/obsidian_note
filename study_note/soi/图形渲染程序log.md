@@ -99,3 +99,5 @@ sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
 测试：
 [Eigen的介绍、安装与入门操作 - 知乎](https://zhuanlan.zhihu.com/p/462494086)
 
+#### opengl
+[Ubuntu下搭建OpenGL开发环境（GLFW\_3.3.1 + GLM\_0.9.9 + GLAD）\_RoboticsLearner的博客-CSDN博客](https://blog.csdn.net/l1216766050/article/details/102787618)
