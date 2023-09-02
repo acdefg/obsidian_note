@@ -52,3 +52,12 @@ gdb program-cmd
 (gdb) backtrace
 ```
 
+[GDB调试入门指南 - 知乎](https://zhuanlan.zhihu.com/p/74897601)
+
+[【Linux】GDB调试教程（新手小白）\_爪可摘星辰的博客-CSDN博客](https://blog.csdn.net/lovely_dzh/article/details/109160337#t12)
+
+### vscode_cmake 配置
+[Linux环境下使用VScode调试CMake工程 - 知乎](https://zhuanlan.zhihu.com/p/618043511)
+
+
+[VScode tasks.json和launch.json的设置 - 知乎](https://zhuanlan.zhihu.com/p/92175757)
