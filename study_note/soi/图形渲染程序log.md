@@ -115,3 +115,8 @@ sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
 sudo find / -name libglfw3.a
 cp /usr/local/lib/libglfw3.a .  //路径根据具体情况改
 ```
+
+#### gdb（待整理）
+[GDB调试入门指南 - 知乎](https://zhuanlan.zhihu.com/p/74897601)
+[【Linux】GDB调试教程（新手小白）\_爪可摘星辰的博客-CSDN博客](https://blog.csdn.net/lovely_dzh/article/details/109160337#t12)
+
