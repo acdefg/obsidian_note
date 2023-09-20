@@ -6,29 +6,28 @@
 | 后端面积  | 2440.75   | 5422.14     | 9452.85     | 17651.29    | 138021.20 |
 | density  |0.72726 |     0.72006         | 0.72268           | 0.73423            |   0.80775        |
 
+报告地址：
+
 ## 具体设置
 
 ### init_design
-Innovus
-Import design Lef 
-VDD、VSS、MMMC
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145143.png)
-综合库用的 smic40ll
+
+![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145143.png)
 
 ### floorplan
 rram_top 根据综合面积的 1.5 倍手动设置，AXI 使用自动生成的值
 ratio：0.9 utilization：0.7
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145211.png)
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145211.png)
 
 ### power+route
 power -> connect global nets
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145551.png)
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145748.png)
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145952.png)
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150051.png)
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145551.png)
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145748.png)
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145952.png)
+![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150051.png)
 
 route -> special route
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150103.png)
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150103.png)
 
 source init.tcl
 source power.Tcl
@@ -38,11 +37,11 @@ source power.Tcl
 clk 改信号类型
 source placement.Tcl
 
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151510.png)
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151510.png)
 
 ### 报告生成
 summaryreport
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151809.png)
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151809.png)
 
 
 
