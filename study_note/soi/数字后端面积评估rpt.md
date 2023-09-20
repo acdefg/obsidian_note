@@ -1,3 +1,8 @@
+## 总结
+
+
+## 具体步骤
+
 ### init_design
 Innovus
 Import design Lef 
@@ -22,23 +27,17 @@ route -> special route
 
 source init.tcl
 source power.Tcl
-
-排 pin
+（潘泽伦的 tcl）
+### PIN
+手动排 pin
 clk 改信号类型
-
-save design  .enc
-
-source placement.Tcl（这个 tcl 有点问题，没设 contrainmode 吧）
+source placement.Tcl
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151510.png)
 
+### 报告生成
 summaryreport
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151809.png)
 
-### ref
-[基于innovus的全加器数字芯片物理实现(step by step) - 知乎](https://zhuanlan.zhihu.com/p/56259682)
 
-
-### 面积评估
-[计算cell block的面积 - 简书](https://www.jianshu.com/p/17fd59369383)
 
