@@ -33,6 +33,20 @@ Ctrl + TAB –> 在多个 tab 中切换
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230417160056.png)
 #### vpwl
 
+#### switch
+[cadence Virtuoso ADE原理图AnalogLib库中的switch使用 - 大学生视野 - 博客园](https://www.cnblogs.com/icDesigner/p/14582490.html)
+![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920131726.png)
+A,B: 等效于一个电阻;
+C,D: 等效于控制开关(CD 间的控制电压控制 AB 的断开或闭合);
+open switch resistance: 开关断开状态下的等效电阻(AB 之间);
+close switch resistance: 开关闭合状态下的等效电阻(AB 之间);
+open voltage: 断开开关所需的电压值(CD 间电压低于该值，则 AB 间处于断开状态);
+closed voltage: 闭合开关所需的电压值(CD 间电压高于该值，则 AB 间处于闭合状态);
+
+有 W 标记的是正端，正负端不要接错
+open voltage 和 closed voltage 设置的值不能相同
+（Relay on and off thresholds ('vt2' and 'vt1') must not be the same value
+一般设置 open voltage 小于 closed voltage 的值
 
 ### snippets
 [cadence virtuoso快速查看mos管region【多种方法】_virtuoso region_芯宝典的博客-CSDN博客](https://blog.csdn.net/qq_40007892/article/details/119568781#:~:text=%E6%B3%951%EF%BC%9A%20%E4%BB%BF%E7%9C%9F%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%EF%BC%8CADE-Results-Print-DC%20operating%20Points%EF%BC%8C%E7%82%B9%E5%87%BB%E6%83%B3%E8%A6%81%E6%9F%A5%E7%9C%8B%E7%9A%84mos%E7%AE%A1%EF%BC%8C%E5%9C%A8%E5%BC%B9%E5%87%BA%E7%9A%84%E8%A1%A8%E4%B8%AD%E6%9F%A5%E6%89%BEregion%EF%BC%8C%20%E7%BC%BA%E7%82%B9%EF%BC%9A%20%E4%B8%80%E6%AC%A1%E5%8F%AA%E8%83%BD%E6%9F%A5%E7%9C%8B%E4%B8%80%E4%B8%AAmos%E7%AE%A1%EF%BC%8C%E5%AE%B9%E6%98%93%E5%BF%98%E8%AE%B0%EF%BC%8C%E7%94%B5%E8%B7%AF%E8%A7%84%E6%A8%A1%E5%A4%A7%E4%BA%86%E4%B9%8B%E5%90%8E%E6%93%8D%E4%BD%9C%E4%B8%8D%E6%96%B9%E4%BE%BF%20%E6%B3%952%EF%BC%9A,DC%E4%BB%BF%E7%9C%9F%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%9C%A8ADE%E4%B8%AD%E7%82%B9%E5%87%BBresults-Circuit%20Conditions...%2C%E5%BC%B9%E5%87%BAresults%EF%BC%9Acircuit%20conditions%E5%AF%B9%E8%AF%9D%E6%A1%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%A0%87%E6%B3%A8%E5%87%BA%E7%94%B5%E8%B7%AF%E5%9B%BE%E4%B8%AD%E9%A5%B1%E5%92%8C%E5%8C%BABJT%E6%88%96%E7%BA%BF%E6%80%A7%E5%8C%BAmos%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%B7%B1%E8%AE%BE%E7%BD%AE%E6%A0%87%E6%B3%A8%E6%9D%A1%E4%BB%B6%E3%80%82%20%E7%82%B9%E5%87%BBsaturation%20%3CBJT%3E%20or%20Linear%20%3CMOS%3E%E5%90%8E%E7%9A%84%E5%B0%8F%E6%96%B9%E5%9D%97%E9%80%89%E9%A1%B9%E6%A1%86%EF%BC%8C%E9%80%89%E6%8B%A9%E6%A0%87%E6%B3%A8%E9%A2%9C%E8%89%B2%EF%BC%8C%E7%84%B6%E5%90%8E%E7%82%B9%E5%87%BB%E5%8F%B3%E4%BE%A7results-annotate%E4%B8%AD%E7%9A%84place%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%94%B5%E8%B7%AF%E5%9B%BE%E4%B8%AD%E7%9C%8B%E5%88%B0%E6%89%80%E6%9C%89%E4%BD%8D%E4%BA%8E%E9%A5%B1%E5%92%8C%E5%8C%BABJT%E6%88%96%E7%BA%BF%E6%80%A7%E5%8C%BAmos%E3%80%82)
