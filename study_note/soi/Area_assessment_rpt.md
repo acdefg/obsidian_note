@@ -17,17 +17,17 @@
 ### init_floorplan
 rram_top 根据综合面积的 1.5 倍手动设置，AXI 使用自动生成的值
 ratio：0.9 utilization：0.7
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145211.png)
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145211.png" alt="400" style="zoom: 67%;" />
 
 ### power+route
 power -> connect global nets
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145551.png)
-![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145748.png)
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145952.png)
-![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150051.png)
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145551.png" alt="400" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145748.png" alt="300" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145952.png" alt="400" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150051.png" alt="300" style="zoom: 80%;" />
 
 route -> special route
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150103.png)
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920150103.png" alt="400" style="zoom:67%;" />
 
 source init.tcl
 source power.Tcl
@@ -37,11 +37,11 @@ source power.Tcl
 clk 改信号类型
 source placement.Tcl
 
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151510.png)
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151510.png" alt="400" style="zoom: 50%;" />
 
 ### 报告生成
 summaryreport
-![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151809.png)
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920151809.png" alt="400" style="zoom:67%;" />
 
 
 
