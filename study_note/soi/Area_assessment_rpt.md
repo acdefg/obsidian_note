@@ -12,7 +12,7 @@
 
 ### init_design
 
-![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145143.png)
+![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230920145143.png)
 
 ### init_floorplan
 rram_top 根据综合面积的 1.5 倍手动设置，AXI 使用自动生成的值
