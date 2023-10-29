@@ -96,7 +96,13 @@ git push -u origin main
 
 ### 解决冲突
 [git如何解决冲突？_蛞蝓不孤寡的博客-CSDN博客_git怎么处理冲突](https://blog.csdn.net/fish_skyyyy/article/details/119539747)
-应该可以设置一下merge规则
+应该可以设置一下 merge 规则
+```shell
+git add [冲突文件]  （取本地）
+git rm [冲突文件]  （取远程端）
+git commit -m "2023.10.29"
+git pull
+```
 
 一些教程记录
 [Fetching Title#15ws](https://blog.csdn.net/qq_34842671/article/details/70916587)  ---win下git安装教程
