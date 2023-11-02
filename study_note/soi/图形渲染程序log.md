@@ -1,7 +1,11 @@
 ## restart
-### shirt
+### 程序整理
 [GitHub - wenlongx/Maya-Cloth-Simulation: Generates a shirt model from a CSV file, and simulates it being held from random points](https://github.com/wenlongx/Maya-Cloth-Simulation)
 
+### 知识仓库
+[[图像学]]
+
+[[ZYNQ]]
 
 ## 之前
 [GitHub - mmmovania/opencloth: A collection of source codes implementing cloth simulation algorithms in OpenGL](https://github.com/mmmovania/opencloth)
