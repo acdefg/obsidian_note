@@ -2,7 +2,7 @@
 ### 程序整理
 [GitHub - wenlongx/Maya-Cloth-Simulation: Generates a shirt model from a CSV file, and simulates it being held from random points](https://github.com/wenlongx/Maya-Cloth-Simulation)
 
-论文 An implementation of Large Steps in Cloth Simulation（1998）
+### 论文 An implementation of Large Steps in Cloth Simulation（1998）
 两个都可运行
 [cloth.ipynb](https://github.com/MeghaS94/Cloth-simulator/blob/main/cloth.ipynb)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202311040948663.png)
@@ -133,6 +133,15 @@ sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
 sudo find / -name libglfw3.a
 cp /usr/local/lib/libglfw3.a .  //路径根据具体情况改
 ```
+#### 编译方式
+编译flag
+`-lGL`
+freeglut:
+`-lglut`
+GLEW:
+`-lglew`
+glu:
+`-lGLU`
 
 #### gdb（待整理）
 [GDB调试入门指南 - 知乎](https://zhuanlan.zhihu.com/p/74897601)
