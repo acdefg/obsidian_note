@@ -2,6 +2,13 @@
 ### 程序整理
 [GitHub - wenlongx/Maya-Cloth-Simulation: Generates a shirt model from a CSV file, and simulates it being held from random points](https://github.com/wenlongx/Maya-Cloth-Simulation)
 
+论文 An implementation of Large Steps in Cloth Simulation（1998）
+两个都可运行
+[cloth.ipynb](https://github.com/MeghaS94/Cloth-simulator/blob/main/cloth.ipynb)
+
+[GitHub - zanesterling/cloth-simulation: An implementation of Large Steps in Cloth Simulation for CSE328](https://github.com/zanesterling/cloth-simulation/tree/master)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202311040944821.png)
+
 ### 知识仓库
 [[图像学]]
 
