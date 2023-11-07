@@ -6,6 +6,7 @@
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230412135455.png)
 
+我的逻辑大概是先给 dpg_scan_in，将数据放在 master，然后给 master_to_slave，传到 slave，再给 dut_data_scan_in 将数据传给 mux，然后 out 的时候就是反过来
 
 ### 综合
 [Tcl与Design Compiler （三）——DC综合的流程 - IC_learner - 博客园](https://www.cnblogs.com/IClearner/p/6618992.html)
