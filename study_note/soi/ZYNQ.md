@@ -2,6 +2,27 @@
 [请问ZYNQ有什么比较好的教程？ - 知乎](https://www.zhihu.com/question/56596019)
 
 [ZYNQ | 资料推荐\_zynq手册\_悟道禅师的博客-CSDN博客](https://blog.csdn.net/harhy/article/details/124262767)
+>官网资源
+	// vivado  	
+	文档：vivado -> help -> document and tutorials	
+	视频：vivado -> help -> quick take videos	
+	手册：vivado -> help -> release note guide	
+	专题：vivado -> help -> design hubs	
+	反馈：vivado -> help -> leave feedback	
+	问题：vivado -> help -> search answer records	
+	支持：vivado -> help -> get technical support	
+	安装：vivado -> help -> add design tools or devices	
+	主页：vivado -> help -> vivado on the web	
+	关于：vivado -> about vivado	
+	// SDK	
+	指导：SDK -> help -> welcome -> user guides	
+	备忘：SDK -> help -> welcome -> cheat sheet	
+	视频：SDK -> help -> welcome -> quick take videos	
+	文档：SDK -> help -> welcome -> help documents
+	手册：SDK -> help -> help contents
+	反馈：SDK -> help -> leave feedback
+
+[ALINX ZYNQ Ultrascale+ MPSOC FPGA原创连载教程总目录 - 知乎](https://zhuanlan.zhihu.com/p/339433531)
 ### DOC 下载
 注册账号，登陆下载
 [Downloads](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/documentation-nav.html)
