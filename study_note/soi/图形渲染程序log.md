@@ -12,7 +12,6 @@
 
 ### 知识仓库
 [[图像学]]
-
 [[ZYNQ]]
 
 ## 之前
@@ -92,8 +91,33 @@ Middle click 	Cut cloth
 
 这个差不多，java 新写的
 [GitHub - dissimulate/Tearable-Cloth: A tearable cloth simulation using vertlet integration.](https://github.com/dissimulate/Tearable-Cloth)
-### environment
-#### SFML
+
+## 环境
+### openGL
+[ubuntu配置openGL glut库\_xiadidi的博客-CSDN博客](https://blog.csdn.net/xiadidi/article/details/50867241)
+[Ubuntu下搭建OpenGL开发环境（GLFW\_3.3.1 + GLM\_0.9.9 + GLAD）\_RoboticsLearner的博客-CSDN博客](https://blog.csdn.net/l1216766050/article/details/102787618)
+[Linux（Ubuntu）使用 sudo apt-get install 命令安装软件的目录在哪？（已解决） - Memory4Young - 博客园](https://www.cnblogs.com/memory4young/p/where-is-sudo-apt-get-install-package-file-path.html)
+
+测试一直报错
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011712246.png)
+改了半天搜索路径一直不对，不想在 cmake 在中额外加搜索路径，直接找到这个文件复制进来
+```
+sudo find / -name libglfw3.a
+cp /usr/local/lib/libglfw3.a .  //路径根据具体情况改
+```
+##### 编译方式
+编译 flag
+`-lGL`
+freeglut:
+`-lglut`
+GLEW:
+`-lglew`
+glu:
+`-lGLU`
+
+### openmp(待完善)
+
+### SFML
 [SFML and Linux (SFML / Learn / 2.5 Tutorials)](https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
 
 **▶️ test pass**
@@ -105,7 +129,7 @@ To link an SFML library, you must add "-lsfml-xxx" to your command line, for exa
 g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
 ```
 
-#### eigen
+### eigen
 
 [ubuntu安装Eigen\_ubuntu22安装eigen\_ClaireQi的博客-CSDN博客](https://blog.csdn.net/wangxiao7474/article/details/103422616)
 
@@ -121,29 +145,51 @@ sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
 测试：
 [Eigen的介绍、安装与入门操作 - 知乎](https://zhuanlan.zhihu.com/p/462494086)
 
-#### opengl
-[Ubuntu下搭建OpenGL开发环境（GLFW\_3.3.1 + GLM\_0.9.9 + GLAD）\_RoboticsLearner的博客-CSDN博客](https://blog.csdn.net/l1216766050/article/details/102787618)
+### cmake
+[cmake(5)：选择编译器及设置编译器选项\_cmake指定编译器\_翔底的博客-CSDN博客](https://blog.csdn.net/rangfei/article/details/108862896#t3)
 
-[Linux（Ubuntu）使用 sudo apt-get install 命令安装软件的目录在哪？（已解决） - Memory4Young - 博客园](https://www.cnblogs.com/memory4young/p/where-is-sudo-apt-get-install-package-file-path.html)
+### gcc
 
-测试一直报错
-![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011712246.png)
-改了半天搜索路径一直不对，不想在 cmake 在中额外加搜索路径，直接找到这个文件复制进来
+报错：
+```ad-failure
+- The C compiler identification is unknown
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - broken
+CMake Error at /usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "/usr/bin/cc"
+
+  is not able to compile a simple test program.
+
 ```
-sudo find / -name libglfw3.a
-cp /usr/local/lib/libglfw3.a .  //路径根据具体情况改
-```
-#### 编译方式
-编译flag
-`-lGL`
-freeglut:
-`-lglut`
-GLEW:
-`-lglew`
-glu:
-`-lGLU`
 
-#### gdb（待整理）
+```shell
+cmake ../CMakeLists.txt -DCMAKE_C_COMPILER=$(which gcc)
+```
+
+
+```shell
+-DCMAKE_CXX_COMPILER=$(which g++) -DCMAKE_C_COMPILER=$(which gcc)
+```
+
+### gdb 调试
+
+```shell
+gdb program-cmd
+(gdb) run
+(gdb) backtrace
+```
+
 [GDB调试入门指南 - 知乎](https://zhuanlan.zhihu.com/p/74897601)
+
 [【Linux】GDB调试教程（新手小白）\_爪可摘星辰的博客-CSDN博客](https://blog.csdn.net/lovely_dzh/article/details/109160337#t12)
 
+
+### vscode_cmake 配置
+[Linux环境下使用VScode调试CMake工程 - 知乎](https://zhuanlan.zhihu.com/p/618043511)
+
+[VScode tasks.json和launch.json的设置 - 知乎](https://zhuanlan.zhihu.com/p/92175757)

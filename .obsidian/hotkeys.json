@@ -42,8 +42,7 @@
   "templater-obsidian:Templates/插入/code blocks python.md": [
     {
       "modifiers": [
-        "Alt",
-        "Mod"
+        "Alt"
       ],
       "key": "P"
     }
