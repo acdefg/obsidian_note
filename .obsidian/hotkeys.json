@@ -47,5 +47,13 @@
       ],
       "key": "P"
     }
+  ],
+  "templater-obsidian:Templates/插入/code blocks verilog.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "V"
+    }
   ]
 }
