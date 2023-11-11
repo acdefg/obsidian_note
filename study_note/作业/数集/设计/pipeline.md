@@ -1,0 +1,1 @@
+[【精选】verilog流水线和乘法器的设计（需要请自取）\_verilog乘法运算优化\_松花江路2600号的博客-CSDN博客](https://blog.csdn.net/weixin_47032674/article/details/115032405)
