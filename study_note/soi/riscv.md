@@ -1,6 +1,7 @@
+down:: [[riscv_pulp环境安装]]
+
 有几个需要vpn
 [串行接口芯片16550_xqhrs232的博客-CSDN博客](https://blog.csdn.net/xqhrs232/article/details/51218578)
-
 
 risc-v参阅平台
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221025230341.png)
