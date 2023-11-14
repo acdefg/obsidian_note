@@ -25,7 +25,8 @@
     "Templates/插入/ad-note.md",
     "Templates/插入/image.md",
     "Templates/插入/code blocks shell.md",
-    "Templates/插入/code blocks python.md"
+    "Templates/插入/code blocks python.md",
+    "Templates/插入/down.md"
   ],
   "startup_templates": [
     ""

@@ -54,5 +54,13 @@
       ],
       "key": "V"
     }
+  ],
+  "templater-obsidian:Templates/插入/down.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "D"
+    }
   ]
 }
