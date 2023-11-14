@@ -36,7 +36,7 @@
   "namingSystemRegex": "",
   "namingSystemSplit": ".",
   "namingSystemEndsWithDelimiter": false,
-  "refreshOnNoteChange": false,
+  "refreshOnNoteChange": true,
   "useAllMetadata": true,
   "openMatrixOnLoad": true,
   "openDuckOnLoad": false,
@@ -119,7 +119,7 @@
   "impliedRelations": {
     "siblingIdentity": false,
     "sameParentIsSibling": true,
-    "siblingsSiblingIsSibling": false,
+    "siblingsSiblingIsSibling": true,
     "siblingsParentIsParent": false,
     "parentsSiblingsIsParents": false,
     "parentsParentsIsParent": false,
