@@ -42,3 +42,4 @@ RISC-V 将 PC 单独拿出来作为一个特殊的寄存器来对待，这使得
 
 [【精选】RISC-V流水线CPU 计算机组成与设计第四章第二部分\_ld指令的数据通路-CSDN博客](https://blog.csdn.net/Photice/article/details/125240998)
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20231115122052.png)
