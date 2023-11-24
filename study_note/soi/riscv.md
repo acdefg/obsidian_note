@@ -1,6 +1,7 @@
+down:: [[riscv_pulp环境安装]]
+
 有几个需要vpn
 [串行接口芯片16550_xqhrs232的博客-CSDN博客](https://blog.csdn.net/xqhrs232/article/details/51218578)
-
 
 risc-v参阅平台
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221025230341.png)
@@ -34,3 +35,11 @@ cmake官方教程
 这样带来了一个坏处，那就是对分支跳转的预测变复杂了。
 
 RISC-V 将 PC 单独拿出来作为一个特殊的寄存器来对待，这使得能够改变 PC 寄存器的指令变少，分支跳转的预测准确性便于提高。
+
+### riscv 指令集
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20231115120701.png)
+[RISC-V架构学习-CSDN博客](https://blog.csdn.net/tristan_tian/article/details/106315232)
+
+[【精选】RISC-V流水线CPU 计算机组成与设计第四章第二部分\_ld指令的数据通路-CSDN博客](https://blog.csdn.net/Photice/article/details/125240998)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20231115122052.png)

@@ -42,10 +42,25 @@
   "templater-obsidian:Templates/插入/code blocks python.md": [
     {
       "modifiers": [
-        "Alt",
-        "Mod"
+        "Alt"
       ],
       "key": "P"
+    }
+  ],
+  "templater-obsidian:Templates/插入/code blocks verilog.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "V"
+    }
+  ],
+  "templater-obsidian:Templates/插入/down.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "D"
     }
   ]
 }
