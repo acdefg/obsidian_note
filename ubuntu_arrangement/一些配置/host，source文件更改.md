@@ -1,12 +1,18 @@
 # host 文件更改
 ## windows
-搜索 shell，以管理员模式运行 windows_power_shell
+搜索 shell，以管理员模式运行 windows_power_shell（获得更改权限）
+输入：
+
+```shell
+notepad C:\\Windows\\System32\\drivers\\etc\\hosts
+```
 
 ## linux
 ``` shell
 sudo gedit /etc/hosts
 sudo vim /etc/hosts
 ```
+
 ## github
 https://github.com/ineo6/hosts - 复制里面的内容即可（会更新）
 Fastgithub 可以自动改，没装，参考：https://zhuanlan.zhihu.com/p/428454772
