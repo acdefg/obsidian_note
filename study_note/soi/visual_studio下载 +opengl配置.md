@@ -11,6 +11,7 @@
 参考这篇：
 [VS2022的openGL环境搭建（完整篇） - 知乎](https://zhuanlan.zhihu.com/p/486459964)
 glew 要另外安装，差不多一样的步骤
+
 ### 注意事项
 #### nupengl
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20231129143600.png)
@@ -20,3 +21,18 @@ glew 要另外安装，差不多一样的步骤
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20231129143635.png)
 安装一个另外一个会自动安装
 
+#### glad
+
+在 VS 项目中如果需要用 GLAD，就要把 glad.c 复制到源文件目录下
+glad.c 在 `G:\\software\\Opengl\\glad\\src`
+
+#### glew
+glGenVertexArrays(1, &VAO);
+glGenVertexArrays，VAO 在使用前需要现在 glewInit()之前加上：
+```
+glewExperimental = GL_TRUE;
+```
+
+> [!info]+ Note
+> 
+测试了两组三组代码在 workplace 里面
