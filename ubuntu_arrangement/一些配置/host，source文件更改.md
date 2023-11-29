@@ -1,4 +1,8 @@
 # host 文件更改
+## windows
+搜索 shell，以管理员模式运行 windows_power_shell
+
+## linux
 ``` shell
 sudo gedit /etc/hosts
 sudo vim /etc/hosts
