@@ -32,6 +32,8 @@ glGenVertexArrays，VAO 在使用前需要现在 glewInit()之前加上：
 ```
 glewExperimental = GL_TRUE;
 ```
+[关于c ++：openGL：glGenVertexArrays执行访问冲突的位置0x00000000 | 码农家园](https://www.codenong.com/30061443/)
+[OpenGL GAO访问冲突（glBindVertexArray）-CSDN博客](https://blog.csdn.net/fan2273/article/details/75072823)
 
 > [!info]+ Note
 > 
