@@ -17,6 +17,11 @@ sudo vim /etc/hosts
 https://github.com/ineo6/hosts - 复制里面的内容即可（会更新）
 Fastgithub 可以自动改，没装，参考：https://zhuanlan.zhihu.com/p/428454772
 
+## host 查找教程
+[修改 Hosts 解决 Github 访问失败马克 - 知乎](https://zhuanlan.zhihu.com/p/107334179)
+查找网站：（能访问的，点开就可以）
+[503 Service Temporarily Unavailable](https://ping.chinaz.com/)
+
 # 软件源 source 更改
 参考链接：[Ubuntu20.04软件源更换 - 知乎](https://zhuanlan.zhihu.com/p/142014944)
 复制的内容在：[ubuntu | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
