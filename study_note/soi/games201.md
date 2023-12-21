@@ -24,5 +24,5 @@
 
 ### 流体力学 SPH
 [Site Unreachable](https://www.bilibili.com/video/BV1ZK411H7Hc?t=2993.2&p=2)
-
+自由表面模拟：烟雾就不是自由表面
 
