@@ -11,4 +11,5 @@
 
 显式、隐式
 [Lecture 2 拉格朗日视角（1）\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1ZK411H7Hc?t=1928.3&p=2)
-
+显式：简单易实现，但是 time step 不不能太大
+隐式：不易实现，但是 time step 和很灵活
