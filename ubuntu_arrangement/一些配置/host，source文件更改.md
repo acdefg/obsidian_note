@@ -1,11 +1,30 @@
 # host 文件更改
+## windows
+搜索 shell，以管理员模式运行 windows_power_shell（获得更改权限）
+输入：
+
+```shell
+notepad C:\\Windows\\System32\\drivers\\etc\\hosts
+```
+
+## linux
 ``` shell
 sudo gedit /etc/hosts
 sudo vim /etc/hosts
 ```
+
 ## github
 https://github.com/ineo6/hosts - 复制里面的内容即可（会更新）
 Fastgithub 可以自动改，没装，参考：https://zhuanlan.zhihu.com/p/428454772
+2023.11.29log：
+安装 switch host 实现自动改
+[Fetching Title#fgvj](https://github.com/ineo6/hosts#%E9%85%8D%E7%BD%AEhosts%E6%95%99%E7%A8%8B)
+[switchHosts应用时，没有写入 Hosts 文件的权限\_switchhost没有写入 hosts 文件的权限。\_所遇所思的博客-CSDN博客](https://blog.csdn.net/nxg0916/article/details/122656910)
+
+## host 查找教程
+[修改 Hosts 解决 Github 访问失败马克 - 知乎](https://zhuanlan.zhihu.com/p/107334179)
+查找网站：（能访问的，点开就可以）
+[503 Service Temporarily Unavailable](https://ping.chinaz.com/)
 
 # 软件源 source 更改
 参考链接：[Ubuntu20.04软件源更换 - 知乎](https://zhuanlan.zhihu.com/p/142014944)

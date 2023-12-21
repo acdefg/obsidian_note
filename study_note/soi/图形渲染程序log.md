@@ -2,6 +2,9 @@
 ### 程序整理
 [GitHub - wenlongx/Maya-Cloth-Simulation: Generates a shirt model from a CSV file, and simulates it being held from random points](https://github.com/wenlongx/Maya-Cloth-Simulation)
 
+### blender+body_model+neural
+[GitHub - acdefg/NeuralClothSim: for models](https://github.com/acdefg/NeuralClothSim)
+
 ### 论文 An implementation of Large Steps in Cloth Simulation（1998）✔️
 两个都可运行
 [cloth.ipynb](https://github.com/MeghaS94/Cloth-simulator/blob/main/cloth.ipynb)
