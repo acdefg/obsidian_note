@@ -7,6 +7,8 @@ down:: [[AXI——pytest测试]]
 [[UVM]]
 [[AXI——pytest测试]]
 
+[AMBA总线协议\_apple\_ttt的博客-CSDN博客](https://blog.csdn.net/apple_53311083/category_12416130.html) 专栏深入浅出 AXI 协议部分讲的非常详细
+
 ## 特点
 AXI 是一种面向高性能、高带宽、低延迟的片内总线，它具有如下的几个特点：
 
