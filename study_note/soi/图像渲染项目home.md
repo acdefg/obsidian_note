@@ -7,3 +7,5 @@ down:: [[矩阵求解]]
 down:: [[visual_studio下载 +opengl配置]]
 down:: [[ZYNQ]]
 down:: [[code]]
+
+[图形学物理模拟领域资源整理 - 知乎](https://zhuanlan.zhihu.com/p/444931303)
