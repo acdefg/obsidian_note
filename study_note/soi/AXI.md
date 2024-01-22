@@ -34,7 +34,7 @@ AXI 协议定义了 5 条通道：
 - 写数据
 - 写响应
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202307231842804.png)
-任一通道上发射的每一条数据都称为一次传输 (transfer)。当 VALID 和 READY 信号均居高不下并且时钟存在上升沿时，就会发生传输。
+任一通道上发射的每一条数据都称为一次传输 (transfer)。**当 VALID 和 READY 信号均居高不下并且时钟存在上升沿时**，就会发生传输。
 
 ### 写通道
 AXI4 的写过程主要分为三个通道：
