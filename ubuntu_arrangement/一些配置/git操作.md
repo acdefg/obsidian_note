@@ -123,3 +123,68 @@ bad objects：
 git branch -M main
 3. 给仓库添加共同协作者
 4. 给仓库添加 ssh key（不确定有没有影响）
+
+### git 将本地修改后的文件提交到远程
+**一 提交代码到远程 **
+
+初始化版本库：
+git init
+添加文件到版本库（只是添加到缓存区），. 代表添加文件夹下所有文件
+git add .
+把添加的文件提交到版本库，并填写提交备注(必不可少)
+git commit -m “update readme”
+把本地库与远程库关联（如果已经有 origin 关联则可以忽略）
+git remote add origin 你的远程库地址
+推送（提交）代码：
+git push <远程主机名> <本地分支名>:<远程分支名>
+如：git push origin(主机名) master(本地分支名):master(远程分支名)
+若需要提交指定文件：
+1. 先查看更改的文件：
+git status 查看仓库状态
+2. 指定提交文件
+git add src/components/文件名 添加需要提交的文件名（加路径–参考 git status 打印出来的文件路径）
+3.
+git stash -u -k 忽略其他文件，把现修改的隐藏起来，这样提交的时候就不会提交未被 add 的文件
+4.git commit -m “哪里做了修改可写入…”
+5.git pull 拉取合并
+6.git push 推送到远程仓库
+7.git stash pop 恢复之前忽略的文件
+8. 若需要撤销 add 的某个文件:git reset 文件名
+
+**若需要撤销指定的某次提交（已经提交到远程）：**
+1. 先 git log 查看 commit ID
+2. 执行 git reset –-soft <版本号> ，如 git reset --soft 4f5e9a90edeadcc45d85f43bd861a837fa7ce4c7 ，重置至指定版本的提交，达到撤销提交的目的
+3. 执行 git push origin 分支名 –-force ，强制提交当前版本号。此时远程库回滚完成。
+4. 随后可以再次使用 status 重新提交
+
+若出现“fatal: Not a git repository: mmdetection/…/.git/modules/mmdetection“之类的命令，
+网上说 git init 可以解决，但我这儿不行；解决办法是 cd mmdetection，把里面的.git 删除，即 rm -rf .git*
+
+**git 本地创建分支 并推送到远程新分支：**
+git checkout -b dbg_lichen_star
+参考：https://blog.csdn.net/ljj_9/article/details/79386306
+
+参考：
+https://blog.csdn.net/zcw4237256/article/details/78542122
+https://www.cnblogs.com/qqhfeng/p/13380210.html
+https://blog.csdn.net/f0rd_/article/details/117434986
+
+https://www.cnblogs.com/chaoxiZ/p/9714085.html
+
+**二 拉取代码到本地, 且不覆盖本地已有代码**
+1.git stash
+2.git pull
+3.git stash pop
+4.git stash list
+https://blog.csdn.net/weixin_40367126/article/details/104197540
+https://zhuanlan.zhihu.com/p/403557624
+
+**三 切换不同分支**
+git checkout
+(如果另一个分支有相同的文件, 可能会引起覆盖警告, 可以先 stash 起来)
+
+**四 自己的分支修改之后merge到主分支**
+git checkout master
+git merge --no-ff 自己的分支名
+
+参考:https://blog.csdn.net/default7/article/details/123425422
