@@ -188,3 +188,6 @@ git checkout master
 git merge --no-ff 自己的分支名
 
 参考:https://blog.csdn.net/default7/article/details/123425422
+
+## reference
+[Git实用教程（三） | Git本地库操作（仓库初始化、提交修改） - 知乎](https://zhuanlan.zhihu.com/p/87680115)
