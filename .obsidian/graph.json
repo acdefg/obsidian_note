@@ -1,7 +1,7 @@
 {
   "collapse-filter": false,
   "search": "path:study_note",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.2877041144957054,
-  "close": true
+  "scale": 0.35988448329841166,
+  "close": false
 }

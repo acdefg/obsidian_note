@@ -2,6 +2,7 @@ down:: [[AXI——pytest测试]]
 ## ref
 [Verilog AXI Components Readme [Alex Forencich]](http://alexforencich.com/wiki/en/verilog/axi/readme)
 [test\_axi\_cdma.py](https://github.com/alexforencich/verilog-axi/blob/master/tb/axi_cdma/test_axi_cdma.py) 
+[AXI4（AXI-full）总线详细介绍\_axi4总线-CSDN博客](https://blog.csdn.net/weixin_46136963/article/details/118003005)
 [AMBA总线协议（五）—— AXI3 协议接口信号介绍1\_axi3接口\_摆渡沧桑的博客-CSDN博客](https://blog.csdn.net/vivid117/article/details/110871257)    ----------接口信号介绍的比较详细
 [NoC总线架构拓扑介绍-电子工程专辑](https://www.eet-china.com/mp/a73963.html)   ---------这篇关于总线的整体介绍不错
 [[UVM]]
