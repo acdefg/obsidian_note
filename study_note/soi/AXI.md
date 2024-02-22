@@ -124,7 +124,7 @@ AXI 写入传输事务需要在 3 条读取信道上存在多次传输。
 - 读数据必须始终位于数据相关的地址之后
 - 从设备必须等待发出 ARVALID 和 ARREADY 断言后，才能发出 RVALID 断言以指示该有效数据可用
 
-### 类型
+### 转接类型
 
 AXI-DMA：实现从 PS 内存到 PL 高速传输高速通道 AXI-HP<---->AXI-Stream 的转换
 AXI-FIFO-MM2S：实现从PS内存到PL通用传输通道AXI-GP<----->AXI-Stream的转换
