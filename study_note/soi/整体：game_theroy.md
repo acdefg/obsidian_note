@@ -2,6 +2,9 @@
 down:: [[graph_engine论文]]
 down:: [[布料模拟理论]]
 
+## sinppets
+[Cloth modeling - Wikipedia](https://en.wikipedia.org/wiki/Cloth_modeling)
+
 ## 按算法分类
 
 ### MLS_MPM
@@ -17,7 +20,7 @@ GitHub地址在此：
 [https://github.com/taichi-dev/t](https://link.zhihu.com/?target=https%3A//github.com/taichi-dev/taichi)
 
 note: 详细
-[Site Unreachable](https://blog.csdn.net/weixin_44423708/article/details/118755150)
+[【GAMES201学习笔记】MLS-MPM公式基础-CSDN博客](https://blog.csdn.net/weixin_44423708/article/details/118755150)
 ## 资源收集
 入门导航：
 [【精选】计算机图形学（渲染方向）学习全攻略——学术科研篇\_图形学blog-CSDN博客](https://blog.csdn.net/tiao_god/article/details/111146313)
