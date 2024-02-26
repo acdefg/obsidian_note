@@ -1,6 +1,6 @@
 
 down:: [[graph_engine论文]]
-down:: [[布料模拟理论]]
+down:: [[布料模拟]]
 
 ## sinppets
 [Cloth modeling - Wikipedia](https://en.wikipedia.org/wiki/Cloth_modeling)

@@ -1,4 +1,4 @@
-down:: [[布料模拟理论]]
+down:: [[布料模拟]]
 
 down:: [[整体game_theroy]]
 
