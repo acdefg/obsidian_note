@@ -14,5 +14,6 @@
   "showLineNumber": true,
   "showIndentGuide": false,
   "spellcheck": false,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "rightToLeft": false
 }

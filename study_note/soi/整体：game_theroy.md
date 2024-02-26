@@ -1,5 +1,6 @@
 down:: [[games201]]
 down:: [[games101]]
+down:: [[graph_engine论文]]
 ## 资源收集
 入门导航：
 [【精选】计算机图形学（渲染方向）学习全攻略——学术科研篇\_图形学blog-CSDN博客](https://blog.csdn.net/tiao_god/article/details/111146313)
