@@ -24,13 +24,19 @@ note: 详细
 ## 资源收集
 入门导航：
 [【精选】计算机图形学（渲染方向）学习全攻略——学术科研篇\_图形学blog-CSDN博客](https://blog.csdn.net/tiao_god/article/details/111146313)
-清华大学数值分析动态演示站
-[数值分析演示网站](http://numbda.cs.tsinghua.edu.cn/~yuwj/numweb/index.html#ordinary)
+
 比较详细，分类清晰
 [Games 103 - 知乎](https://www.zhihu.com/column/c_1481545880260513792)
 
 Real Time Physics Class Notes 英文的，图像学各部分，没看
 [realtimeCoursenotes.pdf](https://matthias-research.github.io/pages/publications/realtimeCoursenotes.pdf)
+
+### 数学类
+显式积分和隐式积分优缺点分析的很清楚
+[物理引擎中的时间积分方法及求解 - wghou09 - 博客园](https://www.cnblogs.com/wghou09/p/13245923.html)
+
+清华大学数值分析动态演示站
+[数值分析演示网站](http://numbda.cs.tsinghua.edu.cn/~yuwj/numweb/index.html#ordinary)
 ### 课程
 down:: [[games201]]
 down:: [[games101]]
