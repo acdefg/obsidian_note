@@ -1,6 +1,6 @@
 down:: [[布料模拟理论]]
 
-down:: [[整体：game_theroy]]
+down:: [[整体game_theroy]]
 
 down:: [[硬件部分]]
 
