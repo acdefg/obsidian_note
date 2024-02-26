@@ -9,7 +9,7 @@
   "attachmentFolderPath": "z_attachment",
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
-  "defaultViewMode": "preview",
+  "defaultViewMode": "source",
   "showFrontmatter": false,
   "showLineNumber": true,
   "showIndentGuide": false,
