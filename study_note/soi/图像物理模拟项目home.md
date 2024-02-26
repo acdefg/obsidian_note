@@ -1,4 +1,4 @@
-down:: [[图像学]]
+down:: [[布料模拟理论]]
 down:: [[图形渲染程序log]]
 down:: [[graph_engine论文]]
 down:: [[game_theroy]]
