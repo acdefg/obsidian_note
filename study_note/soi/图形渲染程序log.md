@@ -14,7 +14,7 @@
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202311040944821.png)
 
 ### 知识仓库
-[[图像学]]
+[[布料模拟]]
 [[ZYNQ]]
 
 ## 之前

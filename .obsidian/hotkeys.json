@@ -71,5 +71,13 @@
       ],
       "key": "A"
     }
+  ],
+  "obsidian-emoji-toolbar:emoji-picker:open-picker": [
+    {
+      "modifiers": [
+        "Meta"
+      ],
+      "key": "E"
+    }
   ]
 }
