@@ -18,6 +18,20 @@ vcpkg/CHANGELOG.md 里面有各个库使用的版本
 
 仓库链接：
 [Releases · oneapi-src/oneTBB](https://github.com/oneapi-src/oneTBB/releases?page=3)
+✔️fixed
+
+#### SDL undefined
+
+error message:
+>SDL_waylandvideo.c:(.text+0x688): undefined reference to `wl_proxy_marshal_flags'
+/usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libSDL2.a(SDL_waylandvideo.c.o): in function `display_handle_global':
+SDL_waylandvideo.c:(.text+0x8b7): undefined reference to `wl_proxy_marshal_flags'
+/usr/bin/ld: SDL_waylandvideo.c:(.text+0x936): undefined reference to `wl_proxy_marshal_flags'
+/usr/bin/ld: SDL_waylandvideo.c:(.text+0x9b7): undefined reference to `wl_proxy_marshal_flags'
+/usr/bin/ld: SDL_waylandvideo.c:(.text+0x9f4): undefined reference to `wl_proxy_marshal_flags'
+/usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libSDL2.a(SDL_waylandvideo.c.o):SDL_waylandvideo.c:(.text+0xa64): more undefined references to `wl_proxy_marshal_flags' follow
+
+
 
 #### 
 
