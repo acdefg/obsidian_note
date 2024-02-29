@@ -1,4 +1,26 @@
-## restart
+## 2024.2
+### MADYPG
+论文链接：
+[Mechanics-aware deformation of yarn pattern geometry | ACM Transactions on Graphics](https://dl.acm.org/doi/10.1145/3450626.3459816)
+程序链接：
+[GitHub - kamleshbhalui/MADYPG: Mechanics-Aware Deformation of Yarn Pattern Geometry](https://github.com/kamleshbhalui/MADYPG)
+
+#### 大致问题
+vcpkg/CHANGELOG.md 里面有各个库使用的版本
+##### tdd 库 中 函数大量 undefined
+报错信息如下：
+>undefined reference to `tbb::task_group_context::~task_group_context()' /usr/bin/ld: YarnSoup.cpp:(.text.unlikely+0x28b): undefined reference to `tbb::internal::allocate_root_with_context_proxy::free(tbb::task&) const' /usr/bin/ld: YarnSoup.cpp:(.text.unlikely+0x293): undefined reference to `tbb::task_group_context::~task_group_context()' /usr/bin/ld: YarnSoup.cpp:(.text.unlikely+0x2b5): undefined reference to `tbb::internal::allocate_root_with_context_proxy::free(tbb::task&) const' /usr/bin/ld: YarnSoup.cpp:(.text.unlikely+0x2bd): undefined reference to `tbb::task_group_context::~task_group_context()' /usr/bin/ld: YarnSoup.cpp:(.text.unlikely+0x2d4): undefined reference to `tbb::internal::allocate_root_with_context_proxy::free(tbb::task&) const' /usr/bin/ld: YarnSoup.cpp:(.text.unlikely+0x2dc): undefined reference to `tbb::task_group_context::~task_group_context()'，定义了find_package(TBB CONFIG REQUIRED) target_link_libraries(mesh2yarns PRIVATE TBB::tbb)
+
+更改 tdd 库的版本，手动安装新的版本
+安装教程：
+[linux下安装和使用tbb - 简书](https://www.jianshu.com/p/57b67477ff53)
+仓库链接：
+[Releases · oneapi-src/oneTBB](https://github.com/oneapi-src/oneTBB/releases?page=3)
+
+#### 
+
+## 2023.11
+
 ### 程序整理
 [GitHub - wenlongx/Maya-Cloth-Simulation: Generates a shirt model from a CSV file, and simulates it being held from random points](https://github.com/wenlongx/Maya-Cloth-Simulation)
 
@@ -17,7 +39,7 @@
 [[布料模拟]]
 [[ZYNQ]]
 
-## 之前
+## 2023.11之前
 [GitHub - mmmovania/opencloth: A collection of source codes implementing cloth simulation algorithms in OpenGL](https://github.com/mmmovania/opencloth)
 有一些 demo，但是需要 visual studio
 或者可以 windows 的打开看看那
