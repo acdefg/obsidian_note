@@ -14,6 +14,8 @@ vcpkg/CHANGELOG.md 里面有各个库使用的版本
 更改 tdd 库的版本，手动安装新的版本
 安装教程：
 [linux下安装和使用tbb - 简书](https://www.jianshu.com/p/57b67477ff53)
+[ubuntu下安装Intel Threading Building Blocks（TBB）教程\_ubuntu18.04 安装 threading building blocks-CSDN博客](https://blog.csdn.net/wgd852372/article/details/106647200#:~:text=Intel%C2%AE%20Threading%20Building%20Blocks%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%90%8E%E8%A7%A3%E5%8E%8B%EF%BC%8C%E5%81%87%E8%AE%BE%E8%A7%A3%E5%8E%8B%E7%9B%AE%E5%BD%95%E4%B8%BAtbb1%E3%80%81%E8%B7%B3%E8%BD%AC%E5%88%B0tbb%E7%9B%AE%E5%BD%95%E4%B8%8B%EF%BC%8C%E6%89%A7%E8%A1%8Cmake%E5%91%BD%E4%BB%A4%E3%80%82%20cd%20tbbmake2%E3%80%81%E6%B7%BB%E5%8A%A0tbb%E5%8F%98%E9%87%8Fcd%20buildchmod%20%2Bx%2A.shsh,%2A.so%20%2Fusr%2Flib64cp%20%2A.so.2%20%2Fusr%2Flib64_ubuntu18.04%20%E5%AE%89%E8%A3%85%20threading%20building%20blocks)
+
 仓库链接：
 [Releases · oneapi-src/oneTBB](https://github.com/oneapi-src/oneTBB/releases?page=3)
 
