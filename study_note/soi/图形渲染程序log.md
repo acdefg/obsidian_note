@@ -31,6 +31,12 @@ SDL_waylandvideo.c:(.text+0x8b7): undefined reference to `wl_proxy_marshal_flags
 /usr/bin/ld: SDL_waylandvideo.c:(.text+0x9f4): undefined reference to `wl_proxy_marshal_flags'
 /usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libSDL2.a(SDL_waylandvideo.c.o):SDL_waylandvideo.c:(.text+0xa64): more undefined references to `wl_proxy_marshal_flags' follow
 
+省略中间一堆错误尝试
+正确解决办法：
+看到 github 的 issue 记录，想修改库的源码
+
+vcpkg 修改源码方法：
+[教程：安装本地修改的依赖项 | Microsoft Learn](https://learn.microsoft.com/zh-cn/vcpkg/consume/install-locally-modified-package?pivots=shell-bash#6---modify-portfilecmake-to-apply-the-patch)
 #### libpng undefined
 error message:
 /usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libPngImporter.a(PngImporter.cpp.o): in function `Magnum::Trade::PngImporter::doImage2D(unsigned int, unsigned int)::{lambda(png_struct_def*, char const*)#2}::_FUN(png_struct_def*, char const*)':
