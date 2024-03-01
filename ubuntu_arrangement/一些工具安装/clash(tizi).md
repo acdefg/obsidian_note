@@ -43,7 +43,7 @@ clash
 现在ubuntu上有三个clash，
 一个在/usr/bin里面，可以直接终端输入clash启动
 一个在Template里面，可以进去后输入clash启动
-一个在download里面，输入./cfw启动，这个配置了订阅链接
+一个在 download 里面，输入./cfw 启动，这个配置了订阅链接（以移动到 Template 年里面了）
 
 分流规则配置（待办）：
 https://yattazen.com/tutorial/clash-custom-config.html#:~:text=简易教程 | Clash | 自定义在线分流规则策略组 1 1. 简介,4. 导入配置文件地址到Clash 按照图示导入最终的配置文件到 CFW 或 Clash.Net ，完结撒花！%20
