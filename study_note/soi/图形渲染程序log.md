@@ -33,9 +33,14 @@ SDL_waylandvideo.c:(.text+0x8b7): undefined reference to `wl_proxy_marshal_flags
 
 #### libpng undefined
 error message:
+/usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libPngImporter.a(PngImporter.cpp.o): in function `Magnum::Trade::PngImporter::doImage2D(unsigned int, unsigned int)::{lambda(png_struct_def*, char const*)#2}::_FUN(png_struct_def*, char const*)':
+PngImporter.cpp:(.text+0x3f2): undefined reference to `png_set_longjmp_fn'
+/usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libPngImporter.a(PngImporter.cpp.o): in function `Magnum::Trade::PngImporter::doImage2D(unsigned int, unsigned int)':
+PngImporter.cpp:(.text+0x78c): undefined reference to `png_set_longjmp_fn'
 
 修改了 libpng 以源码（不知道有没有用）
 重新编译了这两个库
+(确认了没用)
 
 
 #### 
