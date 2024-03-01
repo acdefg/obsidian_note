@@ -49,7 +49,7 @@ PngImporter.cpp:(.text+0x78c): undefined reference to `png_set_longjmp_fn'
 (确认了没用)
 
 查找 libpng 的版本问题，网上普遍流传的问题是这个：有一个更老的版本导致编译链接错误
-[Fetching Title#ap7j](https://blog.csdn.net/wangpanbaoding/article/details/104185058)
+[undefined reference to \`png\_set\_longjmp\_fn'-CSDN博客](https://blog.csdn.net/wangpanbaoding/article/details/104185058)
 我查了我的没有
 
 正确解决方案：
