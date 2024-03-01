@@ -31,6 +31,9 @@ SDL_waylandvideo.c:(.text+0x8b7): undefined reference to `wl_proxy_marshal_flags
 /usr/bin/ld: SDL_waylandvideo.c:(.text+0x9f4): undefined reference to `wl_proxy_marshal_flags'
 /usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libSDL2.a(SDL_waylandvideo.c.o):SDL_waylandvideo.c:(.text+0xa64): more undefined references to `wl_proxy_marshal_flags' follow
 
+#### libpng undefined
+error message:
+
 
 
 #### 
