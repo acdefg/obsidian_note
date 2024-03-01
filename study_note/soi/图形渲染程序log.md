@@ -48,6 +48,16 @@ PngImporter.cpp:(.text+0x78c): undefined reference to `png_set_longjmp_fn'
 重新编译了这两个库
 (确认了没用)
 
+查找 libpng 的版本问题，网上普遍流传的问题是这个：有一个更老的版本导致编译链接错误
+[Fetching Title#ap7j](https://blog.csdn.net/wangpanbaoding/article/details/104185058)
+我查了我的没有
+
+正确解决方案：
+在 cmake 编译 pngimporter 部分加入了 libpng 的链接指令
+find_package(libpng CONFIG REQUIRED)
+target_link_libraries(main PRIVATE png_static)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403011800643.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403011801009.png)
 
 #### 
 
