@@ -34,6 +34,8 @@ SDL_waylandvideo.c:(.text+0x8b7): undefined reference to `wl_proxy_marshal_flags
 #### libpng undefined
 error message:
 
+修改了 libpng 以源码（不知道有没有用）
+重新编译了这两个库
 
 
 #### 
