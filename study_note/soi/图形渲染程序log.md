@@ -5,6 +5,15 @@
 程序链接：
 [GitHub - kamleshbhalui/MADYPG: Mechanics-Aware Deformation of Yarn Pattern Geometry](https://github.com/kamleshbhalui/MADYPG)
 
+#### 运行指令 log
+在 root 下运行：python exec.py mesh2yarns x(1-13)都可以
+
+```shell
+python exec.py mesh2yarns 12
+```
+
+
+
 #### 大致问题
 vcpkg/CHANGELOG.md 里面有各个库使用的版本
 ##### tdd 库 中 函数大量 undefined
@@ -20,7 +29,7 @@ vcpkg/CHANGELOG.md 里面有各个库使用的版本
 [Releases · oneapi-src/oneTBB](https://github.com/oneapi-src/oneTBB/releases?page=3)
 ✔️fixed
 
-#### SDL undefined
+##### SDL undefined
 
 error message:
 >SDL_waylandvideo.c:(.text+0x688): undefined reference to `wl_proxy_marshal_flags'
@@ -37,7 +46,7 @@ SDL_waylandvideo.c:(.text+0x8b7): undefined reference to `wl_proxy_marshal_flags
 [Fix build against wayland 1.20 by Sodivad · Pull Request #5092 · libsdl-org/SDL · GitHub](https://github.com/libsdl-org/SDL/pull/5092/files)
 vcpkg 修改源码方法：
 [教程：安装本地修改的依赖项 | Microsoft Learn](https://learn.microsoft.com/zh-cn/vcpkg/consume/install-locally-modified-package?pivots=shell-bash#6---modify-portfilecmake-to-apply-the-patch)
-#### libpng undefined
+##### libpng undefined
 error message:
 /usr/bin/ld: /home/cici/code/physics_simulation/MADYPG/vcpkg/installed/x64-linux/lib/libPngImporter.a(PngImporter.cpp.o): in function `Magnum::Trade::PngImporter::doImage2D(unsigned int, unsigned int)::{lambda(png_struct_def*, char const*)#2}::_FUN(png_struct_def*, char const*)':
 PngImporter.cpp:(.text+0x3f2): undefined reference to `png_set_longjmp_fn'
@@ -59,7 +68,7 @@ target_link_libraries(main PRIVATE png_static)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403011800643.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403011801009.png)
 
-#### 
+
 
 ## 2023.11
 
