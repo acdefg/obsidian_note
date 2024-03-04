@@ -12,7 +12,8 @@
 python exec.py mesh2yarns 12
 ```
 
-
+-p 可以打开 cpu 不并行
+-p 0 不并行
 
 #### 大致问题
 vcpkg/CHANGELOG.md 里面有各个库使用的版本
