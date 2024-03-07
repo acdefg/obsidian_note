@@ -1,5 +1,7 @@
 ## 2024.2
 ### MADYPG
+⚠️upload failed, check dev console
+
 论文链接：
 [Mechanics-aware deformation of yarn pattern geometry | ACM Transactions on Graphics](https://dl.acm.org/doi/10.1145/3450626.3459816)
 程序链接：
