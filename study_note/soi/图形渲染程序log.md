@@ -1,7 +1,9 @@
 ## 2024.2
 ### MADYPG
-⚠️upload failed, check dev console
 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403071333376.gif)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403071333378.gif)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403071333379.gif)
 论文链接：
 [Mechanics-aware deformation of yarn pattern geometry | ACM Transactions on Graphics](https://dl.acm.org/doi/10.1145/3450626.3459816)
 程序链接：
