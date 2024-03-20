@@ -190,7 +190,7 @@ demo_name 在 makefile 中使用 exportdemo_name=demo_fifo
 fsdbDumpvars 0 "tb_top"     
 ```
  
-设置波形的顶层和层次，表示将 tb_top 作为顶层，Dump 所有层次（存疑）
+设置波形的顶层和层次，表示将 tb_top 作为顶层，Dump 所有层次（存疑）, 应该是 0 表示第 0 层
 
 ```
 run
