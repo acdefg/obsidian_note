@@ -219,7 +219,8 @@ run
 
 makefile
 ```makefile
-
+export FSDB_DIR
+export DUT
 ```
 ##### ucli
 ucli 是 Synopsys 公司的一种通用命令行接口，可以执行任意 TCL（ Tool Command Language ）命令 。在 VCS 仿真中，可以通过-ucli 参数启动 UCLI 命令行模式，使用 UCLI 可以执行一些仿真控制命令，如 run、dump、quit 等 
