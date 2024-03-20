@@ -190,7 +190,7 @@ demo_name 在 makefile 中使用 exportdemo_name=demo_fifo
 fsdbDumpvars 0 "tb_top"     
 ```
  
-设置波形的顶层和层次，表示将 tb_top 作为顶层，Dump 所有层次
+设置波形的顶层和层次，表示将 tb_top 作为顶层，Dump 所有层次（存疑）
 
 ```
 run
@@ -206,6 +206,21 @@ run
 
 verdi 优于 modelsim 也正是因此，通过 tcl 语言的控制，每次设置 run 时间，不断的加载仿真波形，十分方便！
 
+##### example
+dump.tcl:
+```tcl
+global env
+
+fsdbDumpfile "$env(FSDB_DIR).fsdb"
+fsdbDumpvars "$env(DUT)_tb"
+run
++fsdb+autoflush 
+```
+
+makefile
+```makefile
+
+```
 ##### ucli
 ucli 是 Synopsys 公司的一种通用命令行接口，可以执行任意 TCL（ Tool Command Language ）命令 。在 VCS 仿真中，可以通过-ucli 参数启动 UCLI 命令行模式，使用 UCLI 可以执行一些仿真控制命令，如 run、dump、quit 等 
 [verilog仿真中几种生成fsdb波形的方式 - 知乎](https://zhuanlan.zhihu.com/p/259543794)
