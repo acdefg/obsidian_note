@@ -190,7 +190,26 @@ demo_name 在 makefile 中使用 exportdemo_name=demo_fifo
 fsdbDumpvars 0 "tb_top"     
 ```
  
-设置波形的顶层和层次，表示将 tb_top 作为顶层，Dump 所有层次（存疑）, 应该是 0 表示第 0 层
+设置波形的顶层和层次，表示将 tb_top 作为顶层，存储所有变量
+
+###### $fsdbDumpvars
+语法：
+```
+$fsdbDumpvars([depth, instance][, “option”])
+```
+含义：
+depth 表示要加载波形的层次；0 表示当前 instance 下的所有变量以及其它 module 实例的波形，1 表示当前 instance 中的变量的波形，不包括当前 instance 中的其它 module 实例的波形，2 表示包含当前 instance 以及其中的第一级子 instance 的波形；以此类推。
+instance 指定要加载波形的 module 名。
+option 加载波形的选项，如：
++IO_Only – 只加载 IO port 信号；
++Reg_Only – 只加载 reg 类型信号；
++mda – 加载 memory 和 MDA 信号；
++packedmda – 加载 packed MDA；
++struct – 加载 structs；
++parameter – 加载 parameter；
++fsdbfile+filename – 指定 fsdb 文件名字。
+
+原文链接：[verdi dump命令详解](https://blog.csdn.net/weixin_45270982/article/details/114155823)
 
 ```
 run
