@@ -1,210 +1,5 @@
 {
   "workspaces": {
-    "ideo": {
-      "main": {
-        "id": "8d24244e080cda36",
-        "type": "split",
-        "children": [
-          {
-            "id": "358043e20b627837",
-            "type": "tabs",
-            "dimension": 26.273458445040216,
-            "children": [
-              {
-                "id": "211df5f331649ccd",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "study_note/作业/树莓派/进程学习.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                },
-                "group": "8d88f34a3b46bb61"
-              }
-            ]
-          },
-          {
-            "id": "a1ead8cfa7aa9e9a",
-            "type": "tabs",
-            "dimension": 73.72654155495978,
-            "children": [
-              {
-                "id": "bf7c0a1881fba0a3",
-                "type": "leaf",
-                "state": {
-                  "type": "media-view",
-                  "state": {
-                    "info": {
-                      "host": 1,
-                      "id": "BV1wd4y137fd",
-                      "src": "https://www.bilibili.com/video/BV1wd4y137fd?p=47&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7",
-                      "iframe": "https://player.bilibili.com/player.html?bvid=BV1wd4y137fd&page=47&high_quality=1&danmaku=0",
-                      "hash": ""
-                    },
-                    "currentTime": 1272.693893
-                  }
-                },
-                "group": "8d88f34a3b46bb61"
-              }
-            ]
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "fb54bea9721bae7e",
-        "type": "split",
-        "children": [
-          {
-            "id": "25f13c63fb3549c2",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f41bff11660e3a4a",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "7430faf83716306c",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "19d01a06e7c80256",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
-      },
-      "right": {
-        "id": "cdd63b50bab6eb76",
-        "type": "split",
-        "children": [
-          {
-            "id": "925ccc302768fb8e",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "645f819367f1e54f",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "a701aed19e3f2ac0",
-                "type": "leaf",
-                "state": {
-                  "type": "outgoing-link",
-                  "state": {
-                    "linksCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "c77ae5e7dcb8adfa",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "3fdfee6dd8d1bac8",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {}
-                }
-              },
-              {
-                "id": "12bea93b16a9abf5",
-                "type": "leaf",
-                "state": {
-                  "type": "calendar",
-                  "state": {}
-                }
-              },
-              {
-                "id": "487d2aa85632598e",
-                "type": "leaf",
-                "state": {
-                  "type": "advanced-tables-toolbar",
-                  "state": {}
-                }
-              },
-              {
-                "id": "50de3c6f3b1b63f2",
-                "type": "leaf",
-                "state": {
-                  "type": "todo",
-                  "state": {}
-                }
-              },
-              {
-                "id": "1cbeadaf1c34822d",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-matrix",
-                  "state": {}
-                }
-              },
-              {
-                "id": "eac1dbc6df4e724f",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-tree",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 8
-          }
-        ],
-        "direction": "horizontal",
-        "width": 154.7423553466797,
-        "collapsed": true
-      },
-      "active": "bf7c0a1881fba0a3"
-    },
     "outline": {
       "main": {
         "id": "8d24244e080cda36",
@@ -386,56 +181,67 @@
       },
       "active": "b9d3426b84e21f9e"
     },
-    "数字": {
+    "数字ic": {
       "main": {
-        "id": "3828c1f70af4402b",
+        "id": "8d24244e080cda36",
         "type": "split",
         "children": [
           {
-            "id": "8ae07d2a6777b577",
+            "id": "27ab1da774961ae9",
             "type": "tabs",
             "children": [
               {
-                "id": "065214829e444bc4",
+                "id": "4dca5ff76348be11",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "study_note/数字集成/接口总集.md",
+                    "file": "study_note/数字集成/面试相关/面试整理home.md",
                     "mode": "source",
                     "source": false
                   }
                 }
               },
               {
-                "id": "fac859a7703ba73a",
+                "id": "32febb476c1c183b",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "study_note/soi/AXI.md",
+                    "file": "study_note/数字集成/面试相关/内容整理.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "95472223a5707963",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/面试题收集.md",
                     "mode": "source",
                     "source": false
                   }
                 }
               }
             ],
-            "currentTab": 1,
-            "stacked": true
+            "currentTab": 2
           }
         ],
         "direction": "vertical"
       },
       "left": {
-        "id": "c49e77af1d07ffc2",
+        "id": "fb54bea9721bae7e",
         "type": "split",
         "children": [
           {
-            "id": "3c8ba5f5366be1e8",
+            "id": "25f13c63fb3549c2",
             "type": "tabs",
             "children": [
               {
-                "id": "853e32297a232b91",
+                "id": "f41bff11660e3a4a",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -445,7 +251,7 @@
                 }
               },
               {
-                "id": "e3b0aa71cd90efcb",
+                "id": "7430faf83716306c",
                 "type": "leaf",
                 "state": {
                   "type": "search",
@@ -460,7 +266,7 @@
                 }
               },
               {
-                "id": "ecaf8278f915be3b",
+                "id": "19d01a06e7c80256",
                 "type": "leaf",
                 "state": {
                   "type": "starred",
@@ -471,53 +277,27 @@
           }
         ],
         "direction": "horizontal",
-        "width": 259.50564193725586
+        "width": 300
       },
       "right": {
-        "id": "bb077342d0daa673",
+        "id": "cdd63b50bab6eb76",
         "type": "split",
         "children": [
           {
-            "id": "ea3a083a82bdf704",
+            "id": "925ccc302768fb8e",
             "type": "tabs",
             "children": [
               {
-                "id": "80aaac21cf4466bc",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-matrix",
-                  "state": {}
-                }
-              },
-              {
-                "id": "9dc24ee68e93b6cb",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "study_note/soi/AXI.md"
-                  }
-                }
-              },
-              {
-                "id": "ef0e7dc80a710bf1",
-                "type": "leaf",
-                "state": {
-                  "type": "calendar",
-                  "state": {}
-                }
-              },
-              {
-                "id": "fec8baae71d6a42a",
+                "id": "645f819367f1e54f",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "study_note/soi/AXI.md",
-                    "collapseAll": true,
-                    "extraContext": true,
+                    "file": "study_note/数字集成/面试相关/面试题收集.md",
+                    "collapseAll": false,
+                    "extraContext": false,
                     "sortOrder": "alphabetical",
-                    "showSearch": true,
+                    "showSearch": false,
                     "searchQuery": "",
                     "backlinkCollapsed": false,
                     "unlinkedCollapsed": true
@@ -525,19 +305,19 @@
                 }
               },
               {
-                "id": "34b494da20cad73c",
+                "id": "a701aed19e3f2ac0",
                 "type": "leaf",
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "study_note/soi/AXI.md",
+                    "file": "study_note/数字集成/面试相关/面试题收集.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   }
                 }
               },
               {
-                "id": "69b38a746ae00fee",
+                "id": "c77ae5e7dcb8adfa",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
@@ -548,7 +328,25 @@
                 }
               },
               {
-                "id": "ae921f08804eae04",
+                "id": "3fdfee6dd8d1bac8",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/面试题收集.md"
+                  }
+                }
+              },
+              {
+                "id": "e88a8859119cf6ef",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "e7b1efd13f1a5405",
                 "type": "leaf",
                 "state": {
                   "type": "todo",
@@ -556,7 +354,7 @@
                 }
               },
               {
-                "id": "62a7fa989fa4343f",
+                "id": "b84ef287d30ad783",
                 "type": "leaf",
                 "state": {
                   "type": "BC-tree",
@@ -564,15 +362,28 @@
                 }
               }
             ],
-            "currentTab": 1
+            "currentTab": 3
+          },
+          {
+            "id": "6001fdd7b18be042",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1cbeadaf1c34822d",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              }
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 206,
-        "collapsed": true
+        "width": 215.5
       },
-      "active": "853e32297a232b91"
+      "active": "95472223a5707963"
     }
   },
-  "active": "outline"
+  "active": "数字ic"
 }
