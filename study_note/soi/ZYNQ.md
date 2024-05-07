@@ -1,6 +1,7 @@
 ### 入门教程
 [请问ZYNQ有什么比较好的教程？ - 知乎](https://www.zhihu.com/question/56596019)
-
+[https://leiblog.wang/static/FPGA/books/The\_Zynq\_Book\_ebook\_chinese.pdf](https://leiblog.wang/static/FPGA/books/The_Zynq_Book_ebook_chinese.pdf) --中文手册
+[https://leiblog.wang/static/FPGA/books/ZYNQ/米联《ZYNQ SOC修炼秘籍》.pdf](https://leiblog.wang/static/FPGA/books/ZYNQ/%E7%B1%B3%E8%81%94%E3%80%8AZYNQ%20SOC%E4%BF%AE%E7%82%BC%E7%A7%98%E7%B1%8D%E3%80%8B.pdf)
 [ZYNQ | 资料推荐\_zynq手册\_悟道禅师的博客-CSDN博客](https://blog.csdn.net/harhy/article/details/124262767)
 >官网资源
 	// vivado  	
@@ -33,3 +34,8 @@ doc 使用教程：
 [DocNav 安装教程\_LivelyDYC的博客-CSDN博客](https://blog.csdn.net/weixin_57802103/article/details/132394508)
 [Widget](https://support.xilinx.com/s/article/000034329?language=zh_CN)
 
+### 项目
+#### NVDLA
+AI
+[NVDLA Xilinx FPGA Mapping - 知乎](https://zhuanlan.zhihu.com/p/378202360)
+[Hardware Architectural Specification — NVDLA Documentation](http://nvdla.org/hw/v1/hwarch.html)

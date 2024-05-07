@@ -1,4 +1,5 @@
-down:: [[riscv_pulp环境安装]]
+down:: [[pulp-riscv]]
+down:: [[开源项目和教程]]
 
 有几个需要vpn
 [串行接口芯片16550_xqhrs232的博客-CSDN博客](https://blog.csdn.net/xqhrs232/article/details/51218578)
@@ -37,6 +38,7 @@ cmake官方教程
 RISC-V 将 PC 单独拿出来作为一个特殊的寄存器来对待，这使得能够改变 PC 寄存器的指令变少，分支跳转的预测准确性便于提高。
 
 ### riscv 指令集
+[计基（二）RISC-V指令集介绍与汇编 - 知乎](https://zhuanlan.zhihu.com/p/558799873)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20231115120701.png)
 [RISC-V架构学习-CSDN博客](https://blog.csdn.net/tristan_tian/article/details/106315232)
 

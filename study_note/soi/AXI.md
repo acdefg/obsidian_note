@@ -2,7 +2,7 @@ down:: [[AXI——pytest测试]]
 ## ref
 [Verilog AXI Components Readme [Alex Forencich]](http://alexforencich.com/wiki/en/verilog/axi/readme)
 [test\_axi\_cdma.py](https://github.com/alexforencich/verilog-axi/blob/master/tb/axi_cdma/test_axi_cdma.py) 
-[AXI4协议学习：架构、信号定义、工作时序和握手机制-CSDN博客](https://blog.csdn.net/lum250/article/details/120912567)
+[AXI4协议学习：架构、信号定义、工作时序和握手机制-CSDN博客](https://blog.csdn.net/lum250/article/details/120912567)  --握手信号依赖
 [AXI4（AXI-full）总线详细介绍\_axi4总线-CSDN博客](https://blog.csdn.net/weixin_46136963/article/details/118003005)
 [AMBA总线协议（五）—— AXI3 协议接口信号介绍1\_axi3接口\_摆渡沧桑的博客-CSDN博客](https://blog.csdn.net/vivid117/article/details/110871257)    ----------接口信号介绍的比较详细
 [NoC总线架构拓扑介绍-电子工程专辑](https://www.eet-china.com/mp/a73963.html)   ---------这篇关于总线的整体介绍不错
@@ -143,11 +143,9 @@ AXI 写入传输事务需要在 3 条读取信道上存在多次传输。
 - 读数据必须始终位于数据相关的地址之后
 - 从设备必须等待发出 ARVALID 和 ARREADY 断言后，才能发出 RVALID 断言以指示该有效数据可用
 
-### 转接类型
-
-AXI-DMA：实现从 PS 内存到 PL 高速传输高速通道 AXI-HP<---->AXI-Stream 的转换
-AXI-FIFO-MM2S：实现从PS内存到PL通用传输通道AXI-GP<----->AXI-Stream的转换
-AXI-DataMover：实现从PS内存到PL高速传输高速通道AXI-HP<---->AXI-Stream的转换，只不过这次是完全由PL控制的，PS是完全被动的。
-AXI-VDMA：实现从PS内存到PL高速传输高速通道AXI-HP<---->AXI-Stream的转换，只不过是专门针对视频、图像等二维数据的。
-除了上面的还有一个AXI-CDMA IP核，这个是由PL完成的将数据从内存的一个位置搬移到另一个位置，无需CPU来插手。
+### GITHUB 相关项目
+[AMBA\_AXI\_AHB\_APB/slides/16\_amba\_axi\_intro.pdf at master · adki/AMBA\_AXI\_AHB\_APB · GitHub](https://github.com/adki/AMBA_AXI_AHB_APB/blob/master/slides/16_amba_axi_intro.pdf)  --slides + code
+[GitHub - pulp-platform/axi: AXI SystemVerilog synthesizable IP modules and verification infrastructure for high-performance on-chip communication](https://github.com/pulp-platform/axi)
+[verilog-axi/rtl/axi\_ram.v at master · alexforencich/verilog-axi · GitHub](https://github.com/alexforencich/verilog-axi/blob/master/rtl/axi_ram.v)
+[https://mp.weixin.qq.com/s/W532h0fyOe1A6Yxw2duw-g](https://mp.weixin.qq.com/s/W532h0fyOe1A6Yxw2duw-g)
 
