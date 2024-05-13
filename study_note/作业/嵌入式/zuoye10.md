@@ -327,7 +327,7 @@ specify cmplier 找\\usr\\bin 下的 gcc
 > 
 undefined reference to `png_set_longjmp_fn'
 
-[cmake - undefined reference to `png_set_longjmp_fn' when compiling PCL source file - Stack Overflow](https://stackoverflow.com/questions/36220123/undefined-reference-to-png-set-longjmp-fn-when-compiling-pcl-source-file)
+[cmake - undefined reference to png_set_longjmp_fn when compiling PCL source file - Stack Overflow](https://stackoverflow.com/questions/36220123/undefined-reference-to-png-set-longjmp-fn-when-compiling-pcl-source-file)
 
 cmake list 了里面加上这个
 ```
