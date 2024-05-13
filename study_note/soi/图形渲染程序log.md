@@ -4,6 +4,11 @@
 [[zuoye10#问题 1：png]]
 注意在 cmake 在中的顺序
 
+### projects
+[Georg SPERL / ARCSim-HYLC · GitLab](https://git.ista.ac.at/gsperl/ARCSim-HYLC)
+[Georg SPERL / HYLC · GitLab](https://git.ista.ac.at/gsperl/HYLC/)
+[ARCSim: Adaptive Refining and Coarsening Simulator - U.C. Berkeley Computer Graphics Research](http://graphics.berkeley.edu/resources/ARCSim/)
+
 ## 2024.2
 ### MADYPG
 
