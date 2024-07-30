@@ -8,3 +8,7 @@
 光栅化：
 [GAMES101-现代计算机图形学入门-闫令琪\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1X7411F744?t=1763.8)
 实时：每秒 30 帧画面
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202407302136227.png)
+
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202407302136046.png)
