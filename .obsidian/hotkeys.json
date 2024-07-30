@@ -79,5 +79,21 @@
       ],
       "key": "E"
     }
+  ],
+  "media-extended:open-media-link": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "media-extended:get-timestamp": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
   ]
 }
