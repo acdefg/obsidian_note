@@ -25,6 +25,9 @@
 ### 02 置信区间
 mismatch是跑蒙特卡洛仿真，每一次仿真失配的参数都不一样，则每次得到的offset都不一样。跑1000次蒙特卡洛，得到1000个offset，用统计学的方法来处理数据，得到一个sigma值和mean值，那么可以认为实际的电路，offset在[mean +/- 3*sigma]这个区间范围内的可信度有96%左右（具体多少忘了，有3sgima和6sigma的置信区间，可以了解一下）
 
+### 03 电流镜失配
+[电流镜的失调及消除 - Analog/RF IC 设计讨论 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://bbs.eetop.cn/thread-662292-1-1.html)
+
 ### reference
 1、一篇讲的很详细的总结帖
 [​一篇关于Analog IC中失调的总结性文章：以运放为例 - chen\_ww1993的日志 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://blog.eetop.cn/blog-1615674-6952843.html)
