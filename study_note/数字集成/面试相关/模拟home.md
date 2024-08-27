@@ -30,7 +30,8 @@ mismatch是跑蒙特卡洛仿真，每一次仿真失配的参数都不一样，
 [电流镜失配总结 - Analog/RF IC 设计讨论 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://bbs.eetop.cn/thread-850890-1-1.html)
 Cascode 基本结构讲的不错：
 [https://zhuanlan.zhihu.com/p/567596915](https://zhuanlan.zhihu.com/p/567596915)
-
+各种结构的电流镜：
+[www.tup.tsinghua.edu.cn/upload/books/yz/095507-01.pdf](http://www.tup.tsinghua.edu.cn/upload/books/yz/095507-01.pdf)
 ### reference
 1、一篇讲的很详细的总结帖
 [​一篇关于Analog IC中失调的总结性文章：以运放为例 - chen\_ww1993的日志 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://blog.eetop.cn/blog-1615674-6952843.html)
