@@ -31,6 +31,28 @@ mismatch是跑蒙特卡洛仿真，每一次仿真失配的参数都不一样，
 
 ## LDO
 [电子电路学习笔记（14）——LDO(低压差线性稳压器)\_ldo电路-CSDN博客](https://blog.csdn.net/qq_36347513/article/details/121019508)
-分类：
+### 分类
 PMOS LDO：电流小
 NMOS LDO：电流大
+PNP LDO：压降小
+NPN LDO：负输出？
+### 基本结构
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272231476.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272232938.png)
+以 PMOS 为例反馈分析：
+![650](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272233472.png)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272233350.png)
+
+### 参数
+1. 输入电压范围：稳压器输入端可以输入的电压范围。
+2. 输出电压：稳压器输出端的输出电压值。
+3. 最大输出电流：稳压器输出端的最大输出电流值。
+4. 线性调整率：稳压器输入变化对输出的影响，即在负载一定的情况下，输出电压变化量和输入电压变化量之比。线性调整率越小越好。
+5. 负载调整率：是指在给定负载变化下的输出电压的变化，这里的负载变化通常是从无负载到满负载。负载调整率越小越好。
+6. 电源纹波抑制比(PSRR)：表示稳压器抑制由输入电压造成的输出电压波动的能力。线性调整率只有在直流电时才需要考虑，但是电源抑制比必须在宽频率范围上考虑。PSRR 是一个用来描述输出信号受电源影响的参量，PSRR 越大，输出信号受到电源的影响越小。
+7. 瞬态响应：表示负载电流突变时引起的输出电压的最大变化，它是输出电容及其等效串联电阻和旁路电容的函数。其中输出电容的作用是提高负载瞬态响应的能力，也起到了高频旁路的作用。
+8. 静态电流：又叫接地电流，是通路元件的偏流和驱动电流的组合，通常保持尽可能低的水平。静态电流越大，稳压器的效率越低。
+9. 最大耗散功率：为了确保 LDO 节点温度不至于过高而损坏，LDO 都必须计算最大耗散功率。LDO 的实际耗散功耗要小于最大耗散功率，否则可能损坏 LDO 芯片。
+### reference
+[彻底弄明白LDO\_ldo结构-CSDN博客](https://blog.csdn.net/tanguohua_666/article/details/103860320)
+[电子电路学习笔记（14）——LDO(低压差线性稳压器)\_ldo电路-CSDN博客](https://blog.csdn.net/qq_36347513/article/details/121019508)
