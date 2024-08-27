@@ -27,6 +27,9 @@ mismatch是跑蒙特卡洛仿真，每一次仿真失配的参数都不一样，
 
 ### 03 电流镜失配
 [电流镜的失调及消除 - Analog/RF IC 设计讨论 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://bbs.eetop.cn/thread-662292-1-1.html)
+[电流镜失配总结 - Analog/RF IC 设计讨论 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://bbs.eetop.cn/thread-850890-1-1.html)
+Cascode 基本结构讲的不错：
+[https://zhuanlan.zhihu.com/p/567596915](https://zhuanlan.zhihu.com/p/567596915)
 
 ### reference
 1、一篇讲的很详细的总结帖
