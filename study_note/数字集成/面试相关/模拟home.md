@@ -28,3 +28,9 @@ mismatch是跑蒙特卡洛仿真，每一次仿真失配的参数都不一样，
 ### reference
 1、一篇讲的很详细的总结帖
 [​一篇关于Analog IC中失调的总结性文章：以运放为例 - chen\_ww1993的日志 - EETOP 创芯网论坛 (原名：电子顶级开发网) -](https://blog.eetop.cn/blog-1615674-6952843.html)
+
+## LDO
+[电子电路学习笔记（14）——LDO(低压差线性稳压器)\_ldo电路-CSDN博客](https://blog.csdn.net/qq_36347513/article/details/121019508)
+分类：
+PMOS LDO：电流小
+NMOS LDO：电流大
