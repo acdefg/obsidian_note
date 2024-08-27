@@ -57,6 +57,48 @@ NPN LDO：负输出？
 [彻底弄明白LDO\_ldo结构-CSDN博客](https://blog.csdn.net/tanguohua_666/article/details/103860320)
 [电子电路学习笔记（14）——LDO(低压差线性稳压器)\_ldo电路-CSDN博客](https://blog.csdn.net/qq_36347513/article/details/121019508)
 
+## DCDC 电路原理
+[DC-DC开关电源 拓扑结构（BUCK BOOST BUCK-BOOST）电路\_buck-boost电路-CSDN博客](https://blog.csdn.net/qq_41451521/article/details/100925249)
+### buck
+降压
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272250235.png)
+图中器件 T 为  N-mos 管
+当 PWM 驱动高电平使得 NMOS 管 T 导通的时候，忽略 MOS 管的导通压降，等效如图 2，电感电流呈线性上升，MOS 导通时电感正向伏秒为：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272251498.png)
+当 PWM 驱动低电平的时候，MOS 管截止，电感电流不能突变，经过续流二极管形成回路（忽略二极管电压），给输出负载供电，此时电感电流下降，如下图 3 所示，MOS 截止时电感反向伏秒为：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272251711.png)
+
+**什么是电感的伏秒平衡呐？**
+处于稳定状态的电感，开关导通时间(电流上升段)的伏秒数须与开关关断(电流下降段)时的伏秒数在数值上相等，尽管两者符号相反。这也表示，绘出电感电压对时间的曲线，导通时段曲线的面积必须等于关断时段曲线的面积。
+(电容两极板上的电压不能突变？电子总量？)
+
+### boost
+Boost 升压型电路拓扑，有时又称为 step-up 电路，其典型的电路结构如下图 4 所示：
+
+　　[![](https://i-blog.csdnimg.cn/blog_migrate/60b054f117fb409bf65f5ce55a6a78c9.png)](http://www.elecfans.com/uploads/allimg/160307/1442114949-3.jpg)
+
+　　同样地，根据Buck电路的分析方式，Boost电路的工作原理为：
+
+　　[![](https://i-blog.csdnimg.cn/blog_migrate/39e37cf6477fb9fc0e6c698e01efcfef.png)](http://www.elecfans.com/uploads/allimg/160307/1442113154-4.jpg)
+### buck-boost
+Buck-Boost 电路拓扑，有时又称为 Inverting，其典型的电路结构如下图 5 所示：
+
+　　[![](https://i-blog.csdnimg.cn/blog_migrate/fc160aee2599ce7958fc7330bf2d4a75.png)](http://www.elecfans.com/uploads/allimg/160307/1442116032-5.jpg)
+
+　　同样地，根据Buck电路的分析方式，Buck-Boost电路的工作原理为：
+
+　　[![](https://i-blog.csdnimg.cn/blog_migrate/4f388b3388fa477e5f1aeb686aa1a3ef.png)](http://www.elecfans.com/uploads/allimg/160307/1442113K7-6.jpg)
+###  Buck 与 Boost 组合
+
+Buck 与 Boost 两者相结合，会得到什么样的电路和应用呢？根据不同的控制，可以让电源从高压降到低压，也可以将低压升到高压，可以称之为双向 DC-DC 变换器之一，典型的应用电路如下图：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202408272255764.png)
+
+DC-DC 双向变换器目前主要应用在各大充放电系统中，随着储能器件的发展得到了广泛地应用，主要的行业在汽车电子，电梯节能系统等应用行业。
+
+当 T2 管截止时，T1 管与 D1、L 等器件构成了 Buck 型降压电路，可以实现对后级的负载进行供电; 反之，当 T1 管截止，T2 管与 D2 二极管、L 等器件构成了 Boost 升压电路，对前端电源进行能量补充。目前对 T1 和 T2 管的控制以模拟方式控制相对还是比较困难，均是以数字控制方式为主。
+     
+原文链接：https://blog.csdn.net/qq_41451521/article/details/100925249
+
 ## PMOS 和 NMOS 在使用上的区别
 **P 沟道 MOS 晶体管的空穴迁移率低**, 因而在 MOS 晶体管的几何尺寸和工作电压绝对值相等的情况下，**PMOS 晶体管的跨导小于 N 沟道 MOS 晶体管**。此外，**P 沟道 MOS 晶体管阈值电压的绝对值一般偏高，要求有较高的工作电压**。它的供电电源的电压大小和极性, 与双极型晶体管——晶体管逻辑电路不兼容。PMOS 因**逻辑摆幅大，充电放电过程长，加之器件跨导小，所以工作速度更低**，在 NMOS 电路(见 N 沟道金属—氧化物—半导体集成电路)出现之后，多数已为 NMOS 电路所取代。只是, 因 PMOS 电路工艺简单, 价格便宜，有些中规模和小规模数字控制电路仍采用 PMOS 电路技术。
 
