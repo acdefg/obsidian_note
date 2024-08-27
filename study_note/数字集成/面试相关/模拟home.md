@@ -56,3 +56,10 @@ NPN LDO：负输出？
 ### reference
 [彻底弄明白LDO\_ldo结构-CSDN博客](https://blog.csdn.net/tanguohua_666/article/details/103860320)
 [电子电路学习笔记（14）——LDO(低压差线性稳压器)\_ldo电路-CSDN博客](https://blog.csdn.net/qq_36347513/article/details/121019508)
+
+## PMOS 和 NMOS 在使用上的区别
+**P 沟道 MOS 晶体管的空穴迁移率低**, 因而在 MOS 晶体管的几何尺寸和工作电压绝对值相等的情况下，**PMOS 晶体管的跨导小于 N 沟道 MOS 晶体管**。此外，**P 沟道 MOS 晶体管阈值电压的绝对值一般偏高，要求有较高的工作电压**。它的供电电源的电压大小和极性, 与双极型晶体管——晶体管逻辑电路不兼容。PMOS 因**逻辑摆幅大，充电放电过程长，加之器件跨导小，所以工作速度更低**，在 NMOS 电路(见 N 沟道金属—氧化物—半导体集成电路)出现之后，多数已为 NMOS 电路所取代。只是, 因 PMOS 电路工艺简单, 价格便宜，有些中规模和小规模数字控制电路仍采用 PMOS 电路技术。
+
+PMOS 集成电路是一种适合在低速、低频领域内应用的器件。PMOS 集成电路采用-24V 电压供电。
+
+原文链接：https://blog.csdn.net/sinat_26528193/article/details/114965721
