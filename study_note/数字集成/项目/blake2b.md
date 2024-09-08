@@ -25,5 +25,6 @@
 其中![](file:///C:\Users\ASUS\AppData\Local\Temp\ksohtml30480\wps2.jpg)分别代表每次输入G函数的四个向量
 ![](file:///C:\Users\ASUS\AppData\Local\Temp\ksohtml30480\wps3.jpg)
 
+根据 round 轮次查 sigma，得到 index，再根据 index 查 m_hreg 得到m
 
 ## 硬件实现
