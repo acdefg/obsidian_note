@@ -35,3 +35,13 @@ column0 = 2i+0    column1 = 2i+1
 G 函数的操作概括为：逻辑计算，根据 round 轮次查 sigma，得到 index，再根据 index 查 m_hreg 得到 两个m
 需要计算 12 次 G 函数，每个 G 函数包含 8 个对向量的计算
 1、对于复杂的 G 函数，观察可以得到，前四个和后四个计算相互之间没有交叉，可以并行
+2、每一个 round 的数据？
+3、复用？
+	原来设置了 12 个 round(包括 round a 和 round b)，和 12 个 mreg，改为使用两个
+### ref clock
+400Mhz
+ (4 clocks per 'G' x 2 'G' per round x 12 rounds)
+ 96 clocks
+ 24 级流水
+###  quiz
+中间寄存器：24 * V[16* 64]
