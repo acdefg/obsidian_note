@@ -50,3 +50,5 @@ sigma：12* 4bit lookup table
 12 个：4 bit mux 5 级
 m_hreg：8 个：16* 64 bit output 64 bit
 V：a，b，c，d 64bit
+一次处理 1024bit = 128 byte 的数据
+超过的话就算两次
