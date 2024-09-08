@@ -16,4 +16,14 @@
     -   这种特性进一步保证了哈希值的唯一性，使得逆向推导更加困难。
 综上所述，虽然 Blake2b 不是真正的非可逆加密算法，但由于其单向性和抗碰撞性等特点，使得从哈希值逆向推导出原始输入数据非常困难，从而在实际应用中表现出类似非可逆加密的特性。
 
+## 算法关键
+### 计算 round
+(1) 对 16 个中间状态进行连续 12 个 round 的转换，每个 round 的操作包括：
+![](file:///C:\Users\ASUS\AppData\Local\Temp\ksohtml30480\wps1.jpg) 
+
+其中每一个G函数包含如下内容：
+其中![](file:///C:\Users\ASUS\AppData\Local\Temp\ksohtml30480\wps2.jpg)分别代表每次输入G函数的四个向量
+![](file:///C:\Users\ASUS\AppData\Local\Temp\ksohtml30480\wps3.jpg)
+
+
 ## 硬件实现
