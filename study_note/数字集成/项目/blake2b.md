@@ -27,7 +27,10 @@
 
 根据 round 轮次查 sigma，得到 index，再根据 index 查 m_hreg 得到m
 G 拆分成两部分，前四个一起，后四个一起
-每一部分，需要给出两个 index 去 sigma，然后拿回来两个 index，送到 m_hreg 中去查找对应的message
+每一部分，需要给出两个 index 去 sigma，然后拿回来两个 index，送到 m_hreg 中去查找对应的 message
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202409081636817.png)
+column0 = 2i+0    column1 = 2i+1
+
 ## 硬件实现
 G 函数的操作概括为：逻辑计算，根据 round 轮次查 sigma，得到 index，再根据 index 查 m_hreg 得到 两个m
 需要计算 12 次 G 函数，每个 G 函数包含 8 个对向量的计算
