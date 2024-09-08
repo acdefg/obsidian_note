@@ -26,5 +26,9 @@
 ![](file:///C:\Users\ASUS\AppData\Local\Temp\ksohtml30480\wps3.jpg)
 
 根据 round 轮次查 sigma，得到 index，再根据 index 查 m_hreg 得到m
-
+G 拆分成两部分，前四个一起，后四个一起
+每一部分，需要给出两个 index 去 sigma，然后拿回来两个 index，送到 m_hreg 中去查找对应的message
 ## 硬件实现
+G 函数的操作概括为：逻辑计算，根据 round 轮次查 sigma，得到 index，再根据 index 查 m_hreg 得到 两个m
+需要计算 12 次 G 函数，每个 G 函数包含 8 个对向量的计算
+1、对于复杂的 G 函数，观察可以得到，前四个和后四个计算相互之间没有交叉，可以并行
