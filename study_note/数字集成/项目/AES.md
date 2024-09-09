@@ -4,7 +4,8 @@
 ## 硬件
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202409091954789.png)
 
-1、通过 func 来选择执行哪个函数，两级流水
+1、通过 func 信号可配置其工作模式，每次可以处理 16 Byte 的 state 数据通过 func 信号可配置其工作模式，每次可以处理 16 Byte 的 state 数据
+2、
 
 
 ## quiz
