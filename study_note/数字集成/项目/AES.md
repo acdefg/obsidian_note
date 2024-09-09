@@ -2,7 +2,9 @@
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202409091947012.png)
 
 ## 硬件
-1、通过 func 来选择执行哪个函数
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202409091954789.png)
+
+1、通过 func 来选择执行哪个函数，两级流水
 
 
 ## quiz
