@@ -5,7 +5,7 @@
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202409091954789.png)
 
 1、通过 func 信号可配置其工作模式，每次可以处理 16 Byte 的 state 数据通过 func 信号可配置其工作模式，每次可以处理 16 Byte 的 state 数据
-2、
+2、每次AES ENGINE可处理16 Byte的data，而AES算法产生或所需的data为64 Byte，因此使用AES_BUF将产生或所需的data进行缓存，之后再与Mem_intf进行传输
 
 
 ## quiz
