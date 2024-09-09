@@ -1,4 +1,6 @@
 ## 算法
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202409091816626.png)
+
 ### AES 和 BLAKE2B 的区别
 AES（Advanced Encryption Standard，高级加密标准）和 Blake2b 都是常见的加密算法，它们之间存在以下一些区别：
 
