@@ -1,5 +1,13 @@
 ## packed unpacked
 在 SystemVerilog 中，packed 数组和 unpacked 数组主要有以下区别：
+**packed array:** 维度声明在标识符名字之前。
+**unpacked array**: 维度声明在标识符名字之后。
+
+```verilog
+bit [7:0] c1; // packed array of scalar bit types
+real u [7:0]; // unpacked array of real types
+```
+
 
 **一、存储方式**
 1.  **packed 数组**：
