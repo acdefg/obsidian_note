@@ -33,3 +33,5 @@ real u [7:0]; // unpacked array of real types
 ## always @* 和 always comb 的区别
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202409162231506.png)
 
+### ref
+[https://zhuanlan.zhihu.com/p/404777602](https://zhuanlan.zhihu.com/p/404777602)
