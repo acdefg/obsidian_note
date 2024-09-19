@@ -35,3 +35,5 @@ real u [7:0]; // unpacked array of real types
 
 ### ref
 [https://zhuanlan.zhihu.com/p/404777602](https://zhuanlan.zhihu.com/p/404777602)
+[SystemVerilog Class Constructor](https://www.chipverify.com/systemverilog/systemverilog-class-constructor)
+[Base Classes](https://www.chipverify.com/uvm/base-classes)
