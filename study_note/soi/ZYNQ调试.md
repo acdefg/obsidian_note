@@ -1,5 +1,8 @@
 ## 串口调试
 
+> [!todo] Info
+> 未完成：可能 sd 卡中 linux 系统文件有问题所有未能启动
+
 下载安装 CP210x_Windows_Drivers.exe
 驱动安装好以后，用红色 USB 线连接电脑 USB 口和开发板上的 UART 口进行连接, 然后打开电脑的设备管理器，设备管理器能够找到串口设备 CP210x, 找到映射端口，图为 COM3。如果不能成功安装驱动，可以尝试使用驱动精灵安装
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410282259633.png)
