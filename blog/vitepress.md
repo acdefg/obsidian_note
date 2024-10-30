@@ -57,3 +57,5 @@ scp -r source destination
 👍git action 自动上传服务器
 [使用Vitepress搭建并发布个人网站-CSDN博客](https://blog.csdn.net/AKALI822/article/details/134180744)
 [配置多个Git账号（windows 10）\_win10系统git配置多账号-CSDN博客](https://blog.csdn.net/q13554515812/article/details/83506172)
+😍倒计时网站（基于vue）
+[GitHub - abc55667788/ccf-deadlines: ⏰ CCF recommendation conference Deadline Countdowns / Please star this project, thanks\~](https://github.com/abc55667788/ccf-deadlines)
