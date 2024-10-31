@@ -240,6 +240,10 @@ git switch 创建一个没有任何提交记录的分支，删除所有跟踪的
 原文：[尽量“手撕”代码系列 - 飞书云文档](https://dwexzknzsh8.feishu.cn/docx/VkYud3H0zoDTrrxNX5lce0S4nDh)
 
 ### git 版本回退
+
+这篇讲的比较好，但还没整理
+[亡羊补牢，一文讲清各种场景下GIT如何回退\_git 回退-CSDN博客](https://blog.csdn.net/u011709538/article/details/139264216)
+
 `git log` 查看版本号
 
 `git reset --hard 目标版本号` 
