@@ -84,7 +84,44 @@ git clone git@xxxx    #ssh
 
 git init 本地文件夹标记为 git 仓库
 
+### git remote
+列出远程仓库：
+```
 git remote
+git remote -v
+```
+-v 选项会显示远程仓库的 URL 地址。
+
+**添加远程仓库：**
+```
+git remote add [别名] [URL]
+```
+这里 [别名] 是你给远程仓库设置的本地引用名（默认为 origin），[URL] 是远程仓库的地址。
+
+移除远程仓库：
+```
+git remote remove [别名]
+```
+或简写为
+```
+git remote rm [别名]
 ```
 
+**修改远程仓库的 URL：**
 ```
+git remote set-url [别名] [新的 URL]
+```
+如果要修改远程仓库的推送 URL（push URL），可以使用 --push 选项：
+```
+git remote set-url --push [别名] [新的推送 URL]
+```
+
+显示远程仓库的详细信息：
+```
+git remote show [别名]
+```
+这个命令会显示指定远程仓库的详细信息，包括远程跟踪分支和 URL 地址等。
+  
+原文链接：https://blog.csdn.net/2201_75439183/article/details/142378739
+更多：[https://zhuanlan.zhihu.com/p/694960607](https://zhuanlan.zhihu.com/p/694960607)
+
