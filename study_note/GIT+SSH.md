@@ -165,7 +165,9 @@ git checkout branchname  #（切换本地分支）
 **切换远程分支**
 该命令可以将远程仓库里指定的分支拉取到本地，并在本地创建一个分支与指定远程仓库分支关联起来。并切换到新建的本地分支中。
 ```
-**git checkout -b 本地分支名 origin/远程分支名**
+git checkout -b 本地分支名 origin/远程分支名
+#example
+git checkout -b happy/0817_test  # orgin/main origin对应远程仓库 main对应分支名
 ```
 
 **放弃修改**
