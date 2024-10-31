@@ -52,6 +52,9 @@ scp -r source destination
 ```
 直接新建站点，把站点文件位置选在刚刚上传的那个文件夹，index.html 的父文件夹
 
+### 自动部署
+
+
 ## 其他待实现参考
 [推送vitepress到阿里云将vitepress推送到阿里云实例中,使用简单的JS语言即可完成.导入ssh2依赖,依靠 - 掘金](https://juejin.cn/post/7351690896918167615)
 👍git action 自动上传服务器
