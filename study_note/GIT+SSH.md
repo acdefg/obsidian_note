@@ -240,4 +240,15 @@ git switch 创建一个没有任何提交记录的分支，删除所有跟踪的
 原文：[尽量“手撕”代码系列 - 飞书云文档](https://dwexzknzsh8.feishu.cn/docx/VkYud3H0zoDTrrxNX5lce0S4nDh)
 
 ### git 版本回退
+`git log` 查看版本号
 
+`git reset --hard 目标版本号` 
+强制回退到某个版本，并且删除之后的版本
+`git push -f` 因为当前版本落后于远程版本，使用`-f`上传
+
+`git revert 目标版本号`
+原理： git revert 是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们 commit 了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有 bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西。如下图所示：
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410311810895.png?token=ALRC6ITMFT5TXYDAYS5EFBLHENL7C)
+
+
+原文链接：https://blog.csdn.net/2401_84910962/article/details/138935767
