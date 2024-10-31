@@ -82,9 +82,27 @@ git clone https://xxxxx
 git clone git@xxxx    #ssh
 ```
 
-git init 本地文件夹标记为 git 仓库
+#### tips
+```
+git init  #本地文件夹标记为 git 仓库
+git remote add origin git@github.com:wenjtop/RepositoryTest.git
+git branch -M main   #-M 修改名称
+git push -u origin main  #-u 设置默认 之后可以直接用 git push做同样的操作
+git commit -a -m "first commit" # 可以同时执行add和commit操作
+git add .   #添加当前目录下所有文件
+```
 
 ### git remote
+
+```text
+git remote -v                                           # 显示所有远程仓库
+git remote add origin https://github.com/user/repo.git  # 添加远程版本库
+git remote rename origin new-origin                     # 修改仓库名
+git remote remove new-origin                            # 删除远程仓库
+git remote set-url origin https://github.com/user/new-repo.git   # 修改指定远程仓库的 URL
+git remote show origin                                  # 显示某个远程仓库的信息
+```
+
 列出远程仓库：
 ```
 git remote
