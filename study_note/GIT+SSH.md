@@ -13,4 +13,9 @@ git checkout：切换分支
 git merge：分支混合
 
 ### 远程
-git remote git pull 
+git remote git fetch git diff git pull
+git fetch：从远程拉取到本地，但不会修改本地文件
+git diff：查看本地和远程仓库的区别，git fetch 之后使用
+
+vscode 使用 git graph 管理 git 分支非常方便
+husky 可以管理 commit message
