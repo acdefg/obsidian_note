@@ -154,6 +154,21 @@ git branch -d 分支名      # 删除以合并的分支，-D强制删除
 git merge dev 分支名      # 当面分支为目标分支，后面为需要合并的分支
 ```
 
+#### git branch
+
+```
+git branch   # 查看在哪个分支上
+git branch < branchName > # 创建新的本地分支，但是不会进行切换
+git branch -vv #查看分支详细信息
+git branch -r # 查看远程分支
+git branch -a # 查看所有分支
+git branch --set-[upstream]-to=origin/< branch > feture-test
+#这个命令用于将本地分支与远程分支建立连接。< branch >是远程分支名，feture-test是本地分支名
+git branch -m old new / git branch -M old new # 重命名分支
+git branch -d branchname / git branch -D branchname # 删除本地分支
+git branch -d -r branchname # 删除远程分支
+```
+
 #### git checkout
 
 **切换本地分支**
@@ -223,7 +238,6 @@ git switch 创建一个没有任何提交记录的分支，删除所有跟踪的
 -   如果存在冲突，Git 会要求你手动解决冲突，然后创建合并提交。
 `git rebase` 是另一种合并更改的方式，但它通过重新应用提交来改变历史记录，使提交历史更加线性。
 原文：[尽量“手撕”代码系列 - 飞书云文档](https://dwexzknzsh8.feishu.cn/docx/VkYud3H0zoDTrrxNX5lce0S4nDh)
-
 
 ### git 版本回退
 
