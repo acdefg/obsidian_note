@@ -6,3 +6,11 @@ down:: [[git+action]]
 git clone git add git commit git push git pull git init git log
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410311628284.png?token=ALRC6IUMHYMCRMMKSIGBROLHEM75W)
+
+### 版本管理
+git branch：创建分支
+git checkout：切换分支
+git merge：分支混合
+
+### 远程
+git remote git pull 
