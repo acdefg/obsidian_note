@@ -214,6 +214,14 @@ git switch 创建一个没有任何提交记录的分支，删除所有跟踪的
                        
 原文链接：https://blog.csdn.net/u012273398/article/details/139860334
 
+### 分支合并（merge 和 rebase）
+#### 工作方式：
+-   当你在目标分支（如 `main`）上运行 `git merge feature-branch` 时，Git 会将 `feature-branch` 分支的更改合并到当前分支。
+-   如果两个分支没有冲突，Git 会自动创建一个新的合并提交，将这两个分支的历史记录结合在一起。
+-   如果存在冲突，Git 会要求你手动解决冲突，然后创建合并提交。
+`git rebase` 是另一种合并更改的方式，但它通过重新应用提交来改变历史记录，使提交历史更加线性。
+原文：[尽量“手撕”代码系列 - 飞书云文档](https://dwexzknzsh8.feishu.cn/docx/VkYud3H0zoDTrrxNX5lce0S4nDh)
+
 
 ### git 版本回退
 
