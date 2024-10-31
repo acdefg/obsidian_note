@@ -19,3 +19,5 @@ git diff：查看本地和远程仓库的区别，git fetch 之后使用
 
 vscode 使用 git graph 管理 git 分支非常方便
 husky 可以管理 commit message
+
+rebase checkout
