@@ -149,10 +149,32 @@ git remote show [别名]
 git branch               # 查看在哪个分支上
 git branch 分支名         # 创建分支
 git switch 新分支名       # 却换到新分支名上，新方法
-git checkout -b 新分支名  # 却换到新分支名上，旧方法
+git checkout -b 新分支名  # 创建新分支并，切换到新分支名上，旧方法
 git branch -d 分支名      # 删除以合并的分支，-D强制删除
 git merge dev 分支名      # 当面分支为目标分支，后面为需要合并的分支
 ```
+
+#### git checkout
+
+**切换本地分支**
+```git
+#切换到”branchname“分支，注意是本地分支。
+git checkout branchname  #（切换本地分支）
+```
+
+**切换远程分支**
+该命令可以将远程仓库里指定的分支拉取到本地，并在本地创建一个分支与指定远程仓库分支关联起来。并切换到新建的本地分支中。
+```
+**git checkout -b 本地分支名 origin/远程分支名**
+```
+
+**放弃修改**
+```
+git checkout             #放弃所有工作区的修改
+git checkout – filename  #放弃对指定文件的修改
+git checkout -f          #放弃工作区和暂存区的所有修改
+```
+
 
 ### git 版本回退
 
