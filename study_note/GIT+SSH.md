@@ -244,11 +244,13 @@ git switch 创建一个没有任何提交记录的分支，删除所有跟踪的
 这篇讲的比较好，但还没整理
 [亡羊补牢，一文讲清各种场景下GIT如何回退\_git 回退-CSDN博客](https://blog.csdn.net/u011709538/article/details/139264216)
 
+#### 基本方法
 `git log` 查看版本号
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410311855060.png?token=ALRC6IUAXYIZ6IPPVJMW2RLHENRHG)
 
-git reset 删除提交记录，可能修改工作区和暂存区
-git revert 创建新的提交记录
-git checkout 执行该命令后，会将工作区和暂存区的内容恢复到指定版本
+`git reset` 删除提交记录，可能修改工作区和暂存区
+`git revert` 创建新的提交记录
+`git checkout` 执行该命令后，会将工作区和暂存区的内容恢复到指定版本
 使用 `git reflog` 命令查看历史操作记录并回退版本：  
 ```
 git reflog  
@@ -257,10 +259,11 @@ git reset
 `git reflog` 命令可以查看到所有的操作记录，包括切换分支、提交等。可以根据 `git reflog` 输出的信息选择需要回退的版本，然后使用 `git reset` 命令回退版本。
 使用 `git cherry-pick` 命令选择特定版本合并到当前分支：  
 ```
-git cherry-pick  
+git cherry-pick  版本号
 ```
-这里的 `` 是要回退的版本的 SHA-1 值，可以通过 `git log` 命令查看到。执行该命令后，会将指定版本的提交合并到当前分支，相当于回退到了指定版本。
+可以通过 `git log` 命令查看到。执行该命令后，会将指定版本的提交合并到当前分支，相当于回退到了指定版本。
 
+#### 详细解释
 `git reset --hard 目标版本号` 
 强制回退到某个版本，并且删除之后的版本
 `git push -f` 因为当前版本落后于远程版本，使用`-f`上传
