@@ -246,6 +246,10 @@ git switch 创建一个没有任何提交记录的分支，删除所有跟踪的
 
 `git log` 查看版本号
 
+git reset 删除提交记录，可能修改工作区和暂存区
+git revert 创建新的提交记录
+git checkout 单个文件？
+
 `git reset --hard 目标版本号` 
 强制回退到某个版本，并且删除之后的版本
 `git push -f` 因为当前版本落后于远程版本，使用`-f`上传
