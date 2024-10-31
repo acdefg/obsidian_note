@@ -143,3 +143,16 @@ git remote show [别名]
 原文链接：https://blog.csdn.net/2201_75439183/article/details/142378739
 更多：[https://zhuanlan.zhihu.com/p/694960607](https://zhuanlan.zhihu.com/p/694960607)
 
+### git 分支
+
+```text
+git branch               # 查看在哪个分支上
+git branch 分支名         # 创建分支
+git switch 新分支名       # 却换到新分支名上，新方法
+git checkout -b 新分支名  # 却换到新分支名上，旧方法
+git branch -d 分支名      # 删除以合并的分支，-D强制删除
+git merge dev 分支名      # 当面分支为目标分支，后面为需要合并的分支
+```
+
+### git 版本回退
+
