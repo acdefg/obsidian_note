@@ -248,7 +248,18 @@ git switch 创建一个没有任何提交记录的分支，删除所有跟踪的
 
 git reset 删除提交记录，可能修改工作区和暂存区
 git revert 创建新的提交记录
-git checkout 单个文件？
+git checkout 执行该命令后，会将工作区和暂存区的内容恢复到指定版本
+使用 `git reflog` 命令查看历史操作记录并回退版本：  
+```
+git reflog  
+git reset  
+```
+`git reflog` 命令可以查看到所有的操作记录，包括切换分支、提交等。可以根据 `git reflog` 输出的信息选择需要回退的版本，然后使用 `git reset` 命令回退版本。
+使用 `git cherry-pick` 命令选择特定版本合并到当前分支：  
+```
+git cherry-pick  
+```
+这里的 `` 是要回退的版本的 SHA-1 值，可以通过 `git log` 命令查看到。执行该命令后，会将指定版本的提交合并到当前分支，相当于回退到了指定版本。
 
 `git reset --hard 目标版本号` 
 强制回退到某个版本，并且删除之后的版本
@@ -258,5 +269,5 @@ git checkout 单个文件？
 原理： git revert 是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们 commit 了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有 bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西。如下图所示：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410311810895.png?token=ALRC6ITMFT5TXYDAYS5EFBLHENL7C)
 
-
 原文链接：https://blog.csdn.net/2401_84910962/article/details/138935767
+
