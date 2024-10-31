@@ -37,7 +37,7 @@ sudo apt install git
 # 其它系统可以去官网下载包安装
 ```
 
-### Git 初始化
+### git 配置（git config）
 
 ```text
 # 给git配置用户名
@@ -67,5 +67,24 @@ git config -l #查看详细信息
 取消 config 设置：
 ```
 git config unset user.name
-git config --global unset user.name
+git config --global --unset user.name
+git config --global --unset http.proxy #取消代理
+```
+
+### git 仓库建立
+git clone
+```
+# 格式：git clone -b <分支名> <URL>
+git clone -b rsdmike-patch-1 https://gitee.com/EdgexFoundry/edgex-examples.git
+
+#不考虑分支
+git clone https://xxxxx
+git clone git@xxxx    #ssh
+```
+
+git init 本地文件夹标记为 git 仓库
+
+git remote
+```
+
 ```
