@@ -175,6 +175,45 @@ git checkout – filename  #放弃对指定文件的修改
 git checkout -f          #放弃工作区和暂存区的所有修改
 ```
 
+### git switch
+
+git switch 切换分支
+  命令：`git switch <branchName>`
+  举例：`git switch testBranch`
+
+**git switch 创建一个新分支并切换到该新分支**
+  命令：`git switch -c <branchName>`
+  举例：`git switch -c test3`
+  tips：如果分支已存在，git 会报：fatal: A branch named ‘test2’ already exists. 我们可以使用 git branch 查看当前本地有哪些分支。
+
+**git switch 以一个提交 commit 来创建一个分支**
+  命令：`git switch -c test3 <commit>`
+  举例：`git switch -c test3 e053cf128d2ad9d35e2f94878569596fb32f4306`
+
+git switch 以一个 tag 来创建一个分支
+  命令：`git switch -c <newBranchName> <tagName>`
+  举例：`git switch -c testcopytagbr testcopytag1`
+
+**git switch 切换到某一个 commit 但是不创建新的分支，可以查看这个记录是的修改情况**
+  命令：`git switch --detach <commit>`
+  举例：`git switch --detach a434bda`
+  tips：如果我们不在查看这个历史记录的情况，只需要 git switch 到那个分支就可以了。如果切换到以前的某个记录了，看不到后面提交的记录了，可以使用 git reflog 查看所有修改记录。
+
+**远程有而本地没有的分支，而如果要从远程分支建一个同名的本地分支，并且关联远程分支**
+  命令：`git switch <branchName>`
+  举例：`git switch testmaster`
+  tips：这里我们也可以理解为拉取远程分支到本地，并建立远程分支和本地分支的关联关系
+
+git switch 切换到上一个切换的分支
+  命令：`git switch -`
+  tips：如我们由 test1 分支切换到 test2 分支，而后我们使用此命令就会切换到 test1 分支去，再使用此命令又会切换到 test2 分支来，即一直使用这个命令，就会在 test1 和 test2 分支来回切换。如果上一个切换的分支被删除了，那么会报：fatal: invalid reference: @{-1}
+
+git switch 创建一个没有任何提交记录的分支，删除所有跟踪的文件
+  命令：`git switch --orphan <branchName>`
+  举例：`git switch --orphan testmaster3`
+                       
+原文链接：https://blog.csdn.net/u012273398/article/details/139860334
+
 
 ### git 版本回退
 
