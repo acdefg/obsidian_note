@@ -1,3 +1,7 @@
+## 2024.11
+### ARGUS(基于 ARMSIM)
+
+
 ## 2024.5
 ### ARMSIM
 
@@ -11,7 +15,7 @@
 [ARCSim: Adaptive Refining and Coarsening Simulator - U.C. Berkeley Computer Graphics Research](http://graphics.berkeley.edu/resources/ARCSim/)
 
 ## 2024.2
-### MADYPG()
+### MADYPG(基于ARMSIM)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403071333376.gif)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403071333378.gif)
