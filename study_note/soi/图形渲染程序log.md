@@ -1,7 +1,7 @@
 ## 2024.11
 ### ARGUS(基于 ARMSIM)
 
-### MultiGPUCG
+### MultiGPUCG(win)
 #### issue1
 cuda 版本
 ```
@@ -26,6 +26,10 @@ cuda 版本
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111004577.png?token=ALRC6IWO2WSH5VEWO536QMTHGFTGA)
 静态库？没有输入？
 
+### 👌open-cloth-implicit-euler
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111027133.png?token=ALRC6IWN2WUD7OTBLY3UQ2THGFV4E)
+works
+
 ## 2024.5
 ### ARMSIM
 [GitHub - kaist-silab/arcsim: ARCSim 0.3.1 Fixes and Installer Script for Linux and MacOS](https://github.com/kaist-silab/arcsim)
@@ -40,7 +44,7 @@ cuda 版本
 [ARCSim: Adaptive Refining and Coarsening Simulator - U.C. Berkeley Computer Graphics Research](http://graphics.berkeley.edu/resources/ARCSim/)
 
 ## 2024.2
-### MADYPG(基于ARMSIM)
+### 👌MADYPG(基于 ARMSIM)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403071333376.gif)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202403071333378.gif)
