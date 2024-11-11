@@ -1,6 +1,30 @@
 ## 2024.11
 ### ARGUS(基于 ARMSIM)
 
+### MultiGPUCG
+#### issue1
+cuda 版本
+```
+严重性	代码	说明	项目	文件	行	禁止显示状态	详细信息
+错误	MSB4019	找不到导入的项目“G:\software\Visual_studio\MSBuild\Microsoft\VC\v170\BuildCustomizations\CUDA 11.1.props”。请确认 Import 声明“G:\software\Visual_studio\MSBuild\Microsoft\VC\v170\\BuildCustomizations\CUDA 11.1.props”中的表达式正确，且文件位于磁盘上。	MultiGPUCG	D:\Users\Downloads\Edge_download\MultiGPUCGSolver-0.1\MultiGPUCGSolver\MultiGPUCG\MultiGPUCG.vcxproj	34		
+```
+
+1. 查看电脑 cuda 版本是否一致：v11.2 的位置对应的是自己安装的版本号
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111009392.png?token=ALRC6IWUG5TJRSR7BQ5BFJ3HGFT2C)
+
+不一致更改 vcxproj 里面的 cuda 版本呢
+打开 vcxproj，找到 cuda 版本，直接搜索版本号更改
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111006779.png?token=ALRC6ISE445U5J5R2BMK6BDHGFTP6)
+
+2. 查看 vs 里面 cuda 路径下面的文件是否齐全
+**Microsoft Visual Studio/\2019/\Community/\MSBuild/\Microsoft/\VC/\v160/\BuildCustomizations/\ 
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111009695.png?token=ALRC6IXL6R4T64QBS2IGTCDHGFTZG)
+
+没有的话从这里拿：版本号根据自己安装的找![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111009392.png?token=ALRC6IWUG5TJRSR7BQ5BFJ3HGFT2C)
+
+#### issue2
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111004577.png?token=ALRC6IWO2WSH5VEWO536QMTHGFTGA)
+
 
 ## 2024.5
 ### ARMSIM
