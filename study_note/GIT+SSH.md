@@ -52,8 +52,8 @@ git config --global --list           # 查看当前仓库配置信息
 
 只配置当前仓库的信息，用于多用户配置时
 ```
-git config user.name 'wenjtop'
-git config user.email "1007131354.@qq.com"
+git config user.name 'xxxx'
+git config user.email "xxxx"
 ```
 
 查看配置：
