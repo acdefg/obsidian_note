@@ -24,7 +24,7 @@ cuda 版本
 
 #### issue2
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411111004577.png?token=ALRC6IWO2WSH5VEWO536QMTHGFTGA)
-
+静态库？没有输入？
 
 ## 2024.5
 ### ARMSIM
