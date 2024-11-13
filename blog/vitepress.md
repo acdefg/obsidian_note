@@ -201,20 +201,34 @@ pnpm add vitepress-plugin-rss
 下面是最基础的使用配置
 
 ```ts
-import { RssPlugin, RSSOptions } from 'vitepress-plugin-rss'
-const baseUrl = 'https://sugarat.top'
-const RSS: RSSOptions = {
-  title: '粥里有勺糖',
-  baseUrl,
-  copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
-}
+......
 
+//RSS
+
+import { RssPlugin, RSSOptions } from 'vitepress-plugin-rss'
+
+const baseUrl = 'https://ljc0606.cn'   //修改
+........
+const RSS: RSSOptions = {
+
+  title: 'CC\'s blog',    //修改
+ 
+  baseUrl,
+
+  copyright: 'Copyright (c) 2024-present, cici',    //修改
+
+}
 export default defineConfig({
-  vite: {
-    // ↓↓↓↓↓
-    plugins: [RssPlugin(RSS)]
-    // ↑↑↑↑↑
-  }
+
+
+  vite: {
+
+    plugins: [MarkdownPreview(),  //原来的
+
+              RssPlugin(RSS)],    //增加的
+
+  },
+
 })
 ```
 
