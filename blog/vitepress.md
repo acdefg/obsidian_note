@@ -188,6 +188,50 @@ jobs:
           post_upload: sudo nginx -s reload
 ```
 
+### RSS 订阅
+[为 VitePress 网站添加 RSS 订阅支持 - 粥里有勺糖 - 博客园](https://www.cnblogs.com/roseAT/p/17649853.html)
+通过 `pnpm/npm/yarn` 安装插件
+
+```sh
+pnpm add vitepress-plugin-rss
+```
+
+在 `.vitepress/config.ts` 配置文件中添加配置使用
+
+下面是最基础的使用配置
+
+```ts
+import { RssPlugin, RSSOptions } from 'vitepress-plugin-rss'
+const baseUrl = 'https://sugarat.top'
+const RSS: RSSOptions = {
+  title: '粥里有勺糖',
+  baseUrl,
+  copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
+}
+
+export default defineConfig({
+  vite: {
+    // ↓↓↓↓↓
+    plugins: [RssPlugin(RSS)]
+    // ↑↑↑↑↑
+  }
+})
+```
+
+然后运行 build 命令，你可以看到在`rendering pages...`后打印了生成 `feed.rss` 日志...
+
+```sh
+pnpm run build
+```
+
+![](https://img.cdn.sugarat.top/mdImg/MTY5MjQ1NTAzMzcwMg==692455033702)
+
+同时会在导航栏的 socialLinks 中添加 rss 图标链接
+
+![](https://img.cdn.sugarat.top/mdImg/MTY5MjQ1NTQ4MDYxMg==692455480612)
+
+只需要 10 行代码
+
 ## 其他待实现参考
 [推送vitepress到阿里云将vitepress推送到阿里云实例中,使用简单的JS语言即可完成.导入ssh2依赖,依靠 - 掘金](https://juejin.cn/post/7351690896918167615)
 👍git action 自动上传服务器
