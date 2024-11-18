@@ -10,3 +10,11 @@ article
 code
 [GitHub - graphdeco-inria/gaussian-splatting: Original reference implementation of "3D Gaussian Splatting for Real-Time Radiance Field Rendering"](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file)
 
+## log
+### 11.18
+ubuntu22.04 self 
+#### install
+```
+conda create -n gaussian_splatting python=3.10
+```
+
