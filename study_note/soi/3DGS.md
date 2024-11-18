@@ -14,7 +14,18 @@ code
 ### 11.18
 ubuntu22.04 self 
 #### install
+[Site Unreachable](https://zhuanlan.zhihu.com/p/685698909)
+安装成功
 ```
 conda create -n gaussian_splatting python=3.10
+conda activate gaussian_splatting
+# 安装pytorch 2.2.1版本,cuda 12.1
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+SET DISTUTILS_USE_SDK=1
+pip install submodules\diff-gaussian-rasterization
+pip install submodules\simple-knn
+pip install plyfile
+pip install tqdm
+
 ```
 
