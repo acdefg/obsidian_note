@@ -187,39 +187,38 @@ ss >> num;
 ### 7. **智能指针和内存管理**
 
 -   **`<memory>`**：提供智能指针（`std::shared_ptr`、`std::unique_ptr`）以及内存管理功能。
-    
-    `#include <memory>  // 智能指针 std::shared_ptr<int> ptr = std::make_shared<int>(10);`
+```
+#include <memory>  // 智能指针 
+std::shared_ptr<int> ptr = std::make_shared<int>(10);
+```
     
 
 ### 8. **异常处理**
 
 -   **`<stdexcept>`**：提供标准异常类，用于异常处理。
     
-    cpp
+```
+#include <stdexcept>  // 异常类 
+throw std::out_of_range("Out of range error");
+```
     
-    复制代码
-    
-    `#include <stdexcept>  // 异常类 throw std::out_of_range("Out of range error");`
-    
-
 ### 9. **线程和并发编程**
 
 -   **`<thread>`**：提供多线程支持。
     
-    cpp
-    
-    复制代码
-    
-    `#include <thread>  // 线程操作 std::thread t([]() { std::cout << "Thread running" << std::endl; }); t.join();`
+```
+#include <thread>  // 线程操作 
+std::thread t([]() { std::cout << "Thread running" << std::endl; }); t.join();
+```
     
 -   **`<mutex>`**：提供互斥量和锁，用于线程同步。
     
-    cpp
-    
-    复制代码
-    
-    `#include <mutex>  // 互斥锁 std::mutex mtx; mtx.lock(); // 临界区代码 mtx.unlock();`
-    
+```
+#include <mutex>  // 互斥锁 
+std::mutex mtx; mtx.lock(); 
+// 临界区代码 
+mtx.unlock();
+```
 
 ### 总结
 
