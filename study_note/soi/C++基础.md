@@ -1,4 +1,6 @@
 down:: [[C++头文件]]
+down:: [[刷题记录]]
+
 # 基础编程
 ## 基础结构
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191634586.png?token=ALRC6IWHIOB6A6ULZM4AHXLHMPNOA)
@@ -13,6 +15,9 @@ down:: [[C++头文件]]
 -   long
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191702522.png?token=ALRC6IXNSO5LA6H3MT5R62DHMPQXG)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191703722.png?token=ALRC6IVOVRPSRBEWYC4KRB3HMPQYI)
+int 以及 unsigned int 范围为十进制 10 位数，2\*e10 4\*e10    4 个字节 32bit
+short int 范围为十进制 5 位数 3\*e5 2 个字节 16bit
+long int  范围为十进制 19 位数 9\*e19 8 个字节 64bit
 
 
 ## typdef 和枚举
