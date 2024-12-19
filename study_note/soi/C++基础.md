@@ -51,6 +51,71 @@ down:: [[C++头文件]]
 在这里，**blue** 的值为 6，因为默认情况下，每个名称都会比它前面一个名称大 1。
 
 
+
+## 输出格式😱
+
+```
+#include <iomanip>
+//输出浮点数 `cost`，并格式化成固定小数点形式，保留 1 位小数
+cout << setiosflags(ios::fixed) << setprecision(1) << cost << endl;
+```
+
+#### example1
+```cpp
+#include <iostream>
+
+#include <iomanip>
+
+using namespace std;
+
+  
+
+int main() {
+
+    double price;
+
+    cin >> price;
+
+  
+
+    double cost = 0.0;
+
+  
+
+    // write your code here.......
+
+    if(price >= 5000)
+
+        cost = price * 0.6;
+
+    else if(price >= 2000)
+
+        cost = price * 0.7;
+
+    else if(price >= 500)
+
+        cost = price * 0.8;
+
+    else if(price >= 100)
+
+        cost = price * 0.9;
+
+    else
+
+        cost = price;
+
+  
+
+    cout << setiosflags(ios::fixed) << setprecision(1) << cost << endl;
+
+  
+
+    return 0;
+
+}
+```
+
+
 # 简单概念解释
 ## C++ 类 & 对象
 ### 类
