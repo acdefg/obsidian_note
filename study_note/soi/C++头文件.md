@@ -2,6 +2,8 @@
 # 头文件类型
 在一个正常的 C++ 程序中，需要包含的头文件取决于你程序的功能需求。C++ 标准库提供了丰富的功能，可以帮助你完成各种操作。常见的头文件包括输入输出、容器、算法、数学函数等。下面是一些常见的 C++ 头文件及其用途，帮助你了解在不同情况下应包含哪些头文件。
 
+## 常见文件类型
+
 ### 1. **基本输入输出**
 
 -   **`<iostream>`**：提供基本的输入输出功能，支持 `std::cin`、`std::cout`、`std::cerr` 等。
@@ -231,4 +233,102 @@ mtx.unlock();
 -   `<string>`、`<cstring>`：字符串处理。
 -   `<memory>`：智能指针。
 
-根据程序的需求，逐步添加适合的头文件，不要包含不必要的头文件，以减少编译时间和程序的复杂性。如果你有特定的需求或进一步的疑问，欢迎随时提问！
+## stdio
+`<stdio.h>` 是 C 语言中一个非常重要的标准头文件，代表 **"Standard Input/Output"**，即标准输入输出库。它定义了一系列用于处理输入输出操作的函数和宏。
+
+在 C++ 中，虽然使用 `<iostream>` 更常见，但 `<stdio.h>` 仍然可以使用，并且在某些低层次程序中可能是更高效的选择。
+
+---
+
+### `<stdio.h>` 的主要内容
+
+#### 1. **输入/输出函数**
+
+-   **标准输入输出：**
+    -   `printf()`：格式化输出到标准输出（通常是屏幕）。
+    -   `scanf()`：从标准输入（通常是键盘）中读取格式化数据。
+-   **文件操作：**
+    -   `fopen()`：打开文件。
+    -   `fclose()`：关闭文件。
+    -   `fread()`/`fwrite()`：从文件中读取或向文件写入数据。
+    -   `fgets()`/`fputs()`：从文件读取一行字符串或将字符串写入文件。
+-   **低级字符操作：**
+    -   `getc()`/`putc()`：从文件中读取或写入一个字符。
+    -   `getchar()`/`putchar()`：从标准输入读取或写入一个字符。
+
+#### 2. **缓冲和控制函数**
+
+-   `fflush()`：清空文件缓冲区。
+-   `setbuf()`/`setvbuf()`：设置文件流缓冲区。
+
+#### 3. **文件状态和错误处理**
+
+-   `fseek()`：在文件中移动文件指针。
+-   `ftell()`：获取文件指针当前位置。
+-   `feof()`：检测文件是否到达末尾。
+-   `ferror()`：检测文件是否发生错误。
+
+#### 4. **预定义流**
+
+-   `stdin`：标准输入流。
+-   `stdout`：标准输出流。
+-   `stderr`：标准错误输出流。
+
+---
+
+### 示例代码
+
+#### 1. 使用标准输入输出
+
+```cpp
+#include <stdio.h>  
+int main() {     
+	int num;    
+	printf("Enter a number: ");     
+	scanf("%d", &num); // 从用户输入中读取整数     
+	printf("You entered: %d\n", num); // 打印用户输入的数字     
+	return 0; 
+}
+```
+
+#### 2. 文件操作
+```cpp
+#include <stdio.h>  
+int main() {     
+	FILE *file = fopen("example.txt", "w"); // 打开文件进行写操作     
+	if (file == NULL) {         
+		perror("Error opening file");         
+		return -1;     
+	}     
+	fprintf(file, "Hello, World!\n"); // 写入到文件     
+	fclose(file); // 关闭文件     
+	return 0; 
+}
+```
+
+#### 3. 读取文件内容
+
+```cpp
+#include <stdio.h>  
+int main() {     
+	FILE *file = fopen("example.txt", "r"); // 打开文件进行读操作     
+	if (file == NULL) {         
+		perror("Error opening file");         
+		return -1;     
+	}     
+	char buffer[256];     
+	while (fgets(buffer, sizeof(buffer), file)) { 
+		// 逐行读取文件内容         
+		printf("%s", buffer); 
+		// 打印到屏幕     
+	}     
+	fclose(file); // 关闭文件     
+	return 0; 
+}
+```
+
+---
+
+### 总结
+
+`<stdio.h>` 提供了最基础的输入输出功能，适用于标准输入输出和文件操作。在 C++ 中，如果需要更高级和面向对象的方式，可以使用 `<iostream>`。但对于一些底层程序，`<stdio.h>` 的函数依然是不可替代的。
