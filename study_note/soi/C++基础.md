@@ -2,7 +2,19 @@ down:: [[C++头文件]]
 # 基础编程
 ## 基础结构
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191634586.png?token=ALRC6IWHIOB6A6ULZM4AHXLHMPNOA)
-### # 简单概念解释
+
+### 数据类型
+1 byte = 8 bits
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191702545.png?token=ALRC6IUC2EZ3EZH22ZEC7NTHMPQUU)
+一些基本类型可以使用一个或多个类型修饰符进行修饰：
+-   signed
+-   unsigned
+-   short
+-   long
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191702522.png?token=ALRC6IXNSO5LA6H3MT5R62DHMPQXG)
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191703722.png?token=ALRC6IVOVRPSRBEWYC4KRB3HMPQYI)
+
+# 简单概念解释
 ## C++ 类 & 对象
 ### 类
 定义一个类需要使用关键字 class，然后指定类的名称，并类的主体是包含在一对花括号中，主体包含类的成员变量和成员函数。
