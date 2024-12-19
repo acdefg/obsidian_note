@@ -65,6 +65,9 @@ long int  范围为十进制 19 位数 9\*e19 8 个字节 64bit
 cout << setiosflags(ios::fixed) << setprecision(1) << cost << endl;
 ```
 
+```cpp
+`printf(``"%.1f %.1f"``,sum,h);`
+```
 #### example1
 ```cpp
 #include <iostream>
