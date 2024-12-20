@@ -124,6 +124,93 @@ int main() {
 ```
 
 
+## 函数传参⭐
+在 C++ 中，函数传参的方式主要包括以下四种：按值传递（Pass by Value）、按引用传递（Pass by Reference）、按指针传递（Pass by Pointer）、以及按常引用传递（Pass by Const Reference）
+
+### 形参
+值传递，swap1函数使用的是`值传递`，它接受两个整数参数x和y，并在函数内部进行交换。这种情况下，函数内部交换的是局部变量的值，而不会影响到main函数中的first和second。
+```cpp
+void swap1(int x, int y){
+    int temp = x;
+    x = y;
+    y = temp;
+}
+```
+
+-   **优点**：避免修改原始数据，安全。
+-   **缺点**：传递大型对象时效率低，因为需要复制数据。
+
+### 引用传参
+传递参数的引用，函数操作的就是原始变量本身，修改会直接影响原变量。
+```cpp
+#include <iostream>
+using namespace std;
+
+void increment(int& x) {
+    x += 1;  // 直接操作原始变量
+}
+
+int main() {
+    int a = 5;
+    increment(a); // a 的值会被修改
+    cout << "Value of a: " << a << endl; // 输出 6
+    return 0;
+}
+
+```
+-   **优点**：避免拷贝，提高效率；可以直接修改原始数据。
+-   **缺点**：可能无意间修改了原始数据。
+
+### 指针传参
+将变量的地址传递给函数，函数通过解引用操作访问原始数据。
+```cpp
+#include <iostream>
+using namespace std;
+
+void increment(int* x) {
+    if (x) { // 检查指针是否为空
+        *x += 1;  // 修改指针指向的变量
+    }
+}
+
+int main() {
+    int a = 5;
+    increment(&a); // 传递变量的地址
+    cout << "Value of a: " << a << endl; // 输出 6
+    return 0;
+}
+```
+-   **优点**：可以传递动态分配的内存或大型结构；显式地指明函数可能修改数据。
+-   **缺点**：需要处理指针的合法性（如空指针）。
+
+### 按常引用传递
+以引用的方式传递，但不能修改原始数据。
+```cpp
+#include <iostream>
+using namespace std;
+
+void print(const int& x) {
+    cout << "Value: " << x << endl;
+    // x += 1; // 会报错，因为 x 是 const 引用
+}
+
+int main() {
+    int a = 5;
+    print(a); // 只读访问 a
+    return 0;
+}
+```
+-   **优点**：避免拷贝，提高效率；适用于只读操作，安全性更高。
+-   **缺点**：不能修改原始数据。
+
+### 总结
+-   **按值传递**适用于简单数据类型且不需要修改原始变量的情况。
+-   **按引用传递**适用于需要修改原始数据的场景，或避免拷贝大对象。
+-   **按指针传递**用于需要操作动态分配的内存，或当可能传递空值时。
+-   **按常引用传递**适合只读访问的大型对象，避免拷贝，提高效率。
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412201445675.png?token=ALRC6IUA4F24NYFVCUXZ2EDHMUJNC)
+
+
 # 简单概念解释
 ## C++ 类 & 对象
 ### 类
