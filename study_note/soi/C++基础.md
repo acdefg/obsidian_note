@@ -216,6 +216,62 @@ int main() {
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412201445675.png?token=ALRC6IUA4F24NYFVCUXZ2EDHMUJNC)
 
 
+## 结构体
+### 结构体定义和使用
+```cpp
+struct [structure tag]{
+    member definition;
+    member definition;
+    ...
+    member definition;
+}[one or more structure variables];  
+```
+
+**structure tag** 是可选的，每个 member definition 是标准的变量定义，比如 int i; 或者 float f; 或者其他有效的变量定义。在结构定义的末尾，最后一个分号之前，您可以指定一个或多个结构变量，这是可选的。下面是声明 Book 结构的方式：
+```cpp
+struct Books{
+    char title[50];
+    char author[50];
+    char subject[100];
+    int book_id;
+}book; 
+```
+
+为了访问结构的成员，我们使用**成员访问运算符（.）**
+```cpp
+strcpy( Book1.title, "Learn C++ Programming"); 
+strcpy( Book1.author, "Chand Miyan"); 
+strcpy( Book1.subject, "C++ Programming"); 
+Book1.book_id = 6495407;
+```
+
+### 指向结构的指针
+您可以定义指向结构的指针，方式与定义指向其他类型变量的指针相似，如下所示：
+`struct Books *struct_pointer;`
+
+现在，您可以在上述定义的指针变量中存储结构变量的地址。为了查找结构变量的地址，请把 & 运算符放在结构名称的前面，如下所示：
+`struct_pointer = &Book1;`
+
+为了使用指向该结构的指针访问结构的成员，您必须使用 -> 运算符，如下所示：
+`struct_pointer->title;`
+
+### typedef 关键字
+下面是一种更简单的定义结构的方式，您可以为创建的类型取一个"别名"。例如：
+```cpp
+typedef struct
+{
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+}Books;
+```
+现在，您可以直接使用 _Books_ 来定义 _Books_ 类型的变量，而不需要使用 struct 关键字。下面是实例：
+`Books Book1, Book2;`
+您可以使用 **typedef** 关键字来定义非结构类型，如下所示：
+`typedef long int *pint32;   pint32 x, y, z;`
+x, y 和 z 都是指向长整型 long int 的指针。
+
 # 简单概念解释
 ## C++ 类 & 对象
 ### 类
