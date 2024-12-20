@@ -5,6 +5,11 @@ down:: [[刷题记录]]
 ## 基础结构
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191634586.png?token=ALRC6IWHIOB6A6ULZM4AHXLHMPNOA)
 
+```cpp
+//计算数组长度
+int len = sizeof(arr) / sizeof(int);
+```
+
 ## 数据类型
 1 byte = 8 bits
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191702545.png?token=ALRC6IUC2EZ3EZH22ZEC7NTHMPQUU)
