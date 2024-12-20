@@ -278,6 +278,10 @@ x, y 和 z 都是指向长整型 long int 的指针。
 int sublen = strlen(substr);   //计算char数组到'\0'前实际长度，也就是不计算'\0'在内
 ```
 
+### string
+构造方法
+![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412202325404.png?token=ALRC6IWLIHAHFFUC4EK5CFDHMWGLG)
+
 
 # 简单概念解释
 ## C++ 类 & 对象
