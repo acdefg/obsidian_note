@@ -272,6 +272,13 @@ typedef struct
 `typedef long int *pint32;   pint32 x, y, z;`
 x, y 和 z 都是指向长整型 long int 的指针。
 
+## 字符串
+
+```
+int sublen = strlen(substr);   //计算char数组到'\0'前实际长度，也就是不计算'\0'在内
+```
+
+
 # 简单概念解释
 ## C++ 类 & 对象
 ### 类
