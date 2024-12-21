@@ -1,5 +1,6 @@
 down:: [[C++头文件]]
 down:: [[刷题记录]]
+donw:: [[虚函数]]
 
 # 基础编程
 ## 基础结构
@@ -274,6 +275,7 @@ x, y 和 z 都是指向长整型 long int 的指针。
 
 ## 字符串
 
+
 ```
 int sublen = strlen(substr);   //计算char数组到'\0'前实际长度，也就是不计算'\0'在内
 ```
@@ -281,6 +283,7 @@ int sublen = strlen(substr);   //计算char数组到'\0'前实际长度，也就
 ### string
 构造方法
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412202325404.png?token=ALRC6IWLIHAHFFUC4EK5CFDHMWGLG)
+
 
 
 # 简单概念解释
