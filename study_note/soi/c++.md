@@ -6,7 +6,7 @@ down:: [[C++基础]]
 [GitHub - Light-City/CPlusPlusThings: C++那些事](https://github.com/Light-City/CPlusPlusThings?tab=readme-ov-file#c-%E9%82%A3%E4%BA%9B%E4%BA%8B) --详细+实战
 [c++快速入门【一小时速通版】（适合预习了解、复习备忘） - 知乎](https://zhuanlan.zhihu.com/p/650726252)
 [C++ 模板 | 菜鸟教程](https://www.runoob.com/cplusplus/cpp-templates.html)
-
+[STL模板库-01-20 \| 阿秀的学习笔记](https://interviewguide.cn/notes/03-hunting_job/02-interview/01-04-01-STL.html) --面试速成+配合 b 站视频食用
 ### 链表
 [c++链表（详解版）-CSDN博客](https://blog.csdn.net/slandarer/article/details/91863177)
 
