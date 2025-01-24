@@ -27,5 +27,3 @@ R：3M - 400
 
 ##### 结果
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202405081212940.png)
-
-![](http://cdn.ljc0606.cn/obsidian/202501241556308.png)
