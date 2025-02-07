@@ -274,3 +274,85 @@ git cherry-pick  版本号
 
 原文链接：https://blog.csdn.net/2401_84910962/article/details/138935767
 
+### 安全地回退到历史版本而不修改历史记录
+**操作步骤：**
+1.  **创建临时分支**
+
+```bash
+git checkout -b temp-version2 <commit-hash-of-version2>
+```
+
+这将在版本2的提交哈希处创建新分支
+2.  **强制推送到远程进行GitHub Actions测试**
+
+```bash
+git push origin temp-version2 --force-with-lease
+```
+
+3.  **通过GitHub界面触发Actions**  
+    在仓库的Actions标签页选择临时分支运行工作流
+    
+4.  **恢复原始状态**  
+    测试完成后切换回原分支：
+
+```bash
+git checkout main
+git branch -D temp-version2
+git push origin --delete temp-version2
+```
+
+**替代方案（使用git revert）:**
+
+1.  **撤销后续提交**
+
+```
+# 找到要回退的位置
+git log --oneline
+
+# 撤销从版本2之后的所有提交
+git revert --no-commit HEAD..<commit-hash-of-version2>
+git commit -m "临时回退到版本2状态"
+git push
+```
+
+2.  **执行GitHub Actions**  
+    此时的工作流将基于临时回退后的状态运行
+    
+3.  **恢复更改**
+
+```
+git reset --hard HEAD@{1}
+git push -f
+```
+
+**关键优势：**
+
+-   保留完整提交历史
+-   不会影响主分支稳定性
+-   可通过删除临时分支彻底清理
+-   使用--force-with-lease更安全的强制推送
+
+**注意事项：**
+
+1.  提前备份当前工作目录
+2.  在非保护分支操作
+3.  通知团队成员临时分支用途
+4.  GitHub Actions需配置为响应临时分支触发
+
+**完整命令示例：**
+
+```
+# 查找版本2的提交ID
+git log --oneline
+
+# 假设版本2提交哈希为abc1234
+git checkout -b test-env abc1234
+git push origin test-env
+
+# 在GitHub界面配置Actions触发条件为test-env分支的推送事件
+
+# 测试完成后清理
+git checkout main
+git branch -D test-env
+git push origin --delete test-env
+```
