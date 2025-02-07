@@ -301,44 +301,6 @@ git branch -D temp-version2
 git push origin --delete temp-version2
 ```
 
-**替代方案（使用git revert）:**
-
-1.  **撤销后续提交**
-
-```
-# 找到要回退的位置
-git log --oneline
-
-# 撤销从版本2之后的所有提交
-git revert --no-commit HEAD..<commit-hash-of-version2>
-git commit -m "临时回退到版本2状态"
-git push
-```
-
-2.  **执行GitHub Actions**  
-    此时的工作流将基于临时回退后的状态运行
-    
-3.  **恢复更改**
-
-```
-git reset --hard HEAD@{1}
-git push -f
-```
-
-**关键优势：**
-
--   保留完整提交历史
--   不会影响主分支稳定性
--   可通过删除临时分支彻底清理
--   使用--force-with-lease更安全的强制推送
-
-**注意事项：**
-
-1.  提前备份当前工作目录
-2.  在非保护分支操作
-3.  通知团队成员临时分支用途
-4.  GitHub Actions需配置为响应临时分支触发
-
 **完整命令示例：**
 
 ```
