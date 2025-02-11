@@ -75,7 +75,7 @@
   "obsidian-emoji-toolbar:emoji-picker:open-picker": [
     {
       "modifiers": [
-        "Meta"
+        "Alt"
       ],
       "key": "E"
     }
