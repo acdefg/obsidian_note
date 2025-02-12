@@ -6,6 +6,7 @@ down:: [[rram model仿真]]
 
 ![](http://cdn.ljc0606.cn/obsidian/202502111752968.png)
 预计结果 500m  500mV/R(620.7k) x 3 = I(2.41uA)?  498.8mV(real)/498.629mV(predict)
+![](http://cdn.ljc0606.cn/obsidian/202502122342031.png)
 
 
 
