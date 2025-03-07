@@ -10,7 +10,7 @@
 [查尔斯的知识库 | 个人技术知识库，记录和分享个人碎片化、结构化、体系化的技术知识内容](https://blog.charles7c.top/)
 还没深入
 [🔧 一篇教你用VitePress + Github Pages搭建博客 | 是柠新呀的知识库](https://xuxing409.github.io/my-blog/technology/article/building-blog-with-vitepress.html)
-
+[VitePress 添加评论功能 \| Xavi的技术文档](https://xaviw.github.io/XaviDocs/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/VitePress%E6%90%AD%E5%BB%BA/%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.html)
 ## 开始
 ### 从零开始
 [入门 | VitePress 中文网](https://vitepress.qzxdp.cn/guide/getting-started.html)
