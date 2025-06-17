@@ -1,18 +1,20 @@
 ## Part 1: Introduction; the Software stack
+
 运行 D3D9/10/11 的 DX11 级 PC 硬件， 虽然除了开头部分外，API 细节不会太重要；一旦进入 GPU 内部，一切都是本地指令了
-### **应用程序（The application）**
+
+### 应用程序（The application）
 
 这是你写的代码。也是你的 Bug，真的。是的，API 运行库和驱动也有 bug，但这次真不是它们的锅。快去修吧。
 
 ---
 
-### **API 运行时（The API runtime）**
+### API 运行时（The API runtime）
 
 你通过它创建资源、设置状态、发出绘图调用。它记录你设定的状态、检查参数的合法性和一致性，管理用户可见的资源，也可能会验证着色器代码及其 shader 连接（至少 D3D 会处理，OpenGL 则在驱动层面中处理）。它还可能做一些批处理操作，然后将工作交给图形驱动，更具体说，是交给用户态驱动（UMD）。
 
 ---
 
-### **用户态图形驱动（User-Mode Driver, UMD）**
+### 用户态图形驱动（User-Mode Driver, UMD）
 
 这是 CPU 端大多数“魔法”发生的地方。如果你的应用因为某个 API 调用崩溃，通常就是在这里发生的。它是一个用户态的 DLL 文件（比如 Nvidia 的 `nvd3dum.dll` 或 AMD 的 `atiumd*.dll`），运行在你的程序地址空间内，没有任何系统权限。
 
