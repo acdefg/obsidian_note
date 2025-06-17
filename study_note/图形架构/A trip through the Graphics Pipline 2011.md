@@ -86,23 +86,28 @@ OpenGL 与上文类似，但 API 与 UMD 之间界限不明显。而且 GLSL 编
 
 本文只是概览，省略了大量细节。例如调度器有多个实现、CPU 和 GPU 的同步机制没有讲、可能还有我忘记的内容。欢迎指出错误，我会修正！希望下次继续为你带来更多 GPU 内部的内容！
 
+```mermaid
+flowchart TD
+    A[应用程序] -->|API调用| B[D3D/OpenGL运行时]
+    B -->|验证/批处理| C[用户模式驱动 UMD]
+    C -->|中间表示| D[着色器编译]
+    C -->|子分配| E[资源管理]
+    C -->|生成| F[命令缓冲区]
+    F -->|提交| G[图形调度器]
+    G -->|仲裁| H[内核模式驱动 KMD]
+    H -->|物理分配| I[GPU内存管理]
+    H -->|写入| J[主命令缓冲]
+    J -->|PCIe传输| K[GPU命令处理器]
+    K --> L[3D渲染管线]
+    
+    style A fill:#f9f,stroke:#333
+    style B fill:#9bf,stroke:#333
+    style C fill:#fc3,stroke:#333
+    style H fill:#f96,stroke:#333
+    style K fill:#6f9,stroke:#333
+
+```
+
 ## Part2: 
 
-```mermaid
-graph TD
-    A[应用程序] --> B[API 运行时]
-    B --> C[用户模式图形驱动(UMD)]
-    C -->|着色器编译等| D[调度器]
-    D --> E[内核模式驱动(KMD)]
-    E --> F[命令处理器]
-    F --> G[GPU 执行渲染]
-    
-    C -->|内存管理| H[内存管理]
-    C -->|传统特性处理| I[传统特性转换]
-    
-    E -->|资源分配等| J[资源管理]
-    E -->|初始化等| K[硬件初始化]
-    
-    L[OpenGL与D3D的比较] --> M[D3D着色器字节码的优势]
-    L --> N[GLSL编译问题]
-```
+
