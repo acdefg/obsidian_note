@@ -62,40 +62,26 @@ UMD 还要处理旧版 D3D 的内容，比如 Shader Model 1.x、2.0、3.0，甚
 
 #### 再次解释 UMD 的工作
 
-```mermaid
-flowchart TD
-    A[应用程序] -->|调用 D3D API| B[D3D Runtime]
-    B -->|验证 & 初级优化| C[User-Mode Driver<br>UMD]
-    
-    subgraph UMD内部处理
-        C --> C1[二次验证]
-        C1 --> C2[字节码 -> IR -> 硬件指令]
-        C2 --> C3[状态融合与特化]
-        C3 --> C4[命令缓冲区构建]
-        C4 --> C5[资源管理 / 数据搬运]
-    end
-    
-    C -->|提交命令缓冲| D[Kernel-Mode Driver<br>KMD]
-    
-    subgraph KMD核心功能
-        D --> D1[GPU 内存分配与映射]
-        D --> D2[中断与看门狗]
-        D --> D3[DRM / 显示初始化]
-        D --> D4[主命令环形缓冲写入]
-    end
-    
-    D -->|DMA via PCIe| E[GPU Command Processor]
-    E --> F[后续各硬件流水线]
-    
-    style A fill:#F9E79F,stroke:#333
-    style B fill:#85C1E9,stroke:#333
-    style C fill:#F7DC6F,stroke:#333
-    style D fill:#F1948A,stroke:#333
-    style E fill:#82E0AA,stroke:#333
-    style F fill:#BB8FCE,stroke:#333
-
+```text
+[ 应用程序 ] 
+      ↓ （调用 D3D API）
+[ D3D Runtime（验证 & 初级优化） ]
+      ↓ （提交 ID3D11DeviceContext::XXX）
+[ User‑Mode Driver（UMD） ]
+   ├─ 二次验证
+   ├─ 字节码 → IR → 硬件指令
+   ├─ 状态融合与特化
+   ├─ 命令缓冲区构建
+   └─ 资源管理 / 数据搬运
+      ↓ （提交命令缓冲给 KMD）
+[ Kernel‑Mode Driver（KMD） ]
+   ├─ GPU 内存分配与映射
+   ├─ 中断与看门狗
+   ├─ DRM / 显示初始化
+   └─ 主命令环形缓冲写入
+      ↓（DMA via PCIe）
+[ GPU Command Processor ] → 后续各硬件流水线
 ```
-
 
 -   **接收并验证 API 调用**
     -   当应用调用 `CreateTexture`、`VSSetShader`、`DrawIndexed` 等 D3D API 时，API 运行时（D3D runtime）首先做基本的参数检查和状态追踪，然后把这些调用转发给 UMD。
