@@ -1,4 +1,5 @@
-## Part 1: Introduction; the Software stack
+
+## Part 1: Introduction the Software stack
 
 运行 D3D9/10/11 的 DX11 级 PC 硬件， 虽然除了开头部分外，API 细节不会太重要；一旦进入 GPU 内部，一切都是本地指令了
 
@@ -157,6 +158,6 @@ OpenGL 与上文类似，但 API 与 UMD 之间界限不明显。而且 GLSL 编
 
 
 
-## Part2: 
 
 
+## Part2: GPU memory architecture and the Command Processor.
