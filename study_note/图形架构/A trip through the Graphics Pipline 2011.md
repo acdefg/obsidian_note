@@ -2,6 +2,28 @@
 
 运行 D3D9/10/11 的 DX11 级 PC 硬件， 虽然除了开头部分外，API 细节不会太重要；一旦进入 GPU 内部，一切都是本地指令了
 
+```mermaid
+flowchart TD
+    A[应用程序] -->|API调用| B[D3D/OpenGL运行时]
+    B -->|验证/批处理| C[用户模式驱动 UMD]
+    C -->|中间表示| D[着色器编译]
+    C -->|子分配| E[资源管理]
+    C -->|生成| F[命令缓冲区]
+    F -->|提交| G[图形调度器]
+    G -->|仲裁| H[内核模式驱动 KMD]
+    H -->|物理分配| I[GPU内存管理]
+    H -->|写入| J[主命令缓冲]
+    J -->|PCIe传输| K[GPU命令处理器]
+    K --> L[3D渲染管线]
+    
+    style A fill:#f9f,stroke:#333
+    style B fill:#9bf,stroke:#333
+    style C fill:#fc3,stroke:#333
+    style H fill:#f96,stroke:#333
+    style K fill:#6f9,stroke:#333
+
+```
+
 ### 应用程序（The application）
 
 这是你写的代码。也是你的 Bug，真的。是的，API 运行库和驱动也有 bug，但这次真不是它们的锅。快去修吧。
@@ -144,49 +166,6 @@ OpenGL 与上文类似，但 API 与 UMD 之间界限不明显。而且 GLSL 编
 
 本文只是概览，省略了大量细节。例如调度器有多个实现、CPU 和 GPU 的同步机制没有讲、可能还有我忘记的内容。欢迎指出错误，我会修正！希望下次继续为你带来更多 GPU 内部的内容！
 
-```mermaid
-flowchart TD
-    A[应用程序] -->|API调用| B[D3D/OpenGL运行时]
-    B -->|验证/批处理| C[用户模式驱动 UMD]
-    C -->|中间表示| D[着色器编译]
-    C -->|子分配| E[资源管理]
-    C -->|生成| F[命令缓冲区]
-    F -->|提交| G[图形调度器]
-    G -->|仲裁| H[内核模式驱动 KMD]
-    H -->|物理分配| I[GPU内存管理]
-    H -->|写入| J[主命令缓冲]
-    J -->|PCIe传输| K[GPU命令处理器]
-    K --> L[3D渲染管线]
-    
-    style A fill:#f9f,stroke:#333
-    style B fill:#9bf,stroke:#333
-    style C fill:#fc3,stroke:#333
-    style H fill:#f96,stroke:#333
-    style K fill:#6f9,stroke:#333
-
-```
-
-```mermaid
-[ 应用程序 ] 
-      ↓ （调用 D3D API）
-[ D3D Runtime（验证 & 初级优化） ]
-      ↓ （提交 ID3D11DeviceContext::XXX）
-[ User‑Mode Driver（UMD） ]
-   ├─ 二次验证
-   ├─ 字节码 → IR → 硬件指令
-   ├─ 状态融合与特化
-   ├─ 命令缓冲区构建
-   └─ 资源管理 / 数据搬运
-      ↓ （提交命令缓冲给 KMD）
-[ Kernel‑Mode Driver（KMD） ]
-   ├─ GPU 内存分配与映射
-   ├─ 中断与看门狗
-   ├─ DRM / 显示初始化
-   └─ 主命令环形缓冲写入
-      ↓（DMA via PCIe）
-[ GPU Command Processor ] → 后续各硬件流水线
-
-```
 
 
 ## Part2: 
