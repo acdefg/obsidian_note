@@ -61,6 +61,7 @@ UMD 还要处理旧版 D3D 的内容，比如 Shader Model 1.x、2.0、3.0，甚
 为了效率，驱动会尽可能将处理放在 UMD 中完成，因为 UMD 是普通 DLL，可以分配内存、多线程、调试等等。如果 UMD 崩溃，只会挂掉应用程序，不会拖垮整个系统。
 
 #### 再次解释 UMD 的工作
+
 ```mermaid
 flowchart TD
     A[应用程序] -->|调用 D3D API| B[D3D Runtime]
@@ -94,6 +95,8 @@ flowchart TD
     style F fill:#BB8FCE,stroke:#333
 
 ```
+
+
 -   **接收并验证 API 调用**
     -   当应用调用 `CreateTexture`、`VSSetShader`、`DrawIndexed` 等 D3D API 时，API 运行时（D3D runtime）首先做基本的参数检查和状态追踪，然后把这些调用转发给 UMD。
     -   UMD 会再次检查——尤其是在 Windows 下，D3D runtime 和 UMD 都会做一遍验证，以保证传入的数据完全合法（资源大小、绑定点数量、状态组合等）。
