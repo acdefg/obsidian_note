@@ -108,6 +108,29 @@ flowchart TD
 
 ```
 
+```mermaid
+[ 应用程序 ] 
+      ↓ （调用 D3D API）
+[ D3D Runtime（验证 & 初级优化） ]
+      ↓ （提交 ID3D11DeviceContext::XXX）
+[ User‑Mode Driver（UMD） ]
+   ├─ 二次验证
+   ├─ 字节码 → IR → 硬件指令
+   ├─ 状态融合与特化
+   ├─ 命令缓冲区构建
+   └─ 资源管理 / 数据搬运
+      ↓ （提交命令缓冲给 KMD）
+[ Kernel‑Mode Driver（KMD） ]
+   ├─ GPU 内存分配与映射
+   ├─ 中断与看门狗
+   ├─ DRM / 显示初始化
+   └─ 主命令环形缓冲写入
+      ↓（DMA via PCIe）
+[ GPU Command Processor ] → 后续各硬件流水线
+
+```
+
+
 ## Part2: 
 
 
