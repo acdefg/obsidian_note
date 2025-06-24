@@ -821,7 +821,7 @@ $$ S = \frac{1}{(1 - p) + \frac{p}{s}}$$
 
 -   2D 纹理坐标 —— 两个浮点数，在本系列中遵循 D3D 术语，我称它们为 u/v，而不是 s/t。
     
--   u 和 v 在屏幕 “x” 方向上的偏导数：∂u∂x,∂v∂x\frac{\partial u}{\partial x}, \frac{\partial v}{\partial x}。
+-   u 和 v 在屏幕 “x” 方向上的偏导数：。
     
 -   同样，我们还需要 “y” 方向上的偏导数：∂u∂y,∂v∂y\frac{\partial u}{\partial y}, \frac{\partial v}{\partial y}。
     
