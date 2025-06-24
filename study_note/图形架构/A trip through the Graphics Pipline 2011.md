@@ -819,12 +819,11 @@ $$ S = \frac{1}{(1 - p) + \frac{p}{s}}$$
 
 那么，我们需要随纹理采样请求发送多少信息？这取决于纹理类型以及我们使用的采样指令类型。现在，假设是二维纹理。如果我们想做一次最多 4 倍各向异性采样的 2D 纹理采样，我们需要发送哪些信息？
 
--   2D 纹理坐标 —— 两个浮点数，在本系列中遵循 D3D 术语，我称它们为 u/v，而不是 s/t。
+-   2D 纹理坐标 —— 两个浮点数，在本系列中遵循 D3D 术语，我称它们为 $u, v$，而不是  $s,t$
     
--   u 和 v 在屏幕 “x” 方向上的偏导数：。
+-   u 和 v 在屏幕 “x” 方向上的偏导数：$\displaystyle \frac{\partial u}{\partial x}, \quad \frac{\partial v}{\partial x}$
     
--   同样，我们还需要 “y” 方向上的偏导数：∂u∂y,∂v∂y\frac{\partial u}{\partial y}, \frac{\partial v}{\partial y}。
-    
+-   同样，我们还需要 “y” 方向上的偏导数：$\displaystyle \frac{\partial u}{\partial y}, \quad \frac{\partial v}{\partial y}$
 
 所以，对于一次相当普通的 2D 采样请求（属于 SampleGrad 类型），总共就是 6 个浮点数——可能比你想象的要多。那 4 个梯度值既用于 mipmap 级别的选择，也用于确定各向异性滤波核的大小和形状。你也可以使用明确指定 mipmap 级别的纹理采样指令（在 HLSL 中是 SampleLevel）——这些指令不需要梯度，只需要一个包含 LOD 参数的值，但也无法做各向异性滤波——最多只能做到三线性！无论如何，我们先暂且以这 6 个浮点数为例。看起来确实很多。我们真的需要在每次纹理请求时都发送它们吗？
 
