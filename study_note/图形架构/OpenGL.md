@@ -24,3 +24,11 @@ GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 项目属性 -> 链接器 -> 常规 -> 附加库目录 -> 添加: $(SolutionDir)Dependencies\GLFW\lib-vc2022
 项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: glfw3.lib
 ```
+
+opengl 添加：
+项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: opengl32.lib
+原视频中为了保持简洁，一个一个添加 lib，直接搜缺少的函数，然后在 MSDN 上能找到属于哪个lib
+```
+//直接默认lib
+$(CoreLibraryDependencies);%(AdditionalDependencies);glfw3.lib;opengl32.lib
+```
