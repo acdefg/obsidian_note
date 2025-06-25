@@ -32,3 +32,5 @@ opengl 添加：
 //直接默认lib
 $(CoreLibraryDependencies);%(AdditionalDependencies);glfw3.lib;opengl32.lib
 ```
+
+## 使用传统 opengl 绘制三角形
