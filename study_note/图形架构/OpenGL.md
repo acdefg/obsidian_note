@@ -54,3 +54,15 @@ glEnd();
 下载链接：[GLEW: The OpenGL Extension Wrangler Library](https://glew.sourceforge.net/)
 在解压出来的文件夹，复制到 `Dependencies` 下面，重命名为 `GLEW`（方便索引），在文件夹中可以找到 `doc/`，有关于如何使用的 html，请阅读这份文档
 
+```
+项目属性 -> C/C++ -> 附加包含目录 -> 添加 $(SolutionDir)Dependencies\GLEW\include
+项目属性 -> 链接器 -> 常规 -> 附加库目录 -> 添加: $(SolutionDir)Dependencies\GLEW\lib\Release\Win32;
+项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: glew32s.lib;
+项目属性 -> C/C++ -> 预处理器 -> 预处理器定义 -> 添加：GLEW_STATIC
+```
+
+## Example
+
+1. `#include <GL/glew.h>` 必须存在在任何 OpenGL 库的 include 之前
+2. `glewinit()` 需要有 opengl 上下文环境
+
