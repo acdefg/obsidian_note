@@ -48,3 +48,8 @@ glEnd();
 ```
 
 # P3：使用现代 OpenGL
+由于现代 OpenGL 是硬件驱动实现的非开源代码，需要用 GLEW 库来提供 OpenGL 的 api 接口，是 OpenGL 的扩展，其他库比如 GLUE 是一种 OpenGL 的特殊扩展。这里使用 GLEW。
+
+## GLEW 配置
+下载链接
+[请稍候…](https://sourceforge.net/projects/glew/files/glew/2.1.0/glew-2.1.0.zip/download)
