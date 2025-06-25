@@ -52,4 +52,5 @@ glEnd();
 
 ## GLEW 配置
 下载链接：[Just a moment...](https://sourceforge.net/projects/glew/files/glew/2.1.0/glew-2.1.0.zip/download)
-在解压出来的文件夹，复制到 `Dependencies` 下面，重命名为 `GLEW`（方便索引），在文件夹中可以找到 `doc/`，有关于如何使用的html
+在解压出来的文件夹，复制到 `Dependencies` 下面，重命名为 `GLEW`（方便索引），在文件夹中可以找到 `doc/`，有关于如何使用的 html，请阅读这份文档
+
