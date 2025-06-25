@@ -22,4 +22,5 @@ GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 ```
 项目属性 -> C/C++ -> 附加包含目录 -> 添加 $(SolutionDir)Dependencies\GLFW\include
 项目属性 -> 链接器 -> 常规 -> 附加库目录 -> 添加: $(SolutionDir)Dependencies\GLFW\lib-vc2022
+项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: glfw3.lib
 ```
