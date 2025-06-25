@@ -14,5 +14,7 @@ GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 右上角导航栏选择：Download，打开后 Windows 用户可选择 32-bit Windows binaries，linux 只能下载源码
 >选择 32-bit 在创建项目时，只能创建 32bit 的项目，至于选择 32bit的原因，作者没有明说，提到在 64bit 环境中也能运行 32bit 代码，猜测可能兼容性更好
 
+打开后：找到 include 文件夹，和最新的 lib-vc 版本
+![](http://cdn.ljc0606.cn/obsidian/202506252234202.png)
 
 
