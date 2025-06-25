@@ -17,7 +17,7 @@ GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 打开后：找到 include 文件夹，和最新的 lib-vc 版本
 ![](http://cdn.ljc0606.cn/obsidian/202506252234202.png)
 
-在项目目录下建立 Dependencies 文件夹，存放上述两个文件夹，删掉 lib 中的 `.dll` 和后缀 `dll` 的 lib 文件，这两个用于静态编译*
+在项目目录下建立 Dependencies 文件夹，存放上述两个文件夹，删掉 lib 中的 `.dll` 和后缀 `dll` 的 lib 文件，这个用于 动态编译*
 配置：
 ```
 项目属性 -> C/C++ -> 附加包含目录 -> 添加 $(SolutionDir)Dependencies\GLFW\include
