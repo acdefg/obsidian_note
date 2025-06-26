@@ -66,3 +66,19 @@ glEnd();
 1. `#include <GL/glew.h>` 必须存在在任何 OpenGL 库的 include 之前
 2. `glewinit()` 需要有 opengl 上下文环境
 
+```
+    /* Make the window's context current */
+    glfwMakeContextCurrent(window);
+
+	/* Initialize GLEW */
+	if ( glewInit() != GLEW_OK)
+    {
+        std::cout << "Failed to initialize GLEW\n" << std::endl;
+		return -1;
+	}
+
+    unsigned a;
+    glGenBuffers(1, &a);
+
+	std::cout << glGetString(GL_VERSION) << std::endl;   //print CPU opengl version
+```
