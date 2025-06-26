@@ -82,3 +82,4 @@ glEnd();
 
 	std::cout << glGetString(GL_VERSION) << std::endl;   //print CPU opengl version
 ```
+
