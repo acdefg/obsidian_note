@@ -96,14 +96,27 @@ OpenGL 是一种状态机（state machine），在绘制之前需要先把数据
 ### 使用现代 OpenGL 绘制三角形
 
 ```C++
-float position[6] = {
-	
-}
+    float position[6] = {
+        -0.5f,-0.5f,
+        0.5f, -0.5f,
+        0.0f, 0.5f
 
-unsigned int buffer;
-glGenBuffers(1, &buffer); //1 表示数量一个buffer buffer：返回buffer对应的id
-glBindBuffer(GL_ARRARY_BUFFER, buffer)
-glBufferData(GL_ARRARY_BUFFER, )
+    };
+
+    unsigned int buffer;
+    glGenBuffers(1, &buffer); //1 表示数量一个buffer buffer：返回buffer对应的id
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), position, GL_STATIC_DRAW);   //define data type and uasge
+
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+        /* Render here */
+        glClear(GL_COLOR_BUFFER_BIT);
+
+		glDrawArrays(GL_TRIANGLES, 0, 3); //draw triangles, 0 is the start index, 3 is the number of vertices
+		.......
+    }
 ```
 
 OpenGL 是一种状态机，代码建议在上下文环境中，当建立 buffer 或者其他对象 object （顶点缓冲区、顶点数组、纹理、着色器等）时，会给出一个标识符 id 表示该对象，然后进行绑定或者选定对象时，使用这个 id
@@ -114,9 +127,12 @@ OpenGL 是一种状态机，代码建议在上下文环境中，当建立 buffer
 ## P4：顶点属性和内存布局
 顶点表示图片上的一个点，包括位置、纹理坐标、颜色、法线等相关内容在内
 当在 GPU 端使用时，需要告知 GPU 数据布局，这样 GPU 才能正确区分和解析数据
-`glVertexAttribPointer`
+`glVertexAttribPointer` 比如有三个属性：坐标、纹理坐标和法线
 index：属性的索引，例如：坐标在位置 1、纹理坐标在位置 2、法线在 3
 size：每一个属性拥有多少元素，例如：2D 坐标为 2，3D 坐标为 3
 type：数据类型：浮点等
 normalized：归一化
-stride： 
+stride： 每个顶点的字节数，例如：位置 12 个字节，纹理坐标 8 个字节，法线 12 个字节，一共 32 个字节
+pointer：对于每个属性，相对于顶点开始位置的偏移量，例如：纹理坐标偏移量为 12
+
+
