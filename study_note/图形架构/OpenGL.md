@@ -112,6 +112,6 @@ OpenGL 是一种状态机，代码建议在上下文环境中，当建立 buffer
 [glBufferData - OpenGL 3 - docs.gl](https://docs.gl/gl3/glBufferData)
 
 ## P4：顶点属性和内存布局
-顶点表示图片上的一个点，包括位置、颜色、法线等相关内容在内
+顶点表示图片上的一个点，包括位置、纹理坐标、颜色、法线等相关内容在内
 当在 GPU 端使用时，需要告知 GPU 数据布局，这样 GPU 才能正确区分和解析数据
 `glVertex`
