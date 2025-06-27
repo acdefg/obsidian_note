@@ -94,5 +94,14 @@ OpenGL 是一种状态机（state machine），在绘制之前需要先把数据
 ### 使用现代 OpenGL 绘制三角形
 
 ```C++
+float position[6] = {
+	
+}
 
+unsigned int buffer;
+glGenBuffers(1, &buffer); //1 表示数量一个buffer buffer：返回buffer对应的id
+glBindBuffer(GL_ARRARY_BUFFER, buffer)
+glBufferData(GL_ARRARY_BUFFER, )
 ```
+
+OpenGL 是一种状态机，代码建议在上下文环境中，当建立 buffer 或者其他对象 object （顶点缓冲区、顶点数组、纹理、着色器等）时，会给出一个标识符 id 表示该对象，然后进行绑定或者选定对象时，使用这个id
