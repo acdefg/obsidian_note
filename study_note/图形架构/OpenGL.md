@@ -108,5 +108,5 @@ glBufferData(GL_ARRARY_BUFFER, )
 
 OpenGL 是一种状态机，代码建议在上下文环境中，当建立 buffer 或者其他对象 object （顶点缓冲区、顶点数组、纹理、着色器等）时，会给出一个标识符 id 表示该对象，然后进行绑定或者选定对象时，使用这个 id
 
-`glBufferData`
+`glBufferData` 参数参考：
 [glBufferData - OpenGL 3 - docs.gl](https://docs.gl/gl3/glBufferData)
