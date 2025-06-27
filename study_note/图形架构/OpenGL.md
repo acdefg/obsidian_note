@@ -83,3 +83,16 @@ glEnd();
 	std::cout << glGetString(GL_VERSION) << std::endl;   //print CPU opengl version
 ```
 
+## P4：顶点缓冲区和绘制三角形
+需要先进行一些设置：
+1. 顶点缓冲区：一个在 GPU VRAM（Video RAM 上的 buffer），CPU 向 GPU 发出 Drawcall（绘制指令），然后使用着色器绘制
+2. 着色器：是一段我们可以编写的，在显卡上运行的代码，告诉 GPU 应该如何绘制
+图形管线将在后面的视频中提到
+
+OpenGL 是一种状态机（state machine），在绘制之前需要先把数据传输到对应 buffer 作为状态，然后告诉 GPU 使用哪个 buffer 和哪个着色器进行绘制
+
+### 使用现代 OpenGL 绘制三角形
+
+```C++
+
+```
