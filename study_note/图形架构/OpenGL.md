@@ -257,3 +257,104 @@ shader 程序描述，程序绑定和删除
 作者推荐：将顶点着色器和片段着色器写入一个文件中，这样更方便使用
 
 ### 将着色器使用文件形式导入
+在 `ProjectDir` 下新建 `res/shader/Basic.shader`，将 shader 的内容导入
+```GLSL
+#shader vertex
+#version 330 core
+
+layout(location = 0) in vec4 position; //input vertex attribute
+
+void main()
+{
+	gl_Position = position; //set the position of the vertex
+}
+
+#shader fragment
+#version 330 core
+
+layout(location = 0) out vec4 color;  //output color of the fragment
+
+void main()
+{
+	color = vec4(1.0, 0.0, 0.0, 1.0); //set the color of the fragment
+}
+
+```
+
+添加 `static ShaderProgramSource ParseShader(const std::string& filepath)` 函数
+```c++
+...
+#include <fstream>
+#include <string>
+#include <sstream>
+
+struct ShaderProgramSource
+{ 
+	std::string VertexSource;
+	std::string FragmentSource;
+
+};
+
+static ShaderProgramSource ParseShader(const std::string& filepath)
+{
+	std::ifstream stream(filepath); //open file
+
+	if (!stream.is_open()) {
+		std::cerr << "ERROR: Could not open shader file at '"
+			<< filepath << "'\n";
+		// You could even `throw std::runtime_error(...)` here
+	}
+
+	std::string line;
+	std::stringstream ss[2]; //create two stringstream for vertex and fragment shader
+
+	enum class ShaderType
+	{
+		NONE = -1, VERTEX = 0, FRAGMENT = 1
+	};
+		
+	ShaderType type = ShaderType::NONE; //initialize shader type to NONE
+
+	while (getline(stream, line))
+	{
+
+		if (line.find("#shader") != std::string::npos)
+		{
+			if (line.find("vertex") != std::string::npos)
+			{
+				type = ShaderType::VERTEX; //set shader type to VERTEX
+				std::cout << "Vertex shader find" << std::endl;
+			}
+			else if (line.find("fragment") != std::string::npos)
+			{
+				type = ShaderType::FRAGMENT; //set shader type to FRAGMENT
+				std::cout << "Fragment shader find" << std::endl;
+			}
+		}
+		else
+		{
+            if (type != ShaderType::NONE) // Check if the shader type is valid before appending
+            {
+               ss[(int)type] << line << '\n'; //append line to the corresponding stringstream
+            }
+		}
+	}
+
+	return { ss[0].str(), ss[1].str() }; //return the vertex and fragment shader source as a ShaderProgramSource struct
+}
+
+...
+
+```
+
+在 `main` 中输出
+```C++
+	ShaderProgramSource source = ParseShader("res/shader/Basic.shader"); //parse shader file
+	std::cout << "VERTEX" << std::endl;
+	std::cout << source.VertexSource << std::endl;
+	std::cout << "FRAGMENT" << std::endl;
+	std::cout << source.FragmentSource << std::endl;
+```
+
+检查路径：项目属性 -> 调试 -> 工作目录 -> $(ProjectDir)
+
