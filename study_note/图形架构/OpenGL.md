@@ -125,8 +125,12 @@ OpenGL 是一种状态机，代码建议在上下文环境中，当建立 buffer
 [glBufferData - OpenGL 3 - docs.gl](https://docs.gl/gl3/glBufferData)
 
 ## P5：顶点属性和内存布局
+
 顶点表示图片上的一个点，包括位置、纹理坐标、颜色、法线等相关内容在内
+
 当在 GPU 端使用时，需要告知 GPU 数据布局，这样 GPU 才能正确区分和解析数据
+
+定义顶点数据属性和内存分布情况：
 `glVertexAttribPointer` 比如有三个属性：坐标、纹理坐标和法线
 index：属性的索引，例如：坐标在位置 1、纹理坐标在位置 2、法线在 3
 size：每一个属性拥有多少元素，例如：2D 坐标为 2，3D 坐标为 3
@@ -145,14 +149,17 @@ glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (const void*)
 ```
 
 ## P6：着色器原理
-上面的代码已经可以实现一个三角形的绘制，虽然还没有实现着色器，但是当你没有着色器代码的时候，有些显卡会提供默认着色器
+上面的代码已经可以实现一个三角形的绘制，虽然还没有实现着色器，但是当你没有着色器代码的时候，有些显卡会使用自带默认的着色器
+
 **着色器**：是一个可以在 GPU 上运行的代码，更加复杂的场景需要对 GPU 进行编程
 现阶段主要了解以下两种着色器：
 Fragment shader 片段着色器，可能会执行很多次
 Vertex shader 顶点着色器：目前会被执行三次(三个顶点)，告诉屏幕你希望在哪里绘制（where you want the position to be）
+
 着色器的最终目的是决定像素颜色
-简化流程：Drawcall -> Vertex shader -> Fragment shader
-着色器也是以状态机的形式工作的，也需要进行启用
+简化 pipline 流程：Drawcall -> Vertex shader -> Fragment shader
+
+Tips: 着色器也是以状态机的形式工作的，也需要进行启用
 
 ## P7：编写一个着色器
 实现 vertex shader 和 fragment shader 使用 `createshader` 函数编译 shader 并且绑定到程序上，使用 `compileshader` 对着色器进行编译并且获得错误提示，使用 GLSL 语言描述着色器
