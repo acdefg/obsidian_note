@@ -135,11 +135,16 @@ normalized：归一化
 stride： 每个顶点的字节数，例如：位置 12 个字节，纹理坐标 8 个字节，法线 12 个字节，一共 32 个字节
 pointer：对于每个属性，相对于顶点开始位置的偏移量，例如：纹理坐标偏移量为 12
 
+还需要使用 `glEnableVertexAttribArray` 启用
 ```c++
 glEnableVertexAttribArray(0); 
 //0 is the index of the vertex attribute, enable the vertex attribute array
 glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (const void*)0); 
 //0 is the index of the vertex attribute, 2 is the size of the attribute, GL_FLOAT is the data type, GL_FALSE means not normalized, 2 * sizeof(float) is the stride, (void*)0 is the offset
 
-
 ```
+
+## P5：着色器
+上面的代码已经可以实现一个三角形的绘制，因为当你没有着色器代码的时候，有些显卡会提供默认着色器
+**着色器**
+是一个可以在 GPU 上运行的代码
