@@ -147,4 +147,8 @@ glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (const void*)
 ## P5：着色器
 上面的代码已经可以实现一个三角形的绘制，因为当你没有着色器代码的时候，有些显卡会提供默认着色器
 **着色器**
-是一个可以在 GPU 上运行的代码
+是一个可以在 GPU 上运行的代码，更加复杂的场景需要对 GPU 进行编程
+现阶段主要了解：
+Fragment shader 片段着色器
+Vertex shader 顶点着色器：目前会被执行三次(三个顶点)，告诉屏幕你希望在哪里绘制（where you want the position to be）
+简化流程：Drawcall -> Vertex shader -> Fragment shader
