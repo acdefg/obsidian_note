@@ -3,7 +3,7 @@
 [docs.gl](https://docs.gl/)
 
 # P1：Why learning OpenGL
-简单、跨平台，相比于其他 API：Vulkan、Direct3D.... 更适合新手，是一种控制 GPU 的规范，可以访问 GPU 的图形 API，opengl 是由显卡制造产商实现的，在 GPU 驱动中
+简单、跨平台，相比于其他 API：Vulkan、Direct3D.... 更适合新手，是它仅仅是一个由[Khronos组织](http://www.khronos.org/)制定并维护的规范(Specification)，可以访问 GPU 的图形 API，opengl 是由显卡制造产商实现的，在 GPU 驱动中
 
 
 # P2：设置 OpenGL 和创建窗口
