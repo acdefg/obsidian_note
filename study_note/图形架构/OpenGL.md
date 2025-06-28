@@ -149,6 +149,8 @@ glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (const void*)
 **着色器**
 是一个可以在 GPU 上运行的代码，更加复杂的场景需要对 GPU 进行编程
 现阶段主要了解：
-Fragment shader 片段着色器
+Fragment shader 片段着色器，可能会执行很多次
 Vertex shader 顶点着色器：目前会被执行三次(三个顶点)，告诉屏幕你希望在哪里绘制（where you want the position to be）
+着色器的最终目的是决定像素颜色
 简化流程：Drawcall -> Vertex shader -> Fragment shader
+着色器也是以状态机的形式工作的，也需要进行启用
