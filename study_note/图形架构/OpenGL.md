@@ -414,4 +414,6 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr); // draw rectangle wit
 >indices 只能使用 unsigned int 定义
 
 # P10：错误处理
-`glGetError` 会给出 OpenGL 出错的错误代码，但只会返回任意一个错误的代码
+`glGetError` 会给出 OpenGL 出错的错误代码，但只会返回任意一个错误的代码，所以需要通过循环来不断打印所有错误信息
+`glDebugMessageCallback` 更好，会给出错误信息而不是代码，并且给出建议，但是不是所有版本都兼容
+
