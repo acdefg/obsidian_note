@@ -361,3 +361,19 @@ static ShaderProgramSource ParseShader(const std::string& filepath)
 ## P9：索引缓冲区
  index buffer：reuse vertex
  
+```c++
+...
+	float position[] = {
+		-0.5f,-0.5f,
+		0.5f, -0.5f,
+		0.5f, 0.5f,
+
+		0.5f, 0.5f,
+		-0.5f,0.5f,
+		-0.5f,-0.5f
+	};
+...
+glBufferData(GL_ARRAY_BUFFER, 6 * 2 * sizeof(float), position, GL_STATIC_DRAW); 
+...
+glDrawArrays(GL_TRIANGLES, 0, 6); 
+```
