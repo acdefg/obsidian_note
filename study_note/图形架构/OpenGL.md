@@ -358,3 +358,4 @@ static ShaderProgramSource ParseShader(const std::string& filepath)
 
 检查路径：项目属性 -> 调试 -> 工作目录 -> $(ProjectDir)
 
+## P9：索引缓冲区
