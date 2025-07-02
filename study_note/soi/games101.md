@@ -54,3 +54,8 @@ Mipmap：快速近似正方形范围查询
 ![](http://cdn.ljc0606.cn/obsidian/202507021654174.png)
 提前计算不同层级的 mipmap，引入额外存储是原图的三分之一
 ![](http://cdn.ljc0606.cn/obsidian/202507021655608.png)
+
+如何计算 mipmap 层级
+![](http://cdn.ljc0606.cn/obsidian/202507021658046.png)
+将红色中心点以及周围中心点映射到纹理上，并且求出这些点在纹理上的距离
+![](http://cdn.ljc0606.cn/obsidian/202507021658713.png)
