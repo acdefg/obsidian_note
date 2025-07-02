@@ -16,6 +16,7 @@
 
 ### 重心坐标
 [Lecture 09 Shading 3 (Texture Mapping Cont.)\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1X7411F744?spm_id_from=333.788.videopod.episodes&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7&p=9)
+重心坐标系
 ![](http://cdn.ljc0606.cn/obsidian/202507021627792.png)
 
 ![](http://cdn.ljc0606.cn/obsidian/202507021623114.png)
@@ -23,5 +24,5 @@
 +β+γ=1，保证在三角形平面内
 重心坐标对应的α、β、γ值可以通过三角形面积求出，Aa 为顶点 A 不相邻的三角形
 ![](http://cdn.ljc0606.cn/obsidian/202507021626309.png)
-
+重心的坐标
 ![](http://cdn.ljc0606.cn/obsidian/202507021628108.png)
