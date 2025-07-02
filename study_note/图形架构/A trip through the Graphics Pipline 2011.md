@@ -988,3 +988,6 @@ $$
 至于 L1 纹理缓存中存放解压后的纹理数据，据我所知，目前的高端硬件确实如此。早期有些设备即便在 L1 缓存中也保持某些格式的压缩状态，但鉴于“在大多数缓存大小下平均 1.25 次未命中/采样”的规律，这样做收益不大，也不值得增加复杂度。我想那些设计现在基本都被淘汰了。
 
 有意思的是一些嵌入式／低功耗的图形芯片，比如 PowerVR；鉴于本系列聚焦 PC 顶级性能硬件，我不会过多深入此类芯片，但如果你感兴趣，可以查看前几部分评论区的相关笔记。PVR 芯片有自己非块格式的纹理压缩方法，与它们的过滤硬件紧密集成，所以我猜它们可能在 L1 缓存中也保持压缩（实际上我不清楚它们是否还有二级缓存！）。这种方法在单位面积与能耗下的工作效率或许相当出色。不过我认为“在填充 L1 缓存时解压”能提供更高的整体吞吐率，正如我再三强调的那样，高端 PC GPU 的核心就是追求吞吐量 😀
+
+# [Part 5](https://fgiesen.wordpress.com/2011/07/05/a-trip-through-the-graphics-pipeline-2011-part-5/) : Primitive Assembly, Clip/Cull, Projection, and Viewport transform.
+[A trip through the Graphics Pipeline 2011, part 5 \| The ryg blog](https://fgiesen.wordpress.com/2011/07/05/a-trip-through-the-graphics-pipeline-2011-part-5/)
