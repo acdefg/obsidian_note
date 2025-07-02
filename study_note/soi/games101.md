@@ -45,5 +45,12 @@
 ![](http://cdn.ljc0606.cn/obsidian/202507021644939.png)
 
 #### 超采样解决
+采样频率高、代价大
 ![](http://cdn.ljc0606.cn/obsidian/202507021645080.png)
-避免采样
+
+#### 避免采样解决（更优）
+点查询、范围查询
+Mipmap：快速近似正方形范围查询
+![](http://cdn.ljc0606.cn/obsidian/202507021654174.png)
+提前计算不同层级的 mipmap，引入额外存储是原图的三分之一
+![](http://cdn.ljc0606.cn/obsidian/202507021655608.png)
