@@ -1176,6 +1176,8 @@ $$ 其中最后一条只是排除了退化点 $(0,0,0,0)$。
 
 # Part 6: (Triangle) rasterization and setup.
 
+[A trip through the Graphics Pipeline 2011, part 6 \| The ryg blog](https://fgiesen.wordpress.com/2011/07/06/a-trip-through-the-graphics-pipeline-2011-part-6/)
+
 欢迎回来！这次我们**终于要看到三角形被光栅化了**——真的！但在我们真正光栅化三角形之前，还得先完成**三角形设置（Triangle Setup）**，而在我解释设置过程之前，我们必须先搞清楚：**设置是为了什么？** 换句话说，**我们要先讲一讲适合硬件实现的三角形光栅化算法**。
 
 ---
