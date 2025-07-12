@@ -2259,8 +2259,6 @@ $$
 * 少量 SRAM 用于状态标记，极大提升效率；
 * 后续将进入 Pixel Shader 阶段。
 
-以下是这一段 **Postscript（附记）** 的中文翻译和总结：
-
 ---
 
 ## 附记（Postscript）
