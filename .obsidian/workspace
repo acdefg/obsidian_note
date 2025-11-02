@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "3828c1f70af4402b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee3be03443d42992",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c49e77af1d07ffc2",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c8ba5f5366be1e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "853e32297a232b91",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e3b0aa71cd90efcb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "npm",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ecaf8278f915be3b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bb077342d0daa673",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea3a083a82bdf704",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fec8baae71d6a42a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ef0e7dc80a710bf1",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "9dc24ee68e93b6cb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md"
+              }
+            }
+          },
+          {
+            "id": "34b494da20cad73c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "69b38a746ae00fee",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ae921f08804eae04",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "ee3be03443d42992",
+  "lastOpenFiles": [
+    "study_note/soi/riscv.md",
+    "study_note/业余/一生一芯.md",
+    "Templates/ad-note.md",
+    "Templates/Daliy routine.md",
+    "Templates/shell code blocks.md",
+    "study_note/一生一芯.md",
+    "study_note/riscv.md",
+    "ubuntu_arrangement/一些配置/git操作.md",
+    "study_note/支持向量机.md",
+    "ubuntu_arrangement/一些工具安装/clash(tizi).md"
+  ]
+}

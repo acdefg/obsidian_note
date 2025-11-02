@@ -1,0 +1,616 @@
+{
+  "workspaces": {
+    "outline": {
+      "main": {
+        "id": "8d24244e080cda36",
+        "type": "split",
+        "children": [
+          {
+            "id": "d2ca3bb9d461f217",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b9d3426b84e21f9e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/作业/树莓派/进程学习.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "fb54bea9721bae7e",
+        "type": "split",
+        "children": [
+          {
+            "id": "25f13c63fb3549c2",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f41bff11660e3a4a",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "7430faf83716306c",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "19d01a06e7c80256",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "right": {
+        "id": "cdd63b50bab6eb76",
+        "type": "split",
+        "children": [
+          {
+            "id": "925ccc302768fb8e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "645f819367f1e54f",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "study_note/作业/树莓派/进程学习.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "a701aed19e3f2ac0",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "study_note/作业/树莓派/进程学习.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "c77ae5e7dcb8adfa",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "3fdfee6dd8d1bac8",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "study_note/作业/树莓派/进程学习.md"
+                  }
+                }
+              },
+              {
+                "id": "12bea93b16a9abf5",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "487d2aa85632598e",
+                "type": "leaf",
+                "state": {
+                  "type": "advanced-tables-toolbar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "50de3c6f3b1b63f2",
+                "type": "leaf",
+                "state": {
+                  "type": "todo",
+                  "state": {}
+                }
+              },
+              {
+                "id": "1cbeadaf1c34822d",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              },
+              {
+                "id": "eac1dbc6df4e724f",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 154.7423553466797
+      },
+      "active": "b9d3426b84e21f9e"
+    },
+    "数字ic": {
+      "main": {
+        "id": "8d24244e080cda36",
+        "type": "split",
+        "children": [
+          {
+            "id": "27ab1da774961ae9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4dca5ff76348be11",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/面试整理home.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "32febb476c1c183b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/内容整理.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "95472223a5707963",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/面试题收集.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "fb54bea9721bae7e",
+        "type": "split",
+        "children": [
+          {
+            "id": "25f13c63fb3549c2",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f41bff11660e3a4a",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "7430faf83716306c",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "19d01a06e7c80256",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "cdd63b50bab6eb76",
+        "type": "split",
+        "children": [
+          {
+            "id": "925ccc302768fb8e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "645f819367f1e54f",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/面试题收集.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "a701aed19e3f2ac0",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/面试题收集.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "c77ae5e7dcb8adfa",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "3fdfee6dd8d1bac8",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "study_note/数字集成/面试相关/面试题收集.md"
+                  }
+                }
+              },
+              {
+                "id": "e88a8859119cf6ef",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "e7b1efd13f1a5405",
+                "type": "leaf",
+                "state": {
+                  "type": "todo",
+                  "state": {}
+                }
+              },
+              {
+                "id": "b84ef287d30ad783",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "6001fdd7b18be042",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1cbeadaf1c34822d",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 215.5
+      },
+      "active": "95472223a5707963"
+    },
+    "物理模拟项目": {
+      "main": {
+        "id": "8d24244e080cda36",
+        "type": "split",
+        "children": [
+          {
+            "id": "769096b6a631cd64",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "93aeadc38dd986d2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/soi/物理模拟项目home.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "49d24ed182df8833",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/soi/software codeing.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "ac42ee1395994b9f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/soi/C++基础.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "a2c9861cb51e729e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/soi/布料模拟.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "a1b367e192895874",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "study_note/soi/衣物模拟整理.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "fb54bea9721bae7e",
+        "type": "split",
+        "children": [
+          {
+            "id": "25f13c63fb3549c2",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f41bff11660e3a4a",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "7430faf83716306c",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "19d01a06e7c80256",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "cdd63b50bab6eb76",
+        "type": "split",
+        "children": [
+          {
+            "id": "925ccc302768fb8e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "645f819367f1e54f",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "study_note/soi/software codeing.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "a701aed19e3f2ac0",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "study_note/soi/software codeing.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "c77ae5e7dcb8adfa",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "3fdfee6dd8d1bac8",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "study_note/soi/software codeing.md"
+                  }
+                }
+              },
+              {
+                "id": "e88a8859119cf6ef",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "e7b1efd13f1a5405",
+                "type": "leaf",
+                "state": {
+                  "type": "todo",
+                  "state": {}
+                }
+              },
+              {
+                "id": "b84ef287d30ad783",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "6001fdd7b18be042",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1cbeadaf1c34822d",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 215.5
+      },
+      "active": "49d24ed182df8833"
+    }
+  },
+  "active": "物理模拟项目"
+}
