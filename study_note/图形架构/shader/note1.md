@@ -7,5 +7,8 @@
 - block 之间没有确认的执行顺序，block 之间相互独立，（针对同一个架构，SM 数量不同的情况，binary 相互之间可以兼容）
 
 ### cuda memory space
-
+- global
+- shared
+- local
+- constant
 
