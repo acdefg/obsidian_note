@@ -17,7 +17,10 @@ stream 适用于并发 grid 的模型，grid 的可以并行执行，也可以�
 
 ### compute subsystem
 FEC： firmware context-level scheduling
-FE： grid-level scheduling（device level）
+FE：grid-level scheduling（device level）
+FE 硬件任务调度单元，这里的 task 可以是 grid 或者一些 command，我们今天先只关心 grid。
+FE 会从显存总加载 task 描述信息，并解析其中的一部分内容用作 grid 调度，处理 grid 依赖关系及优先级并把选出执行的 grid 发给 CDM，还要统计 grid 完成的情况。
+
 CDM：block-level scheduling （core level）
 PDS：MP scheduling
 stream processor：thread-level scheduling
