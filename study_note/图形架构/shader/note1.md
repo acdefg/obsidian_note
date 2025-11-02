@@ -7,8 +7,11 @@
 - block 之间没有确认的执行顺序，block 之间相互独立，（针对同一个架构，SM 数量不同的情况，binary 相互之间可以兼容）
 
 ### cuda memory space
-- global
-- shared
-- local
+- global: 缓存空间 L1
+- shared: shared memory
+- local： thread 私有
 - constant
+
+### stream
+
 
