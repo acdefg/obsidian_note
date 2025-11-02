@@ -14,6 +14,7 @@
 
 ### stream
 stream 适用于并发 grid 的模型，grid 的可以并行执行，也可以存在依赖关系，但不同 stream 中的操作可以同时执行，前提是没有数据依赖关系
+[一文读懂cuda stream与cuda event](https://zhuanlan.zhihu.com/p/699754357)
 
 ### compute subsystem
 FEC： firmware context-level scheduling
