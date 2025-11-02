@@ -13,5 +13,6 @@
 - constant
 
 ### stream
+stream 适用于并发 grid 的模型，grid 的可以并行执行，也可以存在依赖关系
 
 
