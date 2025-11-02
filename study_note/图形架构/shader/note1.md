@@ -33,3 +33,13 @@ PDS：MP scheduling
 stream processor：thread-level scheduling
 SM 是 warp 执行的硬件单元，每个 warp 都会按照取值译码发射执行写回来处理每条指令。
 
+任务完成的 flow 刚好和 launch 相反，SM report warp end 给 PDS，PDS report block end 给 CDM，CDM 进而 report end 给 FE，FE 在 grid 结束后可以更新 sem 并开始调度有依赖的 grid
+
+### warp 调度
+同一个 warp 内的线程是 SIMD，执行同样的指令
+不同的 warp 是 SIMT，针对分支需要通过 active mask 选择对应的线程去执行
+
+Warp 调度的目的是从“满足执行条件”的 warp 中选出适合执行的 warp 来发射指令，这是一个复杂的过程，我们先略过细节，看看单个 warp 的处理，**需要兼顾局部性和负载均衡性**
+
+一个 warp 在等待时（延迟长或者等到数据依赖），scheduler 会切换其他的 warp
+
