@@ -17,7 +17,7 @@ GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 >选择 32-bit 在创建项目时，只能创建 32bit 的项目，至于选择 32bit的原因，作者没有明说，提到在 64bit 环境中也能运行 32bit 代码，猜测可能兼容性更好
 
 打开后：找到 include 文件夹，和最新的 lib-vc 版本
-![](http://cdn.ljc0606.cn/obsidian/202506252234202.png)
+
 
 在项目目录下建立 Dependencies 文件夹，存放上述两个文件夹，删掉 lib 中的 `.dll` 和后缀 `dll` 的 lib 文件，这个用于 动态编译
 配置：
