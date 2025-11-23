@@ -1,1 +1,0 @@
-<div align=center><img src="  " style="zoom: 67%;"></div>
