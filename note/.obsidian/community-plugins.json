@@ -31,5 +31,6 @@
   "oz-clear-unused-images",
   "obsidian-image-toolkit",
   "image-converter",
-  "obsidian-image-auto-upload-plugin"
+  "obsidian-image-auto-upload-plugin",
+  "obsidian-git"
 ]
