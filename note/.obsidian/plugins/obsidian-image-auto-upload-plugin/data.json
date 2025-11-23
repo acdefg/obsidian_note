@@ -1,10 +1,16 @@
 {
-  "uploadByClipSwitch": true,
+  "uploadByClipSwitch": false,
   "uploader": "PicGo",
   "uploadServer": "http://127.0.0.1:36677/upload",
+  "deleteServer": "http://127.0.0.1:36677/delete",
+  "imageSizeSuffix": "",
   "picgoCorePath": "",
-  "menuMode": "auto",
   "workOnNetWork": false,
   "fixPath": false,
-  "applyImage": true
+  "applyImage": true,
+  "newWorkBlackDomains": "",
+  "deleteSource": true,
+  "imageDesc": "origin",
+  "remoteServerMode": false,
+  "menuMode": "auto"
 }

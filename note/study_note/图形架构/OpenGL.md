@@ -18,14 +18,17 @@ GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 
 打开后：找到 include 文件夹，和最新的 lib-vc 版本
 
-
 在项目目录下建立 Dependencies 文件夹，存放上述两个文件夹，删掉 lib 中的 `.dll` 和后缀 `dll` 的 lib 文件，这个用于 动态编译
+
 配置：
+![|574x263](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251109210218083.png)
+
 ```
 项目属性 -> C/C++ -> 附加包含目录 -> 添加 $(SolutionDir)Dependencies\GLFW\include
 项目属性 -> 链接器 -> 常规 -> 附加库目录 -> 添加: $(SolutionDir)Dependencies\GLFW\lib-vc2022
 项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: glfw3.lib
 ```
+F7： compile
 
 opengl 添加：
 项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: opengl32.lib
@@ -34,7 +37,7 @@ opengl 添加：
 //直接默认lib
 $(CoreLibraryDependencies);%(AdditionalDependencies);glfw3.lib;opengl32.lib
 ```
-
+此时运行得到一个全黑的窗口，标题是“Hello World”
 ## 使用传统 opengl 绘制三角形
 
 ```
@@ -359,15 +362,17 @@ static ShaderProgramSource ParseShader(const std::string& filepath)
 检查路径：项目属性 -> 调试 -> 工作目录 -> $(ProjectDir)
 
 # P9：索引缓冲区
+画一个正方形，用两个三角形来实现
  index buffer：reuse vertex
  
 ```c++
 ...
 	float position[] = {
+	//the first tranigle
 		-0.5f,-0.5f,
 		0.5f, -0.5f,
 		0.5f, 0.5f,
-
+  //the second
 		0.5f, 0.5f,
 		-0.5f,0.5f,
 		-0.5f,-0.5f
@@ -417,3 +422,74 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr); // draw rectangle wit
 `glGetError` 会给出 OpenGL 出错的错误代码，但只会返回任意一个错误的代码，所以需要通过循环来不断打印所有错误信息
 `glDebugMessageCallback` 更好，会给出错误信息而不是代码，并且给出建议，但是不是所有版本都兼容
 
+这节先给出怎么使用 `glGetError`， 使用宏方便调用， 给出错误信息和调用的函数和错误位置
+`#include <sstream>`
+![image.png|341x83](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251109221846068.png)
+
+![image.png|512x236](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251109222127950.png)
+
+# P11: 统一变量
+通过 cpu 向 gpu 传递数据的两种方式： `attributes` 和 `uniforms` 
+`attributes` per vertex
+`uniforms` per draw
+
+# P12：顶点数组
+`vertex buffer` and `vertex arrary`
+`vertex arrary` 是 opengl 特有的，其他比如 directX 并没有
+
+OpenGL 3.2 开始把上下文分成两个 **Profile**：
+1. **Core Profile**
+    - 去掉所有**废弃函数**（立刻移除）。
+    - 必须**自配 VAO**、**自写 shader**、**自管矩阵**。
+    - 不能再用 `glBegin/glEnd`、`glVertex*`、`glMatrixMode`、`glLight*` 等固定管线 API。
+    - 目标：**现代、可移植、与未来版本保持兼容**。
+        
+2. **Compatibility Profile**
+    - 保留 3.2 以前**全部旧 API**（废弃函数仍然可用）。
+    - 固定管线 + 可编程管线**混合使用**——你可以一边 `glBegin(GL_TRIANGLES)` 一边用 `glDrawArrays`。
+    - 方便老代码、教学 demo 快速跑起来。
+    - 目标：**向下兼容**，但驱动体积更大，行为可能因厂商而异。
+
+VAO（Vertex Array Object）是 OpenGL 3+ 里 **“一次性记录顶点格式 + 数据源”** 的容器。  
+把它想成 **“顶点配置的录像带”**：录一次，播放无数次——绑定即还原，代码量瞬间从十几行掉到两三行。
+VAO 内保存了
+- 每个属性（attribute）的  
+    – 启/停状态 `glEnableVertexAttribArray`  
+    – 格式 `glVertexAttribPointer` / `glVertexAttribIPointer` / `glVertexAttribLPointer`  
+    – 所属 VBO（`glVertexAttribPointer` 最后一个参数隐含）
+- **Element Array Buffer 绑定**（EBO / IBO）
+- ****不存** 顶点数据本身**，只存“怎么读”。
+
+```cpp
+GLuint vao, vbo, ebo;
+// 1. 生成
+glGenVertexArrays(1, &vao);
+glGenBuffers(1, &vbo);
+glGenBuffers(1, &ebo);
+
+// 2. 录制阶段（只需做一次）
+glBindVertexArray(vao);               // 开始录像
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);   // 绑定到 VAO 的“EBO 槽”
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+    // 属性 0：位置
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    // 属性 1：颜色
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+    // 属性 2：纹理
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(2);
+glBindVertexArray(0);                 // 结束录像
+
+// 3. 渲染阶段（每帧只需两行）
+glUseProgram(shader);
+glBindVertexArray(vao);               // 瞬间还原所有格式 + EBO
+glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
+```
+
+可已选择，在 core 模式下创建一个 VAO 并且全局只用一个，每次切换对象时重新解绑再绑定 buffer，也可以对每一个对象创建一个 VAO，方便切换 layoout

@@ -1,6 +1,6 @@
 ---
 
-kanban-plugin: basic
+kanban-plugin: board
 
 ---
 
@@ -10,8 +10,6 @@ kanban-plugin: basic
 
 ## done
 
-- [ ] [[嵌入式调研报告]]  @{2023-01-20} @@{00:00}
-- [ ] [[数集调研报告]] @{2022-12-23} @@{00:00}
 - [ ] - [x] 数集大作业 @{2022-12-23} @@{00:00}
 - [ ] - [x] 郭老师组会 @{2022-12-11} @@{18:00}
 - [ ] - [x] 杨老师组会 @{2022-12-10} @@{08:00}
@@ -42,10 +40,15 @@ kanban-plugin: basic
 
 
 
+***
 
+## Archive
+
+- [ ] [[数集调研报告]] @{2022-12-23} @@{00:00}
+- [ ] [[study_note/pku_note/作业 1/嵌入式/嵌入式调研报告]]  @{2023-01-20} @@{00:00}
 
 %% kanban:settings
 ```
-{"kanban-plugin":"basic"}
+{"kanban-plugin":"board","list-collapse":[null,true]}
 ```
 %%
