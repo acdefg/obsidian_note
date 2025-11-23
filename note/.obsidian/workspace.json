@@ -8,48 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4537e3e056ad2dfa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/图形架构/OpenGL.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "OpenGL"
-            }
-          },
-          {
-            "id": "ee28e71c79e308c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/work_MT/图形架构/OpenGL.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "OpenGL"
-            }
-          },
-          {
-            "id": "489f066a54833731",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/work_MT/图形架构/Home.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Home"
-            }
-          },
-          {
             "id": "807dec0db5ebeeba",
             "type": "leaf",
             "state": {
@@ -174,65 +132,9 @@
               "icon": "lucide-file",
               "title": "新中特"
             }
-          },
-          {
-            "id": "f141191586561a10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/图形架构/图形渲染学习.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "图形渲染学习"
-            }
-          },
-          {
-            "id": "eb1eb440ac6662c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/图形架构/A trip through the Graphics Pipline 2011.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "A trip through the Graphics Pipline 2011"
-            }
-          },
-          {
-            "id": "02fdd93bae17fe7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/work_MT/图形架构/Rendering_pipeline.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Rendering_pipeline"
-            }
-          },
-          {
-            "id": "ff31e005b22be2c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study_note/work_MT/games/games101.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "games101"
-            }
           }
         ],
-        "currentTab": 9
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -413,51 +315,51 @@
   },
   "active": "efc09d51740a46a3",
   "lastOpenFiles": [
-    "system_arrangement/一些配置/图床设置.md",
-    "system_arrangement/一些配置",
-    "system_arrangement",
-    "study_note/pku-note/作业/DC run log.md",
-    "study_note/pku-note/作业/自然辩证法.md",
-    "study_note/pku-note/作业/集成电路前沿技术导论.md",
-    "study_note/pku-note/作业/低功耗.md",
-    "study_note/pku-note/作业/新中特.md",
-    "study_note/pku-note/作业/读书报告.md",
-    "study_note/pku_note/作业 1/嵌入式/zuoye1.md",
-    "study_note/pku_note/作业 1/低功耗.md",
-    "study_note/pku_note/作业 1/读书报告.md",
-    "study_note/pku_note/作业 1/嵌入式/cuda编程.md",
-    "study_note/pku_note/作业 1/嵌入式/gcc优化选项研究.md",
-    "study_note/pku_note/作业 1/嵌入式/软中断.md",
-    "study_note/pku_note/作业 1/郭老师组会/随机森林vs决策树.md",
-    "study_note/work_MT/纹理/BC6H和BC7.md",
-    "study_note/work_MT/纹理/压缩纹理.md",
-    "study_note/work_MT/纹理",
-    "study_note/图形架构/Home.md",
-    "study_note/work_MT/图形架构/Home.md",
-    "study_note/work_MT/图形架构/OpenGL.md",
-    "study_note/图形架构/OpenGL.md",
-    "study_note/图形架构/图形渲染学习.md",
-    "study_note/图形架构/A trip through the Graphics Pipline 2011.md",
-    "study_note/work_MT/图形架构/图形渲染学习.md",
-    "study_note/work_MT/图形架构/Rendering_pipeline.md",
-    "study_note/work_MT/games/games101.md",
-    "study_note/图形架构/games101/笔记.md",
+    "note/待整理.md",
+    "note/摄影教程/人像修图.md",
+    "note/摄影教程/焦段.md",
+    "note/blog/待整理.md",
+    "note/blog/博客配置.md",
+    "note/tools/CMAKE.md",
+    "note/blog/优秀博客.md",
+    "note/摄影教程/摄影后期——李涛.md",
+    "note/tools/罗技键盘快捷键.md",
+    "note/tools/GIT+SSH.md",
+    "note/一些存储信息/罗技键盘快捷键.md",
+    "note/blog/零基础调试博客网页.md",
+    "note/blog/vitepress.md",
+    "note/blog/git+action.md",
+    "note/Dairy/情绪失序/对话日志.md",
+    "note/blog/阿里云服务器+域名配置.md",
+    "note/blog/同行的 blog 笔记.md",
+    "note/Dairy/2022-04-29.md",
+    "note/Dairy/2022-09-09.md",
+    "note/Dairy/2022-12-19.md",
+    "note/Dairy/2022-04-15.md",
+    "note/Dairy/2022-04-19.md",
+    "note/Dairy/2022-04-17.md",
+    "note/Dairy/2022-04-09.md",
+    "note/Dairy/2022-04-08.md",
+    "note/摄影教程/entertain/Pr.md",
+    "note/study_note/图形架构/Home.md.baiduyun.uploading.cfg",
+    "note/study_note/图形架构/图形渲染学习.md.baiduyun.uploading.cfg",
+    "note/study_note/图形架构/OpenGL.md.baiduyun.uploading.cfg",
+    "note/Excalidraw/Drawing 2022-12-08 23.34.56.excalidraw.svg",
+    "note/study_note/work_MT/图形架构/Home.md.baiduyun.uploading.cfg",
+    "note/Excalidraw/Drawing 2022-12-08 23.34.56.excalidraw.png",
+    "note/Excalidraw/Drawing 2022-12-08 23.18.55.excalidraw.png",
+    "note/study_note/work_MT/图形架构/OpenGL.md.baiduyun.uploading.cfg",
+    "note/study_note/work_MT/图形架构/图形渲染学习.md.baiduyun.uploading.cfg",
+    "note/study_note/pku-note/soi/games101.md.baiduyun.uploading.cfg",
+    "note/study_note/work_MT/图形架构/A trip through the Graphics Pipline 2011.md.baiduyun.uploading.cfg",
+    "note/study_note/图形架构/A trip through the Graphics Pipline 2011.md.baiduyun.uploading.cfg",
+    "note/study_note/pku-note/作业/数集/设计",
     "z_attachment/Pasted image 20251115160425.png",
     "z_attachment/Pasted image 20251115161730.png",
     "Excalidraw/Drawing 2022-12-08 23.34.56.excalidraw.svg",
     "Excalidraw/Drawing 2022-12-08 23.34.56.excalidraw.png",
     "Excalidraw/Drawing 2022-12-08 23.18.55.excalidraw.png",
-    "study_note/work_MT/图形架构/Home.md.baiduyun.uploading.cfg",
-    "study_note/pku-note/soi/games101.md.baiduyun.uploading.cfg",
-    "study_note/work_MT/图形架构/图形渲染学习.md.baiduyun.uploading.cfg",
-    "study_note/work_MT/图形架构/OpenGL.md.baiduyun.uploading.cfg",
-    "study_note/work_MT/图形架构/A trip through the Graphics Pipline 2011.md.baiduyun.uploading.cfg",
-    "study_note/pku_note/作业 1/数集/设计",
-    "study_note/pku-note/数字集成/项目",
     "z_attachment/image-28.png",
-    "z_attachment/image-27.png",
-    "z_attachment/image-26.png",
-    "z_attachment/image-25.png",
-    "z_attachment/image-24.png"
+    "z_attachment/image-27.png"
   ]
 }
