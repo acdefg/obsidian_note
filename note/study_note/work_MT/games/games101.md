@@ -25,28 +25,28 @@
 用 [1,0] 和 [0,1] 变换后得到的位置，就可以得到上述矩阵
 
 ### 线性变化
-![[image-1.png|400x302]]
+![image-1|400x302](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104745.png)
 
 ### 齐次坐标的引入
-![[image-2.png|395x202]] 平移变换没有办法用线性变换的方式表示
+![image-2|395x202](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104746.png) 平移变换没有办法用线性变换的方式表示
 
-![[image-3.png|391x270]] 使用 3 维切边实现 2 维平移变换 
+![image-3|391x270](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104747.png) 使用 3 维切边实现 2 维平移变换 
 
-![[image-4.png|387x220]] 通过 w 是 1 还是 0 来表示是点还是向量
+![image-4|387x220](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104748.png) 通过 w 是 1 还是 0 来表示是点还是向量
 
-![[image-5.png|384x127]] 一个点+一个点会等于一个点的中点
+![image-5|384x127](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104749.png) 一个点+一个点会等于一个点的中点
 
 ### 仿射变换
-![[image-6.png|377x295]]
+![image-6|377x295](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104750.png)
 仿射变换 = 线性变换 + 平移
 
 ### 2d transformation summary
-![[image-7.png|368x318]]
+![image-7|368x318](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104751.png)
 
 ### 逆变换
 复杂的变换可以通过一系列简单的操作得到
 变换的顺序会影响变换的结果（矩阵不满足交换律）
-![[image-8.png|364x260]]
+![image-8|364x260](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104752.png)
 
 ## Lecture 4
 ![image-12|379x217](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251122205602440.png)
@@ -100,25 +100,25 @@ taa：temperol aa，复用了上一帧的结果
 
 ## Lecture 7： Z-test and shading
 ### z-buffering
-![[image-9.png|333x264]]
+![image-9|333x264](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104753.png)
 对每个像素表示的最浅的深度（离屏幕最近的）
 frame buffer：只存最后的结果
 depth buffer：对每个像素，离屏幕最近的距离
-![[image-10.png|346x217]]
+![image-10|346x217](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104754.png)
 ### shading
 对不同物质，应用不同材质的过程
 光线如何和材质进行作用，如何去反射
-![[image-12.png|391x270]]
+![image-12|391x270](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104755.png)
 着色具有局部性，这里并不会生成阴影
-![[image-13.png|424x314]]
+![image-13|424x314](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104756.png)
 
 漫反射
-![[image-14.png|342x264]]
+![image-14|342x264](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104757.png)
 光线打在同样材质但是不同角度的物体表面上，生成的明暗是不一样的
-![[image-15.png|455x313]]
+![image-15|455x313](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104758.png)
 考虑单位面积接收到的光线的能量，这个值和光线方向和物体表面的法线方向的夹角的余弦值成正比，l，n 都是单位向量
-![[image-17.png|322x242]]
-![[image-19.png|320x221]]
+![image-17|322x242](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104759.png)
+![image-19|320x221](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104760.png)
 
 能量守恒，但是能量密度和传播距离成平方反比
 有多少能量到达乘以有多少能量被接收，如果夹角余弦为负，则表示光线没有经过物体表面的该点
@@ -126,26 +126,26 @@ depth buffer：对每个像素，离屏幕最近的距离
 
 ## Lecture 8： shading，pipeline
 ### blinn-phong 着色模型
- ![[image-20.png|503x370]]
+ ![image-20|503x370](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104761.png)
  高光出现的原理是：镜面反射方向和观测方向和接近，也就相等于法线方向和半程向量方向接近
  为什么用半程向量：h 其实等于观测方向 v+光线方向 h，这比反射方向更好算
  简化了多少能量被吸收
 p 为什么控制夹角的衰减系数
 ![[image-21.png|292x159]]
-![[image-22.png|209x159]]
+![image-22|209x159](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104762.png)
 
 环境光：用一个常数来假设物体获得的环境光
-![[image-24.png|309x227]]
+![image-24|309x227](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104763.png)
 
-![[image-25.png|504x314]]
+![image-25|504x314](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104764.png)
 将三个部分加起来
 ### shading pipeline
 对每个三角形/面进行颜色计算
-![[image-26.png|395x248]]
+![image-26|395x248](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104765.png)
 对每个顶点计算法线，得到颜色，然后对于三角形内部的颜色计算插值
 ![[image-27.png|391x256]]
 模型足够复杂的情况下，三种 shading 得到的效果差不多
-![[image-28.png|389x287]]
+![image-28|389x287](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104766.png)
 
 
 
@@ -189,7 +189,7 @@ p 为什么控制夹角的衰减系数
 #### 避免采样解决（更优）
 点查询、范围查询
 Mipmap：快速近似正方形范围查询
-![](http://cdn.ljc0606.cn/obsidian/202507021654174.png)
+![|647x18](http://cdn.ljc0606.cn/obsidian/202507021654174.png)
 提前计算不同层级的 mipmap，引入额外存储是原图的三分之一
 ![](http://cdn.ljc0606.cn/obsidian/202507021655608.png)
 
