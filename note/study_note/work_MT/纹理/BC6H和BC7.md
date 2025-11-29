@@ -174,11 +174,11 @@ BC6H 是 DirectX 11 引入的高动态范围(HDR)纹理压缩格式，专为 FP1
 - 不同于 BC7 的 fix-point， BC6H 会将 16bit integer 解释为 16bit half point，插值为非线性
 
 ## **2. BC6H 所有模式详细参数表**
-![[Pasted image 20251115161730.png]]
+![Pasted image 20251115161730](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129225804064.png)
 没有列出的位是保留位，
 
 ### Mode
-![[Pasted image 20251115160425.png]]
+![Pasted image 20251115160425](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129225804065.png)
 存的是每一种 mode 数字对应的的二进制表示
 
 
