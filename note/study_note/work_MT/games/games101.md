@@ -1,3 +1,8 @@
+## ref
+[Learning/GAMES101笔记及作业/笔记/GAMES101 计算机图形学入门--闫令琪.md at master · zeroo0o0/Learning · GitHub](https://github.com/zeroo0o0/Learning/blob/master/GAMES101%E7%AC%94%E8%AE%B0%E5%8F%8A%E4%BD%9C%E4%B8%9A/%E7%AC%94%E8%AE%B0/GAMES101%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E9%97%AB%E4%BB%A4%E7%90%AA.md)
+[Games101作业1~8(含提高项)](https://zhuanlan.zhihu.com/p/1912986768225047690)
+
+[OpenGL - LearnOpenGL CN](https://learnopengl-cn.github.io/01%20Getting%20started/01%20OpenGL/)
 
 ## Lecture 1
 [GAMES101-现代计算机图形学入门-闫令琪\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1X7411F744/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
@@ -228,8 +233,6 @@ Mipmap：快速近似正方形范围查询
 各向异性过滤对比 mipmap，各向异性过滤生成的图是原本的三倍
 ![|0x0](http://cdn.ljc0606.cn/obsidian/202507021909916.png)
 
-[Learning/GAMES101笔记及作业/笔记/GAMES101 计算机图形学入门--闫令琪.md at master · zeroo0o0/Learning · GitHub](https://github.com/zeroo0o0/Learning/blob/master/GAMES101%E7%AC%94%E8%AE%B0%E5%8F%8A%E4%BD%9C%E4%B8%9A/%E7%AC%94%E8%AE%B0/GAMES101%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E9%97%AB%E4%BB%A4%E7%90%AA.md)
-[Games101作业1~8(含提高项)](https://zhuanlan.zhihu.com/p/1912986768225047690)
+## Lecture 10：geometry
 
-[OpenGL - LearnOpenGL CN](https://learnopengl-cn.github.io/01%20Getting%20started/01%20OpenGL/)
 
