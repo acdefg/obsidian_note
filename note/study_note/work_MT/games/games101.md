@@ -162,8 +162,11 @@ p 为什么控制夹角的衰减系数
 
 ![[image-3.png]]
 
-### Texture
+### Texture 
+三维物体的表面都是二维的
 ![[image-4.png]]
+
+
 ## Lecture 9：纹理映射
 
 ### 重心坐标
