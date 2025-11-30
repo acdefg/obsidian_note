@@ -126,19 +126,21 @@ depth buffer：对每个像素，离屏幕最近的距离
 
 ## Lecture 8： shading，pipeline
 ### blinn-phong 着色模型
+高光项： 光滑表面接近镜面反射
  ![image-20|503x370](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104761.png)
  高光出现的原理是：镜面反射方向和观测方向和接近，也就相等于法线方向和半程向量方向接近
  为什么用半程向量：h 其实等于观测方向 v+光线方向 h，这比反射方向更好算
  简化了多少能量被吸收
 p 为什么控制夹角的衰减系数
 ![[image-21.png|292x159]]
-![image-22|209x159](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104762.png)
+![image-22|407x310](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104762.png)
 
 环境光：用一个常数来假设物体获得的环境光
-![image-24|309x227](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104763.png)
+![image-24|407x299](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104763.png)
 
 ![image-25|504x314](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104764.png)
 将三个部分加起来
+环境光 + 点光源 + 高光项
 ### shading pipeline
 对每个三角形/面进行颜色计算
 ![image-26|395x248](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104765.png)
@@ -160,7 +162,8 @@ p 为什么控制夹角的衰减系数
 
 ![[image-3.png]]
 
-
+### Texture
+![[image-4.png]]
 ## Lecture 9：纹理映射
 
 ### 重心坐标
