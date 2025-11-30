@@ -237,3 +237,7 @@ Mipmap：快速近似正方形范围查询
 
 ### texture application
 ![[image-5.png|557x365]]
+
+![[image-6.png]]
+
+![[image-7.png]]
