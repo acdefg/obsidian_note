@@ -235,4 +235,5 @@ Mipmap：快速近似正方形范围查询
 
 ## Lecture 10：geometry
 
-
+### texture application
+![[image-5.png|557x365]]
