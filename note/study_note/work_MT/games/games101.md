@@ -147,7 +147,7 @@ p 为什么控制夹角的衰减系数
 模型足够复杂的情况下，三种 shading 得到的效果差不多
 ![image-28|389x287](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104766.png)
 
-
+顶点的法线：使用周围面的法线
 
 
 ## Lecture 9：纹理映射
