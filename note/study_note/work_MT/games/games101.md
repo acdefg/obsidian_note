@@ -247,3 +247,5 @@ Mipmap：快速近似正方形范围查询
 ![[image-9.png]]
 求出某个点新的切线
 ![[image-10.png]]
+
+![[image-11.png]]
