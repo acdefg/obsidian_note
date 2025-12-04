@@ -1,3 +1,8 @@
+## ref
+[Learning/GAMES101笔记及作业/笔记/GAMES101 计算机图形学入门--闫令琪.md at master · zeroo0o0/Learning · GitHub](https://github.com/zeroo0o0/Learning/blob/master/GAMES101%E7%AC%94%E8%AE%B0%E5%8F%8A%E4%BD%9C%E4%B8%9A/%E7%AC%94%E8%AE%B0/GAMES101%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E9%97%AB%E4%BB%A4%E7%90%AA.md)
+[Games101作业1~8(含提高项)](https://zhuanlan.zhihu.com/p/1912986768225047690)
+
+[OpenGL - LearnOpenGL CN](https://learnopengl-cn.github.io/01%20Getting%20started/01%20OpenGL/)
 
 ## Lecture 1
 [GAMES101-现代计算机图形学入门-闫令琪\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1X7411F744/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
@@ -126,19 +131,21 @@ depth buffer：对每个像素，离屏幕最近的距离
 
 ## Lecture 8： shading，pipeline
 ### blinn-phong 着色模型
+高光项： 光滑表面接近镜面反射
  ![image-20|503x370](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104761.png)
  高光出现的原理是：镜面反射方向和观测方向和接近，也就相等于法线方向和半程向量方向接近
  为什么用半程向量：h 其实等于观测方向 v+光线方向 h，这比反射方向更好算
  简化了多少能量被吸收
 p 为什么控制夹角的衰减系数
 ![[image-21.png|292x159]]
-![image-22|209x159](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104762.png)
+![image-22|407x310](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104762.png)
 
 环境光：用一个常数来假设物体获得的环境光
-![image-24|309x227](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104763.png)
+![image-24|407x299](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104763.png)
 
 ![image-25|504x314](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104764.png)
 将三个部分加起来
+环境光 + 点光源 + 高光项
 ### shading pipeline
 对每个三角形/面进行颜色计算
 ![image-26|395x248](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104765.png)
@@ -147,7 +154,22 @@ p 为什么控制夹角的衰减系数
 模型足够复杂的情况下，三种 shading 得到的效果差不多
 ![image-28|389x287](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251129223104766.png)
 
+顶点的法线：使用周围面的法线求（加权）平均得到顶点的法线
+逐像素着色：利用顶点法线进行插值，得到每个像素的法线
 
+![[image.png|441x319]]
+
+利用重心坐标进行插值
+![[image-1.png]]
+### 图形管线
+![[image-2.png|647x450]]
+
+
+![[image-3.png]]
+
+### Texture 
+三维物体的表面都是二维的
+![[image-4.png]]
 
 
 ## Lecture 9：纹理映射
@@ -211,8 +233,28 @@ Mipmap：快速近似正方形范围查询
 各向异性过滤对比 mipmap，各向异性过滤生成的图是原本的三倍
 ![|0x0](http://cdn.ljc0606.cn/obsidian/202507021909916.png)
 
-[Learning/GAMES101笔记及作业/笔记/GAMES101 计算机图形学入门--闫令琪.md at master · zeroo0o0/Learning · GitHub](https://github.com/zeroo0o0/Learning/blob/master/GAMES101%E7%AC%94%E8%AE%B0%E5%8F%8A%E4%BD%9C%E4%B8%9A/%E7%AC%94%E8%AE%B0/GAMES101%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E9%97%AB%E4%BB%A4%E7%90%AA.md)
-[Games101作业1~8(含提高项)](https://zhuanlan.zhihu.com/p/1912986768225047690)
+## Lecture 10：geometry
 
-[OpenGL - LearnOpenGL CN](https://learnopengl-cn.github.io/01%20Getting%20started/01%20OpenGL/)
+### texture application
+![[image-5.png|557x365]]
+用球面存储环境管会有失真
+![[image-6.png]]
+将球面映射到立方体
+![[image-7.png]]
+用法线贴图/凹凸贴图，定义物体表面的相对高度，而不需要改变具体的复杂图形
+![[image-8.png]] 
+通过改变某个点的高度，改变了该点的法线
+![[image-9.png]]
+求出某个点新的切线
+![[image-10.png]]
+
+![[image-11.png]]
+
+![[image-12.png]]
+
+![[image-13.png]]
+
+![[image-14.png]]
+
+![[image-15.png]]
 
