@@ -7,6 +7,7 @@ NeRF（神经辐射场）作为近年来**三维重建**领域最受瞩目的技
 
 NeRF 算法的核心在于将一个复杂的三维场景编码进一个多层感知机（MLP）的权重中，其输入包括空间点的三维坐标 $\mathbf{x} = (x, y, z)$ 以及观察该点时的单位方向向量 $\mathbf{d} = (\theta, \phi)$。由于神经网络在处理低维直接输入时难以学习到高频的细节特征，模型首先通过位置编码 $\gamma(p) = (\sin(2^0 \pi p), \cos(2^0 \pi p), \dots, \sin(2^{L-1} \pi p), \cos(2^{L-1} \pi p))$ 将这些输入映射到高维空间。在模型结构上，NeRF 设计了一个非对称的架构，位置 $\mathbf{x}$ 首先经过数层 MLP 输出该点的体积密度 $\sigma$ 和一个中间特征，随后这个特征才与视角 $\mathbf{d}$ 融合并经过最后的网络层输出颜色 $\mathbf{c} = (r, g, b)$。这种结构设计隐含了一个物理假设，即物体的几何形状（密度）是客观存在的，不随观察视角变化，而物体的外观颜色（如高光、反光）则会随着视角的变化而改变。
 ![image-17](https://imag060625.oss-cn-beijing.aliyuncs.com/img/20251218232857259.png)
+## 体渲染
 在渲染阶段，NeRF借用了经典光学中的体渲染理论。对于从相机中心 $\mathbf{o}$ 出发、方向为 $\mathbf{d}$ 的射线 $\mathbf{r}(t) = \mathbf{o} + t\mathbf{d}$，我们关注其在近平面 $t_n$ 到远平面 $t_f$ 之间的颜色积累。该射线预测出的颜色 $C(\mathbf{r})$ 可以表示为积分形式
 
 $$C(\mathbf{r}) = \int_{t_n}^{t_f} T(t) \sigma(\mathbf{r}(t)) \mathbf{c}(\mathbf{r}(t), \mathbf{d}) dt$$
