@@ -20,7 +20,7 @@ THOR:
 | **Total FLOPs ($2PT$)**                                                      | 1.46T    | 2.92T    | 5.84T    | 11.67T   | 14.59T   | 29.18T   | 72.96T   | 145.92T  | 291.84T  |
 | **TFLOPS ($X$)**                                                             | **6.78** | **8.92** | **9.77** | **9.04** | **8.95** | **7.84** | **6.04** | **4.20** | **2.58** |
 |                                                                              |          |          |          |          |          |          |          |          |          |
-|  ~~ <br> @！#RTYHUJJAAAAQ#@ZSZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ |          |          |          |          |          |          |          |          |          |
+| ~~ <br> @！#RTYHUJJAAAAQ#@ZSZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ |          |          |          |          |          |          |          |          |          |
 
 | **Input Frames** | **1**  | **2**  | **4**  | **8**  | **10** | **20** | **50**  | **100** | **200**  |
 | ---------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------- | ------- | -------- |
