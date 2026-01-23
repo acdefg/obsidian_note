@@ -25,8 +25,7 @@ Settings: Warmup=5, Steps=20, Metric=Mean Wall Time.
 ![[GR00T_TEST.png|380x329]]
 
 ![[image-10.png]]
-### ncu test
-使用 NVIDIA Nsight Compute (`ncu`) 分析主要 Kernel 的内存使用情况（Memory Throughput, Cache Hit Rate, DRAM Bandwidth）
+### ncu test使用 NVIDIA Nsight Compute (`ncu`) 分析主要 Kernel 的内存使用情况（Memory Throughput, Cache Hit Rate, DRAM Bandwidth）
 *   **工具**: `ncu` (NVIDIA Nsight Compute CLI)
 *   **指标 (Metrics)**:
     *   `MemoryWorkloadAnalysis`: 详细分析 DRAM、L2 Cache、L1 Cache 的吞吐量和命中率。
