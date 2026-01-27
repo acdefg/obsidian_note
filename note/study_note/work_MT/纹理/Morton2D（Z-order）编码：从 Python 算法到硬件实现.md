@@ -86,17 +86,12 @@ y x y x
 
 ```python
 def morton2d(x: int, y: int) -> int:
-    result = 0
-    bit = 0
-
-    while x > 0 or y > 0:
-        result |= (y & 1) << (2 * bit)
-        result |= (x & 1) << (2 * bit + 1)
-        x >>= 1
-        y >>= 1
-        bit += 1
-
-    return result
+    out = 0
+    n = max(x.bit_length(), y.bit_length())
+    for i in range(n):
+        out |= ((y >> i) & 1) << (2*i)
+        out |= ((x >> i) & 1) << (2*i + 1)
+    return out
 ```
 
 调用上述函数
