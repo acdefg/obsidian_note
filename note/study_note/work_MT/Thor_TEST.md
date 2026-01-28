@@ -1,5 +1,11 @@
 
-### 1222
+## 1222
+### VGGT
+- GPU：**NVIDIA Thor**
+- Batch size：**1**
+- 测试方式：端到端 pipeline + 各子模块拆分
+- model：vggt v1.5-1B
+
 | Component         | Torch (ms) | FP16 (ms) | FP16 QPS | Quant (ms) | Quant QPS |
 | ----------------- | ---------- | --------- | -------- | ---------- | --------- |
 | Backbone          | 2.30298    | 4.27      | 427.728  | (Shared)   | —         |
@@ -15,3 +21,4 @@
 
 **QPS (Queries Per Second)** 代表的是每秒查询率，也可以理解为模型每秒钟能够处理完成的推理请求数量，它是衡量模型“吞吐量”最核心的指标。计算这个数值的公式其实非常简单，在单次请求（Batch Size = 1）的实时控制场景下，QPS 与延迟（Latency）互为倒数关系，即 $QPS = \frac{1000}{\text{Latency(ms)}}$
 
+$$Effective TFLOPS=FLOPs per inference × QPS$$
