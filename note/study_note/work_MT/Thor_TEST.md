@@ -58,20 +58,13 @@ thor 测试数据：
 |**200**|112.9059|47.46|**1.77**|**153,600**|368.64 T|**3.27**|
 - **oken 数量估算 ($T$)**：
  $$T = \text{Frame\_Count} \times 24 \times 32 = \text{Frame\_Count} \times 768$$
-    
 - **总浮点运算量 (Total FLOPs)**：
     采用适用于纯推理阶段的线性估算公式：
     $$Total\_FLOPs = 2 \times P \times T$$
     其中 $P$ 为模型参数量（1.2 Billion），系数 2 代表仅包含前向传播的计算开销。
-    
 - **有效算力 (TFLOPS)**：
-    
-    代表每秒万亿次浮点运算数，计算公式为：
-    
+    每秒万亿次浮点运算数，计算公式为：
     $$TFLOPS = \frac{Total\_FLOPs}{\text{Time (s)} \times 10^{12}}$$
-    
 - **帧率 (FPS)**：
-    
-    代表模型处理视频流的吞吐能力，计算公式为：
-    
+计算公式为：
     $$FPS = \frac{\text{Input Frames}}{\text{Time (s)}}$$
