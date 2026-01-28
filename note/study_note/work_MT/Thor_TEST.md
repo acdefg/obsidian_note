@@ -20,7 +20,6 @@
 
 **QPS (Queries Per Second)** 代表的是每秒查询率，也可以理解为模型每秒钟能够处理完成的推理请求数量，它是衡量模型“吞吐量”最核心的指标。计算这个数值的公式其实非常简单，在单次请求（Batch Size = 1）的实时控制场景下，QPS 与延迟（Latency）互为倒数关系，即 $QPS = \frac{1000}{\text{Latency(ms)}}$
 
-$$Effective TFLOPS=FLOPs per inference × QPS$$
 在 Thor 上对 GR00T N1.5 的测试表明，FP8 路径在 DiT、ViT 和 LLM 等主要计算模块中稳定生效，相比 FP16 带来 1.24×–1.69× 的模块级加速，端到端 pipeline 加速为 1.33×
 
 ### VGGT
