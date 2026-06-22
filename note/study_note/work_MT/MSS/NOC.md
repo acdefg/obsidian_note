@@ -17,6 +17,11 @@ Cycle 4:  [ST Stage] 通过 Crossbar 传输到 East 输出端口
           Body Flit 跟随同一 VC，无需重新 VA
 ~~~
 
-![[image-17.png]]
+VC allocator：
+![[image-17.png|227x377]]
 
-input->output：多个
+input->output：对 P 个 port V 个 virtual channel，一共有 PV 个 V:1 的 arbiter，V 个下游的 virtual channel 里面选择一个来接收
+output：对 P 个 port V 个 virtual channel，一共有 PV 个 PV:1 的 arbiter，前一级每个 VC 都会往这里发信息，需要仲裁 PV：1
+
+SA：
+![[image-18.png|273x363]]
