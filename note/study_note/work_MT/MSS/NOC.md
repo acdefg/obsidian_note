@@ -17,3 +17,6 @@ Cycle 4:  [ST Stage] 通过 Crossbar 传输到 East 输出端口
           Body Flit 跟随同一 VC，无需重新 VA
 ~~~
 
+![[image-17.png]]
+
+input->output：多个
