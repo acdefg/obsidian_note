@@ -25,3 +25,4 @@ output：对 P 个 port V 个 virtual channel，一共有 PV 个 PV:1 的 arbite
 
 SA：
 ![[image-18.png|273x363]]
+区别是按照 P 来看的
