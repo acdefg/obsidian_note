@@ -24,6 +24,10 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
+      "filepath": "Dairy/股市/未命名.md",
+      "timestamp": 1782665074741
+    },
+    {
       "filepath": "Dairy/日记/2026-06-28.md",
       "timestamp": 1782664535659
     },
@@ -38,10 +42,6 @@
     {
       "filepath": "system/ubuntu_arrangement/一些命令/远程服务器后台.md",
       "timestamp": 1782664517978
-    },
-    {
-      "filepath": "system/ubuntu_arrangement/一些命令/常用命令cd，vim.md",
-      "timestamp": 1782664516608
     }
   ],
   "bookmarkedFileStore": [],
