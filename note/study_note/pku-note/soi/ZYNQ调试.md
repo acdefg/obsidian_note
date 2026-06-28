@@ -1,4 +1,11 @@
-## 串口调试
+---
+title: ZYNQ调试
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
+# 串口调试
 
 > [!todo] Info
 > 未完成：可能 sd 卡中 linux 系统文件有问题所有未能启动
@@ -9,9 +16,9 @@
 打开设备管理器：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410282259684.png)
 使用 putty 或者其他串口调试工具连接
-Serial line 填写 COM3，Speed 填写 115200，COM3 串口号根据设备管理器里显示的填写，选择 Serial，并将流控 Flow control 改为 None，点击“Open”
+Serial line 填写 COM3，Speed 填写 115200，COM3 串口号根据设备管理器里显示的填写，选择 Serial，并将流控 Flow control 改为 None，点击 "Open"
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410282303403.png)
 打开开发板上的电源开关，PuTTY 工具窗口会显示 u-boot 和 Linux 系统的启动信息，（启动过程中不要输入命令，不然系统会停在 Uboot 阶段）
 
-5. Linux系统启动完成后，可以在串口终端登陆系统，用户: root，密码: root
-（有很多人是第一次接触Putty，或者是第一次用串口，需要说明的是，Putty输入命令是通过主机键盘输入，不是通过连接在开发板上的键盘输入）
+1. Linux 系统启动完成后，可以在串口终端登陆系统，用户: root，密码: root
+（有很多人是第一次接触 Putty，或者是第一次用串口，需要说明的是，Putty 输入命令是通过主机键盘输入，不是通过连接在开发板上的键盘输入）

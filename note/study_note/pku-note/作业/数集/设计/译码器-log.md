@@ -1,19 +1,26 @@
+---
+title: 译码器-log
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:00 下午
+---
+
 3-8 译码器，8-3 编码器，格雷码计数器，参数化以上
 
-## 老师给的
+# 老师给的
 <div align=center><img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/3a12c9388992ff1dcedb03fa91cf252.jpg" style="zoom: 50%;"></div>
 <img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/e6ccb36aa2e87971e0f038eb4cf4cc7.jpg"style="zoom:50%"/>
 <div align=center><img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/a3e7e64c6575429f11ac203f0f656ee.jpg" style="zoom: 67%;"></div>
 
-## CSND
+# CSND
 [Verilog设计参数化的译码器与编码器，以及设计4位格雷码计数器_ty_:-)的博客-CSDN博客](https://blog.csdn.net/Zhong_ty/article/details/127614249)
 	[独热码_百度百科](https://baike.baidu.com/item/%E7%8B%AC%E7%83%AD%E7%A0%81/1428731)
 
-## 群里发的
+# 群里发的
 [文件路径](D:\Users\Documents\WeChat Files\wxid_1316strf57mi22\FileStorage\File\2022-10\ex_src)
 
-## run_log
-### Decoder_short
+# run_log
+## Decoder_short
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104170757.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104211624.png)
@@ -37,7 +44,6 @@ module decoder_coder #(
 	always@(*)y=1<<in;
 endmodule 
 ```
-
 
 ```verilog                                                                                
 // Generated on "11/04/2022 16:59:40"                                                                               
@@ -78,13 +84,12 @@ endmodule
 
 ```
 
-### Decoder_long
+## Decoder_long
 ![400](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104180601.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104213430.png)
 
 ![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104213454.png)
-
 
 ```verilog
 `timescale 1 ns/ 1 ps
@@ -110,7 +115,7 @@ module decoder_coder #(
 endmodule 
 ```
 
-### Coder_short
+## Coder_short
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104182352.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104183006.png)
@@ -178,7 +183,7 @@ initial
 endmodule
 ```
 
-### Coder_long
+## Coder_long
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104184220.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104192251.png)
@@ -210,14 +215,13 @@ module decoder_coder #(
 endmodule 
 ```
 
-### 格雷码计数器
+## 格雷码计数器
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104193624.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104193643.png)
 
 ![200](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221104193853.png)
-
 
 ```verilog
 module gray_counter(
@@ -285,5 +289,4 @@ always #5 clk = ~clk;
 initial $monitor($time,": state: %b",gray);
 endmodule
 ```
-
 

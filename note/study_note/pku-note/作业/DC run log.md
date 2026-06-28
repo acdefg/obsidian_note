@@ -1,10 +1,16 @@
+---
+title: DC run log
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:01 下午
+---
+
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230406111106.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230406111255.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230406111819.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230406132445.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230406132522.png)
-
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230406132616.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230406132758.png)

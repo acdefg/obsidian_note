@@ -1,6 +1,13 @@
-### 踩坑记录
+---
+title: zuoye3
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:00 下午
+---
 
-### 使用DCD等分配代码得到的地址不对
+# 踩坑记录
+
+# 使用 DCD 等分配代码得到的地址不对
 用了这段代码
 ```armasm
 		AREA Buf, DATA, READWRITE ;
@@ -21,22 +28,22 @@ Array 	DCD 0x11, 0x22, 0x33, 0x44 ;
 			STR R2, [R0, R1, LSL #2] ;
 	END
 ```
-读入Array的时候一直R0的地址都是0x40000000，始终读不到Array真正存储的值，试了一下午吧
-最后把这里原来写的0x40000000删掉了就可以了
-
+读入 Array 的时候一直 R0 的地址都是 0x40000000，始终读不到 Array 真正存储的值，试了一下午吧
+最后把这里原来写的 0x40000000 删掉了就可以了
 
 工程初始化设置参考：[Keil下ARM汇编程序建立与调试简介_朝辞暮见的博客-CSDN博客](https://blog.csdn.net/weixin_42048417/article/details/80585993)
->不同芯片的设置都不一样，以上适用于s3c2410
 
-不要加初始文件s3c2410A.s
+> 不同芯片的设置都不一样，以上适用于 s3c2410
 
-   另外：ARM的M系列主要用Thumb指令，ARM9和A系列主要用ARM指令
+不要加初始文件 s3c2410A.s
 
-     S3C2440.S启动代码中根本就没用Thumb指令。
+   另外：ARM 的 M 系列主要用 Thumb 指令，ARM9 和 A 系列主要用 ARM 指令
 
-### 打印输出的方法
+     S3C2440.S 启动代码中根本就没用 Thumb 指令。
+
+# 打印输出的方法
      
-`int 21h`输出打印，范例如下：
+`int 21h` 输出打印，范例如下：
 ```Assembly
 data segment
 
@@ -69,8 +76,8 @@ end start
 ```
 参考：[汇编之简单地打印内容_久许的博客-CSDN博客](https://blog.csdn.net/jiuweideqixu/article/details/100562637)
 
-### arm模式和thumb模式的转换
-从arm转thumb：
+# arm 模式和 thumb 模式的转换
+从 arm 转 thumb：
 ```arm
 	AREA Arm_to_Thumb,CODE, READONLY 
 	ENTRY 
@@ -83,15 +90,15 @@ aaa  mov r1,#12
 	 END
 ```
 关键语句：
-```
+```txt
 ldr r6,=label
 bx r6
 ```
-aaa = label 替换成thumb段label, 前面的寄存器可以是任意寄存器
-+1是为了告诉编译器跳转的是thumb代码，这由bx的语法决定
+aaa = label 替换成 thumb 段 label, 前面的寄存器可以是任意寄存器
++1 是为了告诉编译器跳转的是 thumb 代码，这由 bx 的语法决定
 
-从thumb转arm：
-```
+从 thumb 转 arm：
+```txt
 	AREA Arm_to_Thumb,CODE, READONLY 
 	ENTRY 
 	CODE16 
@@ -105,4 +112,4 @@ zhangsan
 	mov r2,#10 
 	END
 ```
-这里不用+1是因为末位为偶数位就可以实现跳转arm
+这里不用 +1 是因为末位为偶数位就可以实现跳转 arm

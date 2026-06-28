@@ -1,3 +1,10 @@
+---
+title: Research paper
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
 # Research paper
 
 # Abstract
@@ -26,7 +33,7 @@ spring 信息：即 p1（int32），p2（int32），ks（float16），kd（float
 
 points.size:
 
-X（float32），V（float32），F’(x)（float32），F(x)（float32）
+X（float32），V（float32），F'(x)（float32），F(x)（float32）
 
 # FLOW
 
@@ -108,6 +115,6 @@ $$
 
 CAM1 中需要存储 spring 信息，即 x1（float32），x2（float32），ks（float16），kd（float16），k（float16），其中 x1，x2 为不定值，其余为定值，只考虑 x1，x2 的存储更新
 
-CAM2 中需要存储 point 信息，即 x（float32），v（float32），f’(x)，f(x)
+CAM2 中需要存储 point 信息，即 x（float32），v（float32），f'(x)，f(x)
 
 ## Pipeline

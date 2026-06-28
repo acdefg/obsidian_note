@@ -1,11 +1,4 @@
-
-
-
-
-
 /* BANNERS */
-
-
 
 
 .hover-popover {
@@ -22,6 +15,26 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: -1;
+}
+
+.has-banner .markdown-preview-view .banner-image {
+    z-index: 1;
+}
+
+.has-banner .markdown-preview-sizer {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+.workspace-split.mod-root .view-content.has-banner {
+  background-color: transparent;
 }
 
 .banner-image img {
@@ -47,7 +60,14 @@
 
 .cm-scroller:has(.banner-image:not(:empty)) > .cm-sizer,
 .markdown-preview-view:has(.banner-image:not(:empty)) > .markdown-preview-sizer {
-  margin-top: calc(var(--banner-height) + var(--banner-margin));
+  --pp-banner-top-spacing-phone: calc(var(--banner-height) + var(--banner-margin) - var(--view-top-spacing-markdown));
+  --pp-banner-top-spacing: calc(var(--banner-height) + var(--banner-margin));
+  margin-top: var(--pp-banner-top-spacing);
+}
+
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-source-view > .cm-editor > .cm-scroller:has(.banner-image:not(:empty)) > .cm-sizer,
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-reading-view > .markdown-preview-view:has(.banner-image:not(:empty)) > .markdown-preview-sizer {
+  margin-top: var(--pp-banner-top-spacing-phone, var(--pp-banner-top-spacing));
 }
 
 
@@ -60,7 +80,15 @@
 
 .cm-scroller:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .cm-sizer,
 .markdown-preview-view:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .markdown-preview-sizer {
-  margin-top: calc(var(--banner-height) + var(--pp-banner-icon-gap));
+  --pp-banner-icon-top-spacing-phone: calc(var(--banner-height) + var(--pp-banner-icon-gap) - var(--view-top-spacing-markdown));
+  --pp-banner-icon-top-spacing: calc(var(--banner-height) + var(--pp-banner-icon-gap));
+  margin-top: var(--pp-banner-icon-top-spacing);
+}
+
+
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-source-view > .cm-editor > .cm-scroller:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .cm-sizer,
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-reading-view > .markdown-preview-view:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .markdown-preview-sizer {
+  margin-top: var(--pp-banner-icon-top-spacing-phone, var(--pp-banner-icon-top-spacing));
 }
 
 
@@ -77,6 +105,60 @@
 
 
 
+/* Autohide properties when banner is enabled */
+
+
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container,
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container {
+  position: absolute;
+  top: 5px;
+  border-radius: 10px;
+  container-type: unset;
+  width: calc(100% - var(--file-margins-x) * 2);
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--background-primary);
+  padding: 8px 24px;
+  z-index: 2;
+  box-shadow: 0 3px 3px #0003;
+  margin-bottom: 0;
+}
+
+
+.autohide-props-with-banner .is-readable-line-width .cm-scroller:has(.banner-image:not(:empty)) .metadata-container,
+.autohide-props-with-banner .is-readable-line-width.markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container {
+    max-width: var(--file-line-width);
+}
+
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container,
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container {
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container:not(:hover, :focus, :focus-within),
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container:not(:hover, :focus, :focus-within) {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container .metadata-content,
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container .metadata-content {
+  overflow: hidden;
+  max-height: 500px;  
+}
+
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container:not(:hover, :focus, :focus-within) .metadata-content,
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container:not(:hover, :focus, :focus-within) .metadata-content {
+  max-height: 0;
+  transition-delay: 0.3s;
+}
+
+
+  
+
+
+
 
 
 /* ICONS */
@@ -89,7 +171,17 @@
     right: 0;
     overflow-x: clip;
     overflow-y: visible;
+
 }
+
+
+.cm-scroller:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .icon-wrapper,
+.markdown-preview-view:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .icon-wrapper {
+  top: 0px;
+}
+
+
+
 
 .icon-outer {
   padding: var(--file-margins);
@@ -169,15 +261,32 @@
 
 
 /* SIDE IMAGES*/
+  
+.markdown-source-view .cm-sizer,
+.mod-header {
+  container-type: inline-size;
+}
 
-
-@media (min-width: 600px) {
-  .metadata-container:has(.metadata-side-image img) {
+@container (width >= 600px) {
+  .metadata-container:has(.metadata-side-image:not(.top, .bottom) .pp-cover-image) {
     --metadata-display-editing: grid;
     --metadata-display-reading: grid;
     grid-column-gap: 22px;
     grid-template-rows: auto 1fr;
   }
+}
+
+
+
+.metadata-container:has(.metadata-side-image.bottom .pp-cover-image) {
+  --metadata-display-editing: flex;
+  --metadata-display-reading: flex;
+  flex-direction: column;
+}
+
+
+.metadata-side-image.bottom {
+  order: 1;
 }
 
 
@@ -188,7 +297,11 @@
 .metadata-side-image {
     grid-row: 1/3;
     font-size: 0;
+    text-align: center;
 }
+
+
+
 
 
 
@@ -225,24 +338,23 @@
 
 
 
-
-.pp-cover-left .metadata-container:has(.metadata-side-image) {
+.metadata-container:has(.metadata-side-image.left) {
   grid-template-columns: var(--cover-column-width) auto;
 }
 
-.pp-cover-right .metadata-container:has(.metadata-side-image) {
+.metadata-container:has(.metadata-side-image.right) {
   grid-template-columns: auto var(--cover-column-width);
 }
 
-.pp-cover-left .hover-popover .metadata-container:has(.metadata-side-image) {
+.hover-popover .metadata-container:has(.metadata-side-image.left) {
   grid-template-columns: min(var(--cover-column-width), var(--cover-max-width-popover)) auto;
 }
 
-.pp-cover-right .hover-popover  .metadata-container:has(.metadata-side-image) {
+.hover-popover  .metadata-container:has(.metadata-side-image.right) {
   grid-template-columns: auto min(var(--cover-column-width), var(--cover-max-width-popover));
 }
 
-.pp-cover-right .metadata-side-image {
+.metadata-side-image.right {
   grid-column: 2
 }
 
@@ -253,45 +365,53 @@
 
 
 
-
-.metadata-side-image img {
+.metadata-side-image:not(.top, .bottom) .pp-cover-image {
   max-height: var(--cover-max-height);
 }
 
-.metadata-side-image.initial img,
-.metadata-side-image.initial-2 img,
-.metadata-side-image.initial-3 img {
+.metadata-side-image.top .pp-cover-image,
+.metadata-side-image.bottom .pp-cover-image {
+  max-height: var(--cover-max-height-top-bottom);
+}
+
+
+
+
+.metadata-side-image.initial .pp-cover-image,
+.metadata-side-image.initial-2 .pp-cover-image,
+.metadata-side-image.initial-3 .pp-cover-image {
   object-fit: cover;
 }
 
 
 
-@media (max-width: 600px) {
-  .metadata-side-image {
-    text-align: center;
+
+@container (width < 600px) {
+
+
+  .is-mobile .metadata-side-image .pp-cover-image {
+    width: var(--cover-column-width) !important;
   }
   
-  .metadata-side-image img {
+  .metadata-side-image .pp-cover-image {
     height: 200px !important;
-	width: auto !important;
+	  width: auto !important;
     margin: auto;
   }
 
-  .metadata-side-image.vertical img,
-  .metadata-side-image.vertical-cover img,
-  .metadata-side-image.vertical-contain img {
+  .metadata-side-image.vertical-cover .pp-cover-image,
+  .metadata-side-image.vertical-contain .pp-cover-image {
     aspect-ratio: auto !important;
     max-width: 150px !important;
   }
 
-  .metadata-side-image.horizontal img,
-  .metadata-side-image.horizontal-cover img,
-  .metadata-side-image.horizontal-contain img{
+  .metadata-side-image.horizontal-cover .pp-cover-image,
+  .metadata-side-image.horizontal-contain .pp-cover-image {
     width: 100% !important;
   }
 
-  .metadata-side-image.square img,
-  .metadata-side-image.circle img {
+  .metadata-side-image.square .pp-cover-image,
+  .metadata-side-image.circle .pp-cover-image {
     width: 200px !important;
   }
 }
@@ -301,43 +421,42 @@
 
 
 
-
-.metadata-side-image.vertical-cover img,
-.metadata-side-image.vertical-contain img {
+.metadata-side-image.vertical-cover .pp-cover-image,
+.metadata-side-image.vertical-contain .pp-cover-image {
   aspect-ratio: 0.63;
   object-position: top;
 }
 
-.metadata-side-image.vertical-contain img {
+.metadata-side-image.vertical-contain .pp-cover-image {
   object-fit: contain;
 }
 
-.metadata-side-image.vertical-cover img {
+.metadata-side-image.vertical-cover .pp-cover-image {
   object-fit: cover;
 }
 
 
-.metadata-side-image.horizontal-cover img,
-.metadata-side-image.horizontal-contain img {
+.metadata-side-image.horizontal-cover .pp-cover-image,
+.metadata-side-image.horizontal-contain .pp-cover-image {
   aspect-ratio: 4/3;
 }
 
-.metadata-side-image.horizontal-contain img {
+.metadata-side-image.horizontal-contain .pp-cover-image {
   object-fit: contain;
 }
 
-.metadata-side-image.horizontal-cover img {
+.metadata-side-image.horizontal-cover .pp-cover-image {
   object-fit: cover;
 }
 
 
 
-.metadata-side-image.square img {
+.metadata-side-image.square .pp-cover-image {
   aspect-ratio: 1;
   object-fit: cover;
 }
 
-.metadata-side-image.circle img {
+.metadata-side-image.circle .pp-cover-image {
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50% !important;
@@ -345,7 +464,7 @@
 
 
 
-.metadata-side-image > img {
+.metadata-side-image > .pp-cover-image {
   width: 100%;
 }
 
@@ -356,6 +475,52 @@
 
 
 
+
+
+
+/*Квадратная и круглая*/
+.metadata-side-image.top.square > .pp-cover-image,
+.metadata-side-image.bottom.square > .pp-cover-image,
+.metadata-side-image.top.circle > .pp-cover-image,
+.metadata-side-image.bottom.circle > .pp-cover-image {
+    width: min(var(--cover-max-height-top-bottom), var(--cover-column-width));
+}
+
+
+
+/*Оригинал*/
+
+.metadata-side-image.initial.top .pp-cover-image,
+.metadata-side-image.initial-2.top .pp-cover-image,
+.metadata-side-image.initial-3.top .pp-cover-image,
+.metadata-side-image.initial.bottom .pp-cover-image,
+.metadata-side-image.initial-2.bottom .pp-cover-image,
+.metadata-side-image.initial-3.bottom .pp-cover-image {
+  max-width: var(--cover-column-width);
+  width: auto;
+}
+
+/*Вертикальная*/
+.metadata-side-image.vertical-cover.top .pp-cover-image,
+.metadata-side-image.vertical-contain.top .pp-cover-image,
+.metadata-side-image.vertical-cover.bottom .pp-cover-image,
+.metadata-side-image.vertical-contain.bottom .pp-cover-image {
+  max-width: var(--cover-width-vertical);
+}
+
+.metadata-side-image.vertical-cover.top .pp-cover-image,
+.metadata-side-image.vertical-cover.bottom .pp-cover-image {
+  width: auto;
+}
+
+/*Горизонтальная*/
+.metadata-side-image.horizontal-cover.top .pp-cover-image,
+.metadata-side-image.horizontal-contain.top .pp-cover-image,
+.metadata-side-image.horizontal-cover.bottom .pp-cover-image,
+.metadata-side-image.horizontal-contain.bottom .pp-cover-image {
+  width: 100%;
+  aspect-ratio: unset;
+}
 
 
 
@@ -397,19 +562,39 @@
   overflow: hidden;
 }
 
-.metadata-container.is-collapsed .metadata-side-image {
+
+
+.hide-cover-collapsed .metadata-container.is-collapsed .metadata-side-image {
 	display: none;
 }
 
 
 
 
+.banner-image .image-resize-container {
+  width: 100% !important;
+
+}
+
+.banner-image .image-resize-container img {
+  width: 100% !important;
+  
+}
+
 
 /* SUGGESTERS */
 
+.image-suggestion-item > div > p {
+  margin: 0;
+}
+.image-captions-enabled .image-suggestion-item .internal-embed.image-embed[alt] {
+  display: block !important;
+  width: 100%;
+}
+
 .image-suggestion-item.banner img {
   width: 100%;
-  height: 130px;
+  height: 130px !important;
   object-fit: cover;
   margin: 0;
 }
@@ -422,7 +607,7 @@
 
 
 .image-suggestion-item.cover {
-  height: 240px;
+  height: 200px !important;
   width: 130px;
   display: inline-block;
 }
@@ -435,7 +620,7 @@
 
 .image-suggestion-item.cover img {
   width: 100%;
-  height: 160px;
+  height: 160px !important;
   object-fit: cover;
   margin: 0;
 }
@@ -449,7 +634,7 @@
 
 
 .image-suggestion-item.icon {
-  height: calc(var(--pp-icon-size) + 70px);
+  height: calc(var(--pp-icon-size) + 35px) !important;
   width: calc(var(--pp-icon-size) + 24px);
   display: inline-block;
 }
@@ -462,7 +647,7 @@
 
 
 .image-suggestion-item.icon img {
-  height: var(--pp-icon-size);
+  height: var(--pp-icon-size) !important;
   width: var(--pp-icon-size);
   object-fit: contain;
   margin: 0;
@@ -641,11 +826,14 @@
   width: fit-content;
 }
 
-.metadata-property-value.has-custom-date input.metadata-input-text.mod-date:not(.is-empty)::-webkit-datetime-edit,
-.metadata-property-value.has-custom-date input.metadata-input-text.mod-datetime:not(.is-empty)::-webkit-datetime-edit {
+.metadata-property-value.has-custom-date:not(:focus-within) input.metadata-input-text.mod-date:not(.is-empty)::-webkit-datetime-edit,
+.metadata-property-value.has-custom-date:not(:focus-within) input.metadata-input-text.mod-datetime:not(.is-empty)::-webkit-datetime-edit {
   display: none;
 }
 
+.has-custom-date:focus-within .custom-date {
+  display: none;
+}
 
 .bases-cards-line.has-custom-date input.metadata-input-text.mod-date,
 .bases-cards-line.has-custom-date input.metadata-input-text.mod-datetime,
@@ -663,6 +851,7 @@
 .is-mobile .metadata-property-value.has-custom-date  input.metadata-input-text.mod-date,
 .is-mobile .metadata-property-value.has-custom-date  input.metadata-input-text.mod-datetime {
   font-size: 0; 
+  width: 1rem !important;
 }
 
 body {
@@ -852,12 +1041,12 @@ button.pp-settings-tab:not(.pp-settings-tab-selected):hover {
 }
 
 
-.color-picker-modal input {
+.color-picker-modal .setting-item input[type="color"]{
   height: 80px;
   width: 80px;
 }
 
-.color-picker-modal input::-webkit-color-swatch  {
+.color-picker-modal .setting-item input[type="color"]::-webkit-color-swatch  {
 border-radius: 50%;
 height: 100% !important;
 }
@@ -927,11 +1116,22 @@ a.tag.transparent-color {
 }
 
 
-.cm-hashtag:hover,
-.cm-hashtag-begin:hover + .cm-hashtag-end,
-.cm-hashtag-begin:has(+.cm-hashtag-end:hover),
+.cm-hashtag-inner:hover,
 .cm-hashtag-begin:hover + .cm-hashtag > .cm-hashtag-inner,
-.cm-hashtag-begin:has(+ .cm-hashtag-end:hover) > .cm-hashtag-inner {
+.cm-hashtag-begin:hover + .cm-hashtag:not(.cm-hashtag-end) + .cm-hashtag > .cm-hashtag-inner,
+.cm-hashtag:hover + .cm-hashtag-end > .cm-hashtag-inner,
+.cm-hashtag-begin:has(+ .cm-hashtag:hover, + .cm-hashtag + .cm-hashtag-end:hover) > .cm-hashtag-inner,
+.cm-hashtag:has(+ .cm-hashtag-end:hover) > .cm-hashtag-inner
+
+/*
+,
+
+.
+
+,
+ 
+*/
+{
   background-color: var(--tag-background-hover);
 }
 
@@ -956,11 +1156,57 @@ a.tag.transparent-color {
   --pill-radius: 1em;
 }
 
-body:not(.show-hidden-properties) .workspace-leaf-content[data-type='markdown'] .metadata-property.pp-property-hidden,
-body:not(.show-hidden-properties).hidden-props-in-prop-tab .workspace-leaf-content[data-type='file-properties'] .metadata-property.pp-property-hidden,
-body:not(.show-hidden-properties) .hover-popover .metadata-property.pp-property-hidden {
-  display: none;
+
+/* Hide properties */
+/* We need to use more complex styles instead of just 'display: none' so the property can be revealed when selected by keyboard navigation. */
+
+/* Hide properties marked as hidden */
+body:not(.show-hidden-properties) .markdown-source-view .metadata-property.pp-property-hidden:not(:focus, :focus-within),
+body:not(.show-hidden-properties) .markdown-preview-view .metadata-property.pp-property-hidden:not(:focus, :focus-within),
+body:not(.show-hidden-properties).hidden-props-in-prop-tab .workspace-leaf-content[data-type='file-properties'] .metadata-property.pp-property-hidden:not(:focus, :focus-within),
+body:not(.show-hidden-properties) .hover-popover .metadata-property.pp-property-hidden:not(:focus, :focus-within),
+
+/* Hide empty properties when the settings set to hide all empty properties */
+.hide-all-empty-properties:not(.show-hidden-properties) .markdown-source-view .metadata-property.is-empty:not(:focus, :focus-within), 
+.hide-all-empty-properties:not(.show-hidden-properties) .markdown-preview-view .metadata-property.is-empty:not(:focus, :focus-within), 
+.hide-all-empty-properties:not(.show-hidden-properties).hidden-props-in-prop-tab .workspace-leaf-content[data-type='file-properties'] .metadata-property.is-empty:not(:focus, :focus-within), 
+.hide-all-empty-properties:not(.show-hidden-properties) .hover-popover .metadata-property.is-empty:not(:focus, :focus-within),
+
+/* Hide empty properties when marked as hide when empty */
+body:not(.show-hidden-properties) .markdown-source-view .metadata-property.is-empty.pp-property-hidden-when-empty:not(:focus, :focus-within), 
+body:not(.show-hidden-properties) .markdown-preview-view .metadata-property.is-empty.pp-property-hidden-when-empty:not(:focus, :focus-within), 
+body:not(.show-hidden-properties).hidden-props-in-prop-tab .workspace-leaf-content[data-type='file-properties'] .metadata-property.is-empty.pp-property-hidden-when-empty:not(:focus, :focus-within), 
+body:not(.show-hidden-properties) .hover-popover .metadata-property.is-empty.pp-property-hidden-when-empty:not(:focus, :focus-within),
+
+/* Hide metadata block when all properties are hidden */
+.hide-metadata-if-props-empty-editing:not(.show-hidden-properties) .markdown-source-view .metadata-container.pp-mc-hidden:not(:focus-within, :has(.metadata-side-image)),
+.hide-metadata-if-props-empty-editing.hide-all-empty-properties:not(.show-hidden-properties) .markdown-source-view .metadata-container.pp-mc-empty-hidden:not(:focus-within, :has(.metadata-side-image)),
+.hide-metadata-if-props-empty-reading:not(.show-hidden-properties) .markdown-preview-view .metadata-container.pp-mc-hidden:not(:focus-within, :has(.metadata-side-image)),
+.hide-metadata-if-props-empty-reading.hide-all-empty-properties:not(.show-hidden-properties) .markdown-preview-view .metadata-container.pp-mc-empty-hidden:not(:focus-within, :has(.metadata-side-image)),
+/* Manage hiding metadata when it has the cover image */
+.hide-metadata-if-props-empty-editing:not(.show-hidden-properties) .markdown-source-view .metadata-container.pp-mc-hidden:has(.metadata-side-image) :is(.metadata-properties-heading, .metadata-content):not(:focus, :focus-within),
+.hide-metadata-if-props-empty-editing.hide-all-empty-properties:not(.show-hidden-properties) .markdown-source-view .metadata-container.pp-mc-empty-hidden:has(.metadata-side-image) :is(.metadata-properties-heading, .metadata-content):not(:focus, :focus-within),
+.hide-metadata-if-props-empty-reading:not(.show-hidden-properties) .markdown-preview-view .metadata-container.pp-mc-hidden:has(.metadata-side-image) :is(.metadata-properties-heading, .metadata-content):not(:focus, :focus-within),
+.hide-metadata-if-props-empty-reading.hide-all-empty-properties:not(.show-hidden-properties) .markdown-preview-view .metadata-container.pp-mc-empty-hidden:has(.metadata-side-image) :is(.metadata-properties-heading, .metadata-content):not(:focus, :focus-within)
+{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
+
+
+
+
+
+
+
+
+
 
 .bases-view .bases-cards-property[data-property*="note"] .value-list-element:not(:has(.tag)),
 .bases-view .bases-list-property [data-property-type="multitext"] .value-list-element:not(:has(.tag)) {
@@ -993,6 +1239,7 @@ body:not(.show-hidden-properties) .hover-popover .metadata-property.pp-property-
 
 
 .multi-select-pill.theme-color,
+.metadata-property-value[data-property-type="tags"] .multi-select-pill.theme-color,
 .metadata-property[data-property-key="tags"] .multi-select-pill.theme-color,
 .value-list-element.theme-color {
   --pill-color: rgba(var(--pp-color-rgb), 1);
@@ -1053,14 +1300,13 @@ body {
 }
 
 .metadata-input-longtext.theme-color:not(:hover, :focus),
-/*.md-wrapper.theme-color,*/
 .bases-cards-line.theme-color,
 .bases-rendered-value.theme-color {
   background-color: rgba(var(--pp-color-rgb), 0.2);
+  /*color: rgba(var(--pp-color-rgb), 1);*/
 }
 
 .metadata-input-longtext.custom-color:not(:hover),
-/*.md-wrapper.custom-color,*/
 .bases-cards-line.custom-color,
 .bases-rendered-value.custom-color {
   background-color: hsl(var(--pp-background-hsl));
@@ -1068,7 +1314,6 @@ body {
 }
 
 .metadata-input-longtext,
-/*.md-wrapper,*/
 .bases-cards-line[data-property-longtext-value] {
   border-radius: 4px;
   display: block;
@@ -1305,6 +1550,13 @@ button.longtext-color-button:hover {
   --pp-text-color: var(--metadata-input-text-color);
 }
 
+.metadata-property-value .internal-link, .markdown-rendered .internal-link {
+    cursor: var(--cursor-link);
+    text-decoration-line: var(--link-decoration);
+    --font-weight: var(--link-weight);
+    color: var(--link-color);
+    transition: opacity var(--anim-duration-fast) ease-in-out;
+}
 
 .theme-text-color, .custom-text-color, .none-text-color {
   color: var(--pp-text-color) !important;
@@ -1312,9 +1564,147 @@ button.longtext-color-button:hover {
   --pill-color-remove-hover: var(--pp-text-color) !important;
 }
 
+.theme-color, .custom-color, .theme-text-color, .custom-text-color {
+  --link-color: var(--pp-text-color);
+  --link-color-hover: var(--pp-text-color);
+}
+
+.none-text-color {
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+}
+
+
 
 .custom-date:empty {
   display: none;
 }
 
 
+
+
+
+
+
+.metadata-property:focus-within, 
+.metadata-property[data-property-key=""] {
+  display: flex !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.title-wrapper {
+  margin-block-end: var(--inline-title-margin-bottom);
+  cursor: text;
+}
+
+.title-wrapper .inline-title {
+  display: inline;
+  vertical-align: middle;
+}
+
+.title-icon-wrapper {
+  display: inline;
+  margin-right: 8px;
+  font-weight: var(--inline-title-weight);
+  font-style: var(--inline-title-style);
+  font-variant: var(--inline-title-variant);
+  font-family: var(--inline-title-font);
+  letter-spacing: -0.015em;
+  
+  
+}
+
+.title-icon-wrapper .pp-icon {
+  height: var(--pp-title-icon-size);
+  --icon-size: var(--pp-title-icon-size);
+  
+  vertical-align: middle;
+  
+}
+
+.pp-icon {
+  image-rendering: auto !important;
+  cursor: auto;
+}
+
+.title-icon-wrapper .pp-text-icon {
+  display: inline;
+  font-size: var(--pp-title-icon-size);
+}
+
+.text-icon-match-title-size .title-icon-wrapper .pp-text-icon {
+  font-size: var(--inline-title-size);
+}
+
+
+
+.multi-select-pill {
+  max-width: unset;
+}
+
+
+
+.pp-pdf-cover-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Hide properties title */
+
+.hide-properties-title .metadata-properties-heading:not(:focus) .metadata-properties-title {
+  font-size: 0;
+}
+
+.hide-properties-title .metadata-properties-heading {
+  display: block;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.hide-properties-title .metadata-container.is-collapsed {
+  margin-block-end: 0;
+  padding: 0;
+}
+
+.hide-properties-title .metadata-properties-heading.is-collapsed .collapse-indicator {
+    top:-1em;
+
+}
+
+.metadata-properties-heading .collapse-indicator {
+    inset-inline-start: -21px; 
+}
+
+/* Need to make inset smaller so collapse indicator is visible on canvas nodes */
+
+.hide-properties-title .markdown-embed-content .metadata-properties-heading .collapse-indicator,
+.hide-properties-title .mod-inside-iframe .metadata-properties-heading .collapse-indicator {
+    inset-inline-start: -16px;
+}
+
+/* Hide metadata add button */
+
+.hide-metadata-add-button .markdown-source-view .metadata-content:not(:focus-within) .metadata-add-button,
+.hide-metadata-add-button .markdown-preview-view .metadata-content:not(:focus-within) .metadata-add-button {
+  display: none;
+  
+}
+
+/* Fix for Minimal theme */
+
+[data-theme="Minimal"] .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer>.title-wrapper {
+    max-width: var(--max-width);
+    width: var(--line-width);
+    margin-inline: var(--content-margin)!important;
+}

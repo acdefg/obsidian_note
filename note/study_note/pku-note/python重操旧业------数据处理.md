@@ -1,3 +1,10 @@
+---
+title: python重操旧业------数据处理
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:04 下午
+---
+
 重命名表头
 ```python
 df = pd.read_csv('xxx.csv', names=new_columns, header=0)
@@ -9,7 +16,6 @@ data = pd.read_csv(filepath,encoding='utf-8',header =None)
 print(data.to_string())
 ```
 [python读csv文件时指定行为表头或无表头\_痴迷、淡然\~的博客-CSDN博客](https://blog.csdn.net/qq_36512295/article/details/87930922)
-
 
 ```python
 # 设置某一行为列索引【表头】

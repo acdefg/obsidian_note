@@ -1,3 +1,10 @@
+---
+title: 物理模拟项目home
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:01 下午
+---
+
 down:: [[布料模拟]]
 
 down:: [[整体game_theroy]]
@@ -11,10 +18,8 @@ down:: [[software codeing]]
 
 [[衣物模拟整理]]
 
-### idea 记录
+# idea 记录
 减少计算数目，去掉底数，减少计算数值的基数，精度量化？按块划分计算？
 两种减少读写的方法，电流保持和步长累加
-8 值计算不通过 adc，通过 8 路比较器？是否更快----flash adc 原理一致✅**pipeline adc**
-
-
+8 值计算不通过 adc，通过 8 路比较器？是否更快 ----flash adc 原理一致✅**pipeline adc**
 

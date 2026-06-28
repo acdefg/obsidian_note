@@ -1,4 +1,11 @@
-<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221029195353.png" style="zoom: 67%;" />     <img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221029194813.png" style="zoom: 43%;" />
+---
+title: 序列检测-log
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:00 下午
+---
+
+<img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221029195353.png" style="zoom: 67%;" /> <img src="https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221029194813.png" style="zoom: 43%;" />
 
 FSM1
 ```verilog
@@ -115,6 +122,4 @@ always@(cst or sin)begin                    //主控组合进程
 	end
 endmodule
 ```
-
-
 

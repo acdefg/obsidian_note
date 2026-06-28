@@ -1,3 +1,10 @@
+---
+title: gcc_g++版本切换
+tags: []
+created: 星期六, 十一月 29日 2025, 11:18:01 晚上
+modified: 星期日, 六月 28日 2026, 5:16:54 下午
+---
+
 [gcc/g++多版本切换 (ubuntu18.04) - Angry\_Panda - 博客园](https://www.cnblogs.com/devilmaycry812839668/p/10351763.html)
 这篇帖子很全面
 
@@ -32,30 +39,30 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
 ```
 系统会自动选择优先级最高的版本
 
-另外，还有一种方法，可以修改默认的 g++版本，我们可以更改一下 gcc 的软链接:
+另外，还有一种方法，可以修改默认的 g++ 版本，我们可以更改一下 gcc 的软链接:
 
-```
+```txt
 sudo rm /usr/bin/gcc  
 sudo ln -s /usr/bin/gcc-4.8 /usr/bin/gcc  
 sudo rm /usr/bin/g++  
 sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
 ```
 
-### bug
-之前安装了 cuda，导致上述方法更改 gcc 和 g++不版本均无效
+# bug
+之前安装了 cuda，导致上述方法更改 gcc 和 g++ 不版本均无效
 查到 which 在指向的 gcc 了路径是
-```
+```txt
 which g++                                       
 /usr/local/cuda/bin/g++
 ```
 改不掉这个路径
 再看一下这个路径的指向
-```
+```txt
 ls -al /usr/local/cuda/bin/g++*                 
 lrwxrwxrwx 1 root root 12  8月 23 23:33 /usr/local/cuda/bin/g++ -> /usr/bin/g++-10
 ```
 原来就是这个东西，导致我一直卡在版本 10
-```
+```txt
 #删掉/usr/local/cuda/bin/g++，重新定向
 sudo rm /usr/local/cuda/bin/g++                                        1 ↵
 sudo ln -s /usr/bin/g++  /usr/local/cuda/bin/g++

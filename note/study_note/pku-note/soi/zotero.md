@@ -1,16 +1,23 @@
+---
+title: zotero
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
 配置：zetero 7.x + windows
-## 安装
+# 安装
 直接去官网下载安装
 
-## 插件下载安装和配置
-### 下载
+# 插件下载安装和配置
+## 下载
 zotero 7.0 的插件和之前不适配，建议直接去官网搜
 地址：[Zotero 插件商店 | Zotero 中文社区](https://zotero-chinese.com/plugins/)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411122224898.png?token=ALRC6IV3ZUROZWPJALOASQTHGNSVU)
 点击下载，选择一个地址，下载后是.xpi 文件
 
-### 安装
-主页左上菜单栏选择：工具-->插件
+## 安装
+主页左上菜单栏选择：工具 -->插件
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411122236439.png?token=ALRC6ISNA7HXQ2RZTN5FHNDHGNUDA)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411122236291.png?token=ALRC6IVWKZ76WDLLL4NMROTHGNUEE)
@@ -27,7 +34,7 @@ Green Frog：期刊识别
 Sci-PDF：自动查找 pdf 下载
 Scite Zotero Plugin
 可以直接去拿
-```
+```txt
 链接：https://pan.baidu.com/s/1aRBc3Rnkw0qMWK8_Fay9Xg 
 提取码：m79v 
 --来自百度网盘超级会员 V7 的分享
@@ -35,12 +42,12 @@ Scite Zotero Plugin
 **安装完后重启生效**
 实际使用的时候习惯用几个就行，下载都下上了，需要的时候配置一下用起来
 
-### 配置
-菜单栏：编辑-->设置 安装成功后里面会出现插件
+## 配置
+菜单栏：编辑 -->设置 安装成功后里面会出现插件
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411122241735.png?token=ALRC6ITPV575DLVU5GQ2MW3HGNUUM)
 
-### 翻译
-#### zotero-pdf-translation
+## 翻译
+### zotero-pdf-translation
 deepl 最准，选择 deepl
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202411122242270.png?token=ALRC6IXNKVYU2N7EQKA7I7DHGNUZI)
 api 免费注册链接：[DeepL翻译API](https://deepl-pro.com/#/translate?referral_code=_Us_Zm2qKo)
@@ -50,5 +57,5 @@ api 免费注册链接：[DeepL翻译API](https://deepl-pro.com/#/translate?refe
 sci-pdf 需要加一段脚本
 Better Notes for Zotero：可以去官方 github 找模板导入
 
-### todo
+## todo
 [Site Unreachable](https://zhuanlan.zhihu.com/p/371968761)

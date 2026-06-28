@@ -1,3 +1,10 @@
+---
+title: riscv_pulp环境安装
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
 起因 pulpion 环境要求：
 大问题在于 riscv 交叉编译工具链的安装，xs 后来发现 modelsim 才难搞
 它要 riscv32-unknown-elf-gcc，应该重点在 32 位，newlib 版本
@@ -7,12 +14,11 @@
 > 记得在 zsh/bash 中添加路径，[[在 zsh 中添加路径]]
 > 安装错了可以先 `make clean` 再 make
 
-## pulpion environment requirement
+# pulpion environment requirement
 ![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181431287.png)
 [[ubuntu安装modelsim]]
 
-
-## reference link
+# reference link
 [编译riscv32-unknown-elf-gcc_牧羊女说的博客-CSDN博客](https://blog.csdn.net/deliapu/article/details/120708442) 比较详细
 [RISC-V GNU工具链的编译与安装 - 知乎](https://zhuanlan.zhihu.com/p/364638851) 有指令的解析
 [riscv各种版本gcc工具链编译与安装_weiqi7777的博客-CSDN博客](https://blog.csdn.net/weiqi7777/article/details/88045720) riscv 的各种工具链
@@ -22,8 +28,8 @@
 [Running Modelsim on a 64-bit Ubuntu - Github personal blog](https://pcotret.github.io/modelsim-ubuntu/) 用到 freetype 不懂但是留着
 
 [Issues · pulp-platform/pulpino · GitHub](https://github.com/pulp-platform/pulpino/issues) 😒鉴于我老点它，所以存一下
-## log
-### pulipion
+# log
+## pulipion
 
 ```shell
 git clone https://github.com/pulp-platform/pulpino.git
@@ -37,7 +43,7 @@ cd pulpion
 ./generate-scripts.py
 ```
 
-### tool chain
+## tool chain
 
 下载 tool chain respository
 ```shell
@@ -62,21 +68,21 @@ make newlib -j4
 > 记得在 zsh/bash 中添加路径，[[在 zsh 中添加路径]]
 > 安装错了可以先 `make clean` 再 make
 
-#### 一些工具链：
+### 一些工具链
 [GitHub - acdefg/pulp-riscv-gnu-toolchain](https://github.com/acdefg/pulp-riscv-gnu-toolchain) pulp
 [GitHub - acdefg/riscv-gnu-toolchain: GNU toolchain for RISC-V, including GCC](https://github.com/acdefg/riscv-gnu-toolchain) riscv
 [GitHub - acdefg/ri5cy_gnu_toolchain](https://github.com/acdefg/ri5cy_gnu_toolchain) ri5cy
 个人感觉 pulp tool chain 和 riscv 的应该是一样的，前几次安装 ri5cy 老是失败有可能是没有开 root 权限，直接换了 pulp tool chain
 ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181412510.png) ![300](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211181419145.png)
 
-### pulp 编译篇
-#### part 1
+## pulp 编译篇
+### part 1
 在 pulpion 源码文件夹下面，去 SW 文件夹下面 `mkdir build`，然后在把 SW 下的这个复制到 build 里面，虽然会报错，但是还是运行一下 `cmake_configure.riscv.gcc.sh` ，其它几个对应不同的 riscv
 
 ```shell
 ./cmake_configure.riscv.gcc.sh
 ```
-然后新建两个文件，并且 `chmod u+x *.sh` ，以防忘记请把*号替换成文件名
+然后新建两个文件，并且 `chmod u+x *.sh` ，以防忘记请把 * 号替换成文件名
 fix_m32.sh
 
 ```shell
@@ -109,13 +115,13 @@ riscv32-unknown-elf-ld --verbose | head -n -1 | tail -n +7 | sed '168 a \ \ _fbs
 
 先跑 fix_m32.sh，然后跑 fix_linker.sh，跑 cmake_configure.riscv.gcc.sh，和 fix_linker.sh 交替跑，直到成功
 
-#### part 2
+### part 2
 make helloworld 会失败，因为环境不适配建议都是更换 ri5y 那个 toolchain，那个还需要下载 gcc-5.0，这个又需要 32 位的编译环境，不想配置 32 位环境了，先放在这里
 
-### 一些错误
-1. /usr/bin/env: ‘python’: No such file or directory
+## 一些错误
+1. /usr/bin/env: 'python': No such file or directory
 没定位 python
-2. Missing parentheses in call to 'print'. Did you mean print(...)?
+2. Missing parentheses in call to 'print'. Did you mean print(…)?
 python2，不能用 python3
 这两个一起解决用：
 
@@ -139,17 +145,16 @@ sudo ln -s /usr/bin/python2 /usr/bin/python
 
 [Site Unreachable](https://blog.csdn.net/qq446293528/article/details/113895761)
 
-
 ```shell
 sudo apt install tcsh
 ```
 还安错了一次，安成了 tclsh，这些应该和 zsh 一样是一种 shell
 
-## ideas
+# ideas
 用 qemu 仿真试试，参考普通 riscv 的办法，难点在于没有程序可以测试
 往 riscv 上移植一个系统内核
 
-### log
+## log
 
 ```shell
 writing...

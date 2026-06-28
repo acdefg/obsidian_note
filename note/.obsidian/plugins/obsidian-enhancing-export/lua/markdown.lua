@@ -1,4 +1,4 @@
-package.path=package.path..";" ..debug.getinfo(1).source:match("(.*[/\\])"):sub(2) .. "?.lua"
+package.path=debug.getinfo(1).source:gsub('@',''):sub(0):match('(.*[/\\])'):sub(0) .. '?.lua' .. ';' .. package.path
 
 require("polyfill")
 local url = require('url')
@@ -6,6 +6,9 @@ local url = require('url')
 local pandoc=pandoc
 local PANDOC_STATE=PANDOC_STATE
 
+PANDOC_VERSION:must_be_at_least '3.1.7'
+
+os.text = pandoc.text
 
 local PATH = pandoc.path
 local doc_dir = nil
@@ -15,14 +18,13 @@ if Mode == nil then
   Mode = 'default'
 end
 
-
 -- print("Mode: "..Mode)
 
 if PANDOC_STATE.output_file then
   local output_file = PANDOC_STATE.output_file
   doc_dir = PATH.directory(output_file)
   if PANDOC_WRITER_OPTIONS.variables["media_dir"] then
-    media_dir = PANDOC_WRITER_OPTIONS.variables["media_dir"]
+    media_dir = tostring(PANDOC_WRITER_OPTIONS.variables["media_dir"])
   else
     media_dir = PATH.split_extension(output_file)
     if Mode ~= 'hugo' then
@@ -153,10 +155,35 @@ function Math(el)
   return el
 end
 
+local function headerLink(input)
+  -- github style section link
+  return "#"..input:gsub(' ', '-')
+end
+
+
+local function insertLink(content, linkDescription)
+  local descriptionText = table.concat(linkDescription, "")
+
+  if string.find(descriptionText, '|') then
+    local target, desc = descriptionText:match("(.*)|(.*)")
+    table.insert(content, pandoc.Link(desc, headerLink(target)))
+  else
+    table.insert(content, pandoc.Link(descriptionText, headerLink(descriptionText)))
+  end
+end
+
 function Para(el)
+  local content = el.content
+  content = ProcessMath(content)
+  content = ProcessInternalLinks(content)
+  el.content = content
+  return el
+end
+
+function ProcessMath(elements)
   local content = {}
   local in_display_math = false
-  for _, item in pairs(el.content) do
+  for _, item in pairs(elements) do
     if item.t == 'Str'and item.text == "$$" then
       in_display_math = not in_display_math
     else
@@ -172,7 +199,36 @@ function Para(el)
       end
     end
   end
-  el.content = content
+  return content
+end
+
+function ProcessInternalLinks(elements)
+  local content = {}
+  local in_section_link = false
+  local linkDescription = {}
+
+  for _, item in pairs(elements) do
+    if item.t == 'Str' and string.starts_with(item.text, '[[#') then
+      in_section_link = true
+      table.insert(linkDescription, string.sub(item.text, 4))
+    elseif in_section_link then
+      if string.ends_with(item.text, ']]') then
+        table.insert(linkDescription, string.sub(item.text, 1, -3))
+        insertLink(content, linkDescription)
+        in_section_link = false
+        linkDescription = {}
+      else
+        table.insert(linkDescription, item.text)
+      end
+    else
+      table.insert(content, item)
+    end
+  end
+  return content
+end
+
+function Plain(el)
+  el.content = ProcessInternalLinks(el.content)
   return el
 end
 

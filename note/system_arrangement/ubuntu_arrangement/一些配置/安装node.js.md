@@ -1,36 +1,43 @@
-ubuntu版参考：https://developer.aliyun.com/article/760687
+---
+title: 安装node.js
+tags: []
+created: 星期六, 十一月 29日 2025, 11:18:01 晚上
+modified: 星期日, 六月 28日 2026, 5:16:54 下午
+---
+
+ubuntu 版参考：https://developer.aliyun.com/article/760687
 以下为上面链接提取出来的部分
 - 自动安装
 ```shell
 sudo apt update
 sudo apt install nodejs npm
 ```
-这个自动安装nodejs为10.X，npm为6.14.4
+这个自动安装 nodejs 为 10.X，npm 为 6.14.4
 查询版本代码为：
-```
+```txt
 node --version
 npm --version
 ```
 - 指定版本
-```
+```txt
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
-将14.x改成任意版本即可
+将 14.x 改成任意版本即可
 ```shell
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
-将16.x改成任意版本即可
+将 16.x 改成任意版本即可
 
 第一句添加源，第二句安装
-如没有安装curl，就像我，会报错，按照提示安装即可
-```
+如没有安装 curl，就像我，会报错，按照提示安装即可
+```txt
 sudo apt install curl
 ```
 
-提示：(没处理完，gcc已安装)
-```
+提示：(没处理完，gcc 已安装)
+```txt
 ## Run `sudo apt-get install -y nodejs` to install Node.js 16.x and npm
 ## You may also need development tools to build native addons:
      sudo apt-get install gcc g++ make
@@ -39,4 +46,4 @@ sudo apt install curl
      echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
      sudo apt-get update && sudo apt-get install yarn
 ```
-- nvm管理多个安装版本(没弄，暂时没必要)
+- nvm 管理多个安装版本 (没弄，暂时没必要)

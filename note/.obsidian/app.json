@@ -15,5 +15,6 @@
   "showIndentGuide": false,
   "spellcheck": false,
   "strictLineBreaks": false,
-  "rightToLeft": false
+  "rightToLeft": false,
+  "smartIndentList": true
 }

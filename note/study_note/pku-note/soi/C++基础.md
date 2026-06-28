@@ -1,3 +1,10 @@
+---
+title: C++基础
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:04 下午
+---
+
 down:: [[C++头文件]]
 down:: [[刷题记录]]
 donw:: [[虚函数]]
@@ -15,23 +22,22 @@ int len = sizeof(arr) / sizeof(int);
 1 byte = 8 bits
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191702545.png?token=ALRC6IUC2EZ3EZH22ZEC7NTHMPQUU)
 一些基本类型可以使用一个或多个类型修饰符进行修饰：
--   signed
--   unsigned
--   short
--   long
+- signed
+- unsigned
+- short
+- long
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191702522.png?token=ALRC6IXNSO5LA6H3MT5R62DHMPQXG)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412191703722.png?token=ALRC6IVOVRPSRBEWYC4KRB3HMPQYI)
-int 以及 unsigned int 范围为十进制 10 位数，2\*e10 4\*e10    4 个字节 32bit
+int 以及 unsigned int 范围为十进制 10 位数，2\*e10 4\*e10 4 个字节 32bit
 short int 范围为十进制 5 位数 3\*e5 2 个字节 16bit
-long int  范围为十进制 19 位数 9\*e19 8 个字节 64bit
-
+long int 范围为十进制 19 位数 9\*e19 8 个字节 64bit
 
 ## typdef 和枚举
 ### typedef 声明
 
 您可以使用 **typedef** 为一个已有的类型取一个新的名字。下面是使用 typedef 定义一个新类型的语法：
 
-`typedef type newname;` 
+`typedef type newname;`
 
 例如，下面的语句会告诉编译器，feet 是 int 的另一个名称：
 
@@ -47,7 +53,7 @@ long int  范围为十进制 19 位数 9\*e19 8 个字节 64bit
 
 创建枚举，需要使用关键字 **enum**。枚举类型的一般形式为：
 
-`enum enum-name { list of names } var-list;` 
+`enum enum-name { list of names } var-list;`
 
 在这里，enum-name 是枚举类型的名称。名称列表 { list of names } 是用逗号分隔的。
 
@@ -61,11 +67,9 @@ long int  范围为十进制 19 位数 9\*e19 8 个字节 64bit
 
 在这里，**blue** 的值为 6，因为默认情况下，每个名称都会比它前面一个名称大 1。
 
-
-
 ## 输出格式😱
 
-```
+```txt
 #include <iomanip>
 //输出浮点数 `cost`，并格式化成固定小数点形式，保留 1 位小数
 cout << setiosflags(ios::fixed) << setprecision(1) << cost << endl;
@@ -74,7 +78,7 @@ cout << setiosflags(ios::fixed) << setprecision(1) << cost << endl;
 ```cpp
 `printf(``"%.1f %.1f"``,sum,h);`
 ```
-#### example1
+### example1
 ```cpp
 #include <iostream>
 
@@ -129,12 +133,11 @@ int main() {
 }
 ```
 
-
 ## 函数传参⭐
 在 C++ 中，函数传参的方式主要包括以下四种：按值传递（Pass by Value）、按引用传递（Pass by Reference）、按指针传递（Pass by Pointer）、以及按常引用传递（Pass by Const Reference）
 
 ### 形参
-值传递，swap1函数使用的是`值传递`，它接受两个整数参数x和y，并在函数内部进行交换。这种情况下，函数内部交换的是局部变量的值，而不会影响到main函数中的first和second。
+值传递，swap1 函数使用的是 `值传递`，它接受两个整数参数 x 和 y，并在函数内部进行交换。这种情况下，函数内部交换的是局部变量的值，而不会影响到 main 函数中的 first 和 second。
 ```cpp
 void swap1(int x, int y){
     int temp = x;
@@ -143,8 +146,8 @@ void swap1(int x, int y){
 }
 ```
 
--   **优点**：避免修改原始数据，安全。
--   **缺点**：传递大型对象时效率低，因为需要复制数据。
+- **优点**：避免修改原始数据，安全。
+- **缺点**：传递大型对象时效率低，因为需要复制数据。
 
 ### 引用传参
 传递参数的引用，函数操作的就是原始变量本身，修改会直接影响原变量。
@@ -164,8 +167,8 @@ int main() {
 }
 
 ```
--   **优点**：避免拷贝，提高效率；可以直接修改原始数据。
--   **缺点**：可能无意间修改了原始数据。
+- **优点**：避免拷贝，提高效率；可以直接修改原始数据。
+- **缺点**：可能无意间修改了原始数据。
 
 ### 指针传参
 将变量的地址传递给函数，函数通过解引用操作访问原始数据。
@@ -186,8 +189,8 @@ int main() {
     return 0;
 }
 ```
--   **优点**：可以传递动态分配的内存或大型结构；显式地指明函数可能修改数据。
--   **缺点**：需要处理指针的合法性（如空指针）。
+- **优点**：可以传递动态分配的内存或大型结构；显式地指明函数可能修改数据。
+- **缺点**：需要处理指针的合法性（如空指针）。
 
 ### 按常引用传递
 以引用的方式传递，但不能修改原始数据。
@@ -206,16 +209,15 @@ int main() {
     return 0;
 }
 ```
--   **优点**：避免拷贝，提高效率；适用于只读操作，安全性更高。
--   **缺点**：不能修改原始数据。
+- **优点**：避免拷贝，提高效率；适用于只读操作，安全性更高。
+- **缺点**：不能修改原始数据。
 
 ### 总结
--   **按值传递**适用于简单数据类型且不需要修改原始变量的情况。
--   **按引用传递**适用于需要修改原始数据的场景，或避免拷贝大对象。
--   **按指针传递**用于需要操作动态分配的内存，或当可能传递空值时。
--   **按常引用传递**适合只读访问的大型对象，避免拷贝，提高效率。
+- **按值传递**适用于简单数据类型且不需要修改原始变量的情况。
+- **按引用传递**适用于需要修改原始数据的场景，或避免拷贝大对象。
+- **按指针传递**用于需要操作动态分配的内存，或当可能传递空值时。
+- **按常引用传递**适合只读访问的大型对象，避免拷贝，提高效率。
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412201445675.png?token=ALRC6IUA4F24NYFVCUXZ2EDHMUJNC)
-
 
 ## 结构体
 ### 结构体定义和使用
@@ -257,7 +259,7 @@ Book1.book_id = 6495407;
 `struct_pointer->title;`
 
 ### typedef 关键字
-下面是一种更简单的定义结构的方式，您可以为创建的类型取一个"别名"。例如：
+下面是一种更简单的定义结构的方式，您可以为创建的类型取一个 " 别名 "。例如：
 ```cpp
 typedef struct
 {
@@ -275,16 +277,13 @@ x, y 和 z 都是指向长整型 long int 的指针。
 
 ## 字符串
 
-
-```
+```txt
 int sublen = strlen(substr);   //计算char数组到'\0'前实际长度，也就是不计算'\0'在内
 ```
 
 ### string
 构造方法
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202412202325404.png?token=ALRC6IWLIHAHFFUC4EK5CFDHMWGLG)
-
-
 
 # 简单概念解释
 ## C++ 类 & 对象
@@ -307,7 +306,6 @@ Box Box2; // 声明 Box2，类型为 Box
 类的对象的公共数据成员可以使用直接成员访问运算符 . 来访问。
 
 ![](https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11-2.png)
-
 
 ### public & private
 public 可以在类外被访问
@@ -379,7 +377,7 @@ int main( )
 }
 ```
 当上面的代码被编译和执行时，它会产生下列结果：
-```
+```txt
 Box1 的体积：210
 Box2 的体积：1560
 Box3 的体积：1536

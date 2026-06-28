@@ -1,3 +1,10 @@
+---
+title: window11新建WSL
+tags: []
+created: 星期六, 十一月 29日 2025, 11:18:01 晚上
+modified: 星期日, 六月 28日 2026, 5:16:55 下午
+---
+
 [Windows Subsystem for Linux (WSL, Ubuntu) 最新安装教程（2024.11 更新）-CSDN博客](https://blog.csdn.net/wangtcCSDN/article/details/137950545)
 # 移动
 以前，移动发行版需要手动导出 → 将其作为新发行版导入 WSL → 然后删除原来的发行版，这 3 个步骤。但从 WSL 2.3.11 开始，微软引入了更简单的 `--move` 参数来移动发行版的底层存储。
@@ -6,16 +13,16 @@
 
 列出已安装的发行版：
 
-```
+```txt
 wsl --list
 ```
 
 将特定发行版移动到指定路径：
 
-```
+```txt
 wsl --manage Ubuntu-22.04 --move <path>
 ```
 
 移动成功后，会有通知提示
 
-# git clone 问题！
+# git clone 问题

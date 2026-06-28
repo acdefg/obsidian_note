@@ -1,3 +1,10 @@
+---
+title: host，source文件更改
+tags: []
+created: 星期六, 十一月 29日 2025, 11:18:01 晚上
+modified: 星期日, 六月 28日 2026, 5:16:54 下午
+---
+
 # host 文件更改
 ## windows
 搜索 shell，以管理员模式运行 windows_power_shell（获得更改权限）
@@ -36,7 +43,7 @@ Fastgithub 可以自动改，没装，参考：https://zhuanlan.zhihu.com/p/4284
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
 
-2.打开/etc/apt/sources.list文件，在前面添加如下条目，并保存。
+2.打开/etc/apt/sources.list 文件，在前面添加如下条目，并保存。
 
 ```shell
 sudo vim /etc/apt/sources.list
@@ -111,6 +118,6 @@ sudo apt-get upgrade
 
 台湾淡江大学 [http://ftp.tku.edu.tw/Linux/](https://link.zhihu.com/?target=http%3A//ftp.tku.edu.tw/Linux/)
 
-Linux运维派开源镜像 [http://mirrors.skyshe.cn/](https://link.zhihu.com/?target=http%3A//mirrors.skyshe.cn/)
+Linux 运维派开源镜像 [http://mirrors.skyshe.cn/](https://link.zhihu.com/?target=http%3A//mirrors.skyshe.cn/)
 
 各种源原始地址：[中国Linux源镜像站大全 - starnight_cyber - 博客园](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/Hi-blog/p/5954230.html)

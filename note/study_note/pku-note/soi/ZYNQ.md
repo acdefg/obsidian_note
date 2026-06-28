@@ -1,29 +1,36 @@
+---
+title: ZYNQ
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
 down:: [[FPGA的一些基本概念]]
 down:: [[ZYNQ的一些基本介绍]]
 down:: [[ZYNQ基本工程]]
 down:: [[ZYNQ调试]]
-### 入门教程
+# 入门教程
 [请问ZYNQ有什么比较好的教程？ - 知乎](https://www.zhihu.com/question/56596019)
-[https://leiblog.wang/static/FPGA/books/The\_Zynq\_Book\_ebook\_chinese.pdf](https://leiblog.wang/static/FPGA/books/The_Zynq_Book_ebook_chinese.pdf) --中文手册
+[https://leiblog.wang/static/FPGA/books/The\_Zynq\_Book\_ebook\_chinese.pdf](https://leiblog.wang/static/FPGA/books/The_Zynq_Book_ebook_chinese.pdf) -- 中文手册
 [https://leiblog.wang/static/FPGA/books/ZYNQ/米联《ZYNQ SOC修炼秘籍》.pdf](https://leiblog.wang/static/FPGA/books/ZYNQ/%E7%B1%B3%E8%81%94%E3%80%8AZYNQ%20SOC%E4%BF%AE%E7%82%BC%E7%A7%98%E7%B1%8D%E3%80%8B.pdf)
 [ZYNQ | 资料推荐\_zynq手册\_悟道禅师的博客-CSDN博客](https://blog.csdn.net/harhy/article/details/124262767)
 
->官网资源
+> 官网资源
 	// vivado  	
-	文档：vivado -> help -> document and tutorials	
-	视频：vivado -> help -> quick take videos	
-	手册：vivado -> help -> release note guide	
-	专题：vivado -> help -> design hubs	
-	反馈：vivado -> help -> leave feedback	
-	问题：vivado -> help -> search answer records	
-	支持：vivado -> help -> get technical support	
-	安装：vivado -> help -> add design tools or devices	
-	主页：vivado -> help -> vivado on the web	
-	关于：vivado -> about vivado	
-	// SDK	
-	指导：SDK -> help -> welcome -> user guides	
-	备忘：SDK -> help -> welcome -> cheat sheet	
-	视频：SDK -> help -> welcome -> quick take videos	
+	文档：vivado -> help -> document and tutorials
+	视频：vivado -> help -> quick take videos
+	手册：vivado -> help -> release note guide
+	专题：vivado -> help -> design hubs
+	反馈：vivado -> help -> leave feedback
+	问题：vivado -> help -> search answer records
+	支持：vivado -> help -> get technical support
+	安装：vivado -> help -> add design tools or devices
+	主页：vivado -> help -> vivado on the web
+	关于：vivado -> about vivado
+	// SDK
+	指导：SDK -> help -> welcome -> user guides
+	备忘：SDK -> help -> welcome -> cheat sheet
+	视频：SDK -> help -> welcome -> quick take videos
 	文档：SDK -> help -> welcome -> help documents
 	手册：SDK -> help -> help contents
 	反馈：SDK -> help -> leave feedback
@@ -31,7 +38,7 @@ down:: [[ZYNQ调试]]
 [ALINX ZYNQ Ultrascale+ MPSOC FPGA原创连载教程总目录 - 知乎](https://zhuanlan.zhihu.com/p/339433531)
 [【ZYNQ】从入门到秃头01 初识ZYNQ（PS和PL之间连接）-CSDN博客](https://blog.csdn.net/szm1234/article/details/121902787)
 
-### DOC 
+# DOC
 doc 使用教程：
 [请问ZYNQ有什么比较好的教程？ - 知乎](https://www.zhihu.com/question/56596019)
 注册账号，登陆下载
@@ -40,8 +47,8 @@ doc 使用教程：
 [DocNav 安装教程\_LivelyDYC的博客-CSDN博客](https://blog.csdn.net/weixin_57802103/article/details/132394508)
 [Widget](https://support.xilinx.com/s/article/000034329?language=zh_CN)
 
-### 项目
-#### NVDLA
+# 项目
+## NVDLA
 AI
 [NVDLA Xilinx FPGA Mapping - 知乎](https://zhuanlan.zhihu.com/p/378202360)
 [Hardware Architectural Specification — NVDLA Documentation](http://nvdla.org/hw/v1/hwarch.html)

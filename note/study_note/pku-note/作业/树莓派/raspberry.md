@@ -1,4 +1,11 @@
-```
+---
+title: raspberry
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:00 下午
+---
+
+```txt
 mkdir raspberry
 git clone git://github.com/raspberrypi/tools.git
 ```

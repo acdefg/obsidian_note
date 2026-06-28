@@ -32,5 +32,14 @@
   "obsidian-image-toolkit",
   "image-converter",
   "obsidian-git",
-  "obsidian-image-auto-upload-plugin"
+  "obsidian-image-auto-upload-plugin",
+  "obsidian-style-settings",
+  "obsidian-table-generator",
+  "smart-connections",
+  "obsidian-mind-map",
+  "metaedit",
+  "obsidian-meta-bind-plugin",
+  "global-search-and-replace",
+  "replace-all",
+  "obsidian-linter"
 ]

@@ -1,3 +1,10 @@
+---
+title: rram 仿真
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
 down:: [[rram model仿真]]
 
 ✅3x3 同样的值的 crossbar 计算
@@ -6,9 +13,9 @@ down:: [[rram model仿真]]
 ❓存在严重漏电无法完全关断 2025.2.12
 
 ![](http://cdn.ljc0606.cn/obsidian/202502111752968.png)
-预计结果 500m  500mV/R(620.7k) x 3 = I(2.41uA)?  498.8mV(real)/498.629mV(predict)
+预计结果 500m 500mV/R(620.7k) x 3 = I(2.41uA)? 498.8mV(real)/498.629mV(predict)
 ![](http://cdn.ljc0606.cn/obsidian/202502122342031.png)
-RRAM 电压--阻值对应
+RRAM 电压 -- 阻值对应
 ![](http://cdn.ljc0606.cn/obsidian/202502122344705.png)
 
 2025.3.25 解决漏电问题：
@@ -18,5 +25,4 @@ RRAM 电压--阻值对应
 
 ![](http://cdn.ljc0606.cn/obsidian/202503251608325.png)
 ![](http://cdn.ljc0606.cn/obsidian/202503251608444.png)
-
 

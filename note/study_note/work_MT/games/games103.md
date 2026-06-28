@@ -1,3 +1,10 @@
+---
+title: games103
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:16:58 下午
+---
+
 slides:
 [课程PPT和视频 – 计算机图形学与混合现实在线平台](https://games-cn.org/games103-slides/)
 部分笔记，比较详细，分类清晰

@@ -1,10 +1,17 @@
+---
+title: riscv
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
 down:: [[pulp-riscv]]
 down:: [[开源项目和教程]]
 
-有几个需要vpn
+有几个需要 vpn
 [串行接口芯片16550_xqhrs232的博客-CSDN博客](https://blog.csdn.net/xqhrs232/article/details/51218578)
 
-risc-v参阅平台
+risc-v 参阅平台
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20221025230341.png)
 [riscv-platform-specs/riscv-platform-spec.adoc at main · riscv/riscv-platform-specs · GitHub](https://github.com/riscv/riscv-platform-specs/blob/main/riscv-platform-spec.adoc)
 
@@ -14,12 +21,12 @@ risc-v参阅平台
 配置参考
 [PULPino 在 Modelsim 下的软件模拟 - 知乎](https://zhuanlan.zhihu.com/p/470281404)
 
-好东西，啥都有risc，pulp介绍
+好东西，啥都有 risc，pulp 介绍
 [Page Not Found · GitBook (Legacy)](https://cnrv.gitbooks.io/riscv-soc-book/content/ch8/sec2-PULPino_overview.html)
 
-cmake教程
+cmake 教程
 [CMake教程（一） - 知乎](https://zhuanlan.zhihu.com/p/119426899)
-cmake官方教程
+cmake 官方教程
 [CMake Tutorial — CMake 3.17.5 Documentation](https://cmake.org/cmake/help/v3.17/guide/tutorial/index.html#adding-system-introspection-step-5)
 
 较详细的介绍
@@ -31,13 +38,13 @@ cmake官方教程
 指令集的简单介绍，初学可以看
 [计算机系统基础（五）之RISC-V指令集_深度学习的学习僧的博客-CSDN博客_risc-v指令集](https://blog.csdn.net/qq_38915354/article/details/115696721)
 
-### RISC-V 程序计数器 （PC）
+# RISC-V 程序计数器 （PC）
 在 ARM 的设计中，PC 是作为一个通用寄存器而存在的，这意味着任何能改变寄存器值的指令都有可能导致程序执行分支跳转。
 这样带来了一个坏处，那就是对分支跳转的预测变复杂了。
 
 RISC-V 将 PC 单独拿出来作为一个特殊的寄存器来对待，这使得能够改变 PC 寄存器的指令变少，分支跳转的预测准确性便于提高。
 
-### riscv 指令集
+# riscv 指令集
 [计基（二）RISC-V指令集介绍与汇编 - 知乎](https://zhuanlan.zhihu.com/p/558799873)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20231115120701.png)
 [RISC-V架构学习-CSDN博客](https://blog.csdn.net/tristan_tian/article/details/106315232)

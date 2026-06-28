@@ -7,7 +7,7 @@
       ""
     ]
   ],
-  "trigger_on_file_creation": false,
+  "trigger_on_file_creation": true,
   "auto_jump_to_cursor": false,
   "enable_system_commands": false,
   "shell_path": "",
@@ -15,11 +15,19 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "",
+      "folder": "study_note",
+      "template": "Templates/note/note-frontmatter.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
       "template": ""
     }
   ],
   "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
     "Templates/插入/code blocks verilog.md",
     "Templates/插入/ad-note.md",
@@ -30,6 +38,15 @@
   ],
   "startup_templates": [
     ""
+  ],
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": "z_attachment"
+    },
+    {
+      "folder": "Templates"
+    }
   ],
   "enable_ribbon_icon": true
 }

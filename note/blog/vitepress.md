@@ -1,7 +1,14 @@
-## 参考文档
-### 官方文档入口
+---
+title: vitepress
+tags: []
+created: 星期六, 十一月 29日 2025, 9:40:38 晚上
+modified: 星期日, 六月 28日 2026, 5:17:04 下午
+---
+
+# 参考文档
+## 官方文档入口
 [VitePress | 由 Vite 和 Vue 驱动的静态站点生成器](https://vitejs.cn/vitepress/)
-### 一些参考博客
+## 一些参考博客
 比较喜欢的布局，也是主要参考，开源代码里面有很多没有，可以参考他的布局再完善
 [Daily Notes 日常笔记 | 茂茂物语](https://maomao.fe-mm.com/daily-notes/)
 [VitePress 生成站点地图 | 茂茂物语](https://maomao.fe-mm.com/daily-notes/issue-39#vitepress-%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE)
@@ -11,58 +18,57 @@
 还没深入
 [🔧 一篇教你用VitePress + Github Pages搭建博客 | 是柠新呀的知识库](https://xuxing409.github.io/my-blog/technology/article/building-blog-with-vitepress.html)
 [VitePress 添加评论功能 \| Xavi的技术文档](https://xaviw.github.io/XaviDocs/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/VitePress%E6%90%AD%E5%BB%BA/%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.html)
-## 开始
-### 从零开始
+# 开始
+## 从零开始
 [入门 | VitePress 中文网](https://vitepress.qzxdp.cn/guide/getting-started.html)
-```
+```txt
 npm install -D vitepress
 ```
 
-```
+```txt
 npx vitepress init
 ```
-记得安装和升级 npm、node 
+记得安装和升级 npm、node
 
 得到几个问题：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410271709576.png)
 
-### 从模板开始
+## 从模板开始
 下载好的模板文件夹里
 解决一些依赖问题
-```
+```txt
 npm install
 ```
 本地运行调试，一般下好的模板是可以直接跑的
-```
+```txt
 npm run dev
 ```
 本地编译
-```
+```txt
 npm run build
 ```
 
 编译好的文件在：.vitepress/dist 下面，把这个上传 github page 或者服务器
 
-### 服务器连接
+## 服务器连接
 [[阿里云服务器+域名配置]]
 阿里云下载宝塔
-把编译好的文件上传服务器，可以用 ftp(filezila)或者 ssh(scp)
-```
+把编译好的文件上传服务器，可以用 ftp(filezila) 或者 ssh(scp)
+```txt
 scp -r source destination
 ```
 直接新建站点，把站点文件位置选在刚刚上传的那个文件夹，index.html 的父文件夹
 
-### 自动部署
+## 自动部署
 [[git+action]]
-实现上传后自动复制到服务器，也可以上传源码文件，使用 github 提供的服务器编译并且部署 github page 
+实现上传后自动复制到服务器，也可以上传源码文件，使用 github 提供的服务器编译并且部署 github page
 服务器为 github 提供服务器，使用一些 action 配置模板，主要为了 scp 功能，secret 在 github 仓库上添加，matrix 变量自己定义
-#### 参考
+### 参考
 [使用Vitepress搭建并发布个人网站-CSDN博客](https://blog.csdn.net/AKALI822/article/details/134180744)
 [ssh-scp-deploy/with\_pass.sh at v1.2.0 · marcodallasanta/ssh-scp-deploy · GitHub](https://github.com/marcodallasanta/ssh-scp-deploy/blob/v1.2.0/with_pass.sh)
 [Gitea Action 简单配置（CI/CD）\_gitea cicd-CSDN博客](https://blog.csdn.net/weixin_42562106/article/details/142174469)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202410311616882.png?token=ALRC6IWOBAHCJ4BU6XKVOGDHEM6S6)
-
 
 ``` git
 name: GitHub Actions Build and Deploy
@@ -188,7 +194,7 @@ jobs:
           post_upload: sudo nginx -s reload
 ```
 
-### RSS 订阅
+## RSS 订阅
 [为 VitePress 网站添加 RSS 订阅支持 - 粥里有勺糖 - 博客园](https://www.cnblogs.com/roseAT/p/17649853.html)
 通过 `pnpm/npm/yarn` 安装插件
 
@@ -232,7 +238,7 @@ export default defineConfig({
 })
 ```
 
-然后运行 build 命令，你可以看到在`rendering pages...`后打印了生成 `feed.rss` 日志...
+然后运行 build 命令，你可以看到在 `rendering pages…` 后打印了生成 `feed.rss` 日志…
 
 ```sh
 pnpm run build
@@ -246,10 +252,10 @@ pnpm run build
 
 只需要 10 行代码
 
-## 其他待实现参考
+# 其他待实现参考
 [推送vitepress到阿里云将vitepress推送到阿里云实例中,使用简单的JS语言即可完成.导入ssh2依赖,依靠 - 掘金](https://juejin.cn/post/7351690896918167615)
 👍git action 自动上传服务器
 [使用Vitepress搭建并发布个人网站-CSDN博客](https://blog.csdn.net/AKALI822/article/details/134180744)
 [配置多个Git账号（windows 10）\_win10系统git配置多账号-CSDN博客](https://blog.csdn.net/q13554515812/article/details/83506172)
-😍倒计时网站（基于vue）
+😍倒计时网站（基于 vue）
 [GitHub - abc55667788/ccf-deadlines: ⏰ CCF recommendation conference Deadline Countdowns / Please star this project, thanks\~](https://github.com/abc55667788/ccf-deadlines)

@@ -1,3 +1,10 @@
+---
+title: gcc优化选项研究
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:01 下午
+---
+
 [gcc编译优化-O0 -O1 -O2 -O3 -OS解析_奔跑的码农的博客-CSDN博客_gcc o2](https://blog.csdn.net/wuxing26jiayou/article/details/96132721) 选项内容具体描述
 [汇编视角:不同优化级别下的GCC行为分析 | 海森的博客](https://hisenz.com/post/%E6%B1%87%E7%BC%96%E8%A7%86%E8%A7%92-%E4%B8%8D%E5%90%8C%E4%BC%98%E5%8C%96%E7%BA%A7%E5%88%AB%E4%B8%8B%E7%9A%84GCC%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90/) 👍
 
@@ -202,7 +209,6 @@ int main(){
 	
 ```
 
-
 ```shell
 aarch64-linux-gnu-gcc -o memcpy0.o memcpy_m.c -O0 -static
 aarch64-linux-gnu-gcc -o memcpy1.o memcpy_m.c -O1 -static
@@ -211,6 +217,7 @@ aarch64-linux-gnu-gcc -o memcpy3.o memcpy_m.c -O3 -static
 ```
 
 使用 `time` 测试运行时间：
+
 | Options | user/s | system|
 | ------- | ---- | ------ |
 | O0      |  0.37    |  0.5      |
@@ -220,10 +227,9 @@ aarch64-linux-gnu-gcc -o memcpy3.o memcpy_m.c -O3 -static
 
 real：实际时间，从 command 命令行开始执行到运行终止的消逝时间；
 
-user：用户CPU时间，命令执行完成花费的用户CPU时间，即命令在用户态中执行时间总和；
+user：用户 CPU 时间，命令执行完成花费的用户 CPU 时间，即命令在用户态中执行时间总和；
 
-system：系统CPU时间，命令执行完成花费的系统CPU时间，即命令在核心态中执行时间总和；
+system：系统 CPU 时间，命令执行完成花费的系统 CPU 时间，即命令在核心态中执行时间总和；
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202211172132126.png)
-
 

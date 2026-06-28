@@ -1,10 +1,16 @@
+---
+title: OpenGL
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:37:13 下午
+---
+
 [最好的OpenGL教程之一\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1MJ411u7Bc/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
 
 [docs.gl](https://docs.gl/)
 
 # P1：Why learning OpenGL
-简单、跨平台，相比于其他 API：Vulkan、Direct3D.... 更适合新手，是它仅仅是一个由[Khronos组织](http://www.khronos.org/)制定并维护的规范(Specification)，可以访问 GPU 的图形 API，opengl 是由显卡制造产商实现的，在 GPU 驱动中
-
+简单、跨平台，相比于其他 API：Vulkan、Direct3D…. 更适合新手，是它仅仅是一个由 [Khronos组织](http://www.khronos.org/) 制定并维护的规范 (Specification)，可以访问 GPU 的图形 API，opengl 是由显卡制造产商实现的，在 GPU 驱动中
 
 # P2：设置 OpenGL 和创建窗口
 
@@ -14,14 +20,16 @@
 这里为了方便直接下载了 windows 的预编译版本
 GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 右上角导航栏选择：Download，打开后 Windows 用户可选择 32-bit Windows binaries，linux 只能下载源码或者通过 `sudo apt install libglfw3-dev libglfw3` 安装 glfw
->选择 32-bit 在创建项目时，只能创建 32bit 的项目，至于选择 32bit的原因，作者没有明说，提到在 64bit 环境中也能运行 32bit 代码，猜测可能兼容性更好
+
+> 选择 32-bit 在创建项目时，只能创建 32bit 的项目，至于选择 32bit 的原因，作者没有明说，提到在 64bit 环境中也能运行 32bit 代码，猜测可能兼容性更好
 
 打开后：找到 include 文件夹，和最新的 lib-vc 版本
 ![](http://cdn.ljc0606.cn/obsidian/202506252234202.png)
 
 在项目目录下建立 Dependencies 文件夹，存放上述两个文件夹，删掉 lib 中的 `.dll` 和后缀 `dll` 的 lib 文件，这个用于 动态编译
 配置：
-```
+
+```txt
 项目属性 -> C/C++ -> 附加包含目录 -> 添加 $(SolutionDir)Dependencies\GLFW\include
 项目属性 -> 链接器 -> 常规 -> 附加库目录 -> 添加: $(SolutionDir)Dependencies\GLFW\lib-vc2022
 项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: glfw3.lib
@@ -29,15 +37,16 @@ GLFW 官方网址： [An OpenGL library \| GLFW](https://www.glfw.org/)
 
 opengl 添加：
 项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: opengl32.lib
-原视频中为了保持简洁，一个一个添加 lib，直接搜缺少的函数，然后在 MSDN 上能找到属于哪个lib
-```
+原视频中为了保持简洁，一个一个添加 lib，直接搜缺少的函数，然后在 MSDN 上能找到属于哪个 lib
+
+```txt
 //直接默认lib
 $(CoreLibraryDependencies);%(AdditionalDependencies);glfw3.lib;opengl32.lib
 ```
 
 ## 使用传统 opengl 绘制三角形
 
-```
+```txt
 /* Render here */
 glClear(GL_COLOR_BUFFER_BIT);
 
@@ -56,7 +65,7 @@ glEnd();
 下载链接：[GLEW: The OpenGL Extension Wrangler Library](https://glew.sourceforge.net/)
 在解压出来的文件夹，复制到 `Dependencies` 下面，重命名为 `GLEW`（方便索引），在文件夹中可以找到 `doc/`，有关于如何使用的 html，请阅读这份文档
 
-```
+```txt
 项目属性 -> C/C++ -> 附加包含目录 -> 添加 $(SolutionDir)Dependencies\GLEW\include
 项目属性 -> 链接器 -> 常规 -> 附加库目录 -> 添加: $(SolutionDir)Dependencies\GLEW\lib\Release\Win32;
 项目属性 -> 链接器 -> 输入 -> 附加依赖项 -> 添加: glew32s.lib;
@@ -68,7 +77,7 @@ glEnd();
 1. `#include <GL/glew.h>` 必须存在在任何 OpenGL 库的 include 之前
 2. `glewinit()` 需要有 opengl 上下文环境
 
-```
+```txt
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
@@ -140,6 +149,7 @@ stride： 每个顶点的字节数，例如：位置 12 个字节，纹理坐标
 pointer：对于每个属性，相对于顶点开始位置的偏移量，例如：纹理坐标偏移量为 12
 
 还需要使用 `glEnableVertexAttribArray` 启用
+
 ```c++
 glEnableVertexAttribArray(0); 
 //0 is the index of the vertex attribute, enable the vertex attribute array
@@ -154,7 +164,7 @@ glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (const void*)
 **着色器**：是一个可以在 GPU 上运行的代码，更加复杂的场景需要对 GPU 进行编程
 现阶段主要了解以下两种着色器：
 Fragment shader 片段着色器，可能会执行很多次
-Vertex shader 顶点着色器：目前会被执行三次(三个顶点)，告诉屏幕你希望在哪里绘制（where you want the position to be）
+Vertex shader 顶点着色器：目前会被执行三次 (三个顶点)，告诉屏幕你希望在哪里绘制（where you want the position to be）
 
 着色器的最终目的是决定像素颜色
 简化 pipline 流程：Drawcall -> Vertex shader -> Fragment shader
@@ -165,6 +175,7 @@ Tips: 着色器也是以状态机的形式工作的，也需要进行启用
 实现 vertex shader 和 fragment shader 使用 `createshader` 函数编译 shader 并且绑定到程序上，使用 `compileshader` 对着色器进行编译并且获得错误提示，使用 GLSL 语言描述着色器
 
 两个编译 shader 函数
+
 ```c++
 static unsigned int CompileShader(unsigned int type, const std::string& source)
 {
@@ -213,6 +224,7 @@ static int CreateShader(const std::string& VertexShader, const std::string& Frag
 ```
 
 shader 程序描述，程序绑定和删除
+
 ```c++
 //in main ：previous code
 	glEnableVertexAttribArray(0); //0 is the index of the vertex attribute, enable the vertex attribute array
@@ -258,6 +270,7 @@ shader 程序描述，程序绑定和删除
 
 ## 将着色器使用文件形式导入
 在 `ProjectDir` 下新建 `res/shader/Basic.shader`，将 shader 的内容导入
+
 ```GLSL
 #shader vertex
 #version 330 core
@@ -282,6 +295,7 @@ void main()
 ```
 
 添加 `static ShaderProgramSource ParseShader(const std::string& filepath)` 函数
+
 ```c++
 ...
 #include <fstream>
@@ -348,6 +362,7 @@ static ShaderProgramSource ParseShader(const std::string& filepath)
 ```
 
 在 `main` 中输出
+
 ```C++
 	ShaderProgramSource source = ParseShader("res/shader/Basic.shader"); //parse shader file
 	std::cout << "VERTEX" << std::endl;
@@ -360,7 +375,8 @@ static ShaderProgramSource ParseShader(const std::string& filepath)
 
 # P9：索引缓冲区
  index buffer：reuse vertex
- 
+$1
+
 ```c++
 ...
 	float position[] = {
@@ -379,6 +395,7 @@ glDrawArrays(GL_TRIANGLES, 0, 6);
 ```
 
 use index buffer to draw
+
 ```c++
 float position[] = {
 	-0.5f,-0.5f,  //0
@@ -411,7 +428,7 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr); // draw rectangle wit
 
 ```
 
->indices 只能使用 unsigned int 定义
+> indices 只能使用 unsigned int 定义
 
 # P10：错误处理
 `glGetError` 会给出 OpenGL 出错的错误代码，但只会返回任意一个错误的代码，所以需要通过循环来不断打印所有错误信息

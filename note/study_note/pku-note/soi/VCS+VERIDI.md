@@ -1,9 +1,16 @@
+---
+title: VCS+VERIDI
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:02 下午
+---
+
 ![500](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527112358.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527112423.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527112525.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527112545.png)
 
-### filelist 自动生成指令
+# filelist 自动生成指令
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230527115954.png)
 
 ```bash
@@ -14,7 +21,7 @@ hhhh，这指令可真好使，下级目录的也能生成，爱了爱了
 
 [VCS+VERDI+Makefile 初体验 - 知乎](https://zhuanlan.zhihu.com/p/563041890)
 
-### vcd
+# vcd
 
 ```verilog
    initial

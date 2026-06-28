@@ -1,4 +1,11 @@
-ubuntu  javajs 和环境配置
+---
+title: vscode_ubuntu_javajs
+tags: []
+created: 星期六, 十一月 29日 2025, 11:18:01 晚上
+modified: 星期日, 六月 28日 2026, 5:16:55 下午
+---
+
+ubuntu javajs 和环境配置
 已经安好了 node、npm 就不整 nvm 了
 [Ubuntu升级nodejs版本\_ubuntu nodejs升级\_zzqwtc的博客-CSDN博客](https://blog.csdn.net/zzq0523/article/details/122910368#:~:text=Ubuntu%E5%8D%87%E7%BA%A7nodejs%E7%89%88%E6%9C%AC%201%20%E9%A6%96%E5%85%88%E4%B8%8B%E8%BD%BD%20n%20%E8%BF%99%E4%B8%AA%E7%94%A8%E4%BA%8E%E6%9B%B4%E6%96%B0%20node%20%E7%89%88%E6%9C%AC%E7%9A%84%E5%B7%A5%E5%85%B7%20sudo,%E5%8D%B3%E5%8F%AF%EF%BC%8C%E6%88%91%E7%94%A8%E7%9A%84%E6%98%AF%20zsh%20%EF%BC%8C%E6%89%80%E4%BB%A5%E6%89%A7%E8%A1%8C%20hash%20-r%20%EF%BC%88%E6%A0%B9%E6%8D%AE%E4%B8%8A%E5%9B%BE%E5%80%92%E6%95%B0%E7%AC%AC%E4%B8%89%E8%A1%8C%E6%8F%90%E7%A4%BA%EF%BC%89%203%20%E6%9B%B4%E6%96%B0%E5%AE%8C%E6%88%90)
 
@@ -7,27 +14,27 @@ ubuntu  javajs 和环境配置
 
 firefox、edge 的 save data 和 cookie 的都关了，建议还是不要用 edge，dev 调试贼不好使
 [更改html代码后网页不更新\_weixin\_30684743的博客-CSDN博客](https://blog.csdn.net/weixin_30684743/article/details/95290812)
-[Html静态页面更新，解决浏览器缓存不更新问题\_html更新页面\_NicestZK的博客-CSDN博客](https://blog.csdn.net/m0_37750806/article/details/119269635
+[Html 静态页面更新，解决浏览器缓存不更新问题\_html 更新页面\_NicestZK 的博客 -CSDN 博客](https://blog.csdn.net/m0_37750806/article/details/119269635
 [【web】关于修改html代码后网页不更新问题(自用)\_为什么改html页面没有更新\_代码搬运工小菜狗的博客-CSDN博客](https://blog.csdn.net/qq_51332755/article/details/124210366)
 
-#### run
+# run
 
 环境安装
-```
+```txt
 npm install
 ```
-本地部署   没有这个就 `npm install -g http_server`
-```
+本地部署 没有这个就 `npm install -g http_server`
+```txt
 http_server
 ```
 
-vscode   start 的对应 package.json 里的命令设置
-```
+vscode start 的对应 package.json 里的命令设置
+```txt
 npm run start
 ```
 
 lanch.json store
-```
+```txt
 {
 
 // Use IntelliSense to learn about possible attributes.
@@ -75,10 +82,10 @@ lanch.json store
 }
 ```
 
-#### example
+# example
 [[图形渲染程序log#sheen]]
 package.json 从程序入口
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011443324.png)
 
-index.html  调用scripts
+index.html 调用 scripts
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202309011444308.png)

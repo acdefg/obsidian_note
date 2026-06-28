@@ -1,3 +1,9 @@
+---
+title: HVT LVT SVT
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:03 下午
+---
 
 [芯片工艺库中的ffg、ssg、ttg和HVT、LVT、SVT（RVT）_svt和lvt有什么区别_Ocean_VV的博客-CSDN博客](https://blog.csdn.net/qq_41634276/article/details/126979760)
 

@@ -1,5 +1,12 @@
-## 1222
-### GR00T-N1.5
+---
+title: Thor_TEST
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:16:58 下午
+---
+
+# 1222
+## GR00T-N1.5
 - GPU：**NVIDIA Thor**
 - Batch size：**1**
 - 测试方式：端到端 pipeline + 各子模块拆分
@@ -18,21 +25,21 @@
 
 基本和官方结果一致
 
-**QPS (Queries Per Second)** 代表的是每秒查询率，也可以理解为模型每秒钟能够处理完成的推理请求数量，它是衡量模型“吞吐量”最核心的指标。计算这个数值的公式其实非常简单，在单次请求（Batch Size = 1）的实时控制场景下，QPS 与延迟（Latency）互为倒数关系，即 $QPS = \frac{1000}{\text{Latency(ms)}}$
+**QPS (Queries Per Second)** 代表的是每秒查询率，也可以理解为模型每秒钟能够处理完成的推理请求数量，它是衡量模型 " 吞吐量 " 最核心的指标。计算这个数值的公式其实非常简单，在单次请求（Batch Size = 1）的实时控制场景下，QPS 与延迟（Latency）互为倒数关系，即 $QPS = \frac{1000}{\text{Latency(ms)}}$
 
 在 Thor 上对 GR00T N1.5 的测试表明，FP8 路径在 DiT、ViT 和 LLM 等主要计算模块中，相比 FP16 带来 1.24×–1.69× 的模块级加速，端到端 pipeline 加速为 1.33×
 
-### VGGT
+## VGGT
 
 - **模型**：VGG-1B(FP32l)
 - **测试数据**：`examples/llff_flower/images/000.png`
 - **平台**：THOR
 - **输入帧数（frames）**：1, 2, 4, 8, 10, 20, 50, 100, 200
 - **测量指标**：
-    - `Time (s)`：前向推理耗时
-    - `Memory (GB)` ：GPU 显存占用
+	- `Time (s)`：前向推理耗时
+	- `Memory (GB)` ：GPU 显存占用
 
-thor 测试数据： 
+thor 测试数据：
 
 | Input Frames |    1   |    2   |    4   |    8   |   10   |   20   |    50   |   100   |    200   |
 | :----------: | :----: | :----: | :----: | :----: | :----: | :----: | :-----: | :-----: | :------: |
@@ -57,15 +64,23 @@ thor 测试数据：
 | **50**           | 12.0767      | 16.90           | **4.14** | **38,400**        | 92.16 T              | **7.63**              |
 | **100**          | 34.7772      | 26.92           | **2.88** | **76,800**        | 184.32 T             | **5.30**              |
 | **200**          | 112.9059     | 47.46           | **1.77** | **153,600**       | 368.64 T             | **3.27**              |
+
 - **token 数量估算 ($T$)**：
+
  $$T = \text{Frame\_Count} \times 24 \times 32 = \text{Frame\_Count} \times 768$$
+
 - **总浮点运算量 (Total FLOPs)**：
-    采用适用于纯推理阶段的线性估算公式：
-    $$Total\_FLOPs = 2 \times P \times T$$
-    其中 $P$ 为模型参数量（1.2 Billion），系数 2 代表仅包含前向传播的计算开销。
+	采用适用于纯推理阶段的线性估算公式：
+
+	$$Total\_FLOPs = 2 \times P \times T$$
+
+	其中 $P$ 为模型参数量（1.2 Billion），系数 2 代表仅包含前向传播的计算开销。
 - **有效算力 (TFLOPS)**：
-    每秒万亿次浮点运算数，计算公式为：
-    $$TFLOPS = \frac{Total\_FLOPs}{\text{Time (s)} \times 10^{12}}$$
+	每秒万亿次浮点运算数，计算公式为：
+
+	$$TFLOPS = \frac{Total\_FLOPs}{\text{Time (s)} \times 10^{12}}$$
+
 - **帧率 (FPS)**：
 计算公式为：
-    $$FPS = \frac{\text{Input Frames}}{\text{Time (s)}}$$
+
+	$$FPS = \frac{\text{Input Frames}}{\text{Time (s)}}$$

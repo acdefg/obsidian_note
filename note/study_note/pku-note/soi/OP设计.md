@@ -1,3 +1,10 @@
+---
+title: OP设计
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:03 下午
+---
+
 down:: [[SMIC40ll_MOS管特性]]
 瞬态：
 

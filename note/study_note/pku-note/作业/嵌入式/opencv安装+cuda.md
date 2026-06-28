@@ -1,4 +1,11 @@
-## 下载准备
+---
+title: opencv安装+cuda
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:01 下午
+---
+
+# 下载准备
 ```shell
 git clone https://github.com/opencv/opencv_contrib.git
 git clone https://github.com/opencv/opencv.git
@@ -10,16 +17,15 @@ sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 ```
-会少 python2-dev，python-numpy，lib...，lib 年那个加了个 source list [[zuoye9#error messages]]
+会少 python2-dev，python-numpy，lib…，lib 年那个加了个 source list [[zuoye9#error messages]]
 
 video.h
-```
+```txt
 cp ./modules/videoio/include/opencv2/videoio/videoio_c.h /usr/include/sys/videoio.h
 cp ./modules/videoio/include/opencv2/videoio/videoio_c.h /usr/include/video/videoio.h
 ```
 
-
-## 编译 cmake 选项
+# 编译 cmake 选项
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311216796.png)
 
 使用的：
@@ -34,10 +40,10 @@ cd build
 cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=ON -D ENABLE_CXX11=1 -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -D OPENCV_ENABLE_NONFREE=True -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D WITH_CUDA=ON -D WITH_TBB=ON -D ENABLE_FAST_MATH=1 -D WITH_OPENMP=ON -D WITH_CUFFT=ON -D WITH_CUBLAS=ON ..
 ```
 
--D BUILD_opencv_world=ON   编译生成 libopencv_world.so
--D CUDA_NVCC_FLAGS=–expt-relaxed-constexpr  使用 abs
-#### 看看，建个.sh 文件放在目录下
-```
+-D BUILD_opencv_world=ON 编译生成 libopencv_world.so
+-D CUDA_NVCC_FLAGS=–expt-relaxed-constexpr 使用 abs
+## 看看，建个.sh 文件放在目录下
+```txt
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_C_COMPILER=gcc-10.4 \
       -D CMAKE_CXX_COMPILER=g++-10.4 \
@@ -80,11 +86,11 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D BUILD_EXAMPLES=OFF ..
 ```
 
-#### 问题
+## 问题
 有大病问题，这么清楚的 build 看不见瞎嘛，总而言之删了重新解压，重新操作一遍就好了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311213569.png)
 
-之前出现这个问题是要将 gcc，g++降级，我明明降过了
+之前出现这个问题是要将 gcc，g++ 降级，我明明降过了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311224803.png)
 
 emmmm，路径带括号，什么路径，就是（cpoy）别用了
@@ -93,9 +99,9 @@ emmmm，路径带括号，什么路径，就是（cpoy）别用了
 这个说改 cmake -D CUDA_ARCH_BIN="8.6" 这个选项，emmmm，我不这么改了，换成 cmake-gui
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311420494.png)
 
-### cmake-gui
+# cmake-gui
 以上设置更加简单的方法
-#### 安装
+## 安装
 
 ```shell
 sudo apt-get install cmake-qt-gui
@@ -108,20 +114,20 @@ cmake-gui
 cmake-gui ..(在源码目录下打开)
 ```
 
-#### 编译 opencv
+## 编译 opencv
 configure
 specify cmplier 找\\usr\\bin 下的 gcc
 改选项
-#### 问题 1：png
+## 问题 1：png
 
 > [!failure]
-> 
+
 undefined reference to `png_set_longjmp_fn'
 
 [cmake - undefined reference to `png_set_longjmp_fn' when compiling PCL source file - Stack Overflow](https://stackoverflow.com/questions/36220123/undefined-reference-to-png-set-longjmp-fn-when-compiling-pcl-source-file)
 
 cmake list 了里面加上这个
-```
+```txt
 # LibPNG
 option(WITH_PNG "PNG file support" TRUE)
 if(WITH_PNG)
@@ -143,10 +149,10 @@ if(WITH_PNG)
 endif(WITH_PNG)
 ```
 
-#### 问题 2：ade
+## 问题 2：ade
 
 > [!failure]
-> 
+
 CMake Error at modules/gapi/cmake/DownloadADE.cmake:23 (add_library):  
 No SOURCES given to target: ade  
 Call Stack (most recent call first):  
@@ -158,17 +164,17 @@ CMakeLists.txt:971 (ocv_register_modules)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311525522.png)
 
-## make&install
+# make&install
 
 ```shell
 make -j8
 ```
-查看最大核数，那就最大可以-16
+查看最大核数，那就最大可以 -16
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311725826.png)
 装了一天终于成了
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011441400.png)
 
-#### 问题 1：boostdesc_bgm.i
+## 问题 1：boostdesc_bgm.i
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311704695.png)
 
 download.sh 在 opencv 个根目录下运行这个脚本，操作下面隐藏文件夹 cache
@@ -193,11 +199,11 @@ curl https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f7
 然后下载了一个补充文件，放在 opencv_contrib/modules/xfeatures2d/src/目录下：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212311746943.png)
 想安装 tree，查看文件结构，还没好
-### 问题 2：nvopticalFlow.h 没得
+# 问题 2：nvopticalFlow.h 没得
 把 cudaflow 等一些没必要的 module 给关掉，重来就好了
-## 配置环境变量
-#### 从 cmake option配置 log
-```
+# 配置环境变量
+## 从 cmake option 配置 log
+```txt
 General configuration for OpenCV 4.7.0-dev =====================================
 
 Version control: unknown
@@ -412,7 +418,6 @@ Java tests: NO
 Install to: /usr/local
 ```
 
-
 ```shell
 zshconfig
 # bash用：
@@ -427,7 +432,6 @@ update
 # or
 sudo updatedb
 ```
-
 
 ```shell
 #打开下列文件
@@ -448,13 +452,13 @@ pkg-config --modversion opencv4
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011456367.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011526487.png)
 
-#### 问题：opencv.pc
+## 问题：opencv.pc
 [linux下编译安装opencv生成opencv.pc_浓茶淡酒的博客-CSDN博客](https://blog.csdn.net/s15810751918/article/details/107705387)
 
-## 测试
+# 测试
 到这个目录下面执行：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011545157.png)
-#### 问题：报错
+## 问题：报错
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301011546064.png)
 解决：
 ```shell
@@ -464,16 +468,16 @@ sudo cmake .. -DCMAKE_CXX_COMPILER=$(which g++) -DCMAKE_C_COMPILER=$(which gcc)
 [[已解决] The C++ compiler "/usr/local/bin/c++" is not able to compile a simple test program._HeyMountain的博客-CSDN博客_cmake在编译你的c或c++代码前，会先验证你指定的编译器是否可以正常工作](https://is.gd/VJi6Vm)
 [Ubuntu下安装opencv并进行测试_带你去网吧里偷耳机的博客-CSDN博客_检测opencv是否安装成功 ubuntu](https://blog.csdn.net/qq_40123329/article/details/103904087)
 
-## 编译方法
+# 编译方法
 可以设置 cmake，配置 vscode，这里使用最简单的方法：
 
 ```shell
 nvcc -std=c++11 `pkg-config --cflags opencv4` cuda_image.cu `pkg-config --libs opencv4` -o image
 ```
-cuda_image.cu  --- source code 
-image  --- output
-### reference
-[c++ - Cmake + CUDA + OpenCV - Stack Overflow](https://stackoverflow.com/questions/31881249/cmake-cuda-opencv)  --cmake cuda
-[Linux平台CUDA+OpenCV3.4配置 - Brccq - 博客园](https://www.cnblogs.com/br170525/p/8331640.html)  --一篇比较长的模板，可以修改 cuda opencv
-[cuda与openCV结合编程（一）_alpc40的博客-CSDN博客_cuda与opencv](https://blog.csdn.net/weixin_39212021/article/details/78884830) --几种编译方法
+cuda_image.cu --- source code
+image --- output
+## reference
+[c++ - Cmake + CUDA + OpenCV - Stack Overflow](https://stackoverflow.com/questions/31881249/cmake-cuda-opencv) --cmake cuda
+[Linux平台CUDA+OpenCV3.4配置 - Brccq - 博客园](https://www.cnblogs.com/br170525/p/8331640.html) -- 一篇比较长的模板，可以修改 cuda opencv
+[cuda与openCV结合编程（一）_alpc40的博客-CSDN博客_cuda与opencv](https://blog.csdn.net/weixin_39212021/article/details/78884830) -- 几种编译方法
 

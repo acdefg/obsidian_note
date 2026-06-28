@@ -1,5 +1,12 @@
+---
+title: opengl系列
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:03 下午
+---
+
 down:: [[visual_studio下载 +opengl配置]]
-### eigen 将矩阵输出
+# eigen 将矩阵输出
 
 ```c++
 std::ofstream input_file("input.txt", std::ios::trunc);

@@ -1,3 +1,10 @@
+---
+title: 同行的 blog 笔记
+tags: []
+created: 星期六, 十一月 29日 2025, 9:40:38 晚上
+modified: 星期日, 六月 28日 2026, 5:17:04 下午
+---
+
 [SystemC入门笔记 | 月见樽'blog](https://www.yuejianzun.xyz/2019/01/22/SystemC%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/)
 [归档 - 墨魂](https://mohun-8052.github.io/archives/)
 [Analog-Life – 干饭睡觉真君的模拟技术分享网站](https://www.analog-life.com/)

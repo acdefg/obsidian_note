@@ -1,4 +1,11 @@
-## cuda 安装
+---
+title: cuda编程
+tags: ["note"]
+created: 星期日, 六月 28日 2026, 2:58:15 下午
+modified: 星期日, 六月 28日 2026, 5:17:01 下午
+---
+
+# cuda 安装
 参考：[Ubuntu 22.04 安装cuda，适用20.04_AIhub的博客-CSDN博客_ubuntu22.04安装cuda](https://is.gd/H3L2qQ)
 [kali linux 安装CUDA 11.6问题总结 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/328870.html)
 1. 安装驱动
@@ -6,15 +13,15 @@
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291221320.png)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212291452085.png)
-2. 安装 cuda toolkit，参考[kali linux 安装CUDA 11.6问题总结 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/328870.html)
+2. 安装 cuda toolkit，参考 [kali linux 安装CUDA 11.6问题总结 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/328870.html)
 问题 1：
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292226234.png)
 
-```
+```txt
 sudo vim /etc/apt/sources.list
 ```
 加上
-```
+```txt
 deb http://ftp.de.debian.org/debian bullseye main
 ```
 update 一下
@@ -40,7 +47,7 @@ export  LD_LIBRARY_PATH=/usr/local/cuda/lib64$LD_LIBRARY_PATH
 ```
 输入 `nvcc -V`，查看更改成功
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212292244738.png)
-## cuda 程序
+# cuda 程序
 cuda 编程教学👍：[CUDA C/C++ 教程一：加速应用程序_白水baishui的博客-CSDN博客_c++ cuda](https://is.gd/XcIHdt)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022103477.png)
 
@@ -48,13 +55,13 @@ cuda 编程教学👍：[CUDA C/C++ 教程一：加速应用程序_白水baishui
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022316707.png)
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202301022319208.png)
 
-## 问题
+# 问题
 上次之后不知道系统删掉了什么环境，这次运行就一直报错，找不到 opencv2/opencv.hpp 从查找文件还在，经过一步一步检查，应该是 autoremove 把 libopencv-dev 在这个包给删了，'sudo apt-get install libopencv-dev' ，重新安装，配置好 vscode，F5 运行没问题了。
 
 [vs各个版本编写代码时的光标变成了黑块，黑块选中字符，再输入的时候就会替换掉那个黑块选中的字符_CJack酒杯的博客-CSDN博客_c语言光标变成黑块](https://blog.csdn.net/qwe6620692/article/details/88079003)
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202212301822118.png)
-根据这篇把 gcc/g++降级了，还是不行 [error: parameter packs not expanded with ‘...’ · Issue #119 · NVlabs/instant-ngp · GitHub](https://github.com/NVlabs/instant-ngp/issues/119)
+根据这篇把 gcc/g++ 降级了，还是不行 [error: parameter packs not expanded with ‘...’ · Issue #119 · NVlabs/instant-ngp · GitHub](https://github.com/NVlabs/instant-ngp/issues/119)
 降级新办法：[[ubuntu][原创]ubuntu gcc g++降级方法_FL1623863129 的博客-CSDN 博客_ubuntu 22 gcc12 降到 11](https://blog.csdn.net/FL1623863129/article/details/115192387)
 
 ```shell

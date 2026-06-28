@@ -6,8 +6,9 @@ if you want to view the source visit the plugins github repository
 'use strict';
 
 var obsidian = require('obsidian');
+var view = require('@codemirror/view');
 
-/*! *****************************************************************************
+/******************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -32,404 +33,1080 @@ function __awaiter(thisArg, _arguments, P, generator) {
     });
 }
 
+typeof SuppressedError === "function" ? SuppressedError : function (error, suppressed, message) {
+    var e = new Error(message);
+    return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+};
+
 const DEFAULT_SETTINGS = {
     numberCursors: 1,
     selectionMode: "full",
     displayCharCount: true,
-    displayPattern: "ch:ln/ct",
-    cursorSeperator: " / ",
-    rangeSeperator: "->",
+    displayPatternOption: "clt",
+    displayPattern: "",
+    cursorSeparatorOption: "slash",
+    cursorSeparator: "",
+    rangeSeparatorOption: "arrow",
+    rangeSeparator: "",
+    displayCursorLineCount: true,
     displayTotalLines: true,
     displayCursorLines: false,
-    cursorLinePattern: "[lc]",
+    cursorLinePatternOption: "square",
+    cursorLinePattern: "",
+    statusBarPadding: false,
+    paddingStepOption: "medium",
+    paddingStep: 9,
+    wordyDisplay: false,
+    fuzzyAmount: "strictpercent",
+    excludeFrontmatter: false,
+    frontmatterString: "frontmatter",
+    frontmatterStringCustom: "",
 };
+const MIDDLEPATTERN = /^.*(ln|ch).*?ct.*?(ln|ch).*/i;
+const BEGINPATTERN = /^.*ct.*((ln|ch).*?(ln|ch).*)/i;
+const ENDPATTERN = /(.*(ln|ch).*?(ln|ch)).*?ct.*$/i;
+const FRONTMATTER = /^\s*?---\n+?[\s\S]*?\n---/;
+const MULTCURSORS = "{} cursors";
+const SELECTTEXTDISPLAY = `{} selected`;
+const SELECTLINEDISPLAY = `{} lines`;
+const SELECTMULT = ` ({} / {})`;
+const SELECTSINGLE = ` ({})`;
+// preamble, metadata, frontmatter
+// optional names, optional include
+// top, near top, middle, near bottom, bottom
+// 0-19, 20-39, 40-59, 60-79, 80-100
+const LOWRANGEWORDS = new Map([
+    [0, "top"],
+    [20, "near top"],
+    [40, "middle"],
+    [60, "near bottom"],
+    [80, "bottom"],
+    [100, "bottom"],
+]);
+// top, middle, bottom
+// 0-32, 33-65, 66-99(/100)
+const HIGHRANGEWORDS = new Map([
+    [0, "top"],
+    [33, "middle"],
+    [66, "bottom"],
+    [99, "bottom"],
+    [100, "bottom"],
+]);
+// top, %%, bottom
+// 0, 1-99, 100
+const HARDPERCENTWORDS = new Map([
+    [0, "top"],
+    [100, "bottom"],
+]);
+const CURSORSEPERATOR = new Map([
+    ["slash", "/"],
+    ["pipe", "|"],
+    ["tilde", "~"],
+    ["ampersand", "&"],
+]);
+const RANGESEPERATOR = new Map([
+    ["arrow", "→"],
+    ["dash", "-"],
+    ["tilde", "~"],
+]);
+const PADDINGSTEP = new Map([
+    ["low", 6],
+    ["medium", 12],
+    ["high", 24],
+]);
+const DISPLAYPATTERN = new Map([
+    ["clt", "ch:ln/ct"],
+    ["lct", "ln:ch/ct"],
+    ["clt2", "ch ln-ct"],
+    ["clts", "ch ln ct"],
+    ["lcts", "ln ch ct"],
+]);
+
+function format(raw, ...args) {
+    for (let arg of args) {
+        raw = raw.replace("{}", arg.toString());
+    }
+    return raw;
+}
+function closest(val, to) {
+    return Math.floor(val / to) * to;
+}
+function showElem(elem) {
+    elem.removeAttribute("style");
+}
+function hideElem(elem) {
+    elem.setAttribute("style", "display:none;");
+}
+
+class SettingElement {
+    constructor(container, title, plugin, name, override = null) {
+        this.name = name;
+        this.plugin = plugin;
+        this.override = override;
+        this.children = [];
+        this.element = container.createDiv();
+        this.element.createEl("h3", { text: title });
+    }
+    resetComponent() {
+        const value = DEFAULT_SETTINGS[this.name];
+        console.log(`resetting ${this.name}: ${value}`);
+        let component = this.setting.components[0];
+        component.setValue(value);
+        this.plugin.settings[this.name] = value;
+        if (this.warning != null)
+            this.warning.setText("");
+    }
+    createWarning() {
+        return this.element.createEl("p", { text: "", attr: { style: "color:red" } });
+    }
+    basicOnChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            if (this.plugin.settings[this.name] != value) {
+                console.log(`changing ${this.name}: ${value}`);
+            }
+            if (typeof DEFAULT_SETTINGS[this.name] === "boolean") {
+                this.plugin.settings[this.name] = value;
+            }
+            else {
+                this.plugin.settings[this.name] = value === null || value === void 0 ? void 0 : value.trim();
+            }
+            yield this.plugin.saveSettings();
+        });
+    }
+    numberOnChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            let parsedValue = parseInt(value);
+            if (!isNaN(parsedValue)) {
+                if (this.plugin.settings[this.name] != value) {
+                    console.log(`changing ${this.name}: ${value}`);
+                }
+                this.warning.setText("");
+                this.plugin.settings[this.name] = parsedValue;
+                yield this.plugin.saveSettings();
+                this.error = false;
+            }
+            else {
+                console.log(`unable to update ${this.name}, `, `unable to parse new value into integer: ${value}`);
+                this.warning.setText(`"${value}" is not a full number, unable to save.`);
+                this.error = true;
+            }
+        });
+    }
+    show() {
+        if (this.element)
+            showElem(this.element);
+        if (this.warning)
+            showElem(this.warning);
+        this.showChildren();
+    }
+    showChildren() {
+        this.children.forEach(c => c.show());
+    }
+    hide() {
+        if (this.element)
+            hideElem(this.element);
+        if (this.warning)
+            hideElem(this.warning);
+        this.hideChildren();
+    }
+    hideChildren() {
+        this.children.forEach(c => c.hide());
+    }
+}
+class SettingElementCustom extends SettingElement {
+    customOnChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            if (this.plugin.settings[this.customName] != value) {
+                console.log(`changing ${this.customName}: ${value}`);
+            }
+            if (typeof DEFAULT_SETTINGS[this.customName] === "boolean") {
+                this.plugin.settings[this.customName] = value;
+            }
+            else {
+                this.plugin.settings[this.customName] = value === null || value === void 0 ? void 0 : value.trim();
+            }
+            yield this.plugin.saveSettings();
+        });
+    }
+    toggleCustom() {
+        const isCustom = this.plugin.settings[this.name] == "custom";
+        const elem = this.custom.settingEl;
+        isCustom ? showElem(elem) : hideElem(elem);
+    }
+    basicOnChange() {
+        const _super = Object.create(null, {
+            basicOnChange: { get: () => super.basicOnChange }
+        });
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            yield _super.basicOnChange.call(this)(value);
+            this.toggleCustom();
+        });
+    }
+}
+class NumberCursors extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "# of Cursors", plugin, "numberCursors");
+        this.setting = new obsidian.Setting(this.element)
+            .setName('Number of cursor positions that will display \
+          in the status bar before switching to "N cursors".')
+            .addText((text) => {
+            var _a, _b;
+            text
+                .setValue((_b = (_a = this.plugin.settings) === null || _a === void 0 ? void 0 : _a.numberCursors) === null || _b === void 0 ? void 0 : _b.toString())
+                .onChange(this.onChange());
+        });
+        this.warning = this.createWarning();
+    }
+    onChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            yield this.numberOnChange()(value);
+            if (!this.error)
+                this.toggleChildren();
+        });
+    }
+    showChildren() {
+        if (this.plugin.settings.numberCursors != 1) {
+            super.showChildren();
+        }
+    }
+    toggleChildren() {
+        const num = this.plugin.settings.numberCursors;
+        num == 1 ? super.hideChildren() : super.showChildren();
+    }
+}
+class SelectionMode extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Selection Mode", plugin, "selectionMode", "Full Selection");
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Display just the beginning, \
+        just the end, or the full range of a selection.")
+            .addDropdown((cb) => {
+            cb
+                .addOption("full", "Full Selection")
+                .addOption("begin", "Beginning")
+                .addOption("end", "End")
+                .setValue(this.plugin.settings.selectionMode
+                || DEFAULT_SETTINGS.selectionMode)
+                .onChange(this.onChange());
+        });
+    }
+    onChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            yield this.basicOnChange()(value);
+            this.toggleChildren();
+        });
+    }
+    showChildren() {
+        if (this.plugin.settings.selectionMode == "full") {
+            super.showChildren();
+        }
+    }
+    toggleChildren() {
+        const mode = this.plugin.settings.selectionMode;
+        mode == "full" ? super.showChildren() : super.hideChildren();
+    }
+}
+class DisplayCharCount extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Display Character Count", plugin, "displayCharCount");
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Display the total number of characters selected.")
+            .addToggle((cb) => {
+            cb
+                .setValue(this.plugin.settings.displayCharCount != null
+                ? this.plugin.settings.displayCharCount
+                : DEFAULT_SETTINGS.displayCharCount)
+                .onChange(this.basicOnChange());
+        });
+    }
+}
+class DisplayTotalLineCount extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Display Total Line Count", plugin, "displayTotalLines");
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Display the total number of lines selected.")
+            .addToggle((cb) => {
+            cb
+                .setValue(this.plugin.settings.displayTotalLines != null
+                ? this.plugin.settings.displayTotalLines
+                : DEFAULT_SETTINGS.displayTotalLines)
+                .onChange(this.basicOnChange());
+        });
+    }
+}
+class DisplayPattern extends SettingElementCustom {
+    constructor(container, plugin) {
+        super(container, "Individual Cursor Pattern", plugin, "displayPatternOption", "ch:ln/ct");
+        this.customName = "displayPattern";
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Pattern to display location information for each cursor.")
+            .setDesc("`ch` is the column the cursor is at in the current line, \
+        `ln` is the current line number, \
+        `ct` is the total line numbers in the file (count).")
+            .addDropdown((cb) => {
+            cb
+                .addOption("clt", "ch:ln/ct")
+                .addOption("lct", "ln:ch/ct")
+                .addOption("clt2", "ch ln-ct")
+                .addOption("clts", "ch ln ct")
+                .addOption("lcts", "ln ch ct")
+                .addOption("custom", "custom")
+                .setValue(this.plugin.settings.displayPatternOption
+                || DEFAULT_SETTINGS.displayPatternOption)
+                .onChange(this.basicOnChange());
+        });
+        this.custom = new obsidian.Setting(this.element)
+            .setName("Custom pattern for display")
+            .setDesc("If `ct` is the first or last of the three values, \
+        it will be removed when displaying a range.")
+            .addText((text) => {
+            text
+                .setValue(this.plugin.settings.displayPattern)
+                .onChange(this.customOnChange());
+        });
+        this.toggleCustom();
+    }
+}
+class CursorSeparator extends SettingElementCustom {
+    constructor(container, plugin) {
+        super(container, "Cursor Separator", plugin, "cursorSeparatorOption", "slash `/`");
+        this.customName = "cursorSeparator";
+        this.setting = new obsidian.Setting(this.element)
+            .setName("String to seperate multiple curor locations when \
+        `# of Cursors` is greater than 1. Selecting `custom` \
+        will let you type out your own")
+            .addDropdown((cb) => {
+            cb
+                .addOption("slash", "slash `/`")
+                .addOption("pipe", "pipe `|`")
+                .addOption("tilde", "tilde `~`")
+                .addOption("ampersand", "ampersand `&`")
+                .addOption("custom", "custom")
+                .setValue(this.plugin.settings.cursorSeparatorOption
+                || DEFAULT_SETTINGS.cursorSeparatorOption)
+                .onChange(this.basicOnChange());
+        });
+        this.custom = new obsidian.Setting(this.element)
+            .setName("String will be padded by a space on each side. \
+        Consecutive whitespace is squashed to 1 space (per HTML rules). \
+        For example: '/' will be displayed as ' / '")
+            .addText((text) => {
+            text
+                .setValue(this.plugin.settings.cursorSeparator)
+                .onChange(this.customOnChange());
+        });
+        this.toggleCustom();
+    }
+}
+class RangeSeparator extends SettingElementCustom {
+    constructor(container, plugin) {
+        super(container, "Range Separator", plugin, "rangeSeparatorOption", "arrow '→'");
+        this.customName = "rangeSeparator";
+        this.setting = new obsidian.Setting(this.element)
+            .setName("String to seperate the beginning and end of a selection \
+          when `Selection Mode` is set to `Full Selection`. \
+          Selecting `custom` will let you type out your own")
+            .addDropdown((cb) => {
+            cb
+                .addOption("arrow", "arrow '→'")
+                .addOption("dash", "dash `-`")
+                .addOption("tilde", "tilde `~`")
+                .addOption("custom", "custom")
+                .setValue(this.plugin.settings.rangeSeparatorOption
+                || DEFAULT_SETTINGS.rangeSeparatorOption)
+                .onChange(this.basicOnChange());
+        });
+        this.custom = new obsidian.Setting(this.element)
+            .setName("String will NOT be padded by a space on each side. \
+          Consecutive whitespace is squashed to 1 space (per HTML rules) \
+          For example: '->' will be displayed as '2->3' and ' -> ' will \
+          be displayed as '2 -> 3'")
+            .addText((text) => {
+            text
+                .setValue(this.plugin.settings.rangeSeparator)
+                .onChange(this.customOnChange());
+        });
+        this.toggleCustom();
+    }
+}
+class DisplayCursorLines extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Display Cursor Line Count", plugin, "displayCursorLines");
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Display the number of lines selected by each cursor.")
+            .addToggle((cb) => {
+            cb
+                .setValue(this.plugin.settings.displayCursorLines != null
+                ? this.plugin.settings.displayCursorLines
+                : DEFAULT_SETTINGS.displayCursorLines)
+                .onChange(this.onChange());
+        });
+    }
+    onChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            yield this.basicOnChange()(value);
+            this.toggleChildren();
+        });
+    }
+    showChildren() {
+        if (this.plugin.settings.displayCursorLines) {
+            super.showChildren();
+        }
+    }
+    toggleChildren() {
+        const display = this.plugin.settings.displayCursorLines;
+        display ? super.showChildren() : super.hideChildren();
+    }
+}
+class CursorLinePattern extends SettingElementCustom {
+    constructor(container, plugin) {
+        super(container, "Cursor Line Pattern", plugin, "cursorLinePatternOption", "[lc]");
+        this.customName = "cursorLinePattern";
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Pattern to display number of highlighted lines for each cursor.")
+            .addDropdown((cb) => {
+            cb
+                .addOption("square", "[lc]")
+                .addOption("curly", "{lc}")
+                .addOption("parens", "(lc)")
+                .addOption("pointy", "<lc>")
+                .addOption("custom", "custom")
+                .setValue(this.plugin.settings.cursorLinePatternOption
+                || DEFAULT_SETTINGS.cursorLinePatternOption)
+                .onChange(this.basicOnChange());
+        });
+        this.custom = new obsidian.Setting(this.element)
+            .setName("`lc` is the line count and will not be displayed if only one line \
+          is selected or 'Display Cursor Line Count' setting is `false`. \
+          Leading and trailing whitespace is trimmed.")
+            .addText((text) => {
+            text
+                .setValue(this.plugin.settings.cursorLinePattern)
+                .onChange(this.customOnChange());
+        });
+        this.toggleCustom();
+    }
+}
+class StatusBarPadding extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Pad Status Bar", plugin, "statusBarPadding");
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Add padding to lessen the amount the status bar shifts")
+            .addToggle((cb) => {
+            cb
+                .setValue(this.plugin.settings.statusBarPadding != null
+                ? this.plugin.settings.statusBarPadding
+                : DEFAULT_SETTINGS.statusBarPadding)
+                .onChange(this.onChange());
+        });
+    }
+    onChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            yield this.basicOnChange()(value);
+            this.toggleChildren();
+        });
+    }
+    showChildren() {
+        if (this.plugin.settings.statusBarPadding) {
+            super.showChildren();
+        }
+    }
+    toggleChildren() {
+        const display = this.plugin.settings.statusBarPadding;
+        display ? super.showChildren() : super.hideChildren();
+    }
+}
+class PaddingStep extends SettingElementCustom {
+    constructor(container, plugin) {
+        super(container, "Padding Width", plugin, "paddingStepOption", "low `6px`");
+        this.customName = "paddingStep";
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Amount the status bar will round to when padding.")
+            .setDesc("For example, with the default value of '12' the status bar \
+        could be set to a width of 60 if the contents width is 55.")
+            .addDropdown((cb) => {
+            cb
+                .addOption("low", "low `6px`")
+                .addOption("medium", "medium `12px`")
+                .addOption("high", "high `24px`")
+                .addOption("custom", "custom")
+                .setValue(this.plugin.settings.paddingStepOption
+                || DEFAULT_SETTINGS.paddingStepOption)
+                .onChange(this.basicOnChange());
+        });
+        this.custom = new obsidian.Setting(this.element)
+            .setName("Multiples of 3 work best, though any positive value will do.")
+            .setDesc("A cursor with just the head is around 70px. \
+        A single selection with head and anchor plus totals is around 250px. \
+        3 selections like the above with individual line counts is around 500px.")
+            .addText((text) => {
+            var _a, _b;
+            text
+                .setValue((_b = (_a = this.plugin.settings) === null || _a === void 0 ? void 0 : _a.paddingStep) === null || _b === void 0 ? void 0 : _b.toString())
+                .onChange(this.numberOnChange());
+        });
+        this.warning = this.createWarning();
+        this.toggleCustom();
+    }
+}
+class WordyDisplay extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Display as Percent", plugin, "wordyDisplay");
+        this.percents = [];
+        this.rowcol = [];
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Display percent thru the document instead of line number")
+            .addToggle((cb) => {
+            cb
+                .setValue(this.plugin.settings.wordyDisplay != null
+                ? this.plugin.settings.wordyDisplay
+                : DEFAULT_SETTINGS.wordyDisplay)
+                .onChange(this.onChange());
+        });
+    }
+    onChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            yield this.basicOnChange()(value);
+            this.showSettings();
+        });
+    }
+    showSettings() {
+        if (this.plugin.settings.wordyDisplay) {
+            this.percents.forEach(s => s.show());
+            this.rowcol.forEach(s => s.hide());
+        }
+        else {
+            this.percents.forEach(s => s.hide());
+            this.rowcol.forEach(s => s.show());
+        }
+    }
+}
+class FuzzyAmount extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Percentage Mode", plugin, "fuzzyAmount", "Strict Percentages");
+        this.setting = new obsidian.Setting(this.element)
+            .setName("How many words vs percent numbers to display.")
+            .setDesc("\
+        'Strict Percentages' will say at the top and bottom, and then percentages from 1% to 99%. \
+        'Low Fuzzy Percentages' will say at the top and bottom for the first and last 10%, percentages for the rest of the document. \
+        'High Fuzzy Percentages' will say at the top and bottom for the first and last 20%, percentages for the rest of the document. \
+        'Only Percentages' shows percentages throughout the document, no words are used. \
+        'Very Wordy' only uses words, splits the document into 5ths. \
+        'Barely Wordy' only uses words, splits the document into 3rds. \
+        ")
+            .addDropdown((cb) => {
+            cb
+                .addOption("strictpercent", "Strict Percentages")
+                .addOption("lowfuzzypercent", "Low Fuzzy Percentages")
+                .addOption("highfuzzypercent", "High Fuzzy Percentages")
+                .addOption("onlypercent", "Only Percentages")
+                .addOption("verywordy", "Very Wordy")
+                .addOption("littewordy", "Barely Wordy")
+                .setValue(this.plugin.settings.fuzzyAmount
+                || DEFAULT_SETTINGS.fuzzyAmount)
+                .onChange(this.basicOnChange());
+        });
+    }
+}
+class ExcludeFrontmatter extends SettingElement {
+    constructor(container, plugin) {
+        super(container, "Exclude Frontmatter", plugin, "excludeFrontmatter");
+        this.setting = new obsidian.Setting(this.element)
+            .setName("Exclude the frontmatter as part of the document percentage")
+            .addToggle((cb) => {
+            cb
+                .setValue(this.plugin.settings.excludeFrontmatter != null
+                ? this.plugin.settings.excludeFrontmatter
+                : DEFAULT_SETTINGS.excludeFrontmatter)
+                .onChange(this.onChange());
+        });
+    }
+    onChange() {
+        return (value) => __awaiter(this, void 0, void 0, function* () {
+            yield this.basicOnChange()(value);
+            this.toggleChildren();
+        });
+    }
+    showChildren() {
+        if (this.plugin.settings.excludeFrontmatter) {
+            super.showChildren();
+        }
+    }
+    toggleChildren() {
+        const display = this.plugin.settings.excludeFrontmatter;
+        display ? super.showChildren() : super.hideChildren();
+    }
+}
+class FrontmatterString extends SettingElementCustom {
+    constructor(container, plugin) {
+        super(container, "Frontmatter Phrase", plugin, "frontmatterString");
+        this.customName = "frontmatterStringCustom";
+        this.setting = new obsidian.Setting(this.element)
+            .setName("What to call the frontmatter when cursor is inside it")
+            .addDropdown((cb) => {
+            cb
+                .addOption("frontmatter", "frontmatter")
+                .addOption("metadata", "metadata")
+                .addOption("preamble", "preamble")
+                .addOption("custom", "custom")
+                .setValue(this.plugin.settings.frontmatterString
+                || DEFAULT_SETTINGS.frontmatterString)
+                .onChange(this.basicOnChange());
+        });
+        this.custom = new obsidian.Setting(this.element)
+            .setName("If you don't like the options provided, \
+        you can set the frontmatter to whaterver \
+        you want with this.")
+            .addText((text) => {
+            var _a;
+            text
+                .setValue((_a = this.plugin.settings) === null || _a === void 0 ? void 0 : _a.frontmatterStringCustom)
+                .onChange(this.customOnChange());
+        });
+        this.toggleCustom();
+    }
+}
+
+class CursorLocationSettingTab extends obsidian.PluginSettingTab {
+    constructor(app, plugin) {
+        super(app, plugin);
+        this.plugin = plugin;
+    }
+    display() {
+        let { containerEl } = this;
+        containerEl.empty();
+        containerEl.createDiv().createEl("h2", { text: "Cursor Information" });
+        const NumberCursors$1 = new NumberCursors(containerEl, this.plugin);
+        const CursorSeparator$1 = new CursorSeparator(containerEl, this.plugin);
+        NumberCursors$1.children.push(CursorSeparator$1);
+        const SelectionMode$1 = new SelectionMode(containerEl, this.plugin);
+        const RangeSeparator$1 = new RangeSeparator(containerEl, this.plugin);
+        SelectionMode$1.children.push(RangeSeparator$1);
+        const WordyDisplay$1 = new WordyDisplay(containerEl, this.plugin);
+        // Add a Dropdown "Pattern" option, maybe switch Display Pattern
+        // As part of the "custom" option, show the other options
+        const DisplayPattern$1 = new DisplayPattern(containerEl, this.plugin);
+        const DisplayCursorLines$1 = new DisplayCursorLines(containerEl, this.plugin);
+        const CursorLinePattern$1 = new CursorLinePattern(containerEl, this.plugin);
+        DisplayCursorLines$1.children.push(CursorLinePattern$1);
+        const FuzzyAmount$1 = new FuzzyAmount(containerEl, this.plugin);
+        const ExcludeFrontmatter$1 = new ExcludeFrontmatter(containerEl, this.plugin);
+        const FrontmatterString$1 = new FrontmatterString(containerEl, this.plugin);
+        ExcludeFrontmatter$1.children.push(FrontmatterString$1);
+        const StatusBarPadding$1 = new StatusBarPadding(containerEl, this.plugin);
+        const PaddingStep$1 = new PaddingStep(containerEl, this.plugin);
+        StatusBarPadding$1.children.push(PaddingStep$1);
+        const DisplayCharCount$1 = new DisplayCharCount(containerEl, this.plugin);
+        const DisplayTotalLineCount$1 = new DisplayTotalLineCount(containerEl, this.plugin);
+        WordyDisplay$1.percents.push(FuzzyAmount$1);
+        WordyDisplay$1.percents.push(ExcludeFrontmatter$1);
+        WordyDisplay$1.rowcol.push(DisplayPattern$1);
+        WordyDisplay$1.rowcol.push(DisplayCursorLines$1);
+        ExcludeFrontmatter$1.toggleChildren();
+        NumberCursors$1.toggleChildren();
+        SelectionMode$1.toggleChildren();
+        DisplayCursorLines$1.toggleChildren();
+        StatusBarPadding$1.toggleChildren();
+        WordyDisplay$1.showSettings();
+        const cursorLocationSettings = [
+            NumberCursors$1,
+            SelectionMode$1,
+            DisplayCharCount$1,
+            DisplayTotalLineCount$1,
+            DisplayPattern$1,
+            CursorSeparator$1,
+            RangeSeparator$1,
+            DisplayCursorLines$1,
+            CursorLinePattern$1,
+            StatusBarPadding$1,
+            PaddingStep$1,
+            WordyDisplay$1,
+            FuzzyAmount$1,
+            ExcludeFrontmatter$1,
+            FrontmatterString$1,
+        ];
+        containerEl.createDiv().createEl("h2", { text: "Reset All Settings" });
+        let resetAllEl = containerEl.createDiv();
+        new obsidian.Setting(resetAllEl)
+            .setName("Reset all settings to default values.")
+            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
+            console.log("resetting all values to their defaults");
+            cursorLocationSettings.forEach(setting => setting.resetComponent());
+            yield this.plugin.saveSettings();
+            NumberCursors$1.toggleChildren();
+            SelectionMode$1.toggleChildren();
+            DisplayCursorLines$1.toggleChildren();
+            StatusBarPadding$1.toggleChildren();
+            WordyDisplay$1.showSettings();
+        })));
+    }
+}
+
+function generateSelections(doc, ranges, frontmatter = null) {
+    let selections = new Selections();
+    ranges.forEach((range) => {
+        selections.addCursor(new CursorData(range, doc, frontmatter));
+    });
+    return selections;
+}
+class Selections {
+    constructor() {
+        this.lines = 0;
+        this.chars = 0;
+        this.cursors = [];
+    }
+    addCursor(cursor) {
+        this.chars += cursor.highlightedChars;
+        this.lines += cursor.highlightedLines;
+        this.cursors.push(cursor);
+    }
+    totalDisplay(settings) {
+        let totalsDisplay = "";
+        let textDisplay;
+        let lineDisplay;
+        if (settings.displayCharCount) {
+            textDisplay = format(SELECTTEXTDISPLAY, this.chars);
+        }
+        if (settings.displayTotalLines) {
+            lineDisplay = format(SELECTLINEDISPLAY, this.lines);
+        }
+        if (settings.displayCharCount && settings.displayTotalLines) {
+            totalsDisplay = format(SELECTMULT, textDisplay, lineDisplay);
+        }
+        else if (settings.displayCharCount) {
+            totalsDisplay = format(SELECTSINGLE, textDisplay);
+        }
+        else if (settings.displayTotalLines) {
+            totalsDisplay = format(SELECTSINGLE, lineDisplay);
+        }
+        return totalsDisplay;
+    }
+}
+class CursorData {
+    constructor(range, doc, frontmatter) {
+        this.docLineCount = doc.lines;
+        this.docCharCount = doc.length;
+        const aLine = doc.lineAt(range.anchor);
+        this.anchorLine = aLine.number;
+        this.anchorChar = range.anchor - aLine.from;
+        const hLine = doc.lineAt(range.head);
+        this.headLine = hLine.number;
+        this.headChar = range.head - hLine.from;
+        this.highlightedChars = range.to - range.from;
+        this.highlightedLines = Math.abs(this.anchorLine - this.headLine) + 1;
+        this.frontmatter = frontmatter;
+    }
+    partialString(value, skipTotal = false) {
+        if (!skipTotal || MIDDLEPATTERN.test(value)) {
+            value = value.replace("ct", this.docLineCount.toString());
+        }
+        else if (BEGINPATTERN.test(value)) {
+            value = value.replace(BEGINPATTERN, "$1");
+        }
+        else if (ENDPATTERN.test(value)) {
+            value = value.replace(ENDPATTERN, "$1");
+        }
+        return value;
+    }
+    anchorString(value, skipTotal = false) {
+        return this.partialString(value, skipTotal)
+            .replace("ch", this.anchorChar.toString())
+            .replace("ln", this.anchorLine.toString());
+    }
+    headString(value, skipTotal = false) {
+        return this.partialString(value, skipTotal)
+            .replace("ch", this.headChar.toString())
+            .replace("ln", this.headLine.toString());
+    }
+    percent(line) {
+        let total = (this.docLineCount - 1);
+        line -= 1;
+        if (this.frontmatter === null) {
+            const res = Math.round(((line / total) + Number.EPSILON) * 100);
+            return res;
+        }
+        line -= this.frontmatter;
+        total -= this.frontmatter;
+        const res = Math.round(((line / total) + Number.EPSILON) * 100);
+        return res;
+    }
+    wordyString(curLine, fuzzyAmount, frontmatterString) {
+        if (this.frontmatter != null && this.frontmatter >= curLine) {
+            return frontmatterString;
+        }
+        const pct = this.percent(curLine);
+        switch (fuzzyAmount) {
+            case "verywordy":
+                return LOWRANGEWORDS.get(closest(pct, 20));
+            case "littewordy":
+                return HIGHRANGEWORDS.get(closest(pct, 33));
+            case "strictpercent":
+                if (pct == 0 || pct == 100) {
+                    return HARDPERCENTWORDS.get(pct);
+                }
+                return `${pct}%`;
+            case "lowfuzzypercent":
+                if (pct <= 10)
+                    return "top";
+                if (pct >= 90)
+                    return "bottom";
+                return `${pct}%`;
+            case "highfuzzypercent":
+                if (pct <= 20)
+                    return "top";
+                if (pct >= 80)
+                    return "bottom";
+                return `${pct}%`;
+            case "onlypercent":
+                return `${pct}%`;
+        }
+        return "";
+    }
+    headWordy(fuzzyAmount, frontmatterString) {
+        return this.wordyString(this.headLine, fuzzyAmount, frontmatterString);
+    }
+    anchorWordy(fuzzyAmount, frontmatterString) {
+        return this.wordyString(this.anchorLine, fuzzyAmount, frontmatterString);
+    }
+}
+
+function frontmatter(doc, settings) {
+    if (!settings.wordyDisplay || !settings.excludeFrontmatter)
+        return null;
+    const result = doc.toString().match(FRONTMATTER);
+    return result ? doc.lineAt(result[0].length).number : null;
+}
+function getCursorSeparator(settings) {
+    let separator = settings.cursorSeparatorOption == "custom"
+        ? settings.cursorSeparator
+        : CURSORSEPERATOR.get(settings.cursorSeparatorOption);
+    separator.trim();
+    return ` ${separator} `;
+}
+function getRangeSeparator(settings) {
+    return settings.rangeSeparatorOption == "custom"
+        ? settings.rangeSeparator
+        : RANGESEPERATOR.get(settings.rangeSeparatorOption);
+}
+function getDisplayPattern(settings) {
+    return settings.displayPatternOption == "custom"
+        ? settings.displayPattern
+        : DISPLAYPATTERN.get(settings.displayPatternOption);
+}
+class EditorPlugin {
+    constructor(view) {
+        this.view = view;
+        this.hasPlugin = false;
+    }
+    calculateWidth(display, updateFont = true) {
+        const statusBar = this.plugin.cursorStatusBar;
+        if (!this.canvasContext) {
+            const canvas = statusBar.createEl("canvas");
+            // @ts-ignore
+            this.canvasContext = canvas.getContext("2d");
+        }
+        if (updateFont) {
+            const fontWeight = statusBar.getCssPropertyValue("font-weight") || "normal";
+            const fontSize = statusBar.getCssPropertyValue("font-size") || "12pt";
+            const fontFamily = statusBar.getCssPropertyValue("font-family") || "ui-sans-serif";
+            const font = `${fontWeight} ${fontSize} ${fontFamily}`;
+            this.canvasContext.font = font;
+        }
+        const metrics = this.canvasContext.measureText(display);
+        const pad = parseInt(statusBar.getCssPropertyValue("padding-right").replace("px", ""));
+        const width = Math.floor(metrics.width + pad + pad);
+        return width;
+    }
+    update() {
+        if (!this.hasPlugin || !this.plugin.showUpdates)
+            return;
+        const settings = this.plugin.settings;
+        const state = this.view.state;
+        const docLines = state.doc.lines;
+        let display;
+        const fmLine = frontmatter(state.doc, settings);
+        let selections = generateSelections(state.doc, state.selection.ranges, fmLine);
+        let cursors = selections.cursors;
+        if (settings.wordyDisplay) {
+            if (cursors.length == 1) {
+                display = this.wordyDisplay(cursors[0]);
+            }
+            else if (cursors.length <= settings.numberCursors) {
+                let cursorStrings = [];
+                cursors.forEach((cursor) => {
+                    cursorStrings.push(this.wordyDisplay(cursor, true));
+                });
+                const separator = getCursorSeparator(settings);
+                display = cursorStrings.join(separator);
+            }
+            else {
+                display = format(MULTCURSORS, cursors.length);
+            }
+        }
+        else {
+            if (cursors && settings.numberCursors) {
+                if (cursors.length == 1) {
+                    display = this.rowColDisplay(cursors[0]);
+                }
+                else if (cursors.length <= settings.numberCursors) {
+                    let cursorStrings = [];
+                    cursors.forEach((value) => {
+                        cursorStrings.push(this.rowColDisplay(value, true, true));
+                    });
+                    const separator = getCursorSeparator(settings);
+                    display = cursorStrings.join(separator);
+                    if (/ct/.test(getDisplayPattern(settings))) {
+                        display += separator + docLines;
+                    }
+                }
+                else {
+                    display = format(MULTCURSORS, cursors.length);
+                }
+                if (selections.chars != 0) {
+                    display += selections.totalDisplay(settings);
+                }
+                if (settings.statusBarPadding) {
+                    const step = settings.paddingStepOption == "custom"
+                        ? settings.paddingStep
+                        : PADDINGSTEP.get(settings.paddingStepOption);
+                    const width = this.calculateWidth(display);
+                    let padWidth = Math.ceil(width / step) * step;
+                    if (width == padWidth)
+                        padWidth += Math.ceil(step / 3);
+                    this.plugin.cursorStatusBar.setAttribute("style", `justify-content:right;width:${padWidth}px;`);
+                }
+                else {
+                    this.plugin.cursorStatusBar.removeAttribute("style");
+                }
+            }
+        }
+        this.plugin.cursorStatusBar.setText(display);
+    }
+    addPlugin(plugin) {
+        this.plugin = plugin;
+        this.hasPlugin = true;
+        this.update();
+    }
+    destroy() { }
+    rowColDisplay(selection, displayLines = false, skipTotal = false) {
+        let value;
+        const settings = this.plugin.settings;
+        const displayPattern = getDisplayPattern(settings);
+        if (settings.selectionMode == "begin") {
+            value = selection.anchorString(displayPattern, skipTotal);
+        }
+        else if (settings.selectionMode == "end") {
+            value = selection.headString(displayPattern, skipTotal);
+        }
+        else if (selection.highlightedChars == 0) {
+            value = selection.headString(displayPattern, skipTotal);
+        }
+        else {
+            value =
+                selection.anchorString(displayPattern, true) +
+                    getRangeSeparator(settings) +
+                    selection.headString(displayPattern, skipTotal);
+        }
+        if (displayLines && settings.displayCursorLines) {
+            let numberLines = Math.abs(selection.anchorLine - selection.headLine) + 1;
+            let cursorLinePattern = settings.cursorLinePattern;
+            value += ` ${cursorLinePattern.replace("lc", numberLines.toString())}`;
+        }
+        return value;
+    }
+    wordyDisplay(cursor, displayLines = false) {
+        let value;
+        const settings = this.plugin.settings;
+        const frontmatterString = settings.frontmatterString == "custom" ?
+            settings.frontmatterStringCustom :
+            settings.frontmatterString;
+        if (settings.selectionMode == "begin") {
+            value = cursor.anchorWordy(settings.fuzzyAmount, frontmatterString);
+        }
+        else if (settings.selectionMode == "end") {
+            value = cursor.headWordy(settings.fuzzyAmount, frontmatterString);
+        }
+        else if (cursor.highlightedChars == 0) {
+            value = cursor.headWordy(settings.fuzzyAmount, frontmatterString);
+        }
+        else {
+            value =
+                cursor.anchorWordy(settings.fuzzyAmount, frontmatterString) +
+                    getRangeSeparator(settings) +
+                    cursor.headWordy(settings.fuzzyAmount, frontmatterString);
+        }
+        if (displayLines && settings.displayCursorLines) {
+            let numberLines = Math.abs(cursor.anchorLine - cursor.headLine) + 1;
+            let cursorLinePattern = settings.cursorLinePattern;
+            value += ` ${cursorLinePattern.replace("lc", numberLines.toString())}`;
+        }
+        return value;
+    }
+}
+const editorPlugin = view.ViewPlugin.fromClass(EditorPlugin);
+
 class CursorLocation extends obsidian.Plugin {
     constructor() {
         super(...arguments);
-        this.updateCursor = () => {
-            let editor = this.getEditor();
-            if (!this.cursorStatusBar) {
-                this.cursorStatusBar = this.addStatusBarItem();
-            }
-            if (this.inPreviewMode()) {
-                this.cursorStatusBar.setText("");
-            }
-            else if (editor) {
-                let selections = editor.listSelections();
-                let lineCount = editor.lineCount();
-                if (selections && this.settings.numberCursors) {
-                    let display;
-                    if (selections.length == 1) {
-                        display = this.cursorDisplay(selections[0], lineCount);
-                    }
-                    else if (selections.length <= this.settings.numberCursors) {
-                        let cursorStrings = [];
-                        selections.forEach((value) => {
-                            cursorStrings.push(this.cursorDisplay(value, lineCount, true, true));
-                        });
-                        display = cursorStrings.join(this.settings.cursorSeperator);
-                        if (/ct/.test(this.settings.displayPattern)) {
-                            display += this.settings.cursorSeperator + lineCount;
-                        }
-                    }
-                    else {
-                        display = `${selections.length} cursors`;
-                    }
-                    if (editor.somethingSelected()) {
-                        display += this.totalDisplay(editor, selections);
-                    }
-                    this.cursorStatusBar.setText(display);
-                }
-            }
-        };
+        this.cursorStatusBar = null;
+        this.showUpdates = true;
     }
     onload() {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("loading Cursor Location plugin");
-            this.registerCodeMirror((cm) => {
-                cm.on("cursorActivity", this.updateCursor);
-            });
-            this.registerEvent(this.app.workspace.on("active-leaf-change", this.updateCursor));
-            this.registerEvent(this.app.workspace.on("layout-change", this.updateCursor));
-            yield this.loadSettings();
+            this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
             this.addSettingTab(new CursorLocationSettingTab(this.app, this));
-            this.updateCursor();
+            this.cursorStatusBar = this.addStatusBarItem();
+            this.registerEditorExtension(editorPlugin);
+            this.app.workspace.onLayoutReady(() => {
+                this.giveEditorPlugin(this.app.workspace.getMostRecentLeaf());
+                this.updateShowStatus();
+            });
+            this.registerEvent(this.app.workspace.on("active-leaf-change", (leaf) => __awaiter(this, void 0, void 0, function* () {
+                this.giveEditorPlugin(leaf);
+                this.updateShowStatus();
+            })));
+            this.registerEvent(this.app.workspace.on("layout-change", () => {
+                this.updateShowStatus();
+            }));
         });
+    }
+    updateShowStatus() {
+        const view = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView);
+        if (!view)
+            return;
+        const mode = view.getMode();
+        this.showUpdates = mode == "source";
+        if (!this.showUpdates) {
+            this.cursorStatusBar.setText("");
+            this.cursorStatusBar.removeAttribute("style");
+        }
     }
     onunload() {
-        console.log("unloading Cursor Location plugin");
-        this.app.workspace.iterateCodeMirrors((cm) => {
-            cm.off("cursorActivity", this.updateCursor);
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log("unloading Cursor Location plugin");
+            this.cursorStatusBar = null;
         });
     }
-    loadSettings() {
-        return __awaiter(this, void 0, void 0, function* () {
-            this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
-        });
+    giveEditorPlugin(leaf) {
+        var _a;
+        // @ts-expect-error
+        const editor = (_a = leaf === null || leaf === void 0 ? void 0 : leaf.view) === null || _a === void 0 ? void 0 : _a.editor;
+        if (editor) {
+            const editorView = editor.cm;
+            const editorPlug = editorView.plugin(editorPlugin);
+            editorPlug.addPlugin(this);
+            editorPlug.update();
+        }
     }
     saveSettings() {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.saveData(this.settings);
         });
     }
-    getEditor() {
-        var _a;
-        return (_a = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView)) === null || _a === void 0 ? void 0 : _a.editor;
-    }
-    inPreviewMode() {
-        var _a;
-        return ((_a = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView)) === null || _a === void 0 ? void 0 : _a.getMode()) == "preview";
-    }
-    cursorString(cursor, totalCount, skipTotal = false) {
-        let value = this.settings.displayPattern;
-        let middlePattern = /^.*(ln|ch).*?ct.*?(ln|ch).*/i;
-        let beginPattern = /^.*ct.*((ln|ch).*?(ln|ch).*)/i;
-        let endPattern = /(.*(ln|ch).*?(ln|ch)).*?ct.*$/i;
-        if (!skipTotal || middlePattern.test(value)) {
-            value = value.replace("ct", totalCount.toString());
-        }
-        else if (beginPattern.test(value)) {
-            value = value.replace(beginPattern, "$1");
-        }
-        else if (endPattern.test(value)) {
-            value = value.replace(endPattern, "$1");
-        }
-        value = value
-            .replace("ch", cursor.ch.toString())
-            .replace("ln", (cursor.line + 1).toString());
-        return value;
-    }
-    cursorDisplay(selection, totalCount, displayLines = false, skipTotal = false) {
-        let value;
-        if (this.settings.selectionMode == "begin") {
-            value = this.cursorString(selection.anchor, totalCount, skipTotal);
-        }
-        else if (this.settings.selectionMode == "end") {
-            value = this.cursorString(selection.head, totalCount, skipTotal);
-        }
-        else if (selection.anchor.ch == selection.head.ch &&
-            selection.anchor.line == selection.head.line) {
-            value = this.cursorString(selection.head, totalCount, skipTotal);
-        }
-        else {
-            value =
-                this.cursorString(selection.anchor, totalCount, true) +
-                    this.settings.rangeSeperator +
-                    this.cursorString(selection.head, totalCount, skipTotal);
-        }
-        if (displayLines && this.settings.displayCursorLines) {
-            let numberLines = Math.abs(selection.anchor.line - selection.head.line) + 1;
-            let cursorLinePattern = this.settings.cursorLinePattern;
-            value += ` ${cursorLinePattern.replace("lc", numberLines.toString())}`;
-        }
-        return value;
-    }
-    totalDisplay(editor, selections) {
-        let totalsDisplay = "";
-        let textDisplay;
-        let lineDisplay;
-        if (this.settings.displayCharCount) {
-            let textSelection = editor.getSelection();
-            let textCount = textSelection.length - selections.length + 1;
-            textDisplay = `${textCount} selected`;
-        }
-        if (this.settings.displayTotalLines) {
-            let lineCount = 0;
-            selections.forEach((selection) => {
-                lineCount += Math.abs(selection.anchor.line - selection.head.line) + 1;
-            });
-            lineDisplay = `${lineCount} lines`;
-        }
-        if (this.settings.displayCharCount && this.settings.displayTotalLines) {
-            totalsDisplay = ` (${textDisplay} / ${lineDisplay})`;
-        }
-        else if (this.settings.displayCharCount) {
-            totalsDisplay = ` (${textDisplay})`;
-        }
-        else if (this.settings.displayTotalLines) {
-            totalsDisplay = ` (${lineDisplay})`;
-        }
-        return totalsDisplay;
-    }
-}
-class CursorLocationSettingTab extends obsidian.PluginSettingTab {
-    constructor(app, plugin) {
-        super(app, plugin);
-        this.plugin = plugin;
-    }
-    resetComponent(elem, setting) {
-        const value = DEFAULT_SETTINGS[setting];
-        console.log(`resetting ${setting}: ${value}`);
-        let component = elem.components[0];
-        component.setValue(value);
-        this.plugin.settings[setting] = value;
-    }
-    display() {
-        let { containerEl } = this;
-        containerEl.empty();
-        containerEl.createDiv().createEl("h2", { text: "Cursor Information" });
-        let cursorEl = containerEl.createDiv();
-        cursorEl.createEl("h3", { text: "# of Cursors" });
-        let numberCursors = new obsidian.Setting(cursorEl)
-            .setName('Number of cursor positions that will display \
-          in the status bar before switching to "N cursors".')
-            .addText((text) => {
-            var _a, _b;
-            return text
-                .setValue((_b = (_a = this.plugin.settings) === null || _a === void 0 ? void 0 : _a.numberCursors) === null || _b === void 0 ? void 0 : _b.toString())
-                .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                let parsedValue = parseInt(value);
-                if (!isNaN(parsedValue)) {
-                    console.log(`updating numberCursors: ${parsedValue}`);
-                    warningSection.setText("");
-                    this.plugin.settings.numberCursors = parsedValue;
-                    yield this.plugin.saveSettings();
-                }
-                else {
-                    console.log("unable to update numberCursors, ", `unable to parse new value into integer: ${value}`);
-                    warningSection.setText(`"${value}" is not a number, unable to save.`);
-                }
-            }));
-        });
-        let warningSection = cursorEl.createEl("p", {
-            text: "",
-            attr: { style: "color:red" },
-        });
-        new obsidian.Setting(cursorEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.numberCursors}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(numberCursors, "numberCursors");
-            warningSection.setText("");
-            yield this.plugin.saveSettings();
-        })));
-        let selectionEl = containerEl.createDiv();
-        selectionEl.createEl("h3", { text: "Selecion Mode" });
-        let selectionMode = new obsidian.Setting(selectionEl)
-            .setName("Display just the beginning, just the end, or the full range of a selection.")
-            .addDropdown((cb) => cb
-            .addOption("begin", "Beginning")
-            .addOption("end", "End")
-            .addOption("full", "Full Selection")
-            .setValue(this.plugin.settings.selectionMode || DEFAULT_SETTINGS.selectionMode)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            console.log(`changing selectionMode: ${value}`);
-            this.plugin.settings.selectionMode = value;
-            yield this.plugin.saveSettings();
-        })));
-        new obsidian.Setting(selectionEl)
-            .setName("Reset to default value of 'Full Selection'")
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(selectionMode, "selectionMode");
-            yield this.plugin.saveSettings();
-        })));
-        let displayCharCountEl = containerEl.createDiv();
-        displayCharCountEl.createEl("h3", { text: "Display Character Count" });
-        let displayCharCount = new obsidian.Setting(displayCharCountEl)
-            .setName("Display the total number of characters selected.")
-            .addToggle((cb) => cb
-            .setValue(this.plugin.settings.displayCharCount != null
-            ? this.plugin.settings.displayCharCount
-            : DEFAULT_SETTINGS.displayCharCount)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            if (this.plugin.settings.displayCharCount != value) {
-                console.log(`changing displayCharCount: ${value}`);
-            }
-            this.plugin.settings.displayCharCount = value;
-            yield this.plugin.saveSettings();
-        })));
-        new obsidian.Setting(displayCharCountEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.displayCharCount}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(displayCharCount, "displayCharCount");
-            yield this.plugin.saveSettings();
-        })));
-        let displayTotalLineCountEl = containerEl.createDiv();
-        displayTotalLineCountEl.createEl("h3", { text: "Display Total Line Count" });
-        let displayTotalLineCount = new obsidian.Setting(displayTotalLineCountEl)
-            .setName("Display the total number of lines selected.")
-            .addToggle((cb) => cb
-            .setValue(this.plugin.settings.displayTotalLines != null
-            ? this.plugin.settings.displayTotalLines
-            : DEFAULT_SETTINGS.displayTotalLines)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            if (this.plugin.settings.displayTotalLines != value) {
-                console.log(`changing displayTotalLines: ${value}`);
-            }
-            this.plugin.settings.displayTotalLines = value;
-            yield this.plugin.saveSettings();
-        })));
-        new obsidian.Setting(displayTotalLineCountEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.displayTotalLines}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(displayTotalLineCount, "displayTotalLines");
-            yield this.plugin.saveSettings();
-        })));
-        let displayPatternEl = containerEl.createDiv();
-        displayPatternEl.createEl("h3", { text: "Individual Cursor Pattern" });
-        let displayPattern = new obsidian.Setting(displayPatternEl)
-            .setName("Pattern to display location information for each cursor, \
-          `ch` is the column the cursor is at in the current line, \
-          `ln` is the current line number, \
-          `ct` is the total line numbers in the file (count). \
-          If `ct` is the first or last of the three values, \
-          it will be removed when displaying a range.")
-            .addText((text) => {
-            text.setValue(this.plugin.settings.displayPattern).onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                console.log(`changing displayPattern: ${value}`);
-                this.plugin.settings.displayPattern = value.trim();
-                yield this.plugin.saveSettings();
-            }));
-        });
-        new obsidian.Setting(displayPatternEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.displayPattern}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(displayPattern, "displayPattern");
-            yield this.plugin.saveSettings();
-        })));
-        let cursorSeperatorEl = containerEl.createDiv();
-        cursorSeperatorEl.createEl("h3", { text: "Cursor Seperator" });
-        let cursorSeperator = new obsidian.Setting(cursorSeperatorEl)
-            .setName("String to seperate multiple curor locations when \
-          `# of Cursors` is greater than 1. Consecutive whitespace \
-          is squashed to 1 space (per HTML rules).")
-            .addText((text) => {
-            text.setValue(this.plugin.settings.cursorSeperator).onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                console.log(`changing cursorSeperator: ${value}`);
-                this.plugin.settings.cursorSeperator = value;
-                yield this.plugin.saveSettings();
-            }));
-        });
-        new obsidian.Setting(cursorSeperatorEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.cursorSeperator}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(cursorSeperator, "cursorSeperator");
-            yield this.plugin.saveSettings();
-        })));
-        let rangeSeperatorEl = containerEl.createDiv();
-        rangeSeperatorEl.createEl("h3", { text: "Range Seperator" });
-        let rangeSeperator = new obsidian.Setting(rangeSeperatorEl)
-            .setName("String to seperate the beginning and end of a selection \
-          when `Selection Mode` is set to `Full Selection`. \
-          Consecutive whitespace is squashed to 1 space (per HTML rules)")
-            .addText((text) => {
-            text.setValue(this.plugin.settings.rangeSeperator).onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                console.log(`changing rangeSeperator: ${value}`);
-                this.plugin.settings.rangeSeperator = value;
-                yield this.plugin.saveSettings();
-            }));
-        });
-        new obsidian.Setting(rangeSeperatorEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.rangeSeperator}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(rangeSeperator, "rangeSeperator");
-            yield this.plugin.saveSettings();
-        })));
-        let displayCursorLineCountEl = containerEl.createDiv();
-        displayCursorLineCountEl.createEl("h3", { text: "Display Cursor Line Count" });
-        let displayCursorLineCount = new obsidian.Setting(displayCursorLineCountEl)
-            .setName("Display the number of lines selected by each cursor.")
-            .addToggle((cb) => cb
-            .setValue(this.plugin.settings.displayCursorLines != null
-            ? this.plugin.settings.displayCursorLines
-            : DEFAULT_SETTINGS.displayCursorLines)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            if (this.plugin.settings.displayCursorLines != value) {
-                console.log(`changing displayCursorLines: ${value}`);
-            }
-            this.plugin.settings.displayCursorLines = value;
-            yield this.plugin.saveSettings();
-        })));
-        new obsidian.Setting(displayCursorLineCountEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.displayCursorLines}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(displayCursorLineCount, "displayCursorLines");
-            yield this.plugin.saveSettings();
-        })));
-        let cursorLinePatternEl = containerEl.createDiv();
-        cursorLinePatternEl.createEl("h3", { text: "Cursor Line Pattern" });
-        let cursorLinePattern = new obsidian.Setting(cursorLinePatternEl)
-            .setName("Pattern to display number of highlighted lines for each cursor. \
-          `lc` is the line count and will not be displayed if only one line \
-          is selected or 'Display Cursor Line Count' setting is `false`. \
-          Leading and trailing whitespace is trimmed.")
-            .addText((text) => {
-            text.setValue(this.plugin.settings.cursorLinePattern).onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                console.log(`changing cursorLinePattern: ${value}`);
-                this.plugin.settings.cursorLinePattern = value.trim();
-                yield this.plugin.saveSettings();
-            }));
-        });
-        new obsidian.Setting(cursorLinePatternEl)
-            .setName(`Reset to default value of '${DEFAULT_SETTINGS.cursorLinePattern}'`)
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.resetComponent(cursorLinePattern, "cursorLinePattern");
-            yield this.plugin.saveSettings();
-        })));
-        containerEl.createDiv().createEl("h2", { text: "Reset All Settings" });
-        const cursorLocationSettings = [
-            { elem: numberCursors, setting: "numberCursors" },
-            { elem: selectionMode, setting: "selectionMode" },
-            { elem: displayCharCount, setting: "displayCharCount" },
-            { elem: displayTotalLineCount, setting: "displayTotalLines" },
-            { elem: displayPattern, setting: "displayPattern" },
-            { elem: cursorSeperator, setting: "cursorSeperator" },
-            { elem: rangeSeperator, setting: "rangeSeperator" },
-            { elem: displayCursorLineCount, setting: "displayCursorLines" },
-            { elem: cursorLinePattern, setting: "cursorLinePattern" },
-        ];
-        let resetAllEl = containerEl.createDiv();
-        new obsidian.Setting(resetAllEl)
-            .setName("Reset all settings to default values.")
-            .addButton((cb) => cb.setButtonText("Reset").onClick(() => __awaiter(this, void 0, void 0, function* () {
-            console.log("resetting all values to their defaults");
-            cursorLocationSettings.forEach((setting) => {
-                this.resetComponent(setting.elem, setting.setting);
-            });
-            warningSection.setText("");
-            yield this.plugin.saveSettings();
-        })));
-    }
 }
 
 module.exports = CursorLocation;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXMiOlsibm9kZV9tb2R1bGVzL3RzbGliL3RzbGliLmVzNi5qcyIsIm1haW4udHMiXSwic291cmNlc0NvbnRlbnQiOm51bGwsIm5hbWVzIjpbIlBsdWdpbiIsIk1hcmtkb3duVmlldyIsIlBsdWdpblNldHRpbmdUYWIiLCJTZXR0aW5nIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBdURBO0FBQ08sU0FBUyxTQUFTLENBQUMsT0FBTyxFQUFFLFVBQVUsRUFBRSxDQUFDLEVBQUUsU0FBUyxFQUFFO0FBQzdELElBQUksU0FBUyxLQUFLLENBQUMsS0FBSyxFQUFFLEVBQUUsT0FBTyxLQUFLLFlBQVksQ0FBQyxHQUFHLEtBQUssR0FBRyxJQUFJLENBQUMsQ0FBQyxVQUFVLE9BQU8sRUFBRSxFQUFFLE9BQU8sQ0FBQyxLQUFLLENBQUMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxFQUFFO0FBQ2hILElBQUksT0FBTyxLQUFLLENBQUMsS0FBSyxDQUFDLEdBQUcsT0FBTyxDQUFDLEVBQUUsVUFBVSxPQUFPLEVBQUUsTUFBTSxFQUFFO0FBQy9ELFFBQVEsU0FBUyxTQUFTLENBQUMsS0FBSyxFQUFFLEVBQUUsSUFBSSxFQUFFLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sQ0FBQyxFQUFFLEVBQUUsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLEVBQUUsRUFBRTtBQUNuRyxRQUFRLFNBQVMsUUFBUSxDQUFDLEtBQUssRUFBRSxFQUFFLElBQUksRUFBRSxJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sQ0FBQyxFQUFFLEVBQUUsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLEVBQUUsRUFB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
+
+
+/* nosourcemap */
