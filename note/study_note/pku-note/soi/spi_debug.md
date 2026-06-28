@@ -2,7 +2,7 @@
 title: spi_debug
 tags: ["note", 延时也都被消除]
 created: 星期日, 六月 28日 2026, 2:58:15 下午
-modified: 星期日, 六月 28日 2026, 5:37:13 下午
+modified: 星期日, 六月 28日 2026, 6:45:33 晚上
 ---
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230317204925.png)
@@ -207,7 +207,6 @@ demo_name 在 makefile 中使用 exportdemo_name=demo_fifo
 fsdbDumpvars 0 "tb_top"     
 ```
 
-$1
 设置波形的顶层和层次，表示将 tb_top 作为顶层，存储所有变量
 
 #### $fsdbDumpvars

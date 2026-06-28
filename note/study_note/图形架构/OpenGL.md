@@ -2,7 +2,7 @@
 title: OpenGL
 tags: ["note"]
 created: 星期日, 六月 28日 2026, 2:58:15 下午
-modified: 星期日, 六月 28日 2026, 5:39:10 下午
+modified: 星期日, 六月 28日 2026, 6:45:25 晚上
 ---
 
 [最好的OpenGL教程之一\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1MJ411u7Bc/?spm_id_from=333.337.search-card.all.click&vd_source=f8bf73f9a2b495eaf6f8446fa6016bc7)
@@ -380,7 +380,6 @@ static ShaderProgramSource ParseShader(const std::string& filepath)
 # P9：索引缓冲区
 画一个正方形，用两个三角形来实现
  index buffer：reuse vertex
-$1
 
 ```c++
 ...

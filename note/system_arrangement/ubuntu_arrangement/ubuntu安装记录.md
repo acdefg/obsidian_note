@@ -2,7 +2,7 @@
 title: ubuntu安装记录
 tags: []
 created: 星期六, 十一月 29日 2025, 11:18:02 晚上
-modified: 星期日, 六月 28日 2026, 5:55:02 下午
+modified: 星期日, 六月 28日 2026, 6:45:37 晚上
 ---
 
 # 双系统安装
@@ -59,7 +59,6 @@ modified: 星期日, 六月 28日 2026, 5:55:02 下午
 	sudo apt install vim
 	```
 
-$1
 [ubuntu安装记录#3 Obsidian]]
 	```shell
 	sudo apt install xclip

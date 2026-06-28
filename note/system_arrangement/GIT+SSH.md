@@ -2,7 +2,7 @@
 title: GIT+SSH
 tags: []
 created: 星期六, 十一月 29日 2025, 11:18:08 晚上
-modified: 星期日, 六月 28日 2026, 5:55:02 下午
+modified: 星期日, 六月 28日 2026, 6:45:14 晚上
 ---
 
 down:: [[git+action]]
@@ -165,7 +165,6 @@ git remote show [别名]
 ```
 
 这个命令会显示指定远程仓库的详细信息，包括远程跟踪分支和 URL 地址等。
-$1
 原文链接：https://blog.csdn.net/2201_75439183/article/details/142378739
 更多：[https://zhuanlan.zhihu.com/p/694960607](https://zhuanlan.zhihu.com/p/694960607)
 

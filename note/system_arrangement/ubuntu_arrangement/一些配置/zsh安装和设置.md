@@ -2,7 +2,7 @@
 title: zsh安装和设置
 tags: []
 created: 星期六, 十一月 29日 2025, 11:18:01 晚上
-modified: 星期日, 六月 28日 2026, 5:55:02 下午
+modified: 星期日, 六月 28日 2026, 6:45:42 晚上
 ---
 
 # 安装
@@ -67,7 +67,6 @@ modified: 星期日, 六月 28日 2026, 5:55:02 下午
 	[oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)make set zsh more easy
 	installation code:
 	**curl**：要使用 curl 要先安装 `sudo apt install curl`
-$1
 
 	```shell
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh )"
