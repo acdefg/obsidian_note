@@ -2,7 +2,7 @@
 title: ZYNQ的一些基本介绍
 tags: ["note"]
 created: 星期日, 六月 28日 2026, 2:58:15 下午
-modified: 星期日, 六月 28日 2026, 5:17:02 下午
+modified: 星期日, 六月 28日 2026, 6:05:24 晚上
 ---
 
 # ZYNQ 芯片开发流程
@@ -25,5 +25,5 @@ ZYNQ 的开发也是先硬件后软件的方法。具体流程如下：
 在 VMware 里生成 Ubuntu 的内核镜像文件 Zimage 和 Ubuntu 的 根 文件系统。另外还需要要对 FPGA 自定义的 IP 编写驱动。
 
 把 BOOT 、内核、设备树、根文件系统 文件放入到 SD 卡 中，启动开发板电源， Linux 操作系统会从 SD 卡里启动。
-$1
+
 原文链接：https://blog.csdn.net/szm1234/article/details/121902787

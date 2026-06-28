@@ -2,7 +2,7 @@
 title: AXI
 tags: ["note"]
 created: 星期日, 六月 28日 2026, 2:58:15 下午
-modified: 星期日, 六月 28日 2026, 5:17:04 下午
+modified: 星期日, 六月 28日 2026, 6:07:21 晚上
 ---
 
 down:: [[AXI——pytest测试]]
@@ -79,7 +79,7 @@ AXI 握手协议
   AXI4 所采用的是一种 READY，VALID 握手通信机制。即主从模块进行数据通信前，根据操作对各所用到的数据、地址通道进行握手。主要操作包括传输发送者 A 等到传输接受者 B 的 READY 信号后，A 将数据与 VALID 信号同时发送给 B。
   简单来说主从双方进行数据通信前，有一个握手的过程。传输源产生 VLAID 信号来指明何时数据或控制信息有效。而目地源产生 READY 信号来指明已经准备好接受数据或控制信息。传输发生在 VALID 和 READY 信号同时为高的时候，如下图所示：
   ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/202402221932403.png)
-$1
+
 原文链接：https://blog.csdn.net/weixin_46136963/article/details/118003005
 # 写通道
 AXI4 的写过程主要分为三个通道：

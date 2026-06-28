@@ -2,7 +2,7 @@
 title: Day planner_official
 tags: [article]
 created: 星期六, 十一月 29日 2025, 9:40:38 晚上
-modified: 星期日, 六月 28日 2026, 5:35:25 下午
+modified: 星期日, 六月 28日 2026, 6:07:19 晚上
 ---
 
 # Day Planner
@@ -28,7 +28,7 @@ A section of the day dedicated to reading:
 1. Articles.
 2. Book chapters assigned for the day.
 3. Re-reading past notes.
-$1
+
 - [x] 12:00 Reading
 	- [ ] Article 1
 	- [ ] Article 2
