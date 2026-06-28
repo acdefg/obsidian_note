@@ -1,43 +1,32 @@
 {
   "choices": [
     {
-      "id": "2306a430-b78f-4f68-8373-4264decfe6c3",
-      "name": "TODO",
-      "type": "Capture",
-      "command": true,
+      "id": "4d03c5c3-91cc-4bff-ba8a-1d8e5bc04c63",
+      "name": "日记",
+      "type": "Template",
+      "command": false,
+      "templatePath": "Templates/日程管理/每日复盘.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "YYYY-MM-DD"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
       "appendLink": false,
-      "captureTo": "kanban/task_kanban.md",
-      "captureToActiveFile": false,
-      "createFileIfItDoesntExist": {
-        "enabled": false,
-        "createWithTemplate": false,
-        "template": ""
-      },
-      "format": {
-        "enabled": true,
-        "format": "- [ ] {{VALUE:Todo}} @{{{DATE:YYYY-MM-DD}}} @@{{{DATE:HH:mm}}} "
-      },
-      "insertAfter": {
-        "enabled": true,
-        "after": "## Todo",
-        "insertAtEnd": true,
-        "createIfNotFound": false,
-        "createIfNotFoundLocation": "bottom"
-      },
-      "prepend": false,
-      "task": true,
-      "openFileInNewTab": {
-        "enabled": true,
+      "openFile": false,
+      "fileOpening": {
+        "location": "tab",
         "direction": "vertical",
+        "mode": "default",
         "focus": true
       },
-      "openFile": false,
-      "openFileInMode": "default",
-      "fileOpening": {
-        "location": "split",
-        "direction": "vertical",
-        "focus": true,
-        "mode": "default"
+      "fileExistsBehavior": {
+        "kind": "prompt"
       }
     }
   ],

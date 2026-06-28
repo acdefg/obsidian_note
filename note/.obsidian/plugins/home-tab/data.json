@@ -1,0 +1,54 @@
+{
+  "logoType": "default",
+  "logo": {
+    "lucideIcon": "",
+    "imagePath": "",
+    "imageLink": ""
+  },
+  "logoScale": 1.2,
+  "iconColorType": "default",
+  "wordmark": "Obsidian",
+  "customFont": "interfaceFont",
+  "fontSize": "4em",
+  "fontColorType": "default",
+  "fontWeight": 600,
+  "maxResults": 5,
+  "showbookmarkedFiles": true,
+  "showRecentFiles": false,
+  "maxRecentFiles": 5,
+  "storeRecentFile": true,
+  "showPath": true,
+  "selectionHighlight": "default",
+  "showShortcuts": true,
+  "markdownOnly": false,
+  "unresolvedLinks": false,
+  "recentFilesStore": [
+    {
+      "filepath": "Dairy/日记/2026-06-28.md",
+      "timestamp": 1782664535659
+    },
+    {
+      "filepath": "Dairy/日记/2022-04-08.md",
+      "timestamp": 1782664521295
+    },
+    {
+      "filepath": "摄影教程/entertain/PS.md",
+      "timestamp": 1782664520079
+    },
+    {
+      "filepath": "system/ubuntu_arrangement/一些命令/远程服务器后台.md",
+      "timestamp": 1782664517978
+    },
+    {
+      "filepath": "system/ubuntu_arrangement/一些命令/常用命令cd，vim.md",
+      "timestamp": 1782664516608
+    }
+  ],
+  "bookmarkedFileStore": [],
+  "searchDelay": 0,
+  "replaceNewTabs": true,
+  "newTabOnStart": false,
+  "closePreviousSessionTabs": false,
+  "omnisearch": false,
+  "showOmnisearchExcerpt": true
+}

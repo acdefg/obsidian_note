@@ -1,8 +1,9 @@
 ---
 title: clang++
-tags: []
-created: 星期六, 十一月 29日 2025, 11:18:01 晚上
-modified: 星期日, 六月 28日 2026, 5:16:54 下午
+tags:
+  - environment
+created: 星期日, 六月 28日 2026, 6:43:01
+modified: 星期一, 六月 29日 2026, 12:34:35
 ---
 
 在 Ubuntu 22.04 上安装 Clang 编译器非常简单。您可以根据以下步骤进行操作：

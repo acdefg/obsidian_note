@@ -25,7 +25,6 @@
   "obsidian-enhancing-export",
   "open-in-new-tab",
   "obsidian-better-command-palette",
-  "remotely-save",
   "obsidian-checklist-plugin",
   "link-favicon",
   "oz-clear-unused-images",
@@ -41,5 +40,12 @@
   "obsidian-meta-bind-plugin",
   "global-search-and-replace",
   "replace-all",
-  "obsidian-linter"
+  "obsidian-linter",
+  "obsidian-regex-pipeline",
+  "home-tab",
+  "base-board",
+  "obsidian-tasks-plugin",
+  "tag-wrangler",
+  "better-search-views",
+  "editing-toolbar"
 ]
