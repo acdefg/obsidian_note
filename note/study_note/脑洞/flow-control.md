@@ -3,7 +3,7 @@
 mindmap-plugin: basic
 
 created: 星期六, 七月 4日 2026, 12:24:57
-modified: 星期六, 七月 4日 2026, 1:27:46
+modified: 星期日, 七月 5日 2026, 12:36:45
 ---
 ## 负反馈系统抽象
 上游发送端：间隔发送，每次 16 笔，每笔 32 byte，每 44 个 cycle 检查一次，是否可以发送，burst 内连续发送，平均 16/176 cycle 里面发送数据（所以需要控制激励速度），匀速最大为 3 byte/cycle
@@ -147,16 +147,16 @@ Completion
 
 任何一种控制系统，都可以从几个维度评价：
 
-|指标|控制理论含义|为什么重要|
-|---|---|---|
-|**Stability（稳定性）**|是否最终收敛，而不是发散|最基本要求，没有稳定性其他都没有意义|
-|**Steady-state Error（稳态误差）**|最终是否能达到目标值|PI 的 I 项就是为了解决这个问题|
-|**Overshoot（超调）**|是否超过目标值|Memory Buffer 超调意味着 Buffer Overflow 风险|
-|**Settling Time（稳定时间）**|多久进入稳定范围|决定恢复速度|
-|**Rise Time（上升时间）**|响应是否够快|决定系统敏捷性|
-|**Damping（阻尼）**|振荡是否快速衰减|阻尼不足会来回震荡|
-|**Robustness（鲁棒性）**|参数变化后是否仍然稳定|Service Time 波动时是否还能工作|
-|**Delay Margin（延迟裕度）**|能容忍多大的反馈延迟|Memory Pipeline 非常关键|
+| 指标                           | 控制理论含义       | 为什么重要                                  |
+| ---------------------------- | ------------ | -------------------------------------- |
+| **Stability（稳定性）**           | 是否最终收敛，而不是发散 | 最基本要求，没有稳定性其他都没有意义                     |
+| **Steady-state Error（稳态误差）** | 最终是否能达到目标值   | PI 的 I 项就是为了解决这个问题                     |
+| **Overshoot（超调）**            | 是否超过目标值      | Memory Buffer 超调意味着 Buffer Overflow 风险 |
+| **Settling Time（稳定时间）**      | 多久进入稳定范围     | 决定恢复速度                                 |
+| **Rise Time（上升时间）**          | 响应是否够快       | 决定系统敏捷性                                |
+| **Damping（阻尼）**              | 振荡是否快速衰减     | 阻尼不足会来回震荡                              |
+| **Robustness（鲁棒性）**          | 参数变化后是否仍然稳定  | Service Time 波动时是否还能工作                 |
+| **Delay Margin（延迟裕度）**       | 能容忍多大的反馈延迟   | Memory Pipeline 非常关键                   |
 这几个指标贯穿后面所有方法。
 
 ---
@@ -702,3 +702,330 @@ Memory Controller
 2. **控制决策层**：采用 Watermark、PI、Predictive、AIMD 等算法决定目标发送速率。
     
 3. **执行层**：通过 Token Bucket、Leaky Bucket 和 Scheduler 将目标速率转换为平滑、可执行的请求流。
+
+
+好，这一步我们把结构彻底收敛成一个**可直接用的最终控制器表达式**：  
+Smith Predictor + ζ=0.8 + Ts=60 + 你的 T-space 控制。
+
+我只给你“最终结果 + 推导必要的最小步骤”，不再扩展模型。
+
+---
+
+# 1. 先明确 Smith Predictor 在这里做什么
+
+你的系统：
+
+- 控制量：(T(k))
+    
+- 输出：(x-y)
+    
+- 延迟：40 cycle
+
+Smith Predictor 做的事情是：
+
+> 把“真实输出”替换成“无延迟预测输出”
+
+---
+
+## 定义预测误差
+
+[  
+\hat{z}(k) \approx (x-y)(k)  
+]
+
+其中：
+
+[  
+\hat{z}(k) = (x-y)(k) + \big[(x-y)(k) - (x-y)(k-40)\big]  
+]
+
+等价理解：
+
+> 当前值 + 趋势外推（消掉 40 cycle delay）
+
+---
+
+# 2. 控制误差（用预测值）
+
+你原来的误差：
+
+[  
+e(k) = (x-y)(k) - A  
+]
+
+Smith Predictor 后变为：
+
+[  
+\boxed{  
+e_s(k) = \hat{z}(k) - A  
+}  
+]
+
+---
+
+# 3. 控制律结构（不变）
+
+你之前确定的是：
+
+[  
+T(k)=176 + K_p e + K_d \Delta e  
+]
+
+现在全部替换成预测误差：
+
+---
+
+# 4. 代入你已经算好的参数
+
+你之前（ζ=0.8, Ts=60）得到：
+
+- (K_p = 13.45)
+    
+- (K_d = 257.8)
+
+---
+
+# 5. 最终 Smith Predictor 控制律（核心结果）
+
+## ✔ 最终表达式：
+
+# [  
+\boxed{  
+T(k)
+
+176  
++  
+13.45 \cdot e_s(k)  
++  
+257.8 \cdot \Delta e_s(k)  
+}  
+]
+
+其中：
+
+---
+
+## ✔ Smith 误差：
+
+[  
+e_s(k) = \hat{z}(k) - A  
+]
+
+---
+
+## ✔ 预测输出：
+
+# [  
+\hat{z}(k)
+
+(x-y)(k)  
++  
+\big[(x-y)(k) - (x-y)(k-40)\big]  
+]
+
+---
+
+# 6. 合并成一个“单行可实现公式”
+
+如果你要 RTL / Python 实现，可以直接写成：
+
+# [  
+\boxed{  
+T(k)
+
+176  
++  
+13.45 \cdot \big(\hat{z}(k)-A\big)  
++  
+257.8 \cdot \big(\hat{z}(k)-\hat{z}(k-1)\big)  
+}  
+]
+
+---
+
+# 7. 系统效果（你关心的部分）
+
+加 Smith Predictor 后：
+
+## 延迟影响
+
+|项|before|after|
+|---|---|---|
+|40-cycle delay|强烈相位滞后|基本消除|
+|overshoot|中等|明显降低|
+|Ts=60|不稳定达成|可稳定达成|
+
+---
+
+## 动态行为
+
+- ζ = 0.8（强阻尼）
+    
+- Ts ≈ 60 cycle（可实现）
+    
+- buffer peak 被提前压制
+    
+- 不会“晚半拍爆仓”
+
+---
+
+# 8. 一个关键工程结论（非常重要）
+
+你现在这个系统已经变成：
+
+> **“预测型负反馈流控系统”**
+
+其本质是：
+
+- PID：调“当前误差”
+    
+- Smith：调“未来误差”
+
+---
+
+# ✔ 最终答案（压缩版）
+
+### 控制器：
+
+# [  
+T(k)
+
+176  
++  
+13.45(\hat{z}(k)-A)  
++  
+257.8(\hat{z}(k)-\hat{z}(k-1))  
+]
+
+### Smith 预测：
+
+# [  
+\hat{z}(k)
+
+(x-y)(k)  
++  
+\big[(x-y)(k)-(x-y)(k-40)\big]  
+]
+
+---
+
+如果你下一步还要继续优化，其实已经进入最后一层了：  
+👉 **把 A 变成动态水线（adaptive A），可以进一步压 peak latency 和 buffer occupancy**
+
+
+上一版 kp=360, kd=1400:
+Sender Settling Time = 578 cycle
+Sender Overshoot     = 1.405 req
+min command bw       = 0.2386 B/cycle
+
+新版 kp=3200, kd=12000:
+Sender Settling Time = 482 cycle
+Sender Overshoot     = 0.374 req
+min command bw       = 0.1250 B/cycle
+
+现在配置里：
+
+```
+Sender OS 水线 = 96 req
+NOC OS 水线    = 56 req
+```
+
+两种水线策略分别是：
+
+```
+Sender Outstanding:
+  sender_os >= 96 时限制发送
+  sender_os < 96 时允许发送
+
+NOC Watermark:
+  noc_os > 56 时触发关闭上游
+  noc_os < 56 时重新打开
+  feedback delay = 44 cycles
+```
+
+Smith PI 现在的控制量不是直接用 OS，而是用这个误差：
+
+```
+raw_error(k) = max(
+    sender_os(k) - 96,
+    delayed_noc_os(k) - 56
+)
+```
+
+其中：
+
+```
+delayed_noc_os(k) = noc_os(k - 44)
+```
+
+然后先做低通滤波：
+
+```
+m(k) = 0.1 * raw_error(k) + 0.9 * m(k-1)
+```
+
+Smith 预测：
+
+```
+z_hat(k) = m(k) + [m(k) - m(k-44)]
+```
+
+死区：
+
+```
+if z_hat(k) <= 2:
+    e(k) = 0
+else:
+    e(k) = z_hat(k) - 2
+```
+
+PI/PD 周期控制公式现在等价于 P-only：
+
+```
+T(k) = 176 + 40 * e(k)
+```
+
+因为当前：
+
+```
+kp = 40
+kd = 0
+```
+
+最后限制：
+
+```
+T(k) clamp 到 [176, 4096]
+每 cycle 最大变化量 <= 64
+T(k) 四舍五入
+```
+
+对应发送带宽：
+
+```
+command_bw(k) = 16 * 32 / T(k) = 512 / T(k)  B/cycle
+```
+
+所以满速时：
+
+```
+T = 176
+command_bw = 512 / 176 ≈ 2.91 B/cycle
+```
+
+当前 Smith PI 参数汇总：
+
+```
+signal = sender_or_delayed_noc_error
+sender_threshold = 96
+noc_threshold = 56
+feedback_delay = 44
+prediction_delay = 44
+kp = 40
+kd = 0
+measurement_filter_alpha = 0.1
+error_deadband = 2
+min_period = 176
+max_period = 4096
+max_period_step = 64
+```
