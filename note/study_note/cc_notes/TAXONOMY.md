@@ -15,6 +15,16 @@ updated: 2026-10-09
 | CUDA | `cuda-memory.md` | `[cuda, memory]` | 内存模型、pinned、UVA、异步拷贝、stream |
 | CUDA | `cuda-execution.md` | `[cuda, execution]` | SIMT、warp、occupancy、bank conflict |
 | 计算机体系结构 | `computer-arch.md` | `[arch, gpu]` | cache、流水线、分支预测、乱序执行；GPU 微架构（SM/TMA/L2）、memory hierarchy、roofline |
+| DMA | `dma-engine.md` | `[dma, arch]` | DMA 引擎本体：技术分类（六轴）、SGL、引擎实际在做什么、引擎内部机制（分割 / 合并 / 顺序管理） |
+| DMA | `dma-address-path.md` | `[dma, iommu]` | 地址空间与翻译：MMU vs IOMMU、三层地址视图（VA / PA / IOVA）、谁能在哪一层合并 |
+| DMA | `rdma.md` | `[dma, rdma]` | RDMA：内存注册 / 队列对 / 完成队列、单边 vs 双边、与跨卡 DMA 的关系 |
+| DMA | `dma-c2c-crosscard.md` | `[dma, noc]` | 片内 C2C/D2D 与跨卡：两域设计轴、延迟吸收、链路控制器分层、跨卡三条路径 |
+| DMA | `pcie-iommu.md` | `[dma, pcie]` | PCIe 三层 / TLP / Ordering / MPS·MRRS、ATS·PRI·PASID、VT-d·AMD-Vi·SMMUv3 两级翻译与失效 |
+| DMA | `linux-dma.md` | `[dma, kernel]` | Linux DMA 子系统：DMA-API、coherent/streaming、scatterlist、SWIOTLB、dmaengine、dma-buf、P2PDMA、GUP/FOLL_PIN |
+| DMA | `x86-io-primitives.md` | `[dma, cpu]` | WC/MTRR/PAT、non-temporal store、`movdir64b`、`enqcmd(s)`、CLFLUSH/CLWB/SFENCE、门铃与工作队列 |
+| DMA | `zero-copy.md` | `[dma, kernel]` | 零拷贝谱系：sendfile/splice、MSG_ZEROCOPY、AF_XDP、io_uring、GPUDirect、DPDK/SPDK 及各自代价 |
+| DMA | `dma-interconnect-survey.md` | `[dma, survey]` | **工业与标准现状**：NVLink/NVSwitch/NV-HBI、UALink、UEC、CXL、GPUDirect、xGMI 的规格与公开空白（逐条标来源） |
+| DMA | `dma-academic-survey.md` | `[dma, survey]` | **学术现状**：多芯粒 GPU 搬运、一致性/同步、显式搬运引擎（iDMA/XDMA/DME）、仿真器、开放问题 |
 | 图形学 | `graphics-rendering.md` | `[graphics, rendering]` | 光栅化、光追、shading、GAMES101 |
 | 图形学 | `geometry-processing.md` | `[graphics, geometry]` | 网格、细分、参数化 |
 | 图形学 | `graphics-gaussian-splatting.md` | `[graphics, 3dgs]` | 3DGS / 4DGS、可逆渲染、splat 表示与压缩 |
