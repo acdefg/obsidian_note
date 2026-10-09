@@ -36,12 +36,18 @@
 # ⚠️ 凭据类文件 —— 不要提交
 # ─────────────────────────────────────────────
 #
-# 注意：下面第一条以前写成 /ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md，
-# 但真实路径是 system_arrangement/ubuntu_arrangement/...，且文件名里 " & " 两边有空格。
-# 规则从未匹配过任何文件 —— 那个文件一直处于**未保护**状态，差点被提交。
-# 现在改用通配，避免文件名再变一次就失效。
+# 这一节最初列了 4 个"疑似凭据"文件，逐个核实后**只有下面这一条保留**。
+# 其余 3 个是关键词误判，已从忽略列表移除、正常入库：
+#   · 图床设置.md / 树莓派.md —— 不含任何凭据赋值
+#   · vitepress.md —— 命中的两处，一处是带 token= 参数的图片 URL，
+#                     一处是 GitHub Actions 示例里的占位符
+#
+# 教训：不要凭 grep 关键词命中就把文件排除出备份——先看内容再定级。
+#
+# 保留下面这条的理由：文件名本身就是凭据记录，是个廉价的保险。
+# 用通配是因为原规则把路径和文件名写死了
+# （/ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md），
+# 与实际路径 system_arrangement/ubuntu_arrangement/... 对不上，
+# 且真实文件名里 " & " 两边有空格 —— 那条规则从未匹配过任何文件。
 
 system_arrangement/ubuntu_arrangement/一些配置/私人token*.md
-system_arrangement/ubuntu_arrangement/一些配置/图床设置.md
-study_note/pku-note/作业/树莓派/树莓派.md
-blog/vitepress.md
