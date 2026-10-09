@@ -44,6 +44,12 @@ cc_notes/
 | DMA | `DMA/软件栈/zero-copy.md` | `[dma, kernel]` | 零拷贝谱系：sendfile/splice、MSG_ZEROCOPY、AF_XDP、io_uring、GPUDirect、DPDK/SPDK 及各自代价 |
 | DMA | `DMA/预研综述/interconnect-survey.md` | `[dma, survey]` | **工业与标准现状**：NVLink/NVSwitch/NV-HBI、UALink、UEC、CXL、GPUDirect、xGMI 的规格与公开空白（逐条标来源） |
 | DMA | `DMA/预研综述/academic-survey.md` | `[dma, survey]` | **学术现状**：多芯粒 GPU 搬运、一致性/同步、显式搬运引擎（iDMA/XDMA/DME）、仿真器、开放问题 |
+| 压缩 | `压缩/原理/information-theory.md` | `[compression, theory]` | **L1** 信息论根基：熵、香农源编码定理、熵率、Kolmogorov 复杂度、典型数据的实际熵 |
+| 压缩 | `压缩/原理/entropy-coding.md` | `[compression, theory]` | **L2** 熵编码：Huffman、Canonical Huffman、算术/区间编码、ANS（rANS·tANS）、PPM·CM 上下文建模 |
+| 压缩 | `压缩/原理/dictionary-transform.md` | `[compression, theory]` | **L2** 字典与变换：LZ77·LZ78·LZW·LZSS、BWT·MTF·RLE、变换编码通性 |
+| 压缩 | `压缩/格式/formats.md` | `[compression, format]` | **L3** 现代格式：DEFLATE·zlib·gzip·zip、LZMA·xz、zstd、brotli、LZ4·Snappy·LZO、seekable |
+| 压缩 | `压缩/有损/lossy.md` | `[compression, lossy]` | **L4** 有损与感知：量化、率失真、DPCM、DCT·JPEG、小波·JPEG 2000、感知模型、运动补偿、RDO |
+| 压缩 | `压缩/硬件/hardware.md` | `[compression, hardware]` | **L5** 硬件与系统：能量论证、硬件友好特征、QAT、IAA、链路在线压缩、内存压缩、解压瓶颈、度量 |
 | 图形学 | `<graphics>/graphics-rendering.md` | `[graphics, rendering]` | 光栅化、光追、shading、GAMES101 |
 | 图形学 | `<graphics>/geometry-processing.md` | `[graphics, geometry]` | 网格、细分、参数化 |
 | 图形学 | `<graphics>/graphics-gaussian-splatting.md` | `[graphics, 3dgs]` | 3DGS / 4DGS、可逆渲染、splat 表示与压缩 |
