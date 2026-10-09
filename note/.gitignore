@@ -1,0 +1,47 @@
+# ─────────────────────────────────────────────
+# 大块垃圾：不该进版本库
+# ─────────────────────────────────────────────
+
+# 书籍 PDF 等
+/books
+
+# 附件库（笔记引用的图片等，13M）
+/z_attachment
+
+# 第三方插件包（52M）。这是 vendor 代码，每次插件升级整包重写，
+# 提进去等于给仓库喂重复副本——真正要备份的笔记只有 2.5M。
+/.obsidian/plugins/
+
+# Obsidian 回收站（27M），待删垃圾
+/.trash/
+
+
+# ─────────────────────────────────────────────
+# 开窗就变的状态文件
+# ─────────────────────────────────────────────
+
+/.obsidian/workspace.json
+/.obsidian/workspace-mobile.json
+/.obsidian/workspace*.json
+
+
+# ─────────────────────────────────────────────
+# Smart Environment
+# ─────────────────────────────────────────────
+
+.smart-env
+
+
+# ─────────────────────────────────────────────
+# ⚠️ 凭据类文件 —— 不要提交
+# ─────────────────────────────────────────────
+#
+# 注意：下面第一条以前写成 /ubuntu_arrangement/一些配置/私人token,ssh,user,root_password记录.md，
+# 但真实路径是 system_arrangement/ubuntu_arrangement/...，且文件名里 " & " 两边有空格。
+# 规则从未匹配过任何文件 —— 那个文件一直处于**未保护**状态，差点被提交。
+# 现在改用通配，避免文件名再变一次就失效。
+
+system_arrangement/ubuntu_arrangement/一些配置/私人token*.md
+system_arrangement/ubuntu_arrangement/一些配置/图床设置.md
+study_note/pku-note/作业/树莓派/树莓派.md
+blog/vitepress.md
