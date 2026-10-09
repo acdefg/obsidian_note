@@ -49,9 +49,9 @@ RDMA：
 
 **单边 vs 双边是 RDMA 最重要的概念区分**：单边操作完全不需要对端软件参与（这是它快的来源），也因此难用——对端根本不知道数据来了。
 
-**和 GPU 内部 C2C/D2D 的关系**：概念同构（都是"一个设备直接搬另一个内存域的数据，不经过那个域的处理器"），但约束完全不同——见 [[dma-c2c-crosscard#片内 C2C/D2D 与跨卡 DMA 的设计轴]]。
+**和 GPU 内部 C2C/D2D 的关系**：概念同构（都是"一个设备直接搬另一个内存域的数据，不经过那个域的处理器"），但约束完全不同——见 [[c2c-crosscard#片内 C2C/D2D 与跨卡 DMA 的设计轴]]。
 
-相关：[[pcie-iommu#ATS（Address Translation Services）]] · [[cuda-memory#Pinned Memory 是什么？为什么是异步 DMA 的前提？]]
+相关：[[pcie-iommu#ATS（Address Translation Services）]] · [[memory#Pinned Memory 是什么？为什么是异步 DMA 的前提？]]
 
 ### 自测
 - [ ] RDMA 的"内存注册"这一步，本质上在解决什么问题？它和 CUDA 的 pinned memory 有什么共同点？

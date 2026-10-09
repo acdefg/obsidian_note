@@ -173,7 +173,7 @@ prefetch 全部页  →  此刻确定驻留            ← 拿到的是一个"�
 
 **结论**：prefetch 让你把"大概率驻留"变成"此刻确定驻留"，但 pin 给的是"传输全程持续驻留"。**前者是一个时刻的快照，后者是持续的保证。快照能被偷走，保证不能。**
 
-相关：[[dma-address-path#MMU 和 IOMMU 有什么区别？]]
+相关：[[address-path#MMU 和 IOMMU 有什么区别？]]
 
 ### 自测
 - [ ] 把"页不在内存"和"页会移动"分开，prefetch 各自能解决哪个？
@@ -219,7 +219,7 @@ CPU 侧：  用户态 VA  →  页表       →  PA
 
 **一个反直觉的推论**：pin 解决的是"**稳定性**"，不是"**连续性**"。很多人以为 pin 是为了拿到物理连续内存——不是。现代 DMA 引擎基本都支持 SGL（Scatter-Gather List），一次传输可以横跨许多不连续的物理页。**真正的约束只有一个：这些页在整个传输期间不许动。**
 
-相关：[[dma-engine#SGL（Scatter-Gather List）是什么？]] · [[dma-address-path#MMU 和 IOMMU 有什么区别？]]
+相关：[[engine#SGL（Scatter-Gather List）是什么？]] · [[address-path#MMU 和 IOMMU 有什么区别？]]
 
 ### 自测
 - [ ] 内核用哪三个机制保证一个页不被移动？分别在什么路径上生效？

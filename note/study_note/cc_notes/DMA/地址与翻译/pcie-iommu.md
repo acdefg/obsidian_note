@@ -138,7 +138,7 @@ updated: 2026-10-10
 
 **调优惯例**：MPS 取路径所支持的最大值；MRRS 取设备支持的最大值且不超过 MPS。
 
-相关：[[dma-engine#分割、合并与顺序管理]]
+相关：[[engine#分割、合并与顺序管理]]
 
 ### 自测
 - [ ] MPS 和 MRRS 各限制什么？为什么说 MPS 只限制"带数据 TLP"？
@@ -288,7 +288,7 @@ updated: 2026-10-10
 **SMMUv3 的 `CMD_ATC_INV`**：⚠️ 仅在 SMMU 实现 ATS（`ARM_SMMU_FEAT_ATS`）时合法；地址须按范围大小对齐（2 的幂个页），Linux 用 `fls(start ^ end)` 求最小覆盖幂次。
 ⚠️ **ATC 失效超时在随后的 `CMD_SYNC` 才报告**，而非在出错的 `CMD_ATC_INV`；驱动会重新单独下发每个 ATS SID 以定位无响应设备并屏蔽其 ATS（如清 `STE.EATS`）。
 
-相关：[[dma-address-path#MMU 和 IOMMU 有什么区别？]] · [[dma-address-path#三层地址视图：谁能在哪一层合并？]]
+相关：[[address-path#MMU 和 IOMMU 有什么区别？]] · [[address-path#三层地址视图：谁能在哪一层合并？]]
 
 ### 自测
 - [ ] Stage 1 和 Stage 2 各自是谁拥有的？为什么 Stage 2 是安全边界？

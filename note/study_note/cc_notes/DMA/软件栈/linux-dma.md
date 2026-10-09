@@ -150,7 +150,7 @@ for_each_sg(sg, s, nents, i) {          /* 用返回值遍历 */
 
 **建议用 `dma_map_sgtable()` / `dma_unmap_sgtable()`** —— 内部区分 `orig_nents` 与映射后的 `nents`。
 
-相关：[[dma-address-path#三层地址视图：谁能在哪一层合并？]]
+相关：[[address-path#三层地址视图：谁能在哪一层合并？]]
 
 ### 自测
 - [ ] `dma_map_sg` 的返回值为什么可能小于传入的 nents？
@@ -313,7 +313,7 @@ for (i = 0; i < npages; i++) unpin_user_page(pages[i]);  /* 4. 解除钉住 */
 
 > ⚠️ **不确定项**：`FOLL_PIN` / `FOLL_LONGTERM` 的语义在内核版本间有演进（长期 pin 的回收/迁移限制细节），以目标版本代码为准。
 
-相关：[[cuda-memory#pin 是软件机制还是硬件机制？]] · [[cuda-memory#为什么操作系统一定要分页？]]
+相关：[[memory#pin 是软件机制还是硬件机制？]] · [[memory#为什么操作系统一定要分页？]]
 
 ### 自测
 - [ ] GUP 和 `dma_map_*` 各自负责什么？为什么不能合并成一步？
