@@ -50,4 +50,4 @@
 # 与实际路径 system_arrangement/ubuntu_arrangement/... 对不上，
 # 且真实文件名里 " & " 两边有空格 —— 那条规则从未匹配过任何文件。
 
-system_arrangement/ubuntu_arrangement/一些配置/私人token*.md
+私人token*.md
