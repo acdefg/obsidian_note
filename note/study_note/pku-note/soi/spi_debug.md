@@ -1,8 +1,9 @@
 ---
 title: spi_debug
-tags: ["note", 延时也都被消除]
-created: 星期日, 六月 28日 2026, 2:58:15 下午
-modified: 星期日, 六月 28日 2026, 6:45:33 晚上
+tags:
+  - note
+created: 星期日, 六月 28日 2026, 6:43:01
+modified: 星期一, 六月 29日 2026, 12:12:20
 ---
 
 ![](https://raw.githubusercontent.com/acdefg/cdn/main/obsidian/20230317204925.png)

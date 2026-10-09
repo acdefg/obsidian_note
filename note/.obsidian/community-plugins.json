@@ -42,5 +42,10 @@
   "replace-all",
   "obsidian-linter",
   "obsidian-regex-pipeline",
-  "home-tab"
+  "home-tab",
+  "base-board",
+  "obsidian-tasks-plugin",
+  "tag-wrangler",
+  "better-search-views",
+  "editing-toolbar"
 ]

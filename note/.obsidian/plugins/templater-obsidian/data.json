@@ -1,0 +1,64 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "study_note",
+      "template": "Templates/note/note-frontmatter.md"
+    },
+    {
+      "folder": "Dairy/日记",
+      "template": "Templates/日程管理/每日复盘.md"
+    },
+    {
+      "folder": "Dairy/周报",
+      "template": "Templates/日程管理/周记模板.md"
+    },
+    {
+      "folder": "Dairy/股市",
+      "template": "Templates/日程管理/股市记录.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "Templates/插入/code blocks verilog.md",
+    "Templates/插入/ad-note.md",
+    "Templates/插入/image.md",
+    "Templates/插入/code blocks shell.md",
+    "Templates/插入/code blocks python.md",
+    "Templates/插入/down.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": "z_attachment"
+    },
+    {
+      "folder": "Templates"
+    }
+  ],
+  "enable_ribbon_icon": true
+}

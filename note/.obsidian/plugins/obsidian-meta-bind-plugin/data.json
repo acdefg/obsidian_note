@@ -1,0 +1,49 @@
+{
+  "devMode": false,
+  "ignoreCodeBlockRestrictions": false,
+  "preferredDateFormat": "YYYY-MM-DD",
+  "firstWeekday": {
+    "index": 1,
+    "name": "Monday",
+    "shortName": "Mo"
+  },
+  "syncInterval": 200,
+  "enableJs": false,
+  "viewFieldDisplayNullAsEmpty": false,
+  "enableSyntaxHighlighting": true,
+  "enableEditorRightClickMenu": true,
+  "inputFieldTemplates": [
+    {
+      "name": "slider",
+      "declaration": "INPUT[slider(addLabels, minValue(1), maxValue(10)):slider1]"
+    },
+    {
+      "name": "date",
+      "declaration": "INPUT[date(showcase):date]"
+    },
+    {
+      "name": "date-pick",
+      "declaration": "INPUT[date_picker(showcase):date]"
+    },
+    {
+      "name": "single-select",
+      "declaration": "INPUT[select(\ntitle(单选题：选择下列答案中的一个),\noption(option a),\noption(option b),\noption(option c),\noption(option d)\n):select]"
+    },
+    {
+      "name": "multi-select",
+      "declaration": "INPUT[multi_select(\ntitle(多选题：选择下列答案中的一个或多个),\noption(option a),\noption(option b),\noption(option c),\noption(option d)\n):other note#multi-select]"
+    },
+    {
+      "name": "text",
+      "declaration": "INPUT[text:nested[\"object\"]]"
+    },
+    {
+      "name": "editor",
+      "declaration": "INPUT[editor(showcase):editor]"
+    }
+  ],
+  "buttonTemplates": [],
+  "excludedFolders": [
+    "templates"
+  ]
+}

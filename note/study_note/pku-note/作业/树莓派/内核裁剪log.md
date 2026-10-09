@@ -1,8 +1,9 @@
 ---
 title: 内核裁剪log
-tags: ["note", cd, make]
-created: 星期日, 六月 28日 2026, 2:58:15 下午
-modified: 星期日, 六月 28日 2026, 5:17:00 下午
+tags:
+  - note
+created: 星期日, 六月 28日 2026, 6:43:01
+modified: 星期一, 六月 29日 2026, 12:13:41
 ---
 
 # 重装系统
