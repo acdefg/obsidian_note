@@ -2,7 +2,7 @@
 tags: [compression, theory]
 updated: 2026-10-10
 created: 星期六, 十月 10日 2026, 1:18:38 凌晨
-modified: 星期日, 十月 11日 2026, 9:48:03 上午
+modified: 星期日, 十月 11日 2026, 10:20:32 上午
 ---
 
 # 信息论根基
