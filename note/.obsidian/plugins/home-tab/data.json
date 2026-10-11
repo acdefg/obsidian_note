@@ -22,7 +22,24 @@
   "showShortcuts": true,
   "markdownOnly": false,
   "unresolvedLinks": false,
-  "recentFilesStore": [],
+  "recentFilesStore": [
+    {
+      "filepath": "study_note/cc_notes/压缩/原理/information-theory.md",
+      "timestamp": 1791597181065
+    },
+    {
+      "filepath": "study_note/cc_notes/INDEX.md",
+      "timestamp": 1791597170616
+    },
+    {
+      "filepath": "study_note/cc_notes/压缩/原理/dictionary-transform.md",
+      "timestamp": 1791597163332
+    },
+    {
+      "filepath": "study_note/cc_notes/压缩/格式/formats.md",
+      "timestamp": 1791597148578
+    }
+  ],
   "bookmarkedFileStore": [],
   "searchDelay": 0,
   "replaceNewTabs": true,
