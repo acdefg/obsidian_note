@@ -1,6 +1,6 @@
 ---
 tags: [index, taxonomy]
-updated: 2026-10-10
+updated: 2026-10-12
 ---
 
 # 主题分类表
@@ -31,9 +31,10 @@ cc_notes/
 
 | 领域 | 路径 | frontmatter tags | 覆盖范围 |
 |---|---|---|---|
-| CUDA | `CUDA/memory.md` | `[cuda, memory]` | 内存模型、pinned、UVA、异步拷贝、stream |
-| CUDA | `CUDA/execution.md` | `[cuda, execution]` | SIMT、warp、occupancy、bank conflict |
-| 计算机体系结构 | `<arch>/computer-arch.md` | `[arch, gpu]` | cache、流水线、分支预测、乱序执行；GPU 微架构（SM/TMA/L2）、memory hierarchy、roofline |
+| CUDA | `CUDA/memory.md` | `[cuda, memory]` | **主机内存视角**：pinned、pageable、分页、UVA、zero-copy、异步拷贝、stream |
+| CUDA | `CUDA/synchronization.md` | `[cuda, memory]` | **并发内存模型视角**：coherence vs consistency、relaxed/release/acquire、fence·barrier 三分、MESI、GPU scope 与 mbarrier、跨卡一致性 |
+| CUDA | `CUDA/execution.md` | `[cuda, execution]` | warp、occupancy、bank conflict、**内存层级（register file / shared / local / global）与变量·栈的分配**。**SIMT 的范式辨析归 `计算机体系结构/`** |
+| 计算机体系结构 | `计算机体系结构/computer-arch.md` | `[arch, gpu]` | cache、流水线、分支预测、乱序执行；GPU 微架构（SM/TMA/L2）、memory hierarchy、roofline；**SIMD / SIMT / 脉动阵列的范式对比** |
 | DMA | `DMA/引擎与机制/engine.md` | `[dma, arch]` | DMA 引擎本体：技术分类（六轴）、SGL、引擎实际在做什么、分割 / 合并 / 顺序管理 |
 | DMA | `DMA/引擎与机制/c2c-crosscard.md` | `[dma, noc]` | 片内 C2C/D2D 与跨卡：两域设计轴、延迟吸收、链路控制器分层、跨卡三条路径 |
 | DMA | `DMA/地址与翻译/address-path.md` | `[dma, iommu]` | 地址空间与翻译：MMU vs IOMMU、三层地址视图（VA / PA / IOVA）、谁能在哪一层合并 |
@@ -87,3 +88,6 @@ cc_notes/
 - 2026-10-09 — 初版。由 10 行草稿定稿：GPU 架构并入 `computer-arch.md`；图形学拆三片（4DGS 单列）；补 `embodied-ai.md`。
 - 2026-10-09 — 从 `D:\code\notes\` 迁到 vault 内 `note\study_note\cc_notes\`，双链与标签面板自此生效。
 - 2026-10-10 — **改为两层目录**（`<领域>/<子类>/`），文件名去掉领域前缀。11 个文件按子类归位；改名前后均做了重名检查与死链检查。DMA 领域拆出 5 个子类；`cuda-memory.md` → `CUDA/memory.md`。
+- 2026-10-11 — 新建 `CUDA/synchronization.md`（内存模型与同步）。原 `CUDA/memory.md` 的「内存模型」四个字划走，它只剩主机内存视角（pinned / 分页 / UVA / zero-copy / 异步拷贝）；并发视角独立成文件，避免单文件越 400 行。两文件共用 `[cuda, memory]` frontmatter（同 `压缩/原理/*` 三文件共用 `[compression, theory]` 的先例）。
+- 2026-10-11 — 新建 `CUDA/execution.md`（此前已在表中预留）。覆盖范围从「SIMT / warp / occupancy / bank conflict」扩到含**设备侧内存层级与变量·栈的分配**。曾考虑归入 `计算机体系结构/computer-arch.md`（该行覆盖范围写了「memory hierarchy」），但用户选择留在 CUDA 领域——`计算机体系结构` 领域文件夹**仍未建立**。
+- 2026-10-12 — **建立 `计算机体系结构/` 领域**（首个文件 `computer-arch.md`），此前一直是 `<arch>` 占位。同时把 `CUDA/execution.md` 那行的覆盖范围收窄：**SIMT 的范式辨析归体系结构，CUDA 侧只留 warp / occupancy / bank conflict 与设备内存层级**。判据是「从哪个角度回查」——问「SIMT 和脉动阵列差在哪」是体系结构问题，问「我的 kernel 占用率为什么低」才是 CUDA 问题。

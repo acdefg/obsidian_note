@@ -24,20 +24,16 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
-      "filepath": "study_note/cc_notes/压缩/原理/information-theory.md",
-      "timestamp": 1791597181065
-    },
-    {
-      "filepath": "study_note/cc_notes/INDEX.md",
-      "timestamp": 1791597170616
-    },
-    {
-      "filepath": "study_note/cc_notes/压缩/原理/dictionary-transform.md",
-      "timestamp": 1791597163332
+      "filepath": "study_note/cc_notes/压缩/硬件/hardware.md",
+      "timestamp": 1792235549563
     },
     {
       "filepath": "study_note/cc_notes/压缩/格式/formats.md",
-      "timestamp": 1791597148578
+      "timestamp": 1791738208189
+    },
+    {
+      "filepath": "study_note/cc_notes/计算机体系结构/computer-arch.md",
+      "timestamp": 1791738200115
     }
   ],
   "bookmarkedFileStore": [],
