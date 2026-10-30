@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:core.ac.uk)",
+      "WebFetch(domain:www.semanticscholar.org)",
+      "WebFetch(domain:ieeexplore.ieee.org)",
+      "Bash(ls -la \"D:/Cici/Documents/xwechat_files/wxid_1316strf57mi22_6a2d/msg/file/2026-10\" 2>&1 | head -60)",
+      "Read(//d/Cici/Documents/xwechat_files/wxid_1316strf57mi22_6a2d/msg/file/2026-10/**)",
+      "Bash(command -v pdftotext)",
+      "Bash(command -v python)",
+      "Bash(command -v python3)",
+      "Bash(python -c \"import pypdf; print\\('pypdf', pypdf.__version__\\)\")",
+      "Bash(python -c \"import fitz; print\\('pymupdf', fitz.__doc__\\)\")",
+      "Bash(pdftotext -layout \"D:/Cici/Documents/xwechat_files/wxid_1316strf57mi22_6a2d/msg/file/2026-10/mascot.1994.284438.pdf\" /tmp/mascot.txt)",
+      "Read(//tmp/**)",
+      "Bash(cygpath -w /tmp/mascot.txt)",
+      "Read(//c/Users/Cici/AppData/Local/Temp/**)"
+    ]
+  }
+}

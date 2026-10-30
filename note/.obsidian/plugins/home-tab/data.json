@@ -24,16 +24,20 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
-      "filepath": "study_note/cc_notes/压缩/硬件/hardware.md",
-      "timestamp": 1792235549563
+      "filepath": "study_note/面试/项目-SFU执行单元-方案.md",
+      "timestamp": 1793204779939
     },
     {
-      "filepath": "study_note/cc_notes/压缩/格式/formats.md",
-      "timestamp": 1791738208189
+      "filepath": "study_note/cc_notes/计算机体系结构/建模/modeling-levels.md",
+      "timestamp": 1793110249161
     },
     {
-      "filepath": "study_note/cc_notes/计算机体系结构/computer-arch.md",
-      "timestamp": 1791738200115
+      "filepath": "study_note/cc_notes/计算机体系结构/建模/systemc-kernel.md",
+      "timestamp": 1793108914059
+    },
+    {
+      "filepath": "study_note/cc_notes/计算机体系结构/建模/tlm.md",
+      "timestamp": 1793108850311
     }
   ],
   "bookmarkedFileStore": [],

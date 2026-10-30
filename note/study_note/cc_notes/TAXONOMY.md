@@ -1,6 +1,6 @@
 ---
 tags: [index, taxonomy]
-updated: 2026-10-12
+updated: 2026-10-27
 ---
 
 # 主题分类表
@@ -34,7 +34,17 @@ cc_notes/
 | CUDA | `CUDA/memory.md` | `[cuda, memory]` | **主机内存视角**：pinned、pageable、分页、UVA、zero-copy、异步拷贝、stream |
 | CUDA | `CUDA/synchronization.md` | `[cuda, memory]` | **并发内存模型视角**：coherence vs consistency、relaxed/release/acquire、fence·barrier 三分、MESI、GPU scope 与 mbarrier、跨卡一致性 |
 | CUDA | `CUDA/execution.md` | `[cuda, execution]` | warp、occupancy、bank conflict、**内存层级（register file / shared / local / global）与变量·栈的分配**。**SIMT 的范式辨析归 `计算机体系结构/`** |
-| 计算机体系结构 | `计算机体系结构/computer-arch.md` | `[arch, gpu]` | cache、流水线、分支预测、乱序执行；GPU 微架构（SM/TMA/L2）、memory hierarchy、roofline；**SIMD / SIMT / 脉动阵列的范式对比** |
+| 计算机体系结构 | `计算机体系结构/computer-arch.md` | `[arch, gpu]` | 流水线、分支预测、乱序执行；GPU 微架构（SM/TMA/L2）、memory hierarchy、roofline；**SIMD / SIMT / 脉动阵列的范式对比**；**DNN 加速器的数据流（WS/OS/IS/RS）与复用因子、tiling 的流量代价** |
+| 计算机体系结构 | `计算机体系结构/soc-architecture.md` | `[arch, soc]` | **SoC 架构岗位能力图谱**：JD 拆解（模块 owner vs 架构师）、产品定义与 PPA 预算、VMSA·MMU·SMMU·ASID/nG、TrustZone·安全启动、总线·crossbar·NoC 与带宽估算、UPF·VCLP·低功耗、存储层级与 tiling 预算、子系统划分与架构文档、后端·DFT·验证分工、缺口清单 |
+| 计算机体系结构 | `计算机体系结构/建模/systemc-kernel.md` | `[arch]` | **SystemC 仿真内核**：离散事件调度、求值/更新两阶段、delta cycle 与时间推进、`sc_signal` vs `sc_buffer`、`SC_METHOD`/`SC_THREAD` 语义、零延迟环与多驱动 |
+| 计算机体系结构 | `计算机体系结构/建模/tlm.md` | `[arch]` | **TLM-2.0 事务级建模**：LT vs AT、`b_transport`/`nb_transport` 四相、`tlm_generic_payload`、时间解耦 quantum、DMI、五个常见坑 |
+| 计算机体系结构 | `计算机体系结构/建模/modeling-levels.md` | `[arch]` | **性能建模粒度**：解析 / trace-driven / LT·AT / 周期近似 / 周期精确；周期级状态语义（倒序执行 vs current-next 两阶段）；TLM-2.0 不含 cycle-accurate 标准 |
+| 计算机体系结构 | `计算机体系结构/cache-microarchitecture.md` | `[arch, memory-hierarchy]` | **cache 硬件结构**：tag/index/offset、组相联、MSHR、write buffer、victim cache、包含关系；**替换算法**：LRU/MRU/FIFO/PLRU/NRU/RRIP/BIP 的硬件代价与扫描病理；**evict-first / streaming hint** 的软硬件分工；**访存合并**：CPU 侧 MSHR merge / write combining；GPU 侧 warp coalescing / 32B sector |
+| 计算机体系结构 | `计算机体系结构/中断架构/risc-v-aia.md` | `[arch, interrupt]` | **RISC-V AIA**：AIA CSRs / IMSIC 中断文件·MSI·claim 语义 / APLIC 域·direct·MSI / PLIC 对比 / 软件栈（Linux·OpenSBI·QEMU·KVM·Spike）/ 开源 RTL 盘点 / 自研拆分与验证路线 |
+| 计算机体系结构 | `计算机体系结构/中断架构/interrupt-basics.md` | `[arch, interrupt]` | **中断基础**：MMIO / hart / MSI / CSR（含间接 CSR）/ APLIC domain 分层 / direct（类 PLIC）/ direct·MSI·IPI·虚拟化完整 trap 流程 / 面试速查与常见误解 |
+| 计算机体系结构 | `计算机体系结构/存内计算/rram-cim.md` | `[arch, cim]` | **RRAM 存内计算**：器件/阵列原理、GEMM 与矩阵求导映射、**tiling 与阵列映射的分层、MNK/batch 与复用因子**、精度补偿四层、仿真验证（含旧 RRAM 仿真笔记案例）、论文清单、面试背诵卡 |
+| 计算机体系结构 | `计算机体系结构/存内计算/mixed-precision-cim.md` | `[arch, cim]` | **混合精度 CIM**：INT8/INT4 量化误差、bit-slicing 与 MVM 映射、混合精度分配与硬件支持、论文清单、面试背诵卡 |
+| 项目经历 | `项目经历/华为/huawei-mpu.md` | `[arch, memory-hierarchy]` | **华为 MPU 项目案例**：message process：key/lockid、乱序分配、shift queue、64-key 冲突判断、dispatch、提前释放、删拍、自动时钟门控；**Leading-one RTL**（优先链 / 二分树 / lockid 位图） |
 | DMA | `DMA/引擎与机制/engine.md` | `[dma, arch]` | DMA 引擎本体：技术分类（六轴）、SGL、引擎实际在做什么、分割 / 合并 / 顺序管理 |
 | DMA | `DMA/引擎与机制/c2c-crosscard.md` | `[dma, noc]` | 片内 C2C/D2D 与跨卡：两域设计轴、延迟吸收、链路控制器分层、跨卡三条路径 |
 | DMA | `DMA/地址与翻译/address-path.md` | `[dma, iommu]` | 地址空间与翻译：MMU vs IOMMU、三层地址视图（VA / PA / IOVA）、谁能在哪一层合并 |
@@ -57,7 +67,9 @@ cc_notes/
 | 深度学习系统 | `<dl>/dl-systems.md` | `[dl, systems]` | 训练/推理系统、算子、并行策略 |
 | 具身智能 | `<embodied>/embodied-ai.md` | `[embodied, robotics]` | 机器人、仿真、感知–决策–控制 |
 | 数字电路 | `<digital>/digital-design.md` | `[digital, verilog]` | Verilog、时序、综合、Zynq |
-| C++ | `<cpp>/cpp.md` | `[cpp]` | 语言特性、模板、内存模型、并发 |
+| C++ | `C++/STL/hash-table.md` | `[cpp]` | **STL 哈希表**：六种实现写法 / `unordered_map` 访问语义与坑 / 从声明到遍历的用法。领域其余范围（语言特性、模板、内存模型、并发）待建子类 |
+| C++ | `C++/STL/string.md` | `[cpp]` | **STL 字符串**：声明·初始化 / `>>` 与 `getline` 的分工 / 常用操作表 / 遍历·切分·查找 / 七个坑 / SSO 与扩容 |
+| C++ | `C++/0-1背包 完全背包.md` | `[cpp]` | **背包 DP**：0-1 / 完全 / 多重 / 分组 / 二维费用；二维→一维的逆序·正序 / 初始化与比较符 / 组合与排列。算法类笔记暂放 `C++/` 根目录，未开子类 |
 | 工具链 | `<toolchain>/toolchain.md` | `[toolchain]` | 构建、调试、profiler、环境 |
 
 > `<...>` 表示该领域的文件夹尚未建立。**第一次往这个领域写笔记时建文件夹**，
@@ -90,4 +102,20 @@ cc_notes/
 - 2026-10-10 — **改为两层目录**（`<领域>/<子类>/`），文件名去掉领域前缀。11 个文件按子类归位；改名前后均做了重名检查与死链检查。DMA 领域拆出 5 个子类；`cuda-memory.md` → `CUDA/memory.md`。
 - 2026-10-11 — 新建 `CUDA/synchronization.md`（内存模型与同步）。原 `CUDA/memory.md` 的「内存模型」四个字划走，它只剩主机内存视角（pinned / 分页 / UVA / zero-copy / 异步拷贝）；并发视角独立成文件，避免单文件越 400 行。两文件共用 `[cuda, memory]` frontmatter（同 `压缩/原理/*` 三文件共用 `[compression, theory]` 的先例）。
 - 2026-10-11 — 新建 `CUDA/execution.md`（此前已在表中预留）。覆盖范围从「SIMT / warp / occupancy / bank conflict」扩到含**设备侧内存层级与变量·栈的分配**。曾考虑归入 `计算机体系结构/computer-arch.md`（该行覆盖范围写了「memory hierarchy」），但用户选择留在 CUDA 领域——`计算机体系结构` 领域文件夹**仍未建立**。
+- 2026-10-17 — `computer-arch.md` 追加「数据流怎么选？复用因子怎么算？」。覆盖范围补上 **数据流四分类与复用因子**——此前只有脉动阵列的机制与利用率，缺"映射层"（哪份数据留片上、复用怎么算）。归入体系结构而非新开领域，因为回查角度是"这个架构为什么这么设计"，不是"我的 kernel 为什么慢"。
 - 2026-10-12 — **建立 `计算机体系结构/` 领域**（首个文件 `computer-arch.md`），此前一直是 `<arch>` 占位。同时把 `CUDA/execution.md` 那行的覆盖范围收窄：**SIMT 的范式辨析归体系结构，CUDA 侧只留 warp / occupancy / bank conflict 与设备内存层级**。判据是「从哪个角度回查」——问「SIMT 和脉动阵列差在哪」是体系结构问题，问「我的 kernel 占用率为什么低」才是 CUDA 问题。
+- 2026-10-18 — 新建 `计算机体系结构/cache-microarchitecture.md`（cache 硬件结构 / 替换算法 / 访存合并）。文件名不用 `cache.md`：vault 内 `study_note/pku-note/数字集成/cache.md` 已占用，`[[cache]]` 会歧义。`computer-arch.md` 的覆盖范围去掉「cache」，改由本文件覆盖。
+- 2026-10-18 — 新建 `计算机体系结构/项目/huawei-mpu.md`（华为 MPU 项目案例）。TAXONOMY 暂无「项目经历」领域，暂归到计算机体系结构下的「项目」子类；若后续项目笔记增多，再单开领域。
+- 2026-10-18 — 单开「项目经历」领域，`huawei-mpu.md` 从 `计算机体系结构/项目/` 迁到 `项目经历/华为/`。项目笔记按公司分子类；后续摩尔线程、算能、润石、北大项目沿用此结构。知识概念仍留在各领域，项目案例单独沉淀。
+- 2026-10-19 — 新建 `计算机体系结构/存内计算/rram-cim.md` 与 `mixed-precision-cim.md`。TAXONOMY 暂无独立「存内计算」领域，按“先归最接近领域”的规则暂放 `计算机体系结构/存内计算/`；若后续 CIM 笔记继续增多，再单开领域。两文件共用 `[arch, cim]` frontmatter，细粒度用 `#rram` / `#quantization` / `#mixed-precision`。
+- 2026-10-24 — `rram-cim.md` 追加「Tiling 和阵列映射是什么关系？」与「MNK、batch 和复用因子怎么对应？」，补上映射层与复用因子的分层；`computer-arch.md` 的数据流条目加交叉链接。
+- 2026-10-24 — 新建 `计算机体系结构/中断架构/risc-v-aia.md`。TAXONOMY 暂无「中断架构」子类，按“先归最接近领域”的规则放在 `计算机体系结构/` 下；覆盖 AIA 规范、IMSIC/APLIC 机制、软件栈与开源 RTL 实现盘点。若后续中断/异常笔记增多，再考虑单开领域。
+- 2026-10-24 — 新建 `计算机体系结构/中断架构/interrupt-basics.md`。把 MMIO / hart / MSI / CSR / APLIC domain / direct / 完整 trap 流程从对话整理成基础层，和 `risc-v-aia.md` 分工：本篇讲“词是什么、路径怎么走”，AIA 篇讲“规范细节、软件栈、开源 RTL”。两篇互相链接。
+- 2026-10-24 — **建立 `C++/` 领域**（首个文件 `C++/STL/hash-table.md`），此前一直是 `<cpp>` 占位。子类先只开 `STL/`；语言特性、模板、内存模型、并发后续各按子类归入。覆盖范围补上 **STL 容器与用法**。
+- 2026-10-25 — 新建 `C++/STL/string.md`。C++ 行拆成两行：哈希表与字符串各占一行（同一 `[cpp]` frontmatter）；领域其余范围仍标注「待建子类」。
+- 2026-10-26 — 追加 `C++/0-1背包 完全背包.md`（背包 DP 全情况矩阵）。这是 C++ 领域第一份**算法类**笔记，暂放根目录；若后续 DP/图论/字符串算法继续累积，再开 `C++/算法/` 子类并迁移。新增标签 `#dp`（见条目行尾）。
+- 2026-10-25 — `计算机体系结构/cache-microarchitecture.md` 追加「MRU 是什么？evict-first / streaming hint 和它是什么关系？」，覆盖范围补上 **MRU/FIFO 与 evict-first·streaming hint**。不新建文件：同属“替换算法”回查路径，与已有条目共享同一主题。同时给旧条目补 MRU/FIFO 两行对照，并修正一个常见说法——4 路 tree-PLRU 的 victim 也不可能是第 2 新的块，扫描病理属于所有“偏爱新块”的策略（含 FIFO、tree-PLRU），不是 LRU 独有。
+- 2026-10-27 — 新建 `计算机体系结构/soc-architecture.md`（SoC 架构岗位知识图谱）。由两份 JD（SoC 前端设计 / SoC 架构师）反推知识域，9 个条目：JD 对比、VMSA·SMMU、TrustZone、互连、低功耗、存储、子系统、后端验证、缺口清单。新增标签 `#soc`、`#security`、`#low-power`。
+- 2026-10-27 — 新建 `计算机体系结构/建模/systemc-kernel.md`（SystemC 离散事件内核 / delta cycle）。TAXONOMY 暂无「建模」子类，暂放 `计算机体系结构/` 下；文件名用 `systemc-kernel` 而非 `systemc`，避免与 `pku-note/数字集成/systemC.md` 仅大小写不同。未新增标签（沿用 `#arch`）。
+- 2026-10-27 — 新建 `计算机体系结构/建模/tlm.md`（TLM-2.0 事务级建模）。与 `systemc-kernel.md` 分工：内核讲调度语义，TLM 讲事务层怎么建模时间；两篇互链。未新增标签（沿用 `#arch`）。
+- 2026-10-27 — 新建 `计算机体系结构/建模/modeling-levels.md`（性能建模粒度与周期级状态语义）。把「解析 / trace-driven / LT·AT / 周期近似 / 周期精确」分层，并说明倒序执行 vs current-next 两阶段；与 `tlm.md`、`systemc-kernel.md` 互链。未新增标签（沿用 `#arch`）。

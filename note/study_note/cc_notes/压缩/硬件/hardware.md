@@ -1,6 +1,8 @@
 ---
 tags: [compression, hardware]
-updated: 2026-10-10
+updated: 2026-10-18
+created: 星期日, 十月 18日 2026, 12:34:00
+modified: 星期日, 十月 18日 2026, 4:49:43
 ---
 
 # 压缩的硬件与系统实现
@@ -24,14 +26,14 @@ updated: 2026-10-10
 
 **单次操作能耗表**（Horowitz, ISSCC 2014 "Computing's Energy Problem"，45nm、0.9V）【硬件】：
 
-| 操作 | 能耗 |
-|---|---|
-| 32-bit int add | 0.1 pJ |
-| 32-bit FP add | 0.9 pJ |
-| 32-bit int multiply | 3.1 pJ |
-| 32-bit FP multiply | 3.7 pJ |
-| 32-bit register file | 1 pJ |
-| 32-bit SRAM read (8KB) | 5 pJ |
+| 操作                            | 能耗         |
+| ----------------------------- | ---------- |
+| 32-bit int add                | 0.1 pJ     |
+| 32-bit FP add                 | 0.9 pJ     |
+| 32-bit int multiply           | 3.1 pJ     |
+| 32-bit FP multiply            | 3.7 pJ     |
+| 32-bit register file          | 1 pJ       |
+| 32-bit SRAM read (8KB)        | 5 pJ       |
 | **32-bit DRAM read（板上 DRAM）** | **640 pJ** |
 
 **关键比值**：一次板上 DRAM 读 ≈ 一次 SRAM 读的 **128×**、≈ FP 乘的 **173×**、≈ int add 的 **6400×**。
@@ -43,14 +45,15 @@ updated: 2026-10-10
 ### 自测
 - [ ] 搬一次 DRAM 数据相当于多少次整型加法？这个比值说明什么？
 - [ ] 为什么"解压在关键路径、压缩不在"？这对设计意味着什么？
-- [ ] 640 pJ 和 540 pJ 的差异是什么原因？
 
 ## 什么场景下压缩是净亏 #compression #hardware
 
 > **速查**
-> - **形式化 break-even**（1994 IEEE）：解压延迟 `d` 必须满足 `d < d_max = m × P × (1 − p·C)`
->   - `m`=miss 率、`P`=miss 惩罚、`p`=压缩节省比例、`C`=开销修正因子
->   - 举例 `p=0.7, C=1.5` → `d_max ≈ 180 CPU 周期`
+> - **形式化 break-even**（Wang & Quong, MASCOTS '94, 式 5）：解压延迟 `d` 必须满足 `d < d_max = m × P × (1 − p^(lg C))`
+>   - `m`=未压缩时的局部 miss 率、`P`=miss penalty（= 下一级访问时间）、`p`=容量/行大小每翻倍时 miss 率的剩余比例、`C`=压缩比（原始/压缩后，>1）、`lg`=以 2 为底的对数
+>   - 来源机制：压缩后 miss 率 `M_c = M_nc × p^(lg C)`；且 `d_max ∝ m×P`（论文明确：m 或 P 翻倍，d_max 也翻倍）
+>   - 论文例子：`p=0.7, C≈1.5` → `p^(lg C)≈0.8`；`m×P=300` → `d_max≈60 周期`；`m×P=600` → `d_max=120 周期`（可按比例缩放，`m×P=900` → ≈180）
+>   - ✅ 已核对原文 PDF（式 5、图 4、第 3.2.2 节；DOI: 10.1109/MASCOT.1994.284438）
 >   - **miss 率或 miss 惩罚越大，越有延迟余量来掩盖解压**
 > - **四类净亏情形**：① **带宽不紧张**（无总线争用时"没有明显收益，甚至负收益"）② **高带宽下压缩开销反而主导** ③ **不可压缩数据**（压完更大）④ 压缩本身成为瓶颈
 > - ⚠️ **高带宽下的具体数字**：传输带宽 **> 1.034 Gb/s** 时，无损压缩的（解）压缩开销占端到端时延 **>98%**；被测压缩器在 **~264 Mb/s** 以上失效；gzip 只有在 **< ~0.016 Gb/s** 时才比不压缩更快
